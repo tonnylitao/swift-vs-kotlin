@@ -26,6 +26,8 @@ const targetMenus = [
   "More Language Constructs",
 ];
 
+const excludeChapters = ["Opt-in Requirements"];
+
 (async () => {
   const browser = await puppeteer.launch({
     // headless: false,
@@ -40,32 +42,34 @@ const targetMenus = [
 
   //load kotlin code from url
   const resultPromise = menus.map(async ({ menu, chapters }) => {
-    const titleUrlDomsPromise = chapters.map(async ({ title, url }) => {
-      const doms = await loadCapter(browser, url);
+    const titleUrlDomsPromise = chapters
+      .filter((item) => !excludeChapters.includes(item.title))
+      .map(async ({ title, url }) => {
+        const doms = await loadCapter(browser, url);
 
-      console.log(url, doms.length);
+        console.log(url, doms.length);
 
-      let filted = [];
-      for (let i = doms.length - 1; i >= 0; i--) {
-        const dom = doms[i];
-        const { tag, content } = dom;
+        let filted = [];
+        for (let i = doms.length - 1; i >= 0; i--) {
+          const dom = doms[i];
+          const { tag, content } = dom;
 
-        if (tag === "pre") {
-          filted.push(dom);
+          if (tag === "pre") {
+            filted.push(dom);
 
-          const nextDom = doms[i - 1];
-          const { tag, content } = nextDom || {};
-          if (tag !== "pre") {
-            filted.push(nextDom);
-            i--;
+            const nextDom = doms[i - 1];
+            const { tag, content } = nextDom || {};
+            if (tag !== "pre") {
+              filted.push(nextDom);
+              i--;
+            }
+          } else if (tag === "h1") {
+            filted.push(dom);
           }
-        } else if (tag === "h1") {
-          filted.push(dom);
         }
-      }
 
-      return Promise.resolve({ title, url, doms: filted.reverse() });
-    });
+        return Promise.resolve({ title, url, doms: filted.reverse() });
+      });
 
     const titleUrlDoms = await Promise.all(titleUrlDomsPromise);
 
@@ -111,7 +115,6 @@ const targetMenus = [
   );
 
   writeToHtml(result);
-  // await browser.close();
 })();
 
 async function loadMenus(browser) {
