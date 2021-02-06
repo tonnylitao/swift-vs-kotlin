@@ -753,25 +753,29 @@ let triangle = Triangle(a: 3.0, b: 4.0, c: 5.0)
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">data class Customer(val name: String, val email: String)</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">data class Customer(val name: String, val email: String)</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌
+</div></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Default values for function parameters<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#default-values-for-function-parameters" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun foo(a: Int = 0, b: String = "") { ... }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun foo(a: Int = 0, b: String = "") { ... }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func foo(a: Int = 0, b: String = "") { ... }
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Filtering a list<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#filtering-a-list" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val positives = list.filter { x -&#62; x &#62; 0 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val positives = list.filter { x -&#62; x &#62; 0 }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let positives = list.filter { x in x &#62; 0 }
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val positives = list.filter { it &#62; 0 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val positives = list.filter { it &#62; 0 }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let positives = list.filter { $0 &#62; 0 }
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Checking element presence in a collection.<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#checking-element-presence-in-a-collection" target="_blank"></a></h4></td>
@@ -780,16 +784,18 @@ let triangle = Triangle(a: 3.0, b: 4.0, c: 5.0)
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">if ("john@example.com" in emailsList) { ... }
 &#8203;
 if ("jane@example.com" !in emailsList) { ... }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">if ("john@example.com" in emailsList) { ... }
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">if emailsList.contains("john@example.com") { ... }
 &#8203;
-if ("jane@example.com" !in emailsList) { ... }</code></pre></td>
+if !emailsList.contains("jane@example.com") { ... }
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>String Interpolation<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#string-interpolation" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">println("Name $name")</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">println("Name $name")</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">print("Name \(name)")
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Instance Checks<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#instance-checks" target="_blank"></a></h4></td>
@@ -800,11 +806,12 @@ if ("jane@example.com" !in emailsList) { ... }</code></pre></td>
     is Bar -&#62; ...
     else   -&#62; ...
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">when (x) {
-    is Foo -&#62; ...
-    is Bar -&#62; ...
-    else   -&#62; ...
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">switch x {
+case is Foo: ...
+case is Bar: ...
+default: ...
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Traversing a map/list of pairs<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#traversing-a-maplist-of-pairs" target="_blank"></a></h4></td>
@@ -813,9 +820,10 @@ if ("jane@example.com" !in emailsList) { ... }</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">for ((k, v) in map) {
     println("$k -&#62; $v")
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for ((k, v) in map) {
-    println("$k -&#62; $v")
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for (k, v) in map.enumerated {
+    print("\(k) -&#62; \(v)")
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Using ranges<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#using-ranges" target="_blank"></a></h4></td>
@@ -826,25 +834,28 @@ for (i in 1 until 100) { ... } // half-open range: does not include 100
 for (x in 2..10 step 2) { ... }
 for (x in 10 downTo 1) { ... }
 if (x in 1..10) { ... }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for (i in 1..100) { ... }  // closed range: includes 100
-for (i in 1 until 100) { ... } // half-open range: does not include 100
-for (x in 2..10 step 2) { ... }
-for (x in 10 downTo 1) { ... }
-if (x in 1..10) { ... }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for i in 1...100 { ... }  // closed range: includes 100
+for i in 1..&#60;100 { ... } // half-open range: does not include 100
+for x in stride(from: 2, to: 12, by: 2) { ... }
+for x in stride(from: 10, to: 0, by: -1) { ... }
+if (1...10).contains(x) { ... }
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Read-only list<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#read-only-list" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val list = listOf("a", "b", "c")</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val list = listOf("a", "b", "c")</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let list = ["a", "b", "c"]
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Read-only map<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#read-only-map" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val map = mapOf("a" to 1, "b" to 2, "c" to 3)</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val map = mapOf("a" to 1, "b" to 2, "c" to 3)</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let map = ["a": 1, "b": 2, "c": 3]
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Accessing a map<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#accessing-a-map" target="_blank"></a></h4></td>
@@ -852,8 +863,9 @@ if (x in 1..10) { ... }</code></pre></td>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">println(map["key"])
 map["key"] = value</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">println(map["key"])
-map["key"] = value</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">print(map["key"])
+map["key"] = value
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Lazy property<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#lazy-property" target="_blank"></a></h4></td>
@@ -862,9 +874,10 @@ map["key"] = value</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val p: String by lazy {
     // compute the string
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val p: String by lazy {
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">lazy var p: String {
     // compute the string
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Extension Functions<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#extension-functions" target="_blank"></a></h4></td>
@@ -873,9 +886,12 @@ map["key"] = value</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun String.spaceToCamelCase() { ... }
 &#8203;
 "Convert this to camelcase".spaceToCamelCase()</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun String.spaceToCamelCase() { ... }
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">extension String {
+    func spaceToCamelCase() { ... }
+}
 &#8203;
-"Convert this to camelcase".spaceToCamelCase()</code></pre></td>
+"Convert this to camelcase".spaceToCamelCase()
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Creating a singleton<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#creating-a-singleton" target="_blank"></a></h4></td>
@@ -884,9 +900,8 @@ map["key"] = value</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">object Resource {
     val name = "Name"
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">object Resource {
-    val name = "Name"
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌
+</div></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Instantiate an abstract class<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#instantiate-an-abstract-class" target="_blank"></a></h4></td>
@@ -908,22 +923,8 @@ fun main() {
     }
     myObject.doSomething()
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">abstract class MyAbstractClass {
-    abstract fun doSomething()
-    abstract fun sleep()
-}
-&#8203;
-fun main() {
-    val myObject = object : MyAbstractClass() {
-        override fun doSomething() {
-            // ...
-        }
-&#8203;
-        override fun sleep() { // ...
-        }
-    }
-    myObject.doSomething()
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌
+</div></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>If not null shorthand<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#if-not-null-shorthand" target="_blank"></a></h4></td>
@@ -932,9 +933,10 @@ fun main() {
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val files = File("Test").listFiles()
 &#8203;
 println(files?.size)</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val files = File("Test").listFiles()
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let files = File("Test").listFiles()
 &#8203;
-println(files?.size)</code></pre></td>
+print(files?.count)
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>If not null and else shorthand<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#if-not-null-and-else-shorthand" target="_blank"></a></h4></td>
@@ -943,9 +945,10 @@ println(files?.size)</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val files = File("Test").listFiles()
 &#8203;
 println(files?.size ?: "empty")</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val files = File("Test").listFiles()
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let files = File("Test").listFiles()
 &#8203;
-println(files?.size ?: "empty")</code></pre></td>
+print(files?.count ?? 0)
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Executing a statement if null<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#executing-a-statement-if-null" target="_blank"></a></h4></td>
@@ -953,8 +956,11 @@ println(files?.size ?: "empty")</code></pre></td>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val values = ...
 val email = values["email"] ?: throw IllegalStateException("Email is missing!")</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val values = ...
-val email = values["email"] ?: throw IllegalStateException("Email is missing!")</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let values = ...
+guard let email = values["email"] else {
+    throw IllegalStateException("Email is missing!")
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Get first item of a possibly empty collection<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#get-first-item-of-a-possibly-empty-collection" target="_blank"></a></h4></td>
@@ -962,8 +968,9 @@ val email = values["email"] ?: throw IllegalStateException("Email is missing!")<
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val emails = ... // might be empty
 val mainEmail = emails.firstOrNull() ?: ""</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val emails = ... // might be empty
-val mainEmail = emails.firstOrNull() ?: ""</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let emails = ... // might be empty
+let mainEmail = emails.first ?? ""
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Execute if not null<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#execute-if-not-null" target="_blank"></a></h4></td>
@@ -974,11 +981,12 @@ val mainEmail = emails.firstOrNull() ?: ""</code></pre></td>
 value?.let {
     ... // execute this block if not null
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val value = ...
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let value = ...
 &#8203;
-value?.let {
+if let value = value {
     ... // execute this block if not null
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Map nullable value if not null<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#map-nullable-value-if-not-null" target="_blank"></a></h4></td>
@@ -988,10 +996,11 @@ value?.let {
 &#8203;
 val mapped = value?.let { transformValue(it) } ?: defaultValue 
 // defaultValue is returned if the value or the transform result is null.</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val value = ...
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let value: Int? = 1
 &#8203;
-val mapped = value?.let { transformValue(it) } ?: defaultValue 
-// defaultValue is returned if the value or the transform result is null.</code></pre></td>
+let mapped = value.flatMap { transformValue($0) } ?? defaultValue
+// defaultValue is returned if the value or the transform result is null.
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Return on when statement<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#return-on-when-statement" target="_blank"></a></h4></td>
@@ -1005,14 +1014,18 @@ val mapped = value?.let { transformValue(it) } ?: defaultValue
         else -&#62; throw IllegalArgumentException("Invalid color param value")
     }
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun transform(color: String): Int {
-    return when (color) {
-        "Red" -&#62; 0
-        "Green" -&#62; 1
-        "Blue" -&#62; 2
-        else -&#62; throw IllegalArgumentException("Invalid color param value")
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum Error: Swift.Error {
+    case illegalArgumentException(String)
+}
+func transform(color: String) throws -&#62; Int {
+    switch (color) {
+    case "Red": return 0
+    case "Green": return 1
+    case "Blue": return 2
+    default: throw Error.illegalArgumentException("Invalid color param value")
     }
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>'try/catch' expression<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#trycatch-expression" target="_blank"></a></h4></td>
@@ -1027,15 +1040,25 @@ val mapped = value?.let { transformValue(it) } ?: defaultValue
 &#8203;
     // Working with result
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun test() {
-    val result = try {
-        count()
-    } catch (e: ArithmeticException) {
-        throw IllegalStateException(e)
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">indirect enum Error: Swift.Error {
+    case arithmeticException
+    case llegalStateException(Error)
+}
+
+func count() throws -&#62; Int { ... }
+
+func test() throws {
+    let result: Int
+
+    do {
+        result = try count()
+    } catch Error.arithmeticException {
+        throw Error.llegalStateException(.arithmeticException)
     }
-&#8203;
+    
     // Working with result
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>'if' expression<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#if-expression" target="_blank"></a></h4></td>
@@ -1050,15 +1073,17 @@ val mapped = value?.let { transformValue(it) } ?: defaultValue
         "three"
     }
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun foo(param: Int) {
-    val result = if (param == 1) {
-        "one"
-    } else if (param == 2) {
-        "two"
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func foo(param: Int) {
+    let result: String
+    if param == 1 {
+        result = "one"
+    } else if param == 2 {
+        result = "two"
     } else {
-        "three"
+        result = "three"
     }
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Builder-style usage of methods that return Unit<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#builder-style-usage-of-methods-that-return-unit" target="_blank"></a></h4></td>
@@ -1067,24 +1092,29 @@ val mapped = value?.let { transformValue(it) } ?: defaultValue
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun arrayOfMinusOnes(size: Int): IntArray {
     return IntArray(size).apply { fill(-1) }
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun arrayOfMinusOnes(size: Int): IntArray {
-    return IntArray(size).apply { fill(-1) }
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func arrayOfMinusOnes(size: Int) -&#62; [Int] {
+    return [Int](repeating: -1, count: size)
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Single-expression functions<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#single-expression-functions" target="_blank"></a></h4></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun theAnswer() = 42</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun theAnswer() = 42</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func theAnswer() -&#62; Int {
+    42
+}
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun theAnswer(): Int {
     return 42
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun theAnswer(): Int {
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func theAnswer() -&#62; Int {
     return 42
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun transform(color: String): Int = when (color) {
@@ -1093,12 +1123,15 @@ val mapped = value?.let { transformValue(it) } ?: defaultValue
     "Blue" -&#62; 2
     else -&#62; throw IllegalArgumentException("Invalid color param value")
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun transform(color: String): Int = when (color) {
-    "Red" -&#62; 0
-    "Green" -&#62; 1
-    "Blue" -&#62; 2
-    else -&#62; throw IllegalArgumentException("Invalid color param value")
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func transform(color: String) throws -&#62; Int {
+    switch color {
+    case "Red": return 0
+    case "Green": return 1
+    case "Blue": return 2
+    default: throw Error.illegalArgumentException("Invalid color param value")
+    }
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Calling multiple methods on an object instance (with)<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#calling-multiple-methods-on-an-object-instance-with" target="_blank"></a></h4></td>
@@ -1120,22 +1153,8 @@ with(myTurtle) { //draw a 100 pix square
     }
     penUp()
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">class Turtle {
-    fun penDown()
-    fun penUp()
-    fun turn(degrees: Double)
-    fun forward(pixels: Double)
-}
-&#8203;
-val myTurtle = Turtle()
-with(myTurtle) { //draw a 100 pix square
-    penDown()
-    for (i in 1..4) {
-        forward(100.0)
-        turn(90.0)
-    }
-    penUp()
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌
+</div></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Configuring properties of an object (apply)<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#configuring-properties-of-an-object-apply" target="_blank"></a></h4></td>
@@ -1146,11 +1165,8 @@ with(myTurtle) { //draw a 100 pix square
     breadth = 5
     color = 0xFAFAFA
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val myRectangle = Rectangle().apply {
-    length = 4
-    breadth = 5
-    color = 0xFAFAFA
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌
+</div></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Java 7's try with resources<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#java-7s-try-with-resources" target="_blank"></a></h4></td>
@@ -1160,10 +1176,8 @@ with(myTurtle) { //draw a 100 pix square
 stream.buffered().reader().use { reader -&#62;
     println(reader.readText())
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val stream = Files.newInputStream(Paths.get("/some/file.txt"))
-stream.buffered().reader().use { reader -&#62;
-    println(reader.readText())
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Convenient form for a generic function that requires the generic type information<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#convenient-form-for-a-generic-function-that-requires-the-generic-type-information" target="_blank"></a></h4></td>
@@ -1175,12 +1189,8 @@ stream.buffered().reader().use { reader -&#62;
 //     ...
 &#8203;
 inline fun &#60;reified T: Any&#62; Gson.fromJson(json: JsonElement): T = this.fromJson(json, T::class.java)</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">//  public final class Gson {
-//     ...
-//     public &#60;T&#62; T fromJson(JsonElement json, Class&#60;T&#62; classOfT) throws JsonSyntaxException {
-//     ...
-&#8203;
-inline fun &#60;reified T: Any&#62; Gson.fromJson(json: JsonElement): T = this.fromJson(json, T::class.java)</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Consuming a nullable Boolean<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#consuming-a-nullable-boolean" target="_blank"></a></h4></td>
@@ -1192,12 +1202,13 @@ if (b == true) {
 } else {
     // `b` is false or null
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val b: Boolean? = ...
-if (b == true) {
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let b: Boolean? = ...
+if b == true {
     ...
 } else {
     // `b` is false or null
-}</code></pre></td>
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h4>Swapping two variables<a class="anchor" href="https://kotlinlang.org/docs/reference/idioms.html#swapping-two-variables" target="_blank"></a></h4></td>
@@ -1208,7 +1219,8 @@ var b = 2
 a = b.also { b = a }</code></pre></td>
               <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">var a = 1
 var b = 2
-a = b.also { b = a }</code></pre></td>
+(a, b) = (b, a)
+</code></pre></td>
             </tr>
             
             
