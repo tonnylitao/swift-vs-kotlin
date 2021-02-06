@@ -1,0 +1,1 @@
+(1..3).asFlow().map { requestFlow(it) }

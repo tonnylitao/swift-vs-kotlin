@@ -1,0 +1,1 @@
+fun powerOf(number: Int, exponent: Int): Int { /*...*/ }

@@ -1,0 +1,15 @@
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-maven-plugin</artifactId>
+            <version>${kotlin.version}</version>
+            <executions>...</executions>
+            <configuration>
+                <args>
+                    <arg>-Xopt-in=org.mylibrary.OptInAnnotation</arg>                    
+                </args>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>

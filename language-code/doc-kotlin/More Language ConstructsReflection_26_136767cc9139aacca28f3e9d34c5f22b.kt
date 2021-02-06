@@ -1,0 +1,1 @@
+fun getKClass(o: Any): KClass<Any> = o.javaClass.kotlin

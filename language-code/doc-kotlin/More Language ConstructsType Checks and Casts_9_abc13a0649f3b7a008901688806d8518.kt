@@ -1,0 +1,1 @@
+val x: String = y as String

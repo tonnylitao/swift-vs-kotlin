@@ -1,0 +1,1 @@
+typealias ClickHandler = (Button, ClickEvent) -> Unit

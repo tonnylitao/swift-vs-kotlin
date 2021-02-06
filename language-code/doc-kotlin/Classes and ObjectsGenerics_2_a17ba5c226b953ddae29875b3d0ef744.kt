@@ -1,0 +1,1 @@
+val box: Box<Int> = Box<Int>(1)

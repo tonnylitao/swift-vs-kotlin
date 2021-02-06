@@ -1,0 +1,1 @@
+println((1..10).filter { it % 2 == 0 })

@@ -1,0 +1,1 @@
+inline fun <T> lock(lock: Lock, body: () -> T): T { ... }

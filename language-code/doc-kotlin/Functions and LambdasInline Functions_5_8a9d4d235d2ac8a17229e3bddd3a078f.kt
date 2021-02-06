@@ -1,0 +1,1 @@
+inline fun foo(inlined: () -> Unit, noinline notInlined: () -> Unit) { ... }

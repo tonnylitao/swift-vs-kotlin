@@ -1,0 +1,1 @@
+map.forEach { _, value -> println("$value!") }

@@ -1,0 +1,1 @@
+val l = if (b != null) b.length else -1

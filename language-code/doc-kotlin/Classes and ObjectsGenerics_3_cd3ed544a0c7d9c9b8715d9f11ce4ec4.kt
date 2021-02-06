@@ -1,0 +1,1 @@
+val box = Box(1) // 1 has type Int, so the compiler figures out that we are talking about Box<Int>

@@ -1,0 +1,1 @@
+value class Password(private val s: String)

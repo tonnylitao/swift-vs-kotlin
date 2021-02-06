@@ -1,0 +1,1 @@
+val result = double(2)

@@ -1,0 +1,1 @@
+import org.example.* // everything in 'org.example' becomes accessible

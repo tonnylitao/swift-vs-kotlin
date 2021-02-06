@@ -1,0 +1,1 @@
+max(strings, { a, b -> a.length < b.length })

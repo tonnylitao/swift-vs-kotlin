@@ -1,0 +1,1 @@
+class Customer public @Inject constructor(name: String) { /*...*/ }

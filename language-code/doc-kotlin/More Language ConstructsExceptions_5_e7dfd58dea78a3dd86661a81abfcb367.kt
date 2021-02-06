@@ -1,0 +1,1 @@
+val a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }

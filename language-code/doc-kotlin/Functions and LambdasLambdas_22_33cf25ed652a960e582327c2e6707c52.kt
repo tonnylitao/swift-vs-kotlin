@@ -1,0 +1,1 @@
+ints.filter { it > 0 } // this literal is of type '(it: Int) -> Boolean'

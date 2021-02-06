@@ -1,0 +1,1 @@
+Json.encodeToString(Data(a = 42, b = "str"))

@@ -1,0 +1,1 @@
+val l = singletonList<Int>(1)

@@ -1,0 +1,1 @@
+Stream().read() // create instance of class Stream and call read()

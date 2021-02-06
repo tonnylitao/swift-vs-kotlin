@@ -1,0 +1,3 @@
+inline var bar: Bar
+    get() = ...
+    set(v) { ... }

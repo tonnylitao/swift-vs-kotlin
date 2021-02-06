@@ -1,0 +1,1 @@
+val House.number = 1 // error: initializers are not allowed for extension properties

@@ -1,0 +1,1 @@
+val obj = Json.decodeFromString<Data>("""{"a":42, "b": "str"}""")

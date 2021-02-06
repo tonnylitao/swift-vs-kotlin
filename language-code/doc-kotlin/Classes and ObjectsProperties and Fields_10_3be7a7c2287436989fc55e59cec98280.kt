@@ -1,0 +1,1 @@
+val isEmpty get() = this.size == 0  // has type Boolean

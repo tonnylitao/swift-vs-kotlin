@@ -1,0 +1,1 @@
+val instance = MyClass.create()

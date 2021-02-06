@@ -1,0 +1,1 @@
+import org.example.Message // Message is now accessible without qualification

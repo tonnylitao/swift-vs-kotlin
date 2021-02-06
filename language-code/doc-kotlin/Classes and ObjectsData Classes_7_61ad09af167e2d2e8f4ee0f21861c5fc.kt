@@ -1,0 +1,1 @@
+fun copy(name: String = this.name, age: Int = this.age) = User(name, age)

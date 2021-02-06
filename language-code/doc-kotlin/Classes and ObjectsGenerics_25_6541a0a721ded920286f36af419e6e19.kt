@@ -1,0 +1,1 @@
+fun <T : Comparable<T>> sort(list: List<T>) {  ... }

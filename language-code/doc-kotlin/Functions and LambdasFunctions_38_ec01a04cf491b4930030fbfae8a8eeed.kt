@@ -1,0 +1,1 @@
+Sample().foo() // creates instance of class Sample and calls foo

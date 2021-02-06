@@ -1,0 +1,1 @@
+val product = items.fold(1) { acc, e -> acc * e }

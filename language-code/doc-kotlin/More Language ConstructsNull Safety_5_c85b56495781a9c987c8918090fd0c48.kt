@@ -1,0 +1,1 @@
+val l = b.length // error: variable 'b' can be null

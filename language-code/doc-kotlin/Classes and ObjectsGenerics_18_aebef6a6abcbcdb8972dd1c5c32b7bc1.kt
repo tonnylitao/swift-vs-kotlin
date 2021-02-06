@@ -1,0 +1,1 @@
+fun copy(from: Array<out Any>, to: Array<Any>) { ... }
