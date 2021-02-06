@@ -1,0 +1,1 @@
+val PersonComparator: Comparator<Person> = /*...*/

@@ -1,0 +1,1 @@
+val positives = list.filter { x -> x > 0 }

@@ -1,0 +1,3 @@
+appendCommaSeparated(properties) { prop ->
+    val propertyValue = prop.get(obj)  // ...
+}

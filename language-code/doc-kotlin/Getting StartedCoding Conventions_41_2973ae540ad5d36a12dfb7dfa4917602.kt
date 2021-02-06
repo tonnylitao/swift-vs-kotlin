@@ -1,0 +1,1 @@
+val isEmpty: Boolean get() = size == 0

@@ -1,0 +1,1 @@
+list.filter { it > 10 }

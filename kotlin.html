@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kotlin</title>
+
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
+
+    <script src="https://highlightjs.org/static/highlight.site.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <style>
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      bottom: 0;
+      background: white;
+      overflow-y: scroll;
+      width: 300px;
+      padding-left: 10px;
+    }
+    .right-cnt {
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .hljs {
+      border-radius: 5px;
+      padding: 1em;
+    }
+
+    .anchor {
+      position: absolute;
+    }
+
+    .anchor:after {
+      position: absolute;
+      display: none;
+      opacity: .5;
+      margin-top: 2px;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
+      background-repeat: no-repeat;
+      content: '';
+    }
+
+    h1:hover .anchor:after,
+    h2:hover .anchor:after,
+    h3:hover .anchor:after,
+    h4:hover .anchor:after,
+    h5:hover .anchor:after {
+      display: block;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3, h4, h5 {
+      margin: 5px 0 0;
+      color: #555;
+      font-weight: 400;
+    }
+
+    .sticky-row {
+      position: sticky;
+      position: -webkit-sticky;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      background: white;
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+    }
+
+    .chapter-1 {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+
+    .chapter-2 {
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+
+    ul a {
+      text-decoration: none;
+    }
+
+
+    .sticky-row>div {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    table {
+        table-layout:fixed;
+        width:100%;
+    }
+
+    img {
+      width: 30px;
+      display: none;
+    }
+
+    .from-aspect {
+      margin-bottom: 20px;
+    }
+
+    nav ol a, nav ol a:visited {
+      color: #333;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    pre {
+      margin: 0;
+    }
+    </style>
+  </head>
+  <body>
+  <nav>
+  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin vs <img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift"/>Swift</h1>
+    <div class="from-aspect">
+      <a href="#kotlin">From Kotlin View</a><br/>
+      <a href="#kotlin">From Swift View</a>
+    </div>
+    <div class="capters"><ul><ol class="chapter-1">Getting Started</ol><ul><ol class="chapter-2">-&nbsp<a href="#0_0">Basic Syntax</a></ol></ul></ol></ul></div>
+  </nav>
+
+    <div class="container">
+      <div class="right-cnt"><table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <tr>
+              <td class="sticky-row" colspan="2">
+                <div>
+                  <div>Kotlin</div>
+                  <h2 id="0_0" style="text-align:center;">Basic Syntax<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#basic-syntax" target="_blank"></a></h2>
+                  <div>Swift</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Package definition and imports<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#defining-packages" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">package my.demo
+&#8203;
+import kotlin.text.*
+&#8203;
+// ...</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">import Fondation
+</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Program entry point<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#program-entry-point" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun main() {
+    println("Hello world!")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><div>❌<br/>
+Code written at global scope is used as the entry point for the program, so you don’t need a main() function.
+</div></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Functions<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#defining-functions" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun sum(a: Int, b: Int): Int {
+    return a + b
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func sum(a: Int, b: Int) -&#62; Int {
+    return a + b
+}
+</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun sum(a: Int, b: Int) = a + b</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func sum(a: Int, b: Int) {
+    a + b
+}
+</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun printSum(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a + b}")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func printSum(a: Int, b: Int) {
+    print("sum of \(a) and \(b) is \(a + b)")
+}
+</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun printSum(a: Int, b: Int) {
+    println("sum of $a and $b is ${a + b}")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">func printSum(a: Int, b: Int) {
+    print("sum of \(a) and \(b) is \(a + b)")
+}
+</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Variables<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#defining-variables" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val a: Int = 1  // immediate assignment
+val b = 2   // `Int` type is inferred
+val c: Int  // Type required when no initializer is provided
+c = 3       // deferred assignment</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let a: Int = 1
+let b = 2
+let c: Int
+c = 3
+</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">var x = 5 // `Int` type is inferred
+x += 1</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">var x = 5 // `Int` type is inferred
+x += 1</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val PI = 3.14
+var x = 0
+&#8203;
+fun incrementX() { 
+    x += 1 
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let PI = 3.14
+var x = 0
+&#8203;
+func incrementX() {
+    x += 1 
+}
+</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Comments<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#comments" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">// This is an end-of-line comment
+&#8203;
+/* This is a block comment
+   on multiple lines. */</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">// This is an end-of-line comment
+&#8203;
+/* This is a block comment
+   on multiple lines. */</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">/* The comment starts here
+/* contains a nested comment */     
+and ends here. */</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">/* The comment starts here
+/* contains a nested comment */     
+and ends here. */</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>String templates<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-string-templates" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">var a = 1
+// simple name in template:
+val s1 = "a is $a" 
+&#8203;
+a = 2
+// arbitrary expression in template:
+val s2 = "${s1.replace("is", "was")}, but now is $a"</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">var a = 1
+// simple name in template:
+let s1 = "a is \(a)"
+&#8203;
+a = 2
+// arbitrary expression in template:
+let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
+</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Conditional expressions<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-conditional-expressions" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun maxOf(a: Int, b: Int): Int {
+    if (a &#62; b) {
+        return a
+    } else {
+        return b
+    }
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun maxOf(a: Int, b: Int): Int {
+    if (a &#62; b) {
+        return a
+    } else {
+        return b
+    }
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun maxOf(a: Int, b: Int) = if (a &#62; b) a else b</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun maxOf(a: Int, b: Int) = if (a &#62; b) a else b</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Nullable values and null checks<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-nullable-values-and-checking-for-null" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun parseInt(str: String): Int? {
+    // ...
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun parseInt(str: String): Int? {
+    // ...
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun printProduct(arg1: String, arg2: String) {
+    val x = parseInt(arg1)
+    val y = parseInt(arg2)
+&#8203;
+    // Using `x * y` yields error because they may hold nulls.
+    if (x != null &#38;&#38; y != null) {
+        // x and y are automatically cast to non-nullable after null check
+        println(x * y)
+    }
+    else {
+        println("'$arg1' or '$arg2' is not a number")
+    }    
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun printProduct(arg1: String, arg2: String) {
+    val x = parseInt(arg1)
+    val y = parseInt(arg2)
+&#8203;
+    // Using `x * y` yields error because they may hold nulls.
+    if (x != null &#38;&#38; y != null) {
+        // x and y are automatically cast to non-nullable after null check
+        println(x * y)
+    }
+    else {
+        println("'$arg1' or '$arg2' is not a number")
+    }    
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">// ...
+if (x == null) {
+    println("Wrong number format in arg1: '$arg1'")
+    return
+}
+if (y == null) {
+    println("Wrong number format in arg2: '$arg2'")
+    return
+}
+&#8203;
+// x and y are automatically cast to non-nullable after null check
+println(x * y)</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">// ...
+if (x == null) {
+    println("Wrong number format in arg1: '$arg1'")
+    return
+}
+if (y == null) {
+    println("Wrong number format in arg2: '$arg2'")
+    return
+}
+&#8203;
+// x and y are automatically cast to non-nullable after null check
+println(x * y)</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Type checks and automatic casts<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-type-checks-and-automatic-casts" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length
+    }
+&#8203;
+    // `obj` is still of type `Any` outside of the type-checked branch
+    return null
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun getStringLength(obj: Any): Int? {
+    if (obj is String) {
+        // `obj` is automatically cast to `String` in this branch
+        return obj.length
+    }
+&#8203;
+    // `obj` is still of type `Any` outside of the type-checked branch
+    return null
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun getStringLength(obj: Any): Int? {
+    if (obj !is String) return null
+&#8203;
+    // `obj` is automatically cast to `String` in this branch
+    return obj.length
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun getStringLength(obj: Any): Int? {
+    if (obj !is String) return null
+&#8203;
+    // `obj` is automatically cast to `String` in this branch
+    return obj.length
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun getStringLength(obj: Any): Int? {
+    // `obj` is automatically cast to `String` on the right-hand side of `&#38;&#38;`
+    if (obj is String &#38;&#38; obj.length &#62; 0) {
+        return obj.length
+    }
+&#8203;
+    return null
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun getStringLength(obj: Any): Int? {
+    // `obj` is automatically cast to `String` on the right-hand side of `&#38;&#38;`
+    if (obj is String &#38;&#38; obj.length &#62; 0) {
+        return obj.length
+    }
+&#8203;
+    return null
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>for loop<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-a-for-loop" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val items = listOf("apple", "banana", "kiwifruit")
+for (item in items) {
+    println(item)
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val items = listOf("apple", "banana", "kiwifruit")
+for (item in items) {
+    println(item)
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val items = listOf("apple", "banana", "kiwifruit")
+for (index in items.indices) {
+    println("item at $index is ${items[index]}")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val items = listOf("apple", "banana", "kiwifruit")
+for (index in items.indices) {
+    println("item at $index is ${items[index]}")
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>while loop<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-a-while-loop" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val items = listOf("apple", "banana", "kiwifruit")
+var index = 0
+while (index &#60; items.size) {
+    println("item at $index is ${items[index]}")
+    index++
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val items = listOf("apple", "banana", "kiwifruit")
+var index = 0
+while (index &#60; items.size) {
+    println("item at $index is ${items[index]}")
+    index++
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>when expression<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-when-expression" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun describe(obj: Any): String =
+    when (obj) {
+        1          -&#62; "One"
+        "Hello"    -&#62; "Greeting"
+        is Long    -&#62; "Long"
+        !is String -&#62; "Not a string"
+        else       -&#62; "Unknown"
+    }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">fun describe(obj: Any): String =
+    when (obj) {
+        1          -&#62; "One"
+        "Hello"    -&#62; "Greeting"
+        is Long    -&#62; "Long"
+        !is String -&#62; "Not a string"
+        else       -&#62; "Unknown"
+    }</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Ranges<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-ranges" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val x = 10
+val y = 9
+if (x in 1..y+1) {
+    println("fits in range")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val x = 10
+val y = 9
+if (x in 1..y+1) {
+    println("fits in range")
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val list = listOf("a", "b", "c")
+&#8203;
+if (-1 !in 0..list.lastIndex) {
+    println("-1 is out of range")
+}
+if (list.size !in list.indices) {
+    println("list size is out of valid list indices range, too")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val list = listOf("a", "b", "c")
+&#8203;
+if (-1 !in 0..list.lastIndex) {
+    println("-1 is out of range")
+}
+if (list.size !in list.indices) {
+    println("list size is out of valid list indices range, too")
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">for (x in 1..5) {
+    print(x)
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for (x in 1..5) {
+    print(x)
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">for (x in 1..10 step 2) {
+    print(x)
+}
+println()
+for (x in 9 downTo 0 step 3) {
+    print(x)
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for (x in 1..10 step 2) {
+    print(x)
+}
+println()
+for (x in 9 downTo 0 step 3) {
+    print(x)
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Collections<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#using-collections" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">for (item in items) {
+    println(item)
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">for (item in items) {
+    println(item)
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">when {
+    "orange" in items -&#62; println("juicy")
+    "apple" in items -&#62; println("apple is fine too")
+}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">when {
+    "orange" in items -&#62; println("juicy")
+    "apple" in items -&#62; println("apple is fine too")
+}</code></pre></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val fruits = listOf("banana", "avocado", "apple", "kiwifruit")
+fruits
+  .filter { it.startsWith("a") }
+  .sortedBy { it }
+  .map { it.toUpperCase() }
+  .forEach { println(it) }</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val fruits = listOf("banana", "avocado", "apple", "kiwifruit")
+fruits
+  .filter { it.startsWith("a") }
+  .sortedBy { it }
+  .map { it.toUpperCase() }
+  .forEach { println(it) }</code></pre></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center;"><h3>Creating basic classes and their instances<a class="anchor" href="https://kotlinlang.org/docs/reference/basic-syntax.html#creating-basic-classes-and-their-instances" target="_blank"></a></h3></td>
+            </tr>
+            <tr>
+              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val rectangle = Rectangle(5.0, 2.0)
+val triangle = Triangle(3.0, 4.0, 5.0)</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val rectangle = Rectangle(5.0, 2.0)
+val triangle = Triangle(3.0, 4.0, 5.0)</code></pre></td>
+            </tr></table></div>
+    </div>
+  </body>
+</html>

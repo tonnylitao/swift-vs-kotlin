@@ -1,0 +1,1 @@
+fun apiCall(): String = MyJavaApi.getProperty("name")
