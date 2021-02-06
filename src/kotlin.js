@@ -7,10 +7,10 @@ const makeDir = require("make-dir");
 const kotlinUrl = "https://kotlinlang.org/docs/reference";
 const bookName = "kotlin";
 
-// const json = require("../language-code/kotlin.json");
+const json = require("../language-code/kotlin.json");
 
-// writeToHtml(json);
-// return;
+writeToHtml(json);
+return;
 
 //const kotlinViewSwiftCode = require("./kotlin-view-swift-code.json");
 
@@ -39,8 +39,8 @@ const targetMenus = [
   );
 
   //load kotlin code from url
-  const resultPromise = [menus[0]].map(async ({ menu, chapters }) => {
-    const titleUrlDomsPromise = [chapters[0]].map(async ({ title, url }) => {
+  const resultPromise = menus.map(async ({ menu, chapters }) => {
+    const titleUrlDomsPromise = chapters.map(async ({ title, url }) => {
       const doms = await loadCapter(browser, url);
 
       console.log(url, doms.length);
@@ -389,7 +389,7 @@ function writeToHtml(result) {
                   "utf8"
                 );
 
-                isSwiftCode = !swiftCode.includes("❌");
+                isSwiftCode = !swiftCode.startsWith("❌");
                 if (isSwiftCode) {
                   swiftEscaped = swiftCode.replace(
                     /[\u00A0-\u9999<>\&]/g,
