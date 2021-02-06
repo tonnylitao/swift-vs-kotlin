@@ -1873,18 +1873,20 @@ val a = """if(a &#62; 1) {
 val threeBillion = 3000000000 // Long
 val oneLong = 1L // Long
 val oneByte: Byte = 1</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val one = 1 // Int
-val threeBillion = 3000000000 // Long
-val oneLong = 1L // Long
-val oneByte: Byte = 1</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let one = 1 // Int
+//&#10060;
+let oneDouble = 1.0 // Double
+let oneByte: Byte = 1
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val pi = 3.14 // Double
 val e = 2.7182818284 // Double
 val eFloat = 2.7182818284f // Float, actual value is 2.7182817</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val pi = 3.14 // Double
-val e = 2.7182818284 // Double
-val eFloat = 2.7182818284f // Float, actual value is 2.7182817</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let pi = 3.14 // Double
+let e = 2.7182818284 // Double
+let eFloat: Float = 2.7182818284 // Float, actual value is 2.71828175
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">fun main() {
@@ -1970,16 +1972,17 @@ println(boxedA == anotherBoxedA) // Prints 'true'</code></pre></td>
 val a: Int? = 1 // A boxed Int (java.lang.Integer)
 val b: Long? = a // implicit conversion yields a boxed Long (java.lang.Long)
 print(b == a) // Surprise! This prints "false" as Long's equals() checks whether the other is Long as well</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">// Hypothetical code, does not actually compile:
-val a: Int? = 1 // A boxed Int (java.lang.Integer)
-val b: Long? = a // implicit conversion yields a boxed Long (java.lang.Long)
-print(b == a) // Surprise! This prints "false" as Long's equals() checks whether the other is Long as well</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let a: Int? = 1 // Optional
+let b: Double? = Double(a!)
+print(b == a) //Compiler Error: Binary operator '==' cannot be applied to operands of type 'Double?' and 'Int?'
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val b: Byte = 1 // OK, literals are checked statically
 val i: Int = b // ERROR</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val b: Byte = 1 // OK, literals are checked statically
-val i: Int = b // ERROR</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">let b: Byte = 1 // OK, literals are checked statically
+let i: Int = b // ERROR
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val i: Int = b.toInt() // OK: explicitly widened
