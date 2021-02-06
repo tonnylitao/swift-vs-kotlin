@@ -4273,9 +4273,17 @@ val demo = Outer().Inner().foo() // == 1</code></pre></td>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">enum class Direction {
     NORTH, SOUTH, WEST, EAST
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum class Direction {
-    NORTH, SOUTH, WEST, EAST
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum Direction {
+    case north
+    case south
+    case west
+    case east
+}
+ 
+enum Direction {
+    case north, south, west, east
+}
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h3>Initialization<a class="anchor" href="https://kotlinlang.org/docs/reference/enum-classes.html#initialization" target="_blank"></a></h3></td>
@@ -4286,11 +4294,21 @@ val demo = Outer().Inner().foo() // == 1</code></pre></td>
         GREEN(0x00FF00),
         BLUE(0x0000FF)
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum class Color(val rgb: Int) {
-        RED(0xFF0000),
-        GREEN(0x00FF00),
-        BLUE(0x0000FF)
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum Color : Int {
+    case red = 0xFF0000
+    case gree = 0x00FF00
+    case blue = 0x0000FF
+}
+ 
+enum Color : String {
+    case red = "0xFF0000"
+    case gree = "0x00FF00"
+    case blue = "0x0000FF"
+}
+ 
+val color = Color.red
+val rgb = color.rawValue
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h3>Anonymous Classes<a class="anchor" href="https://kotlinlang.org/docs/reference/enum-classes.html#anonymous-classes" target="_blank"></a></h3></td>
@@ -4307,17 +4325,21 @@ val demo = Outer().Inner().foo() // == 1</code></pre></td>
 &#8203;
     abstract fun signal(): ProtocolState
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum class ProtocolState {
-    WAITING {
-        override fun signal() = TALKING
-    },
-&#8203;
-    TALKING {
-        override fun signal() = WAITING
-    };
-&#8203;
-    abstract fun signal(): ProtocolState
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum ProtocolState {
+    case waiting, talking
+    
+    func signal() -&#62; ProtocolState {
+        switch self {
+        case .waiting:
+            return .talking
+        case .talking:
+            return .waiting
+        }
+    }
+}
+ 
+let state = ProtocolState.waiting.signal()
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h3>Implementing Interfaces in Enum Classes<a class="anchor" href="https://kotlinlang.org/docs/reference/enum-classes.html#implementing-interfaces-in-enum-classes" target="_blank"></a></h3></td>
@@ -4333,16 +4355,26 @@ val demo = Outer().Inner().foo() // == 1</code></pre></td>
 &#8203;
     override fun applyAsInt(t: Int, u: Int) = apply(t, u)
 }</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum class IntArithmetics : BinaryOperator&#60;Int&#62;, IntBinaryOperator {
-    PLUS {
-        override fun apply(t: Int, u: Int): Int = t + u
-    },
-    TIMES {
-        override fun apply(t: Int, u: Int): Int = t * u
-    };
-&#8203;
-    override fun applyAsInt(t: Int, u: Int) = apply(t, u)
-}</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">protocol IntBinaryOperator {
+    func apply(_ t: Int, _ u: Int) -&#62; Int
+}
+ 
+enum IntArithmetics: IntBinaryOperator {
+    case plus, times
+ 
+    func apply(_ t: Int, _ u: Int) -&#62; Int {
+        switch self {
+        case .plus:
+            return t + u
+        case .times:
+            return t * u
+        }
+    }
+}
+ 
+IntArithmetics.plus.apply(13, 31)
+IntArithmetics.times.apply(13, 31)
+</code></pre></td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;"><h3>Working with Enum Constants<a class="anchor" href="https://kotlinlang.org/docs/reference/enum-classes.html#working-with-enum-constants" target="_blank"></a></h3></td>
@@ -4350,8 +4382,15 @@ val demo = Outer().Inner().foo() // == 1</code></pre></td>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">EnumClass.valueOf(value: String): EnumClass
 EnumClass.values(): Array&#60;EnumClass&#62;</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">EnumClass.valueOf(value: String): EnumClass
-EnumClass.values(): Array&#60;EnumClass&#62;</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum Direction : String, CaseIterable {
+  case north, south, west, east
+}
+ 
+Direction(rawValue: "north") //Direction.north
+Direction.allCases
+ 
+Direction.north.rawValue
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">enum class RGB { RED, GREEN, BLUE }
@@ -4361,19 +4400,14 @@ inline fun &#60;reified T : Enum&#60;T&#62;&#62; printAllValues() {
 }
 &#8203;
 printAllValues&#60;RGB&#62;() // prints RED, GREEN, BLUE</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">enum class RGB { RED, GREEN, BLUE }
-&#8203;
-inline fun &#60;reified T : Enum&#60;T&#62;&#62; printAllValues() {
-    print(enumValues&#60;T&#62;().joinToString { it.name })
-}
-&#8203;
-printAllValues&#60;RGB&#62;() // prints RED, GREEN, BLUE</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">
+</code></pre></td>
             </tr>
             <tr>
               <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">val name: String
 val ordinal: Int</code></pre></td>
-              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">val name: String
-val ordinal: Int</code></pre></td>
+              <td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">
+</code></pre></td>
             </tr>
             
             

@@ -389,14 +389,14 @@ function writeToHtml(result) {
                   "utf8"
                 );
 
-                isSwiftCode = !swiftCode.startsWith("❌");
+                isSwiftCode = !swiftCode.startsWith("❌") && swiftCode != "";
                 if (isSwiftCode) {
                   swiftEscaped = swiftCode.replace(
                     /[\u00A0-\u9999<>\&]/g,
                     (i) => "&#" + i.charCodeAt(0) + ";"
                   );
                 } else {
-                  swiftEscaped = swiftCode;
+                  swiftEscaped = swiftCode || "❌";
                 }
               } catch (e) {
                 swiftEscaped = "❌";
