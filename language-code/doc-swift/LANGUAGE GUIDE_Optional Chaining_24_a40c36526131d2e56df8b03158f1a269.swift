@@ -1,0 +1,1 @@
+john.residence?[0] = Room(name: "Bathroom")

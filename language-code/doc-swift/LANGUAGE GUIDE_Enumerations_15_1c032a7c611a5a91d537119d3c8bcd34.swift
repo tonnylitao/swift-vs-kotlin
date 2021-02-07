@@ -1,0 +1,1 @@
+var productBarcode = Barcode.upc(8, 85909, 51226, 3)

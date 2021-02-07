@@ -1,0 +1,1 @@
+productBarcode = .qrCode("ABCDEFGHIJKLMNOP")

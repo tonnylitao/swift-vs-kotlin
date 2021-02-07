@@ -1,0 +1,1 @@
+var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]

@@ -1,0 +1,1 @@
+protocol ComparableContainer: Container where Item: Comparable { }

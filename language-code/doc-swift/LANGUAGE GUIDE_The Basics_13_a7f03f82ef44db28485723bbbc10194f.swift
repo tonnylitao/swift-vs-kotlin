@@ -1,0 +1,3 @@
+print(friendlyWelcome)
+
+// Prints "Bonjour!"

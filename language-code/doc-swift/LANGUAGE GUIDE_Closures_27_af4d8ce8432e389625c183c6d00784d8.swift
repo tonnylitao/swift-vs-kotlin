@@ -1,0 +1,1 @@
+let incrementByTen = makeIncrementer(forIncrement: 10)

@@ -1,0 +1,1 @@
+private var privateInstance = SomePrivateClass()

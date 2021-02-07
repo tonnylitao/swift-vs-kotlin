@@ -1,0 +1,1 @@
+let exclamationMark: Character = "!"

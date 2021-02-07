@@ -1,0 +1,5 @@
+protocol SomeProtocol {
+
+    func doSomething()
+
+}
