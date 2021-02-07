@@ -94,13 +94,13 @@ const targetMenus = ["WELCOME TO SWIFT", "LANGUAGE GUIDE"];
 
           const swiftFilename = `${docSwiftFolder}/${menuChapter}_${index}_${md5(
             content
-          )}.kt`;
+          )}.swift`;
           item.filename =
             "." + swiftFilename.replace(__dirname.replace("/src", ""), "");
 
           fs.writeFileSync(swiftFilename, content);
           try {
-            fs.writeFileSync(swiftFilename.replace(".kt", ".swift"), content, {
+            fs.writeFileSync(swiftFilename.replace(".swift", ".kt"), content, {
               flag: "wx",
             });
           } catch (e) {}
