@@ -102,7 +102,7 @@
 
     .chapter-1 {
       padding: 0;
-      margin-bottom: 15px;
+      margin-top: 15px;
     }
 
     .chapter-2 {
@@ -147,6 +147,10 @@
     pre {
       margin: 0;
     }
+
+    .from-aspect a {
+      display: block;
+    }
   </style>
 </head>
 
@@ -155,8 +159,8 @@
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
     <div class="from-aspect">
-      <a href="#kotlin">From Kotlin View</a><br />
-      <a href="#swift">From Swift View</a>
+      <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
     </div>
     <div class="capters">
       <ul>
@@ -165,7 +169,7 @@
           <ul>
             <% item.chapters.forEach((chap, chapterIndex) => { %>
               <ol class="chapter-2">-&nbsp
-                <a href="/doc/<%= chap.menuChapter %>.html">
+                <a href="/from<%= language %>/<%= chap.menuChapter %>.html">
                   <%= chap.title %>
                 </a>
               </ol>
@@ -182,18 +186,18 @@
 
         <% doms.forEach(item => { %>
           <% const tag = item.tag; const content = item.content; const anchor = item.anchor; %>
-          <% const kotlinEscaped = item.kotlinEscaped; const swiftEscaped = item.swiftEscaped; const isSwiftCode = item.isSwiftCode; %>
+          <% const selfEscaped = item.selfEscaped; const otherEscaped = item.otherEscaped; const isSimilar = item.isSimilar; %>
 
           <% if (tag === 'h2') { %>
             <tr>
               <td class="sticky-row" colspan="2">
                 <div>
-                  <div>Kotlin</div>
+                  <div><%= language === 'kotlin' ? 'Kotlin' : 'Swift' %></div>
                   <<%= tag %> style="text-align:center;">
                     <%= content %>
                     <a class="anchor" target="_blank"></a>
                   </<%= tag %>>
-                  <div>Swift</div>
+                  <div><%= language === 'kotlin' ? 'Swift' : 'Kotlin' %></div>
                 </div>
               </td>
             </tr>
@@ -210,17 +214,17 @@
             <tr>
               <td style="padding-right:10px;padding-bottom:10px">
                 <pre>
-                  <code class="kotlin"><%- kotlinEscaped %></code>
+                  <code class="kotlin"><%- selfEscaped %></code>
                 </pre>
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
-              <% if (isSwiftCode) { %>
+              <% if (isSimilar) { %>
                   <pre>
-                    <code class="swift"><%- swiftEscaped %></code>
+                    <code class="swift"><%- otherEscaped %></code>
                   </pre>
               <% }else { %>
-                  <div><%- swiftEscaped %></div>
+                  <div><%- otherEscaped %></div>
               <% } %>
               </td>
             </tr>

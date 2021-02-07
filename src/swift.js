@@ -5,27 +5,20 @@ const md5 = require("md5");
 const makeDir = require("make-dir");
 const ejs = require("ejs");
 
-const documentUrl = "https://kotlinlang.org/docs/reference";
-const documentName = "kotlin";
+const documentUrl = "https://docs.swift.org/swift-book/";
+const documentUrl2 =
+  "https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html";
+
+const documentName = "swift";
 
 //
-writeToHtml(require("../language-code/kotlin.json"));
+writeToHtml(require("../language-code/swift.json"));
 return;
 //
 
-const docKotlinFolderPath = "language-code/doc-kotlin";
+const docSwiftFolderPath = "language-code/doc-swift";
 
-const targetMenus = [
-  "Getting Started",
-  "Basics",
-  "Classes and Objects",
-  "Functions and Lambdas",
-  "Collections",
-  "Coroutines",
-  "More Language Constructs",
-];
-
-const excludeChapters = ["Opt-in Requirements"];
+const targetMenus = ["WELCOME TO SWIFT", "LANGUAGE GUIDE"];
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -35,44 +28,48 @@ const excludeChapters = ["Opt-in Requirements"];
   });
 
   //load menus, chapters with url
-  const menus = (await loadMenus(browser)).filter(({ menu }) =>
-    targetMenus.includes(menu)
+  let menus = (await loadMenus(browser, documentUrl)).filter(({ menu }) =>
+    targetMenus.includes(menu.toUpperCase())
   );
 
-  //load kotlin code from url
+  const menus2 = (await loadMenus(browser, documentUrl2)).filter(({ menu }) =>
+    targetMenus.includes(menu.toUpperCase())
+  );
+
+  menus = [...menus, ...menus2];
+
+  //load swift code from url
   const resultPromise = menus.map(async ({ menu, chapters }) => {
-    const titleUrlDomsPromise = chapters
-      .filter((item) => !excludeChapters.includes(item.title))
-      .map(async ({ title, url }) => {
-        const doms = await loadCapter(browser, url);
+    const titleUrlDomsPromise = chapters.map(async ({ title, url }) => {
+      const doms = await loadCapter(browser, url);
 
-        console.log(url, doms.length);
+      console.log(url, doms.length);
 
-        let filted = [];
-        for (let i = doms.length - 1; i >= 0; i--) {
-          const dom = doms[i];
-          const { tag, content } = dom;
+      let filted = [];
+      for (let i = doms.length - 1; i >= 0; i--) {
+        const dom = doms[i];
+        const { tag, content } = dom;
 
-          if (tag === "pre") {
-            filted.push(dom);
+        if (tag === "pre") {
+          filted.push(dom);
 
-            const nextDom = doms[i - 1];
-            const { tag, content } = nextDom || {};
-            if (tag !== "pre") {
-              filted.push(nextDom);
-              i--;
-            }
-          } else if (tag === "h1") {
-            filted.push(dom);
+          const nextDom = doms[i - 1];
+          const { tag, content } = nextDom || {};
+          if (tag !== "pre") {
+            filted.push(nextDom);
+            i--;
           }
+        } else if (tag === "h1") {
+          filted.push(dom);
         }
+      }
 
-        return Promise.resolve({
-          title,
-          url,
-          doms: filted.reverse(),
-        });
+      return Promise.resolve({
+        title,
+        url,
+        doms: filted.reverse(),
       });
+    });
 
     const titleUrlDoms = await Promise.all(titleUrlDomsPromise);
 
@@ -84,7 +81,7 @@ const excludeChapters = ["Opt-in Requirements"];
 
   const result = await Promise.all(resultPromise);
 
-  const docKotlinFolder = await makeDir(docKotlinFolderPath);
+  const docSwiftFolder = await makeDir(docSwiftFolderPath);
 
   result.forEach(({ menu, chapters }) => {
     chapters.forEach(({ title, url, doms }) => {
@@ -95,15 +92,15 @@ const excludeChapters = ["Opt-in Requirements"];
         if (tag === "pre") {
           delete item.content;
 
-          const kotlinFilename = `${docKotlinFolder}/${menuChapter}_${index}_${md5(
+          const swiftFilename = `${docSwiftFolder}/${menuChapter}_${index}_${md5(
             content
           )}.kt`;
           item.filename =
-            "." + kotlinFilename.replace(__dirname.replace("/src", ""), "");
+            "." + swiftFilename.replace(__dirname.replace("/src", ""), "");
 
-          fs.writeFileSync(kotlinFilename, content);
+          fs.writeFileSync(swiftFilename, content);
           try {
-            fs.writeFileSync(kotlinFilename.replace(".kt", ".swift"), content, {
+            fs.writeFileSync(swiftFilename.replace(".kt", ".swift"), content, {
               flag: "wx",
             });
           } catch (e) {}
@@ -120,25 +117,24 @@ const excludeChapters = ["Opt-in Requirements"];
   writeToHtml(result);
 })();
 
-async function loadMenus(browser) {
+async function loadMenus(browser, url) {
   const page = await browser.newPage();
   await page.setDefaultNavigationTimeout(0);
 
-  await page.goto(documentUrl);
+  await page.goto(url);
 
-  const branches = await page.$$(".tree-branch");
+  const branches = await page.$$(".toctree-l1.current");
 
   const findMenus = branches.map(async (branch) => {
-    const menu = await page.evaluate(
-      (el) => el.getAttribute("data-id"),
-      branch
-    );
+    const menu = await branch.$eval("a", (a) => a.innerText.trim());
 
-    const chapters = await branch.$$eval("a.tree-leaf-title", (list) =>
-      list.map((el) => ({
-        title: el.innerText.trim(),
-        url: el.href,
-      }))
+    const chapters = await branch.$$eval(".toctree-l2>a", (list) =>
+      list.map((el) => {
+        return {
+          title: el.innerText.trim(),
+          url: el.href,
+        };
+      })
     );
 
     return Promise.resolve({
@@ -157,18 +153,18 @@ async function loadCapter(browser, url) {
   await page.goto(url);
 
   try {
-    await page.waitForSelector(".CodeMirror-line", {
+    await page.waitForSelector(".code-lines", {
       timeout: 3000,
     });
   } catch (e) {
     return Promise.resolve([]);
   }
 
-  const doms = await page.$$(".CodeMirror-code,h1,h2,h3,h4");
+  const doms = await page.$$('.Swift.highlight,h1:not([id="logo"]),h2,h3,h4');
   const findChapters = doms.map((dom) =>
     page.evaluate((el) => {
       const outerHTML = el.outerHTML.trim();
-      const tag = outerHTML.slice(1, outerHTML.search(/\s/));
+      const tag = el.tagName.toLowerCase();
 
       let anchor;
       if (tag !== "div") {
@@ -214,9 +210,9 @@ function writeToHtml(result) {
               if (tag === "pre") {
                 let selfEscaped = "";
                 try {
-                  const kotlinCode = fs.readFileSync(filename, "utf8");
+                  const swiftCode = fs.readFileSync(filename, "utf8");
 
-                  selfEscaped = kotlinCode.replace(
+                  selfEscaped = swiftCode.replace(
                     /[\u00A0-\u9999<>\&]/g,
                     (i) => "&#" + i.charCodeAt(0) + ";"
                   );
@@ -229,7 +225,7 @@ function writeToHtml(result) {
                 let isSimilar = false;
                 try {
                   const swiftCode = fs.readFileSync(
-                    filename.replace(".kt", ".swift"),
+                    filename.replace(".swift", ".kt"),
                     "utf8"
                   );
 
@@ -281,11 +277,11 @@ function writeToHtml(result) {
     chapters.forEach(({ menuChapter, url, doms }, chapterIndex) => {
       ejs.renderFile(
         `${__dirname}/template/index.ejs`,
-        { language: "kotlin", data, doms, url },
+        { language: "swift", data, doms, url },
         (err, str) => {
           console.log(err);
 
-          const fileName = `${__dirname}/../public/fromkotlin/${menuChapter}.html`;
+          const fileName = `${__dirname}/../public/fromswift/${menuChapter}.html`;
           fs.writeFileSync(fileName, str);
         }
       );
