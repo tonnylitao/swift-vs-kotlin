@@ -3,10 +3,10 @@ const fs = require("fs");
 const sanitize = require("sanitize-filename");
 const md5 = require("md5");
 const makeDir = require("make-dir");
+const ejs = require("ejs");
 
 const kotlinUrl = "https://kotlinlang.org/docs/reference";
 const bookName = "kotlin";
-
 const json = require("../language-code/kotlin.json");
 
 writeToHtml(json);
@@ -68,7 +68,11 @@ const excludeChapters = ["Opt-in Requirements"];
           }
         }
 
-        return Promise.resolve({ title, url, doms: filted.reverse() });
+        return Promise.resolve({
+          title,
+          url,
+          doms: filted.reverse(),
+        });
       });
 
     const titleUrlDoms = await Promise.all(titleUrlDomsPromise);
@@ -85,7 +89,7 @@ const excludeChapters = ["Opt-in Requirements"];
 
   result.forEach(({ menu, chapters }) => {
     chapters.forEach(({ title, url, doms }) => {
-      const menuChapter = sanitize(menu + title);
+      const menuChapter = sanitize(menu + "_" + title);
 
       doms.forEach((item, index) => {
         const { tag, content } = item;
@@ -138,7 +142,10 @@ async function loadMenus(browser) {
       }))
     );
 
-    return Promise.resolve({ menu, chapters });
+    return Promise.resolve({
+      menu,
+      chapters,
+    });
   });
 
   return Promise.all(findMenus);
@@ -173,288 +180,116 @@ async function loadCapter(browser, url) {
       }
 
       const content = el.innerText.trim();
-      return { tag: tag === "div" ? "pre" : tag, content, anchor };
+      return {
+        tag: tag === "div" ? "pre" : tag,
+        content,
+        anchor,
+      };
     }, dom)
   );
 
   return Promise.all(findChapters);
 }
 
-function htmlTemplete(menu, content) {
-  return `<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Kotlin</title>
-
-    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
-
-    <script src="https://highlightjs.org/static/highlight.site.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    <style>
-    .container {
-      display: flex;
-    }
-
-    nav {
-      position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-      z-index: 1; /* Stay on top */
-      top: 0; /* Stay at the top */
-      left: 0;
-      bottom: 0;
-      background: white;
-      overflow-y: scroll;
-      width: 300px;
-      padding-left: 10px;
-    }
-    .right-cnt {
-      margin-left: 300px;
-      margin-top: 100px;
-    }
-
-    nav ul {
-      padding: 0;
-      margin: 0;
-    }
-
-    .content {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-
-    .hljs {
-      border-radius: 5px;
-      padding: 1em;
-    }
-
-    .anchor {
-      position: absolute;
-    }
-
-    .anchor:after {
-      position: absolute;
-      display: none;
-      opacity: .5;
-      margin-top: 2px;
-      margin-left: 5px;
-      width: 16px;
-      height: 16px;
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAACxQAAAsUBidZ/7wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEqSURBVDiNjdM9S1xRFIXhB8QoihZ+DRoJjlPYWAy2qQSbBFv/gOlT2CuKf0BSphe0EAVBBAvRJlYxghrRQqNgFXEQK5tr4Wa4XO44t9jNXme9h732OZIk0azQigVc4wFr+JQkiSLmduwiyVQNlSKA72G4xzTK2IneZhHAGH6ikupVAvC/KaAB9HMAbhodmMUv3GEdgymtB8cB+JE1dmAjJ7Ct0HtT5nN0pc2d2K/PxgxGsIxJ9OEk9DOU6msM80GItxFSFd9ijV9xEfopBlIX+4DDEP9hNITt6D2nRvmN/szYFuuJUk4J4/gT2hNW0JYTuMs49KXBRkpoeWelagEYypjmMVzgTdgLwCo+Ygp/ozdXBDCBl5zdH6G7KSAoVW8/7hFXWMoLLK9eAaRNvta9bjm9AAAAAElFTkSuQmCC937405abf7d2fa1cd5d9079c2e5160ac);
-      background-repeat: no-repeat;
-      content: '';
-    }
-
-    h1:hover .anchor:after,
-    h2:hover .anchor:after,
-    h3:hover .anchor:after,
-    h4:hover .anchor:after,
-    h5:hover .anchor:after {
-      display: block;
-    }
-
-    h2 {
-      margin: 10px 0;
-    }
-
-    h3, h4, h5 {
-      margin: 5px 0 0;
-      color: #555;
-      font-weight: 400;
-    }
-
-    .sticky-row {
-      position: sticky;
-      position: -webkit-sticky;
-      left: 0;
-      top: 0;
-      z-index: 3;
-      background: white;
-      text-align: center;
-    }
-    ul {
-      list-style-type: none;
-    }
-
-    .chapter-1 {
-      padding: 0;
-      margin-bottom: 15px;
-    }
-
-    .chapter-2 {
-      padding-left: 15px;
-      margin: 5px 0;
-    }
-
-    ul a {
-      text-decoration: none;
-    }
-
-
-    .sticky-row>div {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-
-    table {
-        table-layout:fixed;
-        width:100%;
-    }
-
-    img {
-      width: 30px;
-      display: none;
-    }
-
-    .from-aspect {
-      margin-bottom: 20px;
-    }
-
-    nav ol a, nav ol a:visited {
-      color: #333;
-    }
-
-    td {
-      vertical-align: top;
-    }
-
-    pre {
-      margin: 0;
-    }
-    </style>
-  </head>
-  <body>
-  <nav>
-  <h1><img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin vs <img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift"/>Swift</h1>
-    <div class="from-aspect">
-      <a href="#kotlin">From Kotlin View</a><br/>
-      <a href="#kotlin">From Swift View</a>
-    </div>
-    <div class="capters">${menu}</div>
-  </nav>
-
-    <div class="container">
-      <div class="right-cnt">${content}</div>
-    </div>
-  </body>
-</html>`;
-}
-
 function writeToHtml(result) {
-  let content = "";
+  const data = result.map(({ menu, chapters }, menuIndex) => {
+    return {
+      menu,
+      chapters: chapters
+        .filter((item) => item.doms.length > 0)
+        .map(({ title, url, doms: originDoms }, chapterIndex) => {
+          const menuChapter = sanitize(menu + "_" + title);
 
-  result.forEach(({ menu, chapters }, menuIndex) => {
-    chapters
-      .filter((item) => item.doms.length > 0)
-      .forEach(({ title, url, doms }, chapterIndex) => {
-        const menuChapter = sanitize(menu + title);
+          const doms = originDoms.map(
+            ({ tag: originTag, content, filename, anchor }) => {
+              //only one H1 for SEO
+              const tagMap = {
+                h1: "h2",
+                h2: "h3",
+                h3: "h4",
+                h4: "h4",
+              };
+              const tag = tagMap[originTag] || originTag;
 
-        let domIndex = -1;
-        content += doms.reduce(
-          (result, { tag: originTag, content, filename, anchor }) => {
-            domIndex += 1;
+              //
+              if (tag === "pre") {
+                let kotlinEscaped = "";
+                try {
+                  const kotlinCode = fs.readFileSync(filename, "utf8");
 
-            //only one H1 for SEO
-            const tagMap = {
-              h1: "h2",
-              h2: "h3",
-              h3: "h4",
-              h4: "h4",
-            };
-            const tag = tagMap[originTag] || originTag;
-
-            if (tag === "pre") {
-              let kotlinEscaped = "";
-              try {
-                const kotlinCode = fs.readFileSync(filename, "utf8");
-
-                kotlinEscaped = kotlinCode.replace(
-                  /[\u00A0-\u9999<>\&]/g,
-                  (i) => "&#" + i.charCodeAt(0) + ";"
-                );
-              } catch (e) {
-                console.log("Error:", e.stack);
-              }
-
-              console.log(menuIndex, chapterIndex);
-              // const swiftInfo = kotlinViewSwiftCode[menuIndex].chapters.filter(
-              //   (item) => item.doms.length > 0
-              // )[chapterIndex].doms[domIndex];
-
-              let swiftEscaped = "";
-              let isSwiftCode = false;
-              try {
-                const swiftCode = fs.readFileSync(
-                  filename.replace(".kt", ".swift"),
-                  "utf8"
-                );
-
-                isSwiftCode = !swiftCode.startsWith("❌") && swiftCode != "";
-                if (isSwiftCode) {
-                  swiftEscaped = swiftCode.replace(
+                  kotlinEscaped = kotlinCode.replace(
                     /[\u00A0-\u9999<>\&]/g,
                     (i) => "&#" + i.charCodeAt(0) + ";"
                   );
-                } else {
-                  swiftEscaped = swiftCode || "❌";
+                } catch (e) {
+                  console.log("Error:", e.stack);
                 }
-              } catch (e) {
-                swiftEscaped = "❌";
+
+                //
+                let swiftEscaped = "";
+                let isSwiftCode = false;
+                try {
+                  const swiftCode = fs.readFileSync(
+                    filename.replace(".kt", ".swift"),
+                    "utf8"
+                  );
+
+                  isSwiftCode = !swiftCode.startsWith("❌") && swiftCode != "";
+                  if (isSwiftCode) {
+                    swiftEscaped = swiftCode.replace(
+                      /[\u00A0-\u9999<>\&]/g,
+                      (i) => "&#" + i.charCodeAt(0) + ";"
+                    );
+                  } else {
+                    swiftEscaped = swiftCode || "❌";
+                  }
+                } catch (e) {
+                  swiftEscaped = "❌";
+                }
+
+                return {
+                  tag,
+                  content,
+                  anchor,
+
+                  kotlinEscaped,
+                  isSwiftCode,
+                  swiftEscaped,
+                };
               }
 
-              return `
-            ${result}
-            <tr>
-              <td style="padding-right:10px;padding-bottom:10px"><pre><code class="kotlin">${kotlinEscaped}</code></pre></td>
-              ${
-                isSwiftCode
-                  ? `<td style="padding-left:10px;padding-bottom:10px"><pre><code class="swift">${swiftEscaped}</code></pre></td>`
-                  : `<td style="padding-left:10px;padding-bottom:10px"><div>${swiftEscaped}</div></td>`
+              if (tag === "h2") {
+                return {
+                  tag,
+                  content,
+                  url,
+                  anchor,
+                  menuIndex,
+                  chapterIndex,
+                };
               }
-            </tr>`;
+
+              return { tag, content, url, anchor, menuIndex, chapterIndex };
             }
-            if (tag === "h2") {
-              return `
-            ${result}
-            <tr>
-              <td class="sticky-row" colspan="2">
-                <div>
-                  <div>Kotlin</div>
-                  <${tag} id="${menuIndex}_${chapterIndex}" style="text-align:center;">${content}<a class="anchor" href="${url}${anchor}" target="_blank"></a></${tag}>
-                  <div>Swift</div>
-                </div>
-              </td>
-            </tr>`;
-            } else {
-              return `
-            ${result}
-            <tr>
-              <td colspan="2" style="text-align: center;"><${tag}>${content}<a class="anchor" href="${url}${anchor}" target="_blank"></a></${tag}></td>
-            </tr>`;
-            }
-          },
-          ""
-        );
-      });
+          );
+
+          return { title, url, doms, menuChapter };
+        }),
+    };
   });
 
-  const menus = result.map(({ menu, chapters }, menuIndex) => {
-    return `<ol class="chapter-1">${menu}</ol><ul>${chapters
-      .filter((item) => item.doms.length > 0)
-      .map(
-        ({ title }, chapterIndex) =>
-          `<ol class="chapter-2">-&nbsp<a href="#${menuIndex}_${chapterIndex}">${title}</a></ol>`
-      )
-      .join("")}</ul></ol>`;
+  data.forEach(({ menu, chapters }, menuIndex) => {
+    chapters.forEach(({ menuChapter, url, doms }, chapterIndex) => {
+      ejs.renderFile(
+        `${__dirname}/template/index.ejs`,
+        { data, doms, url },
+        (err, str) => {
+          console.log(err);
+
+          const fileName = `${__dirname}/../public/doc/${menuChapter}.html`;
+          fs.writeFileSync(fileName, str);
+        }
+      );
+    });
   });
-
-  const menuDom = `<ul>${menus.join("")}</ul>`;
-
-  fs.writeFileSync(
-    `./${bookName}.html`,
-    htmlTemplete(menuDom, `<table>${content}</table>`)
-  );
 }
