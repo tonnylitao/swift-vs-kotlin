@@ -1,4 +1,4 @@
-func findIndex<T: Equatable>(of valueToFind: T, in array:[T]) -> Int? {
+func findIndex<T: Equatable>(of valueToFind: T, in array:[T]): Int? {
 
     for (index, value) in array.enumerated() {
 

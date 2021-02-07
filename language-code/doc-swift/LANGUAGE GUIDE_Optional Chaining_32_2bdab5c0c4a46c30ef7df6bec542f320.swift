@@ -1,4 +1,4 @@
-if let beginsWithThe =
+if val beginsWithThe =
 
     john.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
 

@@ -1,4 +1,4 @@
-let protocolValue: ExampleProtocol = a
+val protocolValue: ExampleProtocol = a
 
 print(protocolValue.simpleDescription)
 

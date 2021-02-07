@@ -8,7 +8,7 @@ struct IntStack {
 
     }
 
-    mutating func pop() -> Int {
+    mutating func pop(): Int {
 
         return items.removeLast()
 

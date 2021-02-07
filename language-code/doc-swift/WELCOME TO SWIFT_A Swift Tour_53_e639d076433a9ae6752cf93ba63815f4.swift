@@ -1,6 +1,6 @@
 do {
 
-    let printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
+    val printerResponse = try send(job: 1440, toPrinter: "Gutenberg")
 
     print(printerResponse)
 
@@ -8,7 +8,7 @@ do {
 
     print("I'll just put this over here, with the rest of the fire.")
 
-} catch let printerError as PrinterError {
+} catch val printerError as PrinterError {
 
     print("Printer error: \(printerError).")
 

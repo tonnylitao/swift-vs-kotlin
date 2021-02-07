@@ -10,7 +10,7 @@ var optionalName: String? = "John Appleseed"
 
 var greeting = "Hello!"
 
-if let name = optionalName {
+if val name = optionalName {
 
     greeting = "Hello, \(name)"
 

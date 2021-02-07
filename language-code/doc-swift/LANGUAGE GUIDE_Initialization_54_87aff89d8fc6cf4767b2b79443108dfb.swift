@@ -1,4 +1,4 @@
-let fahrenheitUnit = TemperatureUnit(symbol: "F")
+val fahrenheitUnit = TemperatureUnit(symbol: "F")
 
 if fahrenheitUnit != nil {
 
@@ -10,7 +10,7 @@ if fahrenheitUnit != nil {
 
 
 
-let unknownUnit = TemperatureUnit(symbol: "X")
+val unknownUnit = TemperatureUnit(symbol: "X")
 
 if unknownUnit == nil {
 

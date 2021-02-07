@@ -8,9 +8,9 @@ struct AlternativeRect {
 
         get {
 
-            let centerX = origin.x + (size.width / 2)
+            val centerX = origin.x + (size.width / 2)
 
-            let centerY = origin.y + (size.height / 2)
+            val centerY = origin.y + (size.height / 2)
 
             return Point(x: centerX, y: centerY)
 

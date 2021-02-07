@@ -1,16 +1,16 @@
-let yetAnotherPoint = (1, -1)
+val yetAnotherPoint = (1, -1)
 
 switch yetAnotherPoint {
 
-case let (x, y) where x == y:
+case val (x, y) where x == y:
 
     print("(\(x), \(y)) is on the line x == y")
 
-case let (x, y) where x == -y:
+case val (x, y) where x == -y:
 
     print("(\(x), \(y)) is on the line x == -y")
 
-case let (x, y):
+case val (x, y):
 
     print("(\(x), \(y)) is just some arbitrary point")
 

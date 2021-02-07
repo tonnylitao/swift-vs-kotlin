@@ -1,5 +1,5 @@
 class ThreeSource: NSObject, CounterDataSource {
 
-    let fixedIncrement = 3
+    val fixedIncrement = 3
 
 }

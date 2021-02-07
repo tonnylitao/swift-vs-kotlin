@@ -8,7 +8,7 @@ class Residence {
 
     }
 
-    subscript(i: Int) -> Room {
+    subscript(i: Int): Room {
 
         get {
 

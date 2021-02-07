@@ -1,4 +1,4 @@
-let romeoAndJuliet = [
+val romeoAndJuliet = [
 
     "Act 1 Scene 1: Verona, A public place",
 

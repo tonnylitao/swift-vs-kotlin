@@ -1,4 +1,4 @@
-let anonymousCreature = Animal(species: "")
+val anonymousCreature = Animal(species: "")
 
 // anonymousCreature is of type Animal?, not Animal
 

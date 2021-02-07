@@ -1,6 +1,6 @@
-let singleLineString = "These are the same."
+val singleLineString = "These are the same."
 
-let multilineString = """
+val multilineString = """
 
 These are the same.
 

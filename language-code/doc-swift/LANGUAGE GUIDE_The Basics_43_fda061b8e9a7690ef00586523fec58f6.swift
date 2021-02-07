@@ -1,4 +1,4 @@
-let i = 1
+val i = 1
 
 if i {
 

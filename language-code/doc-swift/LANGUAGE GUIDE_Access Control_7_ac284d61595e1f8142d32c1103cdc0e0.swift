@@ -1,4 +1,4 @@
-func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+func someFunction(): (SomeInternalClass, SomePrivateClass) {
 
     // function implementation goes here
 

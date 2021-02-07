@@ -1,4 +1,4 @@
-let languageName = "Swift"
+val languageName = "Swift"
 
 languageName = "Swift++"
 

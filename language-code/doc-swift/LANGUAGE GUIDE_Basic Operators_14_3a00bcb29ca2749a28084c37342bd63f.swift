@@ -1,3 +1,3 @@
-let minusSix = -6
+val minusSix = -6
 
-let alsoMinusSix = +minusSix  // alsoMinusSix equals -6
+val alsoMinusSix = +minusSix  // alsoMinusSix equals -6

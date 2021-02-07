@@ -1,4 +1,4 @@
-let johnsHouse = Residence()
+val johnsHouse = Residence()
 
 johnsHouse.rooms.append(Room(name: "Living Room"))
 
@@ -8,7 +8,7 @@ john.residence = johnsHouse
 
 
 
-if let firstRoomName = john.residence?[0].name {
+if val firstRoomName = john.residence?[0].name {
 
     print("The first room name is \(firstRoomName).")
 

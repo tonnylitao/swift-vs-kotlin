@@ -1,8 +1,8 @@
 struct TimesTable {
 
-    let multiplier: Int
+    val multiplier: Int
 
-    subscript(index: Int) -> Int {
+    subscript(index: Int): Int {
 
         return multiplier * index
 
@@ -10,7 +10,7 @@ struct TimesTable {
 
 }
 
-let threeTimesTable = TimesTable(multiplier: 3)
+val threeTimesTable = TimesTable(multiplier: 3)
 
 print("six times three is \(threeTimesTable[6])")
 

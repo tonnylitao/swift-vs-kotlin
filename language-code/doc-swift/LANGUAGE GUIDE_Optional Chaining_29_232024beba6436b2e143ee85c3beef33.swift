@@ -1,4 +1,4 @@
-let johnsAddress = Address()
+val johnsAddress = Address()
 
 johnsAddress.buildingName = "The Larches"
 
@@ -8,7 +8,7 @@ john.residence?.address = johnsAddress
 
 
 
-if let johnsStreet = john.residence?.address?.street {
+if val johnsStreet = john.residence?.address?.street {
 
     print("John's street name is \(johnsStreet).")
 

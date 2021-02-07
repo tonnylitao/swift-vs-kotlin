@@ -1,4 +1,4 @@
-func oneMore(than number: Int) -> Int {
+func oneMore(than number: Int): Int {
 
     return number + 1
 

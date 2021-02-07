@@ -8,7 +8,7 @@ struct Stack<Element> {
 
     }
 
-    mutating func pop() -> Element {
+    mutating func pop(): Element {
 
         return items.removeLast()
 

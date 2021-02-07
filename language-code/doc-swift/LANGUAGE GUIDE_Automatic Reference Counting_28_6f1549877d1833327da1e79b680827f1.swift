@@ -1,6 +1,6 @@
 class Country {
 
-    let name: String
+    val name: String
 
     var capitalCity: City!
 
@@ -18,9 +18,9 @@ class Country {
 
 class City {
 
-    let name: String
+    val name: String
 
-    unowned let country: Country
+    unowned val country: Country
 
     init(name: String, country: Country) {
 

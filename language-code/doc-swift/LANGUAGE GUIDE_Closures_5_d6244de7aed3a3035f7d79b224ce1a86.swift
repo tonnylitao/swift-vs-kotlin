@@ -1,4 +1,4 @@
-{ (parameters) -> return type in
+{ (parameters): return type in
 
     statements
 

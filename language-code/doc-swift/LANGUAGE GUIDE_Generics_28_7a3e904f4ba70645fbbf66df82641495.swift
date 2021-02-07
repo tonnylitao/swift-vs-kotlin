@@ -10,7 +10,7 @@ struct Stack<Element>: Container {
 
     }
 
-    mutating func pop() -> Element {
+    mutating func pop(): Element {
 
         return items.removeLast()
 
@@ -30,7 +30,7 @@ struct Stack<Element>: Container {
 
     }
 
-    subscript(i: Int) -> Element {
+    subscript(i: Int): Element {
 
         return items[i]
 

@@ -1,10 +1,10 @@
-let someCreature = Animal(species: "Giraffe")
+val someCreature = Animal(species: "Giraffe")
 
 // someCreature is of type Animal?, not Animal
 
 
 
-if let giraffe = someCreature {
+if val giraffe = someCreature {
 
     print("An animal was initialized with a species of \(giraffe.species)")
 

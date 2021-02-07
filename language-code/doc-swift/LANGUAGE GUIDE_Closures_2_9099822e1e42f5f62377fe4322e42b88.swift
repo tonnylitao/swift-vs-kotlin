@@ -1,1 +1,1 @@
-let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+val names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]

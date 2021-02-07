@@ -1,4 +1,4 @@
-let quotation = """
+val quotation = """
 
 I said "I have \(apples) apples."
 

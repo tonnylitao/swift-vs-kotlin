@@ -1,4 +1,4 @@
-let interestingNumbers = [
+val interestingNumbers = [
 
     "Prime": [2, 3, 5, 7, 11, 13],
 

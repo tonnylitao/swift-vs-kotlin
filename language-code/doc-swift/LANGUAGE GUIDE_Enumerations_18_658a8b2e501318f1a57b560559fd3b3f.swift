@@ -1,10 +1,10 @@
 switch productBarcode {
 
-case let .upc(numberSystem, manufacturer, product, check):
+case val .upc(numberSystem, manufacturer, product, check):
 
     print("UPC : \(numberSystem), \(manufacturer), \(product), \(check).")
 
-case let .qrCode(productCode):
+case val .qrCode(productCode):
 
     print("QR code: \(productCode).")
 

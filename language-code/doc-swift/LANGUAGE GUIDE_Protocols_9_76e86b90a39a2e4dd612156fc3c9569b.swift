@@ -4,6 +4,6 @@ struct Person: FullyNamed {
 
 }
 
-let john = Person(fullName: "John Appleseed")
+val john = Person(fullName: "John Appleseed")
 
 // john.fullName is "John Appleseed"

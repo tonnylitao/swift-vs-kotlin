@@ -1,9 +1,9 @@
-let possibleString: String? = "An optional string."
+val possibleString: String? = "An optional string."
 
-let forcedString: String = possibleString! // requires an exclamation point
+val forcedString: String = possibleString! // requires an exclamation point
 
 
 
-let assumedString: String! = "An implicitly unwrapped optional string."
+val assumedString: String! = "An implicitly unwrapped optional string."
 
-let implicitString: String = assumedString // no need for an exclamation point
+val implicitString: String = assumedString // no need for an exclamation point

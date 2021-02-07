@@ -1,1 +1,1 @@
-let someVehicle = Vehicle()
+val someVehicle = Vehicle()

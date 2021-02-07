@@ -1,4 +1,4 @@
-let numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+val numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
 
 for (animalName, legCount) in numberOfLegs {
 

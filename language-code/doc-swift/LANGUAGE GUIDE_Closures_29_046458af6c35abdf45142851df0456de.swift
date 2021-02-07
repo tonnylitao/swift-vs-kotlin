@@ -1,4 +1,4 @@
-let incrementBySeven = makeIncrementer(forIncrement: 7)
+val incrementBySeven = makeIncrementer(forIncrement: 7)
 
 incrementBySeven()
 

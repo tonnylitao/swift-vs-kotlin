@@ -1,6 +1,6 @@
-let names = ["Anna", "Alex", "Brian", "Jack"]
+val names = ["Anna", "Alex", "Brian", "Jack"]
 
-let count = names.count
+val count = names.count
 
 for i in 0..<count {
 

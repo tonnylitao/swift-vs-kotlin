@@ -1,4 +1,4 @@
-func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+func calculateStatistics(scores: [Int]): (min: Int, max: Int, sum: Int) {
 
     var min = scores[0]
 
@@ -30,7 +30,7 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
 
 }
 
-let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+val statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
 
 print(statistics.sum)
 

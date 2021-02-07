@@ -1,16 +1,16 @@
-let anotherPoint = (2, 0)
+val anotherPoint = (2, 0)
 
 switch anotherPoint {
 
-case (let x, 0):
+case (val x, 0):
 
     print("on the x-axis with an x value of \(x)")
 
-case (0, let y):
+case (0, val y):
 
     print("on the y-axis with a y value of \(y)")
 
-case let (x, y):
+case val (x, y):
 
     print("somewhere else at (\(x), \(y))")
 

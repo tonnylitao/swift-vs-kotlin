@@ -1,4 +1,4 @@
-let alsoIncrementByTen = incrementByTen
+val alsoIncrementByTen = incrementByTen
 
 alsoIncrementByTen()
 

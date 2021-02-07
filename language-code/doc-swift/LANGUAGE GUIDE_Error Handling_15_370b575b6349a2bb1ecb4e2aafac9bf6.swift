@@ -6,11 +6,11 @@ func someThrowingFunction() throws -> Int {
 
 
 
-let x = try? someThrowingFunction()
+val x = try? someThrowingFunction()
 
 
 
-let y: Int?
+val y: Int?
 
 do {
 

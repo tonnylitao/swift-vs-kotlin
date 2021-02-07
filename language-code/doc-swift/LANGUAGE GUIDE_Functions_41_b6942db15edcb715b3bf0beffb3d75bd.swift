@@ -1,3 +1,3 @@
-let anotherMathFunction = addTwoInts
+val anotherMathFunction = addTwoInts
 
-// anotherMathFunction is inferred to be of type (Int, Int) -> Int
+// anotherMathFunction is inferred to be of type (Int, Int): Int

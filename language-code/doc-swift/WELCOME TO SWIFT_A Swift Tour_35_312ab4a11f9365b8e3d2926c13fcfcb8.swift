@@ -34,7 +34,7 @@ class EquilateralTriangle: NamedShape {
 
 
 
-    override func simpleDescription() -> String {
+    override func simpleDescription(): String {
 
         return "An equilateral triangle with sides of length \(sideLength)."
 

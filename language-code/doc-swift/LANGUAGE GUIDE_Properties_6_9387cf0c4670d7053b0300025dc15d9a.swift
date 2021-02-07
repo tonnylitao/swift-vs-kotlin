@@ -28,7 +28,7 @@ class DataManager {
 
 
 
-let manager = DataManager()
+val manager = DataManager()
 
 manager.data.append("Some data")
 

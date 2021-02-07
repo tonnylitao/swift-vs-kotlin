@@ -1,5 +1,5 @@
 protocol RandomNumberGenerator {
 
-    func random() -> Double
+    func random(): Double
 
 }

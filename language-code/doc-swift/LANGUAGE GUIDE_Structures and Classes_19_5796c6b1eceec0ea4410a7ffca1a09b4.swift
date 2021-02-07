@@ -1,4 +1,4 @@
-let tenEighty = VideoMode()
+val tenEighty = VideoMode()
 
 tenEighty.resolution = hd
 

@@ -1,4 +1,4 @@
-let objects: [AnyObject] = [
+val objects: [AnyObject] = [
 
     Circle(radius: 2.0),
 

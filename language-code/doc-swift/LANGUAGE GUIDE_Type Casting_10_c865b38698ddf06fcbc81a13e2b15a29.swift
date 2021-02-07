@@ -16,4 +16,4 @@ things.append((3.0, 5.0))
 
 things.append(Movie(name: "Ghostbusters", director: "Ivan Reitman"))
 
-things.append({ (name: String) -> String in "Hello, \(name)" })
+things.append({ (name: String): String in "Hello, \(name)" })

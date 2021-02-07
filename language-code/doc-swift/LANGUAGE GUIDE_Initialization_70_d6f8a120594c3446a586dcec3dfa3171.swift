@@ -1,6 +1,6 @@
 class SomeClass {
 
-    let someProperty: SomeType = {
+    val someProperty: SomeType = {
 
         // create a default value for someProperty inside this closure
 

@@ -10,7 +10,7 @@ struct Cuboid {
 
 }
 
-let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+val fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 
 print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 

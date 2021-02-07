@@ -1,6 +1,6 @@
 extension Container where Item == Double {
 
-    func average() -> Double {
+    func average(): Double {
 
         var sum = 0.0
 

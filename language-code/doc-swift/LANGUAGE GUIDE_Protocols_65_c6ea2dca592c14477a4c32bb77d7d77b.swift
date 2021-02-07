@@ -6,11 +6,11 @@ class Counter {
 
     func increment() {
 
-        if let amount = dataSource?.increment?(forCount: count) {
+        if val amount = dataSource?.increment?(forCount: count) {
 
             count += amount
 
-        } else if let amount = dataSource?.fixedIncrement {
+        } else if val amount = dataSource?.fixedIncrement {
 
             count += amount
 

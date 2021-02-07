@@ -1,12 +1,12 @@
-func makeOpaqueContainer<T>(item: T) -> some Container {
+func makeOpaqueContainer<T>(item: T): some Container {
 
     return [item]
 
 }
 
-let opaqueContainer = makeOpaqueContainer(item: 12)
+val opaqueContainer = makeOpaqueContainer(item: 12)
 
-let twelve = opaqueContainer[0]
+val twelve = opaqueContainer[0]
 
 print(type(of: twelve))
 

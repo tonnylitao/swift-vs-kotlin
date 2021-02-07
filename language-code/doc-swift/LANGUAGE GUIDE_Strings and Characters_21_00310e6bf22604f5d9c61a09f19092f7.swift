@@ -1,6 +1,6 @@
-let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+val catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
 
-let catString = String(catCharacters)
+val catString = String(catCharacters)
 
 print(catString)
 

@@ -1,4 +1,4 @@
-let lineBreaks = """
+val lineBreaks = """
 
 
 

@@ -1,12 +1,12 @@
-let department = Department(name: "Horticulture")
+val department = Department(name: "Horticulture")
 
 
 
-let intro = Course(name: "Survey of Plants", in: department)
+val intro = Course(name: "Survey of Plants", in: department)
 
-let intermediate = Course(name: "Growing Common Herbs", in: department)
+val intermediate = Course(name: "Growing Common Herbs", in: department)
 
-let advanced = Course(name: "Caring for Tropical Plants", in: department)
+val advanced = Course(name: "Caring for Tropical Plants", in: department)
 
 
 

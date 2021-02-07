@@ -1,7 +1,7 @@
-let apples = 3
+val apples = 3
 
-let oranges = 5
+val oranges = 5
 
-let appleSummary = "I have \(apples) apples."
+val appleSummary = "I have \(apples) apples."
 
-let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+val fruitSummary = "I have \(apples + oranges) pieces of fruit."

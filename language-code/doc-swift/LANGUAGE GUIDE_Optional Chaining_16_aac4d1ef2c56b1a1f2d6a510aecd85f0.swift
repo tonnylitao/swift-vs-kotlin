@@ -1,10 +1,10 @@
-func createAddress() -> Address {
+func createAddress(): Address {
 
     print("Function was called.")
 
 
 
-    let someAddress = Address()
+    val someAddress = Address()
 
     someAddress.buildingNumber = "29"
 

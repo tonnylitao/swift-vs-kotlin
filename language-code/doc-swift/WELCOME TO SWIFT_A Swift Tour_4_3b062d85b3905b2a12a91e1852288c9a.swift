@@ -1,5 +1,5 @@
-let implicitInteger = 70
+val implicitInteger = 70
 
-let implicitDouble = 70.0
+val implicitDouble = 70.0
 
-let explicitDouble: Double = 70
+val explicitDouble: Double = 70

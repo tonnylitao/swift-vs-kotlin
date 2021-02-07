@@ -1,3 +1,3 @@
 class SomeInternalClass {}              // implicitly internal
 
-let someInternalConstant = 0            // implicitly internal
+val someInternalConstant = 0            // implicitly internal

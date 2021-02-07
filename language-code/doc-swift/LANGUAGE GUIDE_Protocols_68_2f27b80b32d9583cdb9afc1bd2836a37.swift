@@ -1,6 +1,6 @@
 class TowardsZeroSource: NSObject, CounterDataSource {
 
-    func increment(forCount count: Int) -> Int {
+    func increment(forCount count: Int): Int {
 
         if count == 0 {
 

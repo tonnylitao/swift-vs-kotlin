@@ -1,4 +1,4 @@
-let minutes = 60
+val minutes = 60
 
 for tickMark in 0..<minutes {
 

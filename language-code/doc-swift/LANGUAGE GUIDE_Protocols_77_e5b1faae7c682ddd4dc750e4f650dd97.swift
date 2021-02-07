@@ -1,3 +1,3 @@
-let equalNumbers = [100, 100, 100, 100, 100]
+val equalNumbers = [100, 100, 100, 100, 100]
 
-let differentNumbers = [100, 100, 200, 100, 200]
+val differentNumbers = [100, 100, 200, 100, 200]

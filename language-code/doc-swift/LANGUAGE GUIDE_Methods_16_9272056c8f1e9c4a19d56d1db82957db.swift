@@ -2,7 +2,7 @@ class Player {
 
     var tracker = LevelTracker()
 
-    let playerName: String
+    val playerName: String
 
     func complete(level: Int) {
 

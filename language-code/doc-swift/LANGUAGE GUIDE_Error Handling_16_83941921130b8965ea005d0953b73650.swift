@@ -1,8 +1,8 @@
-func fetchData() -> Data? {
+func fetchData(): Data? {
 
-    if let data = try? fetchDataFromDisk() { return data }
+    if val data = try? fetchDataFromDisk() { return data }
 
-    if let data = try? fetchDataFromServer() { return data }
+    if val data = try? fetchDataFromServer() { return data }
 
     return nil
 

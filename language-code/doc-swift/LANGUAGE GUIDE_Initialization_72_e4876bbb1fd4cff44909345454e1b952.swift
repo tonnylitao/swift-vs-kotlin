@@ -1,4 +1,4 @@
-let board = Chessboard()
+val board = Chessboard()
 
 print(board.squareIsBlackAt(row: 0, column: 1))
 

@@ -2,15 +2,15 @@ class HTMLElement {
 
 
 
-    let name: String
+    val name: String
 
-    let text: String?
+    val text: String?
 
 
 
-    lazy var asHTML: () -> String = {
+    lazy var asHTML: (): String = {
 
-        if let text = self.text {
+        if val text = self.text {
 
             return "<\(self.name)>\(text)</\(self.name)>"
 

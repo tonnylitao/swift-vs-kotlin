@@ -1,6 +1,6 @@
 extension Container {
 
-    subscript<Indices: Sequence>(indices: Indices) -> [Item]
+    subscript<Indices: Sequence>(indices: Indices): [Item]
 
         where Indices.Iterator.Element == Int {
 

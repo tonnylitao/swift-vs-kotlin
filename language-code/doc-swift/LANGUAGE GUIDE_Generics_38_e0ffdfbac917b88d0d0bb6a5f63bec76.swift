@@ -1,6 +1,6 @@
 func allItemsMatch<C1: Container, C2: Container>
 
-    (_ someContainer: C1, _ anotherContainer: C2) -> Bool
+    (_ someContainer: C1, _ anotherContainer: C2): Bool
 
     where C1.Item == C2.Item, C1.Item: Equatable {
 

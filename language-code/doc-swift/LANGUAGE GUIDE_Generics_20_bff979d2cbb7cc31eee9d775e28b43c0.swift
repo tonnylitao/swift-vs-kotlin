@@ -1,4 +1,4 @@
-func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
+func findIndex(ofString valueToFind: String, in array: [String]): Int? {
 
     for (index, value) in array.enumerated() {
 

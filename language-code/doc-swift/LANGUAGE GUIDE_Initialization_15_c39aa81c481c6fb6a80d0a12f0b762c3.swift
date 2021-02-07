@@ -18,7 +18,7 @@ class SurveyQuestion {
 
 }
 
-let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
+val cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
 
 cheeseQuestion.ask()
 

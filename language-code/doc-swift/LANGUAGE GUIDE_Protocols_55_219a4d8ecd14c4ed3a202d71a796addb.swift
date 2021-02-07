@@ -24,7 +24,7 @@ func wishHappyBirthday(to celebrator: Named & Aged) {
 
 }
 
-let birthdayPerson = Person(name: "Malcolm", age: 21)
+val birthdayPerson = Person(name: "Malcolm", age: 21)
 
 wishHappyBirthday(to: birthdayPerson)
 

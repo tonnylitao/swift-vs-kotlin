@@ -1,1 +1,1 @@
-reversedNames = names.sorted() { $0 > $1 }
+reversedNames = names.sorted() { it > $1 }

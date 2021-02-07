@@ -1,8 +1,8 @@
-let contentHeight = 40
+val contentHeight = 40
 
-let hasHeader = true
+val hasHeader = true
 
-let rowHeight: Int
+val rowHeight: Int
 
 if hasHeader {
 

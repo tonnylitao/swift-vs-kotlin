@@ -1,6 +1,6 @@
-let hasDoorKey = false
+val hasDoorKey = false
 
-let knowsOverridePassword = true
+val knowsOverridePassword = true
 
 if hasDoorKey || knowsOverridePassword {
 

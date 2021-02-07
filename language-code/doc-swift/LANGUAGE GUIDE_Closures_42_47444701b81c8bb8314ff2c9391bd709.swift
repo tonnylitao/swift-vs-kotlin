@@ -1,8 +1,8 @@
 // customersInLine is ["Barry", "Daniella"]
 
-var customerProviders: [() -> String] = []
+var customerProviders: [(): String] = []
 
-func collectCustomerProviders(_ customerProvider: @autoclosure @escaping () -> String) {
+func collectCustomerProviders(_ customerProvider: @autoclosure @escaping (): String) {
 
     customerProviders.append(customerProvider)
 

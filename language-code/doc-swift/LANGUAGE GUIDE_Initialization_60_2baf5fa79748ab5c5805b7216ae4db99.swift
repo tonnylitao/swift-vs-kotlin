@@ -1,4 +1,4 @@
-if let zeroShirts = CartItem(name: "shirt", quantity: 0) {
+if val zeroShirts = CartItem(name: "shirt", quantity: 0) {
 
     print("Item: \(zeroShirts.name), quantity: \(zeroShirts.quantity)")
 

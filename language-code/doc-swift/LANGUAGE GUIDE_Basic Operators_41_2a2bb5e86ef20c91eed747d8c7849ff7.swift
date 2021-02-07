@@ -1,6 +1,6 @@
-let enteredDoorCode = true
+val enteredDoorCode = true
 
-let passedRetinaScan = false
+val passedRetinaScan = false
 
 if enteredDoorCode && passedRetinaScan {
 

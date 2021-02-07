@@ -1,6 +1,6 @@
 extension Int {
 
-    func repetitions(task: () -> Void) {
+    func repetitions(task: (): Void) {
 
         for _ in 0..<self {
 

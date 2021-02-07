@@ -1,4 +1,4 @@
-let softWrappedQuotation = """
+val softWrappedQuotation = """
 
 The White Rabbit put on his spectacles.  "Where shall I begin, \
 

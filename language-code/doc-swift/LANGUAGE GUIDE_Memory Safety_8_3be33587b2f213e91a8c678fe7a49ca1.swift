@@ -1,6 +1,6 @@
 func balance(_ x: inout Int, _ y: inout Int) {
 
-    let sum = x + y
+    val sum = x + y
 
     x = sum / 2
 

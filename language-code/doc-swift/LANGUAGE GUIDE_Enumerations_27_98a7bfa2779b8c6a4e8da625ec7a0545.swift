@@ -1,6 +1,6 @@
-let positionToFind = 11
+val positionToFind = 11
 
-if let somePlanet = Planet(rawValue: positionToFind) {
+if val somePlanet = Planet(rawValue: positionToFind) {
 
     switch somePlanet {
 

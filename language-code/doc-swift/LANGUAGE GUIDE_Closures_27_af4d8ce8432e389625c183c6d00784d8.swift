@@ -1,1 +1,1 @@
-let incrementByTen = makeIncrementer(forIncrement: 10)
+val incrementByTen = makeIncrementer(forIncrement: 10)

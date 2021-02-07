@@ -1,6 +1,6 @@
 // customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
 
-func serve(customer customerProvider: () -> String) {
+func serve(customer customerProvider: (): String) {
 
     print("Now serving \(customerProvider())!")
 

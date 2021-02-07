@@ -1,6 +1,6 @@
 extension IntStack: SuffixableContainer {
 
-    func suffix(_ size: Int) -> Stack<Int> {
+    func suffix(_ size: Int): Stack<Int> {
 
         var result = Stack<Int>()
 

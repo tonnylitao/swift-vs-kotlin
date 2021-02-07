@@ -2,9 +2,9 @@ struct FlippedShape<T: Shape>: Shape {
 
     var shape: T
 
-    func draw() -> String {
+    func draw(): String {
 
-        let lines = shape.draw().split(separator: "\n")
+        val lines = shape.draw().split(separator: "\n")
 
         return lines.reversed().joined(separator: "\n")
 
@@ -12,7 +12,7 @@ struct FlippedShape<T: Shape>: Shape {
 
 }
 
-let flippedTriangle = FlippedShape(shape: smallTriangle)
+val flippedTriangle = FlippedShape(shape: smallTriangle)
 
 print(flippedTriangle.draw())
 

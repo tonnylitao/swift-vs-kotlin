@@ -1,5 +1,5 @@
-let nickname: String? = nil
+val nickname: String? = nil
 
-let fullName: String = "John Appleseed"
+val fullName: String = "John Appleseed"
 
-let informalGreeting = "Hi \(nickname ?? fullName)"
+val informalGreeting = "Hi \(nickname ?? fullName)"

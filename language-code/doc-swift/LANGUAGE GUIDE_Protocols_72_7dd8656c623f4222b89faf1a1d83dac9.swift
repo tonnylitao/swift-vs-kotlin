@@ -1,4 +1,4 @@
-let generator = LinearCongruentialGenerator()
+val generator = LinearCongruentialGenerator()
 
 print("Here's a random number: \(generator.random())")
 

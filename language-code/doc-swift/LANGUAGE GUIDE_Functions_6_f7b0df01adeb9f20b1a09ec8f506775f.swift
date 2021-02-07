@@ -1,4 +1,4 @@
-func sayHelloWorld() -> String {
+func sayHelloWorld(): String {
 
     return "hello, world"
 

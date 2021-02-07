@@ -1,8 +1,8 @@
-let puzzleInput = "great minds think alike"
+val puzzleInput = "great minds think alike"
 
 var puzzleOutput = ""
 
-let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+val charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
 
 for character in puzzleInput {
 

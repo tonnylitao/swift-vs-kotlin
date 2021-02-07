@@ -1,6 +1,6 @@
-let string1 = "hello"
+val string1 = "hello"
 
-let string2 = " there"
+val string2 = " there"
 
 var welcome = string1 + string2
 

@@ -1,4 +1,4 @@
-let mappedNumbers = numbers.map({ number in 3 * number })
+val mappedNumbers = numbers.map({ number in 3 * number })
 
 print(mappedNumbers)
 

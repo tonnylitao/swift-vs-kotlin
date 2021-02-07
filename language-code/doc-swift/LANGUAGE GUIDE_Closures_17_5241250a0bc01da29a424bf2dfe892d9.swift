@@ -1,4 +1,4 @@
-func someFunctionThatTakesAClosure(closure: () -> Void) {
+func someFunctionThatTakesAClosure(closure: (): Void) {
 
     // function body goes here
 

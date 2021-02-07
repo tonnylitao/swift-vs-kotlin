@@ -1,6 +1,6 @@
-let simonTheHamster = Hamster(name: "Simon")
+val simonTheHamster = Hamster(name: "Simon")
 
-let somethingTextRepresentable: TextRepresentable = simonTheHamster
+val somethingTextRepresentable: TextRepresentable = simonTheHamster
 
 print(somethingTextRepresentable.textualDescription)
 

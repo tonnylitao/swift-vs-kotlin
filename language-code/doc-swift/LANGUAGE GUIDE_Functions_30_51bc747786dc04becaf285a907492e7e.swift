@@ -1,4 +1,4 @@
-func arithmeticMean(_ numbers: Double...) -> Double {
+func arithmeticMean(_ numbers: Double...): Double {
 
     var total: Double = 0
 

@@ -1,6 +1,6 @@
 class Room {
 
-    let name: String
+    val name: String
 
     init(name: String) { self.name = name }
 

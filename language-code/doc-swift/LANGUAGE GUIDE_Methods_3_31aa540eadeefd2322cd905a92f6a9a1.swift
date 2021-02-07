@@ -1,4 +1,4 @@
-let counter = Counter()
+val counter = Counter()
 
 // the initial counter value is 0
 

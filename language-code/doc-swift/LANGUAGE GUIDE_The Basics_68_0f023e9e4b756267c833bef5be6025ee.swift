@@ -1,4 +1,4 @@
-if let definiteString = assumedString {
+if val definiteString = assumedString {
 
     print(definiteString)
 

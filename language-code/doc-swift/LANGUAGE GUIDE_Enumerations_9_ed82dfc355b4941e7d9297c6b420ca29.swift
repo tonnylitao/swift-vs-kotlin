@@ -1,4 +1,4 @@
-let somePlanet = Planet.earth
+val somePlanet = Planet.earth
 
 switch somePlanet {
 

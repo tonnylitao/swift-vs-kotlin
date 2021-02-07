@@ -16,7 +16,7 @@ do {
 
     washDishes()
 
-} catch SandwichError.missingIngredients(let ingredients) {
+} catch SandwichError.missingIngredients(val ingredients) {
 
     buyGroceries(ingredients)
 

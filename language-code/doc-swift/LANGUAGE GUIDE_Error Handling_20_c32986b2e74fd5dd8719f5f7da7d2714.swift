@@ -2,7 +2,7 @@ func processFile(filename: String) throws {
 
     if exists(filename) {
 
-        let file = open(filename)
+        val file = open(filename)
 
         defer {
 
@@ -10,7 +10,7 @@ func processFile(filename: String) throws {
 
         }
 
-        while let line = try file.readline() {
+        while val line = try file.readline() {
 
             // Work with the file.
 

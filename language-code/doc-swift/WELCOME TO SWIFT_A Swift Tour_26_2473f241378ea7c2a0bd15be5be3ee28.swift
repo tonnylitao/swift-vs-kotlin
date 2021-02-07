@@ -1,4 +1,4 @@
-func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+func hasAnyMatches(list: [Int], condition: (Int): Bool): Bool {
 
     for item in list {
 
@@ -14,7 +14,7 @@ func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
 
 }
 
-func lessThanTen(number: Int) -> Bool {
+func lessThanTen(number: Int): Bool {
 
     return number < 10
 

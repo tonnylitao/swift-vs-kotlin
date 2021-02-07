@@ -1,6 +1,6 @@
-let john = Person()
+val john = Person()
 
-if let roomCount = john.residence?.numberOfRooms {
+if val roomCount = john.residence?.numberOfRooms {
 
     print("John's residence has \(roomCount) room(s).")
 

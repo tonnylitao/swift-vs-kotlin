@@ -2,7 +2,7 @@ struct FixedLengthRange {
 
     var firstValue: Int
 
-    let length: Int
+    val length: Int
 
 }
 

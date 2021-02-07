@@ -1,4 +1,4 @@
-if let removedGenre = favoriteGenres.remove("Rock") {
+if val removedGenre = favoriteGenres.remove("Rock") {
 
     print("\(removedGenre)? I'm over it.")
 

@@ -1,4 +1,4 @@
-let theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
+val theAceOfSpades = BlackjackCard(rank: .ace, suit: .spades)
 
 print("theAceOfSpades: \(theAceOfSpades.description)")
 

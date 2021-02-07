@@ -16,7 +16,7 @@ class Square: NamedShape {
 
 
 
-    func area() -> Double {
+    func area(): Double {
 
         return sideLength * sideLength
 
@@ -24,7 +24,7 @@ class Square: NamedShape {
 
 
 
-    override func simpleDescription() -> String {
+    override func simpleDescription(): String {
 
         return "A square with sides of length \(sideLength)."
 
@@ -32,7 +32,7 @@ class Square: NamedShape {
 
 }
 
-let test = Square(sideLength: 5.2, name: "my test square")
+val test = Square(sideLength: 5.2, name: "my test square")
 
 test.area()
 

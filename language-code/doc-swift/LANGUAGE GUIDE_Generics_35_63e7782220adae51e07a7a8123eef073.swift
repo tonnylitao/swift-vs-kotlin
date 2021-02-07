@@ -1,6 +1,6 @@
 extension Stack: SuffixableContainer {
 
-    func suffix(_ size: Int) -> Stack {
+    func suffix(_ size: Int): Stack {
 
         var result = Stack()
 
@@ -26,6 +26,6 @@ stackOfInts.append(20)
 
 stackOfInts.append(30)
 
-let suffix = stackOfInts.suffix(2)
+val suffix = stackOfInts.suffix(2)
 
 // suffix contains 20 and 30

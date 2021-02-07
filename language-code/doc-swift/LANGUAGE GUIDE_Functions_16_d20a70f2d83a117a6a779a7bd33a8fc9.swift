@@ -1,4 +1,4 @@
-func minMax(array: [Int]) -> (min: Int, max: Int)? {
+func minMax(array: [Int]): (min: Int, max: Int)? {
 
     if array.isEmpty { return nil }
 

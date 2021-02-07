@@ -1,4 +1,4 @@
-let numberSymbol: Character = "三"  // Chinese symbol for the number 3
+val numberSymbol: Character = "三"  // Chinese symbol for the number 3
 
 var possibleIntegerValue: Int?
 
@@ -26,7 +26,7 @@ default:
 
 }
 
-if let integerValue = possibleIntegerValue {
+if val integerValue = possibleIntegerValue {
 
     print("The integer value of \(numberSymbol) is \(integerValue).")
 

@@ -1,5 +1,5 @@
-if let convertedRank = Rank(rawValue: 3) {
+if val convertedRank = Rank(rawValue: 3) {
 
-    let threeDescription = convertedRank.simpleDescription()
+    val threeDescription = convertedRank.simpleDescription()
 
 }

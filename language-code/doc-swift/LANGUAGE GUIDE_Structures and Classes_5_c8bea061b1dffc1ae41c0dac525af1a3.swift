@@ -1,3 +1,3 @@
-let someResolution = Resolution()
+val someResolution = Resolution()
 
-let someVideoMode = VideoMode()
+val someVideoMode = VideoMode()

@@ -1,6 +1,6 @@
 struct Animal {
 
-    let species: String
+    val species: String
 
     init?(species: String) {
 

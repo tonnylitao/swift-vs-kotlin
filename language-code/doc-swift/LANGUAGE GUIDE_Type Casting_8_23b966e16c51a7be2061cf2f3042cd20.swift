@@ -1,10 +1,10 @@
 for item in library {
 
-    if let movie = item as? Movie {
+    if val movie = item as? Movie {
 
         print("Movie: \(movie.name), dir. \(movie.director)")
 
-    } else if let song = item as? Song {
+    } else if val song = item as? Song {
 
         print("Song: \(song.name), by \(song.artist)")
 

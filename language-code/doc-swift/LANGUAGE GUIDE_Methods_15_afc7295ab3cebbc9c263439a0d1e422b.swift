@@ -14,7 +14,7 @@ struct LevelTracker {
 
 
 
-    static func isUnlocked(_ level: Int) -> Bool {
+    static func isUnlocked(_ level: Int): Bool {
 
         return level <= highestUnlockedLevel
 
@@ -24,7 +24,7 @@ struct LevelTracker {
 
     @discardableResult
 
-    mutating func advance(to level: Int) -> Bool {
+    mutating func advance(to level: Int): Bool {
 
         if LevelTracker.isUnlocked(level) {
 

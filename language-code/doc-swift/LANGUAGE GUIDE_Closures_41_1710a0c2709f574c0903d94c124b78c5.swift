@@ -1,6 +1,6 @@
 // customersInLine is ["Ewa", "Barry", "Daniella"]
 
-func serve(customer customerProvider: @autoclosure () -> String) {
+func serve(customer customerProvider: @autoclosure (): String) {
 
     print("Now serving \(customerProvider())!")
 

@@ -1,6 +1,6 @@
-let tracker = DiceGameTracker()
+val tracker = DiceGameTracker()
 
-let game = SnakesAndLadders()
+val game = SnakesAndLadders()
 
 game.delegate = tracker
 

@@ -1,5 +1,5 @@
-let someBits: UInt8 = 0b10110010
+val someBits: UInt8 = 0b10110010
 
-let moreBits: UInt8 = 0b01011110
+val moreBits: UInt8 = 0b01011110
 
-let combinedbits = someBits | moreBits  // equals 11111110
+val combinedbits = someBits | moreBits  // equals 11111110

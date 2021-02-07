@@ -1,4 +1,4 @@
-let vegetable = "red pepper"
+val vegetable = "red pepper"
 
 switch vegetable {
 
@@ -10,7 +10,7 @@ case "cucumber", "watercress":
 
     print("That would make a good tea sandwich.")
 
-case let x where x.hasSuffix("pepper"):
+case val x where x.hasSuffix("pepper"):
 
     print("Is it a spicy \(x)?")
 

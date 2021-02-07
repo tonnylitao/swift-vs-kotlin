@@ -1,1 +1,1 @@
-let things: [TextRepresentable] = [game, d12, simonTheHamster]
+val things: [TextRepresentable] = [game, d12, simonTheHamster]

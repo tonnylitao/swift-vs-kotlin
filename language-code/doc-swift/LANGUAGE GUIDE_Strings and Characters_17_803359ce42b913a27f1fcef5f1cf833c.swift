@@ -6,7 +6,7 @@ variableString += " and carriage"
 
 
 
-let constantString = "Highlander"
+val constantString = "Highlander"
 
 constantString += " and another Highlander"
 

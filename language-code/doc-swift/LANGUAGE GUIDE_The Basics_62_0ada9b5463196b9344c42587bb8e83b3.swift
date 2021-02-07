@@ -1,4 +1,4 @@
-if let actualNumber = Int(possibleNumber) {
+if val actualNumber = Int(possibleNumber) {
 
     print("The string \"\(possibleNumber)\" has an integer value of \(actualNumber)")
 

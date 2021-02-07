@@ -1,6 +1,6 @@
-func loadPicture(from server: Server, completion: (Picture) -> Void, onFailure: () -> Void) {
+func loadPicture(from server: Server, completion: (Picture): Void, onFailure: (): Void) {
 
-    if let picture = download("photo.jpg", from: server) {
+    if val picture = download("photo.jpg", from: server) {
 
         completion(picture)
 

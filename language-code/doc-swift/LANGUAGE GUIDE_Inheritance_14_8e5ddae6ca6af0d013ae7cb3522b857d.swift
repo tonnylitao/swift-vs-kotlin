@@ -1,4 +1,4 @@
-let train = Train()
+val train = Train()
 
 train.makeNoise()
 

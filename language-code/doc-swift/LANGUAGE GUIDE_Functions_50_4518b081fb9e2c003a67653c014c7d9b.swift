@@ -1,8 +1,8 @@
-func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+func chooseStepFunction(backward: Bool): (Int): Int {
 
-    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepForward(input: Int): Int { return input + 1 }
 
-    func stepBackward(input: Int) -> Int { return input - 1 }
+    func stepBackward(input: Int): Int { return input - 1 }
 
     return backward ? stepBackward : stepForward
 
@@ -10,7 +10,7 @@ func chooseStepFunction(backward: Bool) -> (Int) -> Int {
 
 var currentValue = -4
 
-let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
+val moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
 
 // moveNearerToZero now refers to the nested stepForward() function
 

@@ -1,4 +1,4 @@
-let integerToDescribe = 5
+val integerToDescribe = 5
 
 var description = "The number \(integerToDescribe) is"
 

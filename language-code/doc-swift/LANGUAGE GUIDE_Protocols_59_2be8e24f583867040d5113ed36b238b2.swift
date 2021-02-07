@@ -1,6 +1,6 @@
 class Circle: HasArea {
 
-    let pi = 3.1415927
+    val pi = 3.1415927
 
     var radius: Double
 

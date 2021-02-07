@@ -6,9 +6,9 @@ class Address {
 
     var street: String?
 
-    func buildingIdentifier() -> String? {
+    func buildingIdentifier(): String? {
 
-        if let buildingNumber = buildingNumber, let street = street {
+        if val buildingNumber = buildingNumber, val street = street {
 
             return "\(buildingNumber) \(street)"
 

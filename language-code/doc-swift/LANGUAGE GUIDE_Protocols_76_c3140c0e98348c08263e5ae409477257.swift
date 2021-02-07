@@ -1,6 +1,6 @@
 extension Collection where Element: Equatable {
 
-    func allEqual() -> Bool {
+    func allEqual(): Bool {
 
         for element in self {
 

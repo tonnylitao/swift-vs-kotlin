@@ -1,4 +1,4 @@
-let names = ["Anna", "Alex", "Brian", "Jack"]
+val names = ["Anna", "Alex", "Brian", "Jack"]
 
 for name in names {
 

@@ -1,1 +1,1 @@
-let someString = "Some string literal value"
+val someString = "Some string literal value"

@@ -1,4 +1,4 @@
-let greeting = "Guten Tag!"
+val greeting = "Guten Tag!"
 
 greeting[greeting.startIndex]
 
@@ -12,7 +12,7 @@ greeting[greeting.index(after: greeting.startIndex)]
 
 // u
 
-let index = greeting.index(greeting.startIndex, offsetBy: 7)
+val index = greeting.index(greeting.startIndex, offsetBy: 7)
 
 greeting[index]
 

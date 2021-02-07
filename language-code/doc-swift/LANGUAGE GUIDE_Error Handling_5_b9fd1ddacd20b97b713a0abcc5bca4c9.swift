@@ -2,4 +2,4 @@ func canThrowErrors() throws -> String
 
 
 
-func cannotThrowErrors() -> String
+func cannotThrowErrors(): String

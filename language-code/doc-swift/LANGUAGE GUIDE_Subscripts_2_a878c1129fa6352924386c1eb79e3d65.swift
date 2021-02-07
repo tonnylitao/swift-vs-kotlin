@@ -1,4 +1,4 @@
-subscript(index: Int) -> Int {
+subscript(index: Int): Int {
 
     get {
 

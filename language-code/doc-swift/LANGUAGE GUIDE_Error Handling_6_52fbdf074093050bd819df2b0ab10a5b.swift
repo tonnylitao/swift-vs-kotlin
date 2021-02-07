@@ -26,7 +26,7 @@ class VendingMachine {
 
     func vend(itemNamed name: String) throws {
 
-        guard let item = inventory[name] else {
+        guard val item = inventory[name] else {
 
             throw VendingMachineError.invalidSelection
 

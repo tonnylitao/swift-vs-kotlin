@@ -1,6 +1,6 @@
 class Person {
 
-    let name: String
+    val name: String
 
     init(name: String) {
 

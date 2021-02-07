@@ -1,4 +1,4 @@
-let (statusCode, statusMessage) = http404Error
+val (statusCode, statusMessage) = http404Error
 
 print("The status code is \(statusCode)")
 

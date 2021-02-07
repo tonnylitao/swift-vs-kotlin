@@ -1,3 +1,3 @@
-let roomCount = john.residence!.numberOfRooms
+val roomCount = john.residence!.numberOfRooms
 
 // this triggers a runtime error

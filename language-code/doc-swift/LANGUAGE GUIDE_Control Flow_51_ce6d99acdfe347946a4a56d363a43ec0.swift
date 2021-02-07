@@ -1,6 +1,6 @@
 func greet(person: [String: String]) {
 
-    guard let name = person["name"] else {
+    guard val name = person["name"] else {
 
         return
 
@@ -12,7 +12,7 @@ func greet(person: [String: String]) {
 
 
 
-    guard let location = person["location"] else {
+    guard val location = person["location"] else {
 
         print("I hope the weather is nice near you.")
 

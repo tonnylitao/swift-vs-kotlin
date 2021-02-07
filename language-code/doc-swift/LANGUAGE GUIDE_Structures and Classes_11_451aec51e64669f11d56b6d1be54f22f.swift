@@ -1,1 +1,1 @@
-let vga = Resolution(width: 640, height: 480)
+val vga = Resolution(width: 640, height: 480)

@@ -1,4 +1,4 @@
-if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+if val oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
 
     print("The old value for DUB was \(oldValue).")
 

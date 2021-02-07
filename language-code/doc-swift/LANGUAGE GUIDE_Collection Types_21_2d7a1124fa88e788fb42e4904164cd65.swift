@@ -1,4 +1,4 @@
-let mapleSyrup = shoppingList.remove(at: 0)
+val mapleSyrup = shoppingList.remove(at: 0)
 
 // the item that was at index 0 has just been removed
 

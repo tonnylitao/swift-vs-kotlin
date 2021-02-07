@@ -22,7 +22,7 @@ struct BlackjackCard {
 
         struct Values {
 
-            let first: Int, second: Int?
+            val first: Int, second: Int?
 
         }
 
@@ -52,7 +52,7 @@ struct BlackjackCard {
 
     // BlackjackCard properties and methods
 
-    let rank: Rank, suit: Suit
+    val rank: Rank, suit: Suit
 
     var description: String {
 
@@ -60,7 +60,7 @@ struct BlackjackCard {
 
         output += " value is \(rank.values.first)"
 
-        if let second = rank.values.second {
+        if val second = rank.values.second {
 
             output += " or \(second)"
 

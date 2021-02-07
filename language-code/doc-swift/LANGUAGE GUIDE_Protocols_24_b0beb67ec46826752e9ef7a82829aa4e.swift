@@ -1,8 +1,8 @@
 class Dice {
 
-    let sides: Int
+    val sides: Int
 
-    let generator: RandomNumberGenerator
+    val generator: RandomNumberGenerator
 
     init(sides: Int, generator: RandomNumberGenerator) {
 
@@ -12,7 +12,7 @@ class Dice {
 
     }
 
-    func roll() -> Int {
+    func roll(): Int {
 
         return Int(generator.random() * Double(sides)) + 1
 

@@ -1,4 +1,4 @@
-let strings = numbers.map { (number) -> String in
+val strings = numbers.map { (number): String in
 
     var number = number
 

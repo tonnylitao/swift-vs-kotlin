@@ -1,5 +1,5 @@
-let firstBits: UInt8 = 0b00010100
+val firstBits: UInt8 = 0b00010100
 
-let otherBits: UInt8 = 0b00000101
+val otherBits: UInt8 = 0b00000101
 
-let outputBits = firstBits ^ otherBits  // equals 00010001
+val outputBits = firstBits ^ otherBits  // equals 00010001

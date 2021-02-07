@@ -1,7 +1,7 @@
-let five = ArithmeticExpression.number(5)
+val five = ArithmeticExpression.number(5)
 
-let four = ArithmeticExpression.number(4)
+val four = ArithmeticExpression.number(4)
 
-let sum = ArithmeticExpression.addition(five, four)
+val sum = ArithmeticExpression.addition(five, four)
 
-let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))
+val product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))

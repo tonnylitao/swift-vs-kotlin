@@ -1,6 +1,6 @@
 protocol Shape {
 
-    func draw() -> String
+    func draw(): String
 
 }
 
@@ -10,7 +10,7 @@ struct Triangle: Shape {
 
     var size: Int
 
-    func draw() -> String {
+    func draw(): String {
 
         var result = [String]()
 
@@ -26,7 +26,7 @@ struct Triangle: Shape {
 
 }
 
-let smallTriangle = Triangle(size: 3)
+val smallTriangle = Triangle(size: 3)
 
 print(smallTriangle.draw())
 

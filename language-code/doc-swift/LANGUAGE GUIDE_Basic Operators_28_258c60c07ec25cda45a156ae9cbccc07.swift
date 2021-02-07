@@ -1,4 +1,4 @@
-let defaultColorName = "red"
+val defaultColorName = "red"
 
 var userDefinedColorName: String?   // defaults to nil
 

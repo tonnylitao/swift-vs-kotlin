@@ -1,4 +1,4 @@
-func greeting(for person: String) -> String {
+func greeting(for person: String): String {
 
     "Hello, " + person + "!"
 
@@ -10,7 +10,7 @@ print(greeting(for: "Dave"))
 
 
 
-func anotherGreeting(for person: String) -> String {
+func anotherGreeting(for person: String): String {
 
     return "Hello, " + person + "!"
 

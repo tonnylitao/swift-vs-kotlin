@@ -1,8 +1,8 @@
-let stillAnotherPoint = (9, 0)
+val stillAnotherPoint = (9, 0)
 
 switch stillAnotherPoint {
 
-case (let distance, 0), (0, let distance):
+case (val distance, 0), (0, val distance):
 
     print("On an axis, \(distance) from the origin")
 

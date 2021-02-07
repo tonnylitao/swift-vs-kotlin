@@ -1,4 +1,4 @@
-let name = "world"
+val name = "world"
 
 if name == "world" {
 

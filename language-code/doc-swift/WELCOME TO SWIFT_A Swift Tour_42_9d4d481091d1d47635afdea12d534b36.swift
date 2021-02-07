@@ -8,19 +8,19 @@ enum ServerResponse {
 
 
 
-let success = ServerResponse.result("6:00 am", "8:09 pm")
+val success = ServerResponse.result("6:00 am", "8:09 pm")
 
-let failure = ServerResponse.failure("Out of cheese.")
+val failure = ServerResponse.failure("Out of cheese.")
 
 
 
 switch success {
 
-case let .result(sunrise, sunset):
+case val .result(sunrise, sunset):
 
     print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
 
-case let .failure(message):
+case val .failure(message):
 
     print("Failure...  \(message)")
 

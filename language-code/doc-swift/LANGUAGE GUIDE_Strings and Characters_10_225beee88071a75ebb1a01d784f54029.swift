@@ -1,4 +1,4 @@
-let threeDoubleQuotationMarks = """
+val threeDoubleQuotationMarks = """
 
 Escaping the first quotation mark \"""
 

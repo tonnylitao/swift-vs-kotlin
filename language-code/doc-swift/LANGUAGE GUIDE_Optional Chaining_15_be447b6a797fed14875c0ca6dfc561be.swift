@@ -1,4 +1,4 @@
-let someAddress = Address()
+val someAddress = Address()
 
 someAddress.buildingNumber = "29"
 
