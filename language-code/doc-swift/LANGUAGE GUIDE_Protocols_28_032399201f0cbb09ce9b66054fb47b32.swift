@@ -1,8 +1,8 @@
 class SnakesAndLadders: DiceGame {
 
-    val finalSquare = 25
+    let finalSquare = 25
 
-    val dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
+    let dice = Dice(sides: 6, generator: LinearCongruentialGenerator())
 
     var square = 0
 
@@ -28,7 +28,7 @@ class SnakesAndLadders: DiceGame {
 
         gameLoop: while square != finalSquare {
 
-            val diceRoll = dice.roll()
+            let diceRoll = dice.roll()
 
             delegate?.game(self, didStartNewTurnWithDiceRoll: diceRoll)
 
@@ -38,7 +38,7 @@ class SnakesAndLadders: DiceGame {
 
                 break gameLoop
 
-            case val newSquare where newSquare > finalSquare:
+            case let newSquare where newSquare > finalSquare:
 
                 continue gameLoop
 

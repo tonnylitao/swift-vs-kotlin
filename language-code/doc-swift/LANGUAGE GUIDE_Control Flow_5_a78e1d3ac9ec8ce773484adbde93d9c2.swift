@@ -1,6 +1,6 @@
-val base = 3
+let base = 3
 
-val power = 10
+let power = 10
 
 var answer = 1
 

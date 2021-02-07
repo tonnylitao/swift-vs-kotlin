@@ -1,6 +1,6 @@
-val heading = HTMLElement(name: "h1")
+let heading = HTMLElement(name: "h1")
 
-val defaultText = "some default text"
+let defaultText = "some default text"
 
 heading.asHTML = {
 

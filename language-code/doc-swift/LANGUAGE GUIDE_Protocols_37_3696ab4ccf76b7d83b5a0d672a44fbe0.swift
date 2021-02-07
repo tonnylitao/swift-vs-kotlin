@@ -2,7 +2,7 @@ extension Array: TextRepresentable where Element: TextRepresentable {
 
     var textualDescription: String {
 
-        val itemsAsText = self.map { it.textualDescription }
+        let itemsAsText = self.map { $0.textualDescription }
 
         return "[" + itemsAsText.joined(separator: ", ") + "]"
 
@@ -10,7 +10,7 @@ extension Array: TextRepresentable where Element: TextRepresentable {
 
 }
 
-val myDice = [d6, d12]
+let myDice = [d6, d12]
 
 print(myDice.textualDescription)
 

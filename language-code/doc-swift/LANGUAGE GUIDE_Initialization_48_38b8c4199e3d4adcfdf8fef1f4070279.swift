@@ -1,10 +1,10 @@
-val wholeNumber: Double = 12345.0
+let wholeNumber: Double = 12345.0
 
-val pi = 3.14159
+let pi = 3.14159
 
 
 
-if val valueMaintained = Int(exactly: wholeNumber) {
+if let valueMaintained = Int(exactly: wholeNumber) {
 
     print("\(wholeNumber) conversion to Int maintains value of \(valueMaintained)")
 
@@ -14,7 +14,7 @@ if val valueMaintained = Int(exactly: wholeNumber) {
 
 
 
-val valueChanged = Int(exactly: pi)
+let valueChanged = Int(exactly: pi)
 
 // valueChanged is of type Int?, not Int
 

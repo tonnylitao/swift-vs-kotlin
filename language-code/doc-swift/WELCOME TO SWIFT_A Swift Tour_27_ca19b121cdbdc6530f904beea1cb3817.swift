@@ -1,6 +1,6 @@
-numbers.map({ (number: Int): Int in
+numbers.map({ (number: Int) -> Int in
 
-    val result = 3 * number
+    let result = 3 * number
 
     return result
 

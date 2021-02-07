@@ -14,7 +14,7 @@ extension Int {
 
             return .zero
 
-        case val x where x > 0:
+        case let x where x > 0:
 
             return .positive
 

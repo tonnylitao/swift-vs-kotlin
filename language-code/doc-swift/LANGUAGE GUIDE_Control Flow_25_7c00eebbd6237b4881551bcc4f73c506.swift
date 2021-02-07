@@ -1,4 +1,4 @@
-val someCharacter: Character = "z"
+let someCharacter: Character = "z"
 
 switch someCharacter {
 

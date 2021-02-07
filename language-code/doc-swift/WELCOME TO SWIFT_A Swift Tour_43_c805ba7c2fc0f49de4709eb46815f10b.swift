@@ -4,7 +4,7 @@ struct Card {
 
     var suit: Suit
 
-    func simpleDescription(): String {
+    func simpleDescription() -> String {
 
         return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
 
@@ -12,6 +12,6 @@ struct Card {
 
 }
 
-val threeOfSpades = Card(rank: .three, suit: .spades)
+let threeOfSpades = Card(rank: .three, suit: .spades)
 
-val threeOfSpadesDescription = threeOfSpades.simpleDescription()
+let threeOfSpadesDescription = threeOfSpades.simpleDescription()

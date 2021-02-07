@@ -1,6 +1,6 @@
 func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
 
-    val temporaryA = a
+    let temporaryA = a
 
     a = b
 

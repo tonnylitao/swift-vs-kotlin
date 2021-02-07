@@ -1,4 +1,4 @@
-val minuteInterval = 5
+let minuteInterval = 5
 
 for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 

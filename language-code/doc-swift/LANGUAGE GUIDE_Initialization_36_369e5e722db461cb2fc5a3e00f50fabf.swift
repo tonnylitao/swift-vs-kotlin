@@ -1,4 +1,4 @@
-val bicycle = Bicycle()
+let bicycle = Bicycle()
 
 print("Bicycle: \(bicycle.description)")
 

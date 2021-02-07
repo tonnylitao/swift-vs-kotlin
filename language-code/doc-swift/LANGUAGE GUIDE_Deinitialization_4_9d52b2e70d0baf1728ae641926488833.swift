@@ -2,9 +2,9 @@ class Bank {
 
     static var coinsInBank = 10_000
 
-    static func distribute(coins numberOfCoinsRequested: Int): Int {
+    static func distribute(coins numberOfCoinsRequested: Int) -> Int {
 
-        val numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
+        let numberOfCoinsToVend = min(numberOfCoinsRequested, coinsInBank)
 
         coinsInBank -= numberOfCoinsToVend
 

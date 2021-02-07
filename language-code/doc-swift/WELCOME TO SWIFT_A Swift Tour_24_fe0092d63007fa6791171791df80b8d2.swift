@@ -1,4 +1,4 @@
-func returnFifteen(): Int {
+func returnFifteen() -> Int {
 
     var y = 10
 

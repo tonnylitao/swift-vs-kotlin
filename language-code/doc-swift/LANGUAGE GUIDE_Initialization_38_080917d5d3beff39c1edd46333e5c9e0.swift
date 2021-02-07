@@ -1,4 +1,4 @@
-val hoverboard = Hoverboard(color: "silver")
+let hoverboard = Hoverboard(color: "silver")
 
 print("Hoverboard: \(hoverboard.description)")
 

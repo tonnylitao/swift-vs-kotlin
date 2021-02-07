@@ -1,4 +1,4 @@
-func invalidFlip<T: Shape>(_ shape: T): some Shape {
+func invalidFlip<T: Shape>(_ shape: T) -> some Shape {
 
     if shape is Square {
 

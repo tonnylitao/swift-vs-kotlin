@@ -16,7 +16,7 @@ do {
 
     print("Out of Stock.")
 
-} catch VendingMachineError.insufficientFunds(val coinsNeeded) {
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
 
     print("Insufficient funds. Please insert an additional \(coinsNeeded) coins.")
 

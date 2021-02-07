@@ -22,7 +22,7 @@ class StepCounter {
 
 }
 
-val stepCounter = StepCounter()
+let stepCounter = StepCounter()
 
 stepCounter.totalSteps = 200
 

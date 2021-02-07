@@ -2,7 +2,7 @@ struct NotEquatable { }
 
 var notEquatableStack = Stack<NotEquatable>()
 
-val notEquatableValue = NotEquatable()
+let notEquatableValue = NotEquatable()
 
 notEquatableStack.push(notEquatableValue)
 

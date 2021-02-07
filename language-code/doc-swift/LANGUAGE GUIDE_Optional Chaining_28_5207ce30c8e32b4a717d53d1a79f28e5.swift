@@ -1,4 +1,4 @@
-if val johnsStreet = john.residence?.address?.street {
+if let johnsStreet = john.residence?.address?.street {
 
     print("John's street name is \(johnsStreet).")
 

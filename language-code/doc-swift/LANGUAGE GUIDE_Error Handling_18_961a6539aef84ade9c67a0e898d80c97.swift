@@ -1,1 +1,1 @@
-val photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
+let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")

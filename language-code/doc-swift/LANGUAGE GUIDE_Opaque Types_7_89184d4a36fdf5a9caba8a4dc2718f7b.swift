@@ -2,11 +2,11 @@ struct Square: Shape {
 
     var size: Int
 
-    func draw(): String {
+    func draw() -> String {
 
-        val line = String(repeating: "*", count: size)
+        let line = String(repeating: "*", count: size)
 
-        val result = Array<String>(repeating: line, count: size)
+        let result = Array<String>(repeating: line, count: size)
 
         return result.joined(separator: "\n")
 
@@ -16,15 +16,15 @@ struct Square: Shape {
 
 
 
-func makeTrapezoid(): some Shape {
+func makeTrapezoid() -> some Shape {
 
-    val top = Triangle(size: 2)
+    let top = Triangle(size: 2)
 
-    val middle = Square(size: 2)
+    let middle = Square(size: 2)
 
-    val bottom = FlippedShape(shape: top)
+    let bottom = FlippedShape(shape: top)
 
-    val trapezoid = JoinedShape(
+    let trapezoid = JoinedShape(
 
         top: top,
 
@@ -36,7 +36,7 @@ func makeTrapezoid(): some Shape {
 
 }
 
-val trapezoid = makeTrapezoid()
+let trapezoid = makeTrapezoid()
 
 print(trapezoid.draw())
 

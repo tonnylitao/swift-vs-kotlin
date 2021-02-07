@@ -1,6 +1,6 @@
-val quotation = "We're a lot alike, you and I."
+let quotation = "We're a lot alike, you and I."
 
-val sameQuotation = "We're a lot alike, you and I."
+let sameQuotation = "We're a lot alike, you and I."
 
 if quotation == sameQuotation {
 

@@ -1,6 +1,6 @@
 class Product {
 
-    val name: String
+    let name: String
 
     init?(name: String) {
 
@@ -16,7 +16,7 @@ class Product {
 
 class CartItem: Product {
 
-    val quantity: Int
+    let quantity: Int
 
     init?(name: String, quantity: Int) {
 

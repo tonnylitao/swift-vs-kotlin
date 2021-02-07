@@ -1,4 +1,4 @@
-val favoriteSnacks = [
+let favoriteSnacks = [
 
     "Alice": "Chips",
 
@@ -10,7 +10,7 @@ val favoriteSnacks = [
 
 func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
 
-    val snackName = favoriteSnacks[person] ?? "Candy Bar"
+    let snackName = favoriteSnacks[person] ?? "Candy Bar"
 
     try vendingMachine.vend(itemNamed: snackName)
 

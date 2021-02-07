@@ -1,6 +1,6 @@
 extension Container {
 
-    func average(): Double where Item == Int {
+    func average() -> Double where Item == Int {
 
         var sum = 0.0
 
@@ -14,7 +14,7 @@ extension Container {
 
     }
 
-    func endsWith(_ item: Item): Bool where Item: Equatable {
+    func endsWith(_ item: Item) -> Bool where Item: Equatable {
 
         return count >= 1 && self[count-1] == item
 
@@ -22,7 +22,7 @@ extension Container {
 
 }
 
-val numbers = [1260, 1200, 98, 37]
+let numbers = [1260, 1200, 98, 37]
 
 print(numbers.average())
 

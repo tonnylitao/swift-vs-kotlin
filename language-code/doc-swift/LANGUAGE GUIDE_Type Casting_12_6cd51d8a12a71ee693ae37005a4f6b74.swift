@@ -1,4 +1,4 @@
-val optionalNumber: Int? = 3
+let optionalNumber: Int? = 3
 
 things.append(optionalNumber)        // Warning
 

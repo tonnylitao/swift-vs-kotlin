@@ -1,4 +1,4 @@
-val range = ...5
+let range = ...5
 
 range.contains(7)   // false
 

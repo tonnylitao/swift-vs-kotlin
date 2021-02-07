@@ -1,5 +1,5 @@
-val paddedDouble = 000123.456
+let paddedDouble = 000123.456
 
-val oneMillion = 1_000_000
+let oneMillion = 1_000_000
 
-val justOverOneMillion = 1_000_000.000_000_1
+let justOverOneMillion = 1_000_000.000_000_1

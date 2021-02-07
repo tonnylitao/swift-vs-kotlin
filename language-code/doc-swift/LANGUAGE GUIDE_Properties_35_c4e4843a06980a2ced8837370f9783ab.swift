@@ -1,6 +1,6 @@
 struct AudioChannel {
 
-    static val thresholdLevel = 10
+    static let thresholdLevel = 10
 
     static var maxInputLevelForAllChannels = 0
 

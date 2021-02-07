@@ -1,6 +1,6 @@
 struct PurchasedSnack {
 
-    val name: String
+    let name: String
 
     init(name: String, vendingMachine: VendingMachine) throws {
 

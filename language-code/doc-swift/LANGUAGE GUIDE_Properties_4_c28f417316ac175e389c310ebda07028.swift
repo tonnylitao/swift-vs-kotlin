@@ -1,4 +1,4 @@
-val rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
 
 // this range represents integer values 0, 1, 2, and 3
 

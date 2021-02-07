@@ -1,4 +1,4 @@
-val exclamationMark: Character = "!"
+let exclamationMark: Character = "!"
 
 welcome.append(exclamationMark)
 

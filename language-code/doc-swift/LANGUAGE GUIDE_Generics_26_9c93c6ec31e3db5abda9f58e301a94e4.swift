@@ -6,6 +6,6 @@ protocol Container {
 
     var count: Int { get }
 
-    subscript(i: Int): Item { get }
+    subscript(i: Int) -> Item { get }
 
 }

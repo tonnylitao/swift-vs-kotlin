@@ -1,3 +1,3 @@
-val maximumNumberOfLoginAttempts = 10
+let maximumNumberOfLoginAttempts = 10
 
 var currentLoginAttempt = 0

@@ -1,4 +1,4 @@
-val shiftBits: UInt8 = 4   // 00000100 in binary
+let shiftBits: UInt8 = 4   // 00000100 in binary
 
 shiftBits << 1             // 00001000
 

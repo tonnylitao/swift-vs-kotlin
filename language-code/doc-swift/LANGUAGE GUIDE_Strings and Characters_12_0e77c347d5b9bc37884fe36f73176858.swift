@@ -1,4 +1,4 @@
-val threeMoreDoubleQuotationMarks = #"""
+let threeMoreDoubleQuotationMarks = #"""
 
 Here are three more double quotes: """
 

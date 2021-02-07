@@ -1,4 +1,4 @@
-if val constantName = someOptional {
+if let constantName = someOptional {
 
     statements
 

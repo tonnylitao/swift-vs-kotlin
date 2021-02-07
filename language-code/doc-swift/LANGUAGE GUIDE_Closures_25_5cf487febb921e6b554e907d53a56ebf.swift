@@ -1,8 +1,8 @@
-func makeIncrementer(forIncrement amount: Int): (): Int {
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 
     var runningTotal = 0
 
-    func incrementer(): Int {
+    func incrementer() -> Int {
 
         runningTotal += amount
 

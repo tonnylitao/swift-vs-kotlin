@@ -1,16 +1,16 @@
-func evaluate(_ expression: ArithmeticExpression): Int {
+func evaluate(_ expression: ArithmeticExpression) -> Int {
 
     switch expression {
 
-    case val .number(value):
+    case let .number(value):
 
         return value
 
-    case val .addition(left, right):
+    case let .addition(left, right):
 
         return evaluate(left) + evaluate(right)
 
-    case val .multiplication(left, right):
+    case let .multiplication(left, right):
 
         return evaluate(left) * evaluate(right)
 

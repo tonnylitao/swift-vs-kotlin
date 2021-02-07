@@ -14,7 +14,7 @@ struct SizedRectangle {
 
 
 
-    mutating func resize(to size: Size): Bool {
+    mutating func resize(to size: Size) -> Bool {
 
         switch size {
 

@@ -1,4 +1,4 @@
-if val removedValue = airports.removeValue(forKey: "DUB") {
+if let removedValue = airports.removeValue(forKey: "DUB") {
 
     print("The removed airport's name is \(removedValue).")
 

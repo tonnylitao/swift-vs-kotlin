@@ -1,8 +1,8 @@
-val approximateCount = 62
+let approximateCount = 62
 
-val countedThings = "moons orbiting Saturn"
+let countedThings = "moons orbiting Saturn"
 
-val naturalCount: String
+let naturalCount: String
 
 switch approximateCount {
 

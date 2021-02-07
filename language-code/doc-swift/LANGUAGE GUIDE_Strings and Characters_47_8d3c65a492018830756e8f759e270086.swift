@@ -1,8 +1,8 @@
-val greeting = "Hello, world!"
+let greeting = "Hello, world!"
 
-val index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
 
-val beginning = greeting[..<index]
+let beginning = greeting[..<index]
 
 // beginning is "Hello"
 
@@ -10,4 +10,4 @@ val beginning = greeting[..<index]
 
 // Convert the result to a String for long-term storage.
 
-val newString = String(beginning)
+let newString = String(beginning)

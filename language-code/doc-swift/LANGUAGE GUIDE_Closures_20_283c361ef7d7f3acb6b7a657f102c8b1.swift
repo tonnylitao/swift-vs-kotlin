@@ -1,4 +1,4 @@
-val digitNames = [
+let digitNames = [
 
     0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
 
@@ -6,4 +6,4 @@ val digitNames = [
 
 ]
 
-val numbers = [16, 58, 510]
+let numbers = [16, 58, 510]

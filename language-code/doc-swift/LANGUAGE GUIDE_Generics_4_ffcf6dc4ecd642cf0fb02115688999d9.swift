@@ -1,6 +1,6 @@
 func swapTwoStrings(_ a: inout String, _ b: inout String) {
 
-    val temporaryA = a
+    let temporaryA = a
 
     a = b
 
@@ -12,7 +12,7 @@ func swapTwoStrings(_ a: inout String, _ b: inout String) {
 
 func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
-    val temporaryA = a
+    let temporaryA = a
 
     a = b
 

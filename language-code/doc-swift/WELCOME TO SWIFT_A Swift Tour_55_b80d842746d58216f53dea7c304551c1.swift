@@ -1,10 +1,10 @@
 var fridgeIsOpen = false
 
-val fridgeContent = ["milk", "eggs", "leftovers"]
+let fridgeContent = ["milk", "eggs", "leftovers"]
 
 
 
-func fridgeContains(_ food: String): Bool {
+func fridgeContains(_ food: String) -> Bool {
 
     fridgeIsOpen = true
 
@@ -16,7 +16,7 @@ func fridgeContains(_ food: String): Bool {
 
 
 
-    val result = fridgeContent.contains(food)
+    let result = fridgeContent.contains(food)
 
     return result
 

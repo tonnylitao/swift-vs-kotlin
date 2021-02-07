@@ -1,8 +1,8 @@
-val oddDigits: Set = [1, 3, 5, 7, 9]
+let oddDigits: Set = [1, 3, 5, 7, 9]
 
-val evenDigits: Set = [0, 2, 4, 6, 8]
+let evenDigits: Set = [0, 2, 4, 6, 8]
 
-val singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
 
 
 

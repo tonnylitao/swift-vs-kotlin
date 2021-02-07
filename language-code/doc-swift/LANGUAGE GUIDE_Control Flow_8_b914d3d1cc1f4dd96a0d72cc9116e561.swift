@@ -1,6 +1,6 @@
-val hours = 12
+let hours = 12
 
-val hourInterval = 3
+let hourInterval = 3
 
 for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 

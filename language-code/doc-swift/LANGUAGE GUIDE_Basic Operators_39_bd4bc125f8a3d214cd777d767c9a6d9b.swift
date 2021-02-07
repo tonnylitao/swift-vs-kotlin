@@ -1,4 +1,4 @@
-val allowedEntry = false
+let allowedEntry = false
 
 if !allowedEntry {
 

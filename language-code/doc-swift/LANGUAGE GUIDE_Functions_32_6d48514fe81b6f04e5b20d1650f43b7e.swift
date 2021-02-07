@@ -1,6 +1,6 @@
 func swapTwoInts(_ a: inout Int, _ b: inout Int) {
 
-    val temporaryA = a
+    let temporaryA = a
 
     a = b
 

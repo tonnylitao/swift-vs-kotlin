@@ -12,7 +12,7 @@ enum CompassPoint {
 
 var currentDirection = CompassPoint.west
 
-val rememberedDirection = currentDirection
+let rememberedDirection = currentDirection
 
 currentDirection.turnNorth()
 

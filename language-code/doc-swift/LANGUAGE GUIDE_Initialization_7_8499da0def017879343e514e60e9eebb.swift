@@ -16,10 +16,10 @@ struct Celsius {
 
 }
 
-val boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
 
 // boilingPointOfWater.temperatureInCelsius is 100.0
 
-val freezingPointOfWater = Celsius(fromKelvin: 273.15)
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 // freezingPointOfWater.temperatureInCelsius is 0.0

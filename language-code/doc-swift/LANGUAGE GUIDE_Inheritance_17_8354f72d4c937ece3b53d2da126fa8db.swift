@@ -1,4 +1,4 @@
-val car = Car()
+let car = Car()
 
 car.currentSpeed = 25.0
 

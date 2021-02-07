@@ -1,4 +1,4 @@
-func makeArray<Item>(repeating item: Item, numberOfTimes: Int): [Item] {
+func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
 
     var result = [Item]()
 

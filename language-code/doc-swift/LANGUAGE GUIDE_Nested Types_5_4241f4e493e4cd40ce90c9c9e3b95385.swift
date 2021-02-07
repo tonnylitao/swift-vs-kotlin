@@ -1,3 +1,3 @@
-val heartsSymbol = BlackjackCard.Suit.hearts.rawValue
+let heartsSymbol = BlackjackCard.Suit.hearts.rawValue
 
 // heartsSymbol is "♡"

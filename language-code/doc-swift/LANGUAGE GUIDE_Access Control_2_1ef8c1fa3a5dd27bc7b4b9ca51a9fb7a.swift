@@ -10,7 +10,7 @@ private class SomePrivateClass {}
 
 public var somePublicVariable = 0
 
-internal val someInternalConstant = 0
+internal let someInternalConstant = 0
 
 fileprivate func someFilePrivateFunction() {}
 

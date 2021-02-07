@@ -1,4 +1,4 @@
-func greetAgain(person: String): String {
+func greetAgain(person: String) -> String {
 
     return "Hello again, " + person + "!"
 

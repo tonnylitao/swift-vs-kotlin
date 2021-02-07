@@ -1,4 +1,4 @@
-func incrementer(): Int {
+func incrementer() -> Int {
 
     runningTotal += amount
 

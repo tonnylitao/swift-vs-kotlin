@@ -6,7 +6,7 @@ print(customersInLine.count)
 
 
 
-val customerProvider = { customersInLine.remove(at: 0) }
+let customerProvider = { customersInLine.remove(at: 0) }
 
 print(customersInLine.count)
 

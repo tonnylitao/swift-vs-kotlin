@@ -1,6 +1,6 @@
 struct Matrix {
 
-    val rows: Int, columns: Int
+    let rows: Int, columns: Int
 
     var grid: [Double]
 
@@ -14,13 +14,13 @@ struct Matrix {
 
     }
 
-    func indexIsValid(row: Int, column: Int): Bool {
+    func indexIsValid(row: Int, column: Int) -> Bool {
 
         return row >= 0 && row < rows && column >= 0 && column < columns
 
     }
 
-    subscript(row: Int, column: Int): Double {
+    subscript(row: Int, column: Int) -> Double {
 
         get {
 

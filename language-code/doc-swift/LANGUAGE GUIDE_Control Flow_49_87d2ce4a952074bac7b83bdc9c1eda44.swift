@@ -12,7 +12,7 @@ gameLoop: while square != finalSquare {
 
         break gameLoop
 
-    case val newSquare where newSquare > finalSquare:
+    case let newSquare where newSquare > finalSquare:
 
         // diceRoll will move us beyond the final square, so roll again
 

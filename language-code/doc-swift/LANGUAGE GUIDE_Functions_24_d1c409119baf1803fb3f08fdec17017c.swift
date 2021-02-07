@@ -1,4 +1,4 @@
-func greet(person: String, from hometown: String): String {
+func greet(person: String, from hometown: String) -> String {
 
     return "Hello \(person)!  Glad you could visit from \(hometown)."
 

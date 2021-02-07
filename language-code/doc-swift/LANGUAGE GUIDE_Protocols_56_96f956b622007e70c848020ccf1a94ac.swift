@@ -36,7 +36,7 @@ func beginConcert(in location: Location & Named) {
 
 
 
-val seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
+let seattle = City(name: "Seattle", latitude: 47.6, longitude: -122.3)
 
 beginConcert(in: seattle)
 

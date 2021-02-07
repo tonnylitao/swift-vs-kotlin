@@ -1,7 +1,7 @@
-val contentHeight = 40
+let contentHeight = 40
 
-val hasHeader = true
+let hasHeader = true
 
-val rowHeight = contentHeight + (hasHeader ? 50 : 20)
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
 // rowHeight is equal to 90

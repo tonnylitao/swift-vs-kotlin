@@ -1,12 +1,12 @@
 // "Voulez-vous un café?" using LATIN SMALL LETTER E WITH ACUTE
 
-val eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
+let eAcuteQuestion = "Voulez-vous un caf\u{E9}?"
 
 
 
 // "Voulez-vous un café?" using LATIN SMALL LETTER E and COMBINING ACUTE ACCENT
 
-val combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
+let combinedEAcuteQuestion = "Voulez-vous un caf\u{65}\u{301}?"
 
 
 

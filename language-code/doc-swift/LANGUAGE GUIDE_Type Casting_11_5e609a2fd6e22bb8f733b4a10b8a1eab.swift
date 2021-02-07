@@ -10,11 +10,11 @@ for thing in things {
 
         print("zero as a Double")
 
-    case val someInt as Int:
+    case let someInt as Int:
 
         print("an integer value of \(someInt)")
 
-    case val someDouble as Double where someDouble > 0:
+    case let someDouble as Double where someDouble > 0:
 
         print("a positive double value of \(someDouble)")
 
@@ -22,19 +22,19 @@ for thing in things {
 
         print("some other double value that I don't want to print")
 
-    case val someString as String:
+    case let someString as String:
 
         print("a string value of \"\(someString)\"")
 
-    case val (x, y) as (Double, Double):
+    case let (x, y) as (Double, Double):
 
         print("an (x, y) point at \(x), \(y)")
 
-    case val movie as Movie:
+    case let movie as Movie:
 
         print("a movie called \(movie.name), dir. \(movie.director)")
 
-    case val stringConverter as (String): String:
+    case let stringConverter as (String) -> String:
 
         print(stringConverter("Michael"))
 

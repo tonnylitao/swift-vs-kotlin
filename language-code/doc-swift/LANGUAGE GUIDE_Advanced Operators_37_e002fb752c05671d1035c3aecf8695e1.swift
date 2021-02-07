@@ -1,6 +1,6 @@
 extension Vector2D {
 
-    static prefix func +++ (vector: inout Vector2D): Vector2D {
+    static prefix func +++ (vector: inout Vector2D) -> Vector2D {
 
         vector += vector
 
@@ -14,7 +14,7 @@ extension Vector2D {
 
 var toBeDoubled = Vector2D(x: 1.0, y: 4.0)
 
-val afterDoubling = +++toBeDoubled
+let afterDoubling = +++toBeDoubled
 
 // toBeDoubled now has values of (2.0, 8.0)
 

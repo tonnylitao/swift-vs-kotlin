@@ -22,6 +22,6 @@ struct Celsius {
 
 }
 
-val bodyTemperature = Celsius(37.0)
+let bodyTemperature = Celsius(37.0)
 
 // bodyTemperature.temperatureInCelsius is 37.0

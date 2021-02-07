@@ -1,4 +1,4 @@
-if val airportName = airports["DUB"] {
+if let airportName = airports["DUB"] {
 
     print("The name of the airport is \(airportName).")
 

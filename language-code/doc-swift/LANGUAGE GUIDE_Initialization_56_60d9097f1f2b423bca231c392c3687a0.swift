@@ -6,7 +6,7 @@ enum TemperatureUnit: Character {
 
 
 
-val fahrenheitUnit = TemperatureUnit(rawValue: "F")
+let fahrenheitUnit = TemperatureUnit(rawValue: "F")
 
 if fahrenheitUnit != nil {
 
@@ -18,7 +18,7 @@ if fahrenheitUnit != nil {
 
 
 
-val unknownUnit = TemperatureUnit(rawValue: "X")
+let unknownUnit = TemperatureUnit(rawValue: "X")
 
 if unknownUnit == nil {
 

@@ -1,4 +1,4 @@
-func someFunctionWithNonescapingClosure(closure: (): Void) {
+func someFunctionWithNonescapingClosure(closure: () -> Void) {
 
     closure()
 
@@ -22,7 +22,7 @@ class SomeClass {
 
 
 
-val instance = SomeClass()
+let instance = SomeClass()
 
 instance.doSomething()
 

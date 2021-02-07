@@ -1,3 +1,3 @@
-val mysteryMeat = Food()
+let mysteryMeat = Food()
 
 // mysteryMeat's name is "[Unnamed]"

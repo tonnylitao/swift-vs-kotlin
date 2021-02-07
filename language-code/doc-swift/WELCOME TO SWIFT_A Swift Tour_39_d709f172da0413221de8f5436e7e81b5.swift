@@ -8,7 +8,7 @@ enum Rank: Int {
 
 
 
-    func simpleDescription(): String {
+    func simpleDescription() -> String {
 
         switch self {
 
@@ -38,6 +38,6 @@ enum Rank: Int {
 
 }
 
-val ace = Rank.ace
+let ace = Rank.ace
 
-val aceRawValue = ace.rawValue
+let aceRawValue = ace.rawValue

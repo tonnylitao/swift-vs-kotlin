@@ -1,4 +1,4 @@
-val apples = shoppingList.removeLast()
+let apples = shoppingList.removeLast()
 
 // the last item in the array has just been removed
 

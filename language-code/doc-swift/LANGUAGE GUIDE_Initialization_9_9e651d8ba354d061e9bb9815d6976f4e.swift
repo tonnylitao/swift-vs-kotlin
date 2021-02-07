@@ -1,6 +1,6 @@
 struct Color {
 
-    val red, green, blue: Double
+    let red, green, blue: Double
 
     init(red: Double, green: Double, blue: Double) {
 

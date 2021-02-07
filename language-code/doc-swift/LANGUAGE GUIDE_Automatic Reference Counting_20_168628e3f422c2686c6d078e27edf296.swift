@@ -1,6 +1,6 @@
 class Customer {
 
-    val name: String
+    let name: String
 
     var card: CreditCard?
 
@@ -18,9 +18,9 @@ class Customer {
 
 class CreditCard {
 
-    val number: UInt64
+    let number: UInt64
 
-    unowned val customer: Customer
+    unowned let customer: Customer
 
     init(number: UInt64, customer: Customer) {
 

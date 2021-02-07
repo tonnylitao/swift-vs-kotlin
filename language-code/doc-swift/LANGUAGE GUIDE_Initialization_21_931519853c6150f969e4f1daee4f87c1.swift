@@ -4,4 +4,4 @@ struct Size {
 
 }
 
-val twoByTwo = Size(width: 2.0, height: 2.0)
+let twoByTwo = Size(width: 2.0, height: 2.0)

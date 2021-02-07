@@ -12,13 +12,13 @@ extension Double {
 
 }
 
-val oneInch = 25.4.mm
+let oneInch = 25.4.mm
 
 print("One inch is \(oneInch) meters")
 
 // Prints "One inch is 0.0254 meters"
 
-val threeFeet = 3.ft
+let threeFeet = 3.ft
 
 print("Three feet is \(threeFeet) meters")
 

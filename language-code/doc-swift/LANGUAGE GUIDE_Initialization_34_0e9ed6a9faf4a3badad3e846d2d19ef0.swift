@@ -1,4 +1,4 @@
-val vehicle = Vehicle()
+let vehicle = Vehicle()
 
 print("Vehicle: \(vehicle.description)")
 

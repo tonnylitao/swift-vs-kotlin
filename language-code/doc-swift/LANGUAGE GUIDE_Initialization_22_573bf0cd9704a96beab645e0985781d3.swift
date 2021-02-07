@@ -1,4 +1,4 @@
-val zeroByTwo = Size(height: 2.0)
+let zeroByTwo = Size(height: 2.0)
 
 print(zeroByTwo.width, zeroByTwo.height)
 
@@ -6,7 +6,7 @@ print(zeroByTwo.width, zeroByTwo.height)
 
 
 
-val zeroByZero = Size()
+let zeroByZero = Size()
 
 print(zeroByZero.width, zeroByZero.height)
 

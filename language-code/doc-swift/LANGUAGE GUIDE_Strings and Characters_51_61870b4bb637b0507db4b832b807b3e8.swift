@@ -1,8 +1,8 @@
-val latinCapitalLetterA: Character = "\u{41}"
+let latinCapitalLetterA: Character = "\u{41}"
 
 
 
-val cyrillicCapitalLetterA: Character = "\u{0410}"
+let cyrillicCapitalLetterA: Character = "\u{0410}"
 
 
 

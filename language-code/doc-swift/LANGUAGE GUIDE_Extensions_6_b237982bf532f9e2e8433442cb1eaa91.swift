@@ -1,4 +1,4 @@
-val aMarathon = 42.km + 195.m
+let aMarathon = 42.km + 195.m
 
 print("A marathon is \(aMarathon) meters long")
 

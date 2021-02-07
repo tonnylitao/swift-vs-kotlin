@@ -4,7 +4,7 @@ enum Beverage: CaseIterable {
 
 }
 
-val numberOfChoices = Beverage.allCases.count
+let numberOfChoices = Beverage.allCases.count
 
 print("\(numberOfChoices) beverages available")
 

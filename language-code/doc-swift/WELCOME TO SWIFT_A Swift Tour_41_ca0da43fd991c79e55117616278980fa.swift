@@ -4,7 +4,7 @@ enum Suit {
 
 
 
-    func simpleDescription(): String {
+    func simpleDescription() -> String {
 
         switch self {
 
@@ -30,6 +30,6 @@ enum Suit {
 
 }
 
-val hearts = Suit.hearts
+let hearts = Suit.hearts
 
-val heartsDescription = hearts.simpleDescription()
+let heartsDescription = hearts.simpleDescription()

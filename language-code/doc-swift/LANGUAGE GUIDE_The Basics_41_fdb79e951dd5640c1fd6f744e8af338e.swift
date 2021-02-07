@@ -1,3 +1,3 @@
-val orangesAreOrange = true
+let orangesAreOrange = true
 
-val turnipsAreDelicious = false
+let turnipsAreDelicious = false

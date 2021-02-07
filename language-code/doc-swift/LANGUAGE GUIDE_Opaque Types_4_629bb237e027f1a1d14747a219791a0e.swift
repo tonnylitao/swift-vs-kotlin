@@ -4,7 +4,7 @@ struct JoinedShape<T: Shape, U: Shape>: Shape {
 
     var bottom: U
 
-    func draw(): String {
+    func draw() -> String {
 
         return top.draw() + "\n" + bottom.draw()
 
@@ -12,7 +12,7 @@ struct JoinedShape<T: Shape, U: Shape>: Shape {
 
 }
 
-val joinedTriangles = JoinedShape(top: smallTriangle, bottom: flippedTriangle)
+let joinedTriangles = JoinedShape(top: smallTriangle, bottom: flippedTriangle)
 
 print(joinedTriangles.draw())
 

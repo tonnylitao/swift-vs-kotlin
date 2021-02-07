@@ -4,7 +4,7 @@ welcome.remove(at: welcome.index(before: welcome.endIndex))
 
 
 
-val range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
 
 welcome.removeSubrange(range)
 

@@ -8,7 +8,7 @@ struct Player {
 
 
 
-    static val maxHealth = 10
+    static let maxHealth = 10
 
     mutating func restoreHealth() {
 

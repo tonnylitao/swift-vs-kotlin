@@ -2,4 +2,4 @@ var myVariable = 42
 
 myVariable = 50
 
-val myConstant = 42
+let myConstant = 42

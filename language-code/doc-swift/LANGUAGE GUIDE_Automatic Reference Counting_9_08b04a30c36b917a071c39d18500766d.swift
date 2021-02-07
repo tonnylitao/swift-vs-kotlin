@@ -1,6 +1,6 @@
 class Person {
 
-    val name: String
+    let name: String
 
     init(name: String) { self.name = name }
 
@@ -14,7 +14,7 @@ class Person {
 
 class Apartment {
 
-    val unit: String
+    let unit: String
 
     init(unit: String) { self.unit = unit }
 

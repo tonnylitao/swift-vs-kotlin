@@ -1,8 +1,8 @@
-val cannotBeNegative: UInt8 = -1
+let cannotBeNegative: UInt8 = -1
 
 // UInt8 cannot store negative numbers, and so this will report an error
 
-val tooBig: Int8 = Int8.max + 1
+let tooBig: Int8 = Int8.max + 1
 
 // Int8 cannot store a number larger than its maximum value,
 

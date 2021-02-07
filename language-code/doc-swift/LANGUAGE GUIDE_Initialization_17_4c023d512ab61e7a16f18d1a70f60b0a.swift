@@ -1,6 +1,6 @@
 class SurveyQuestion {
 
-    val text: String
+    let text: String
 
     var response: String?
 
@@ -18,7 +18,7 @@ class SurveyQuestion {
 
 }
 
-val beetsQuestion = SurveyQuestion(text: "How about beets?")
+let beetsQuestion = SurveyQuestion(text: "How about beets?")
 
 beetsQuestion.ask()
 

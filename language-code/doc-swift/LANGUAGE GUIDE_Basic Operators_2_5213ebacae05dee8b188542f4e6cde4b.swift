@@ -1,4 +1,4 @@
-val b = 10
+let b = 10
 
 var a = 5
 

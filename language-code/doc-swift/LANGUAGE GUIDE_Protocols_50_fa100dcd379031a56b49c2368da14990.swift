@@ -8,11 +8,11 @@ extension SnakesAndLadders: PrettyTextRepresentable {
 
             switch board[index] {
 
-            case val ladder where ladder > 0:
+            case let ladder where ladder > 0:
 
                 output += "▲ "
 
-            case val snake where snake < 0:
+            case let snake where snake < 0:
 
                 output += "▼ "
 

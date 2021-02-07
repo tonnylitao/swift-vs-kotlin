@@ -1,3 +1,3 @@
-val emptyArray = [String]()
+let emptyArray = [String]()
 
-val emptyDictionary = [String: Float]()
+let emptyDictionary = [String: Float]()

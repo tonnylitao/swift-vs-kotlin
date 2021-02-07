@@ -1,1 +1,1 @@
-val john = Person()
+let john = Person()

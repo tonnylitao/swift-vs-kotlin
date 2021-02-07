@@ -1,4 +1,4 @@
-if val roomCount = john.residence?.numberOfRooms {
+if let roomCount = john.residence?.numberOfRooms {
 
     print("John's residence has \(roomCount) room(s).")
 

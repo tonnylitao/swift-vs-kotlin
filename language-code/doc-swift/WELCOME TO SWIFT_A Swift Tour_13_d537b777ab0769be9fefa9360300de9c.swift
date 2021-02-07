@@ -1,4 +1,4 @@
-val individualScores = [75, 43, 103, 87, 12]
+let individualScores = [75, 43, 103, 87, 12]
 
 var teamScore = 0
 

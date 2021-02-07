@@ -1,4 +1,4 @@
-func protoFlip<T: Shape>(_ shape: T): Shape {
+func protoFlip<T: Shape>(_ shape: T) -> Shape {
 
     if shape is Square {
 

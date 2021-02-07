@@ -1,4 +1,4 @@
-val sortedNumbers = numbers.sorted { it > $1 }
+let sortedNumbers = numbers.sorted { $0 > $1 }
 
 print(sortedNumbers)
 

@@ -1,4 +1,4 @@
-func printAndCount(string: String): Int {
+func printAndCount(string: String) -> Int {
 
     print(string)
 
@@ -8,7 +8,7 @@ func printAndCount(string: String): Int {
 
 func printWithoutCounting(string: String) {
 
-    val _ = printAndCount(string: string)
+    let _ = printAndCount(string: string)
 
 }
 

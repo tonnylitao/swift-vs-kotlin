@@ -1,4 +1,4 @@
-val automatic = AutomaticCar()
+let automatic = AutomaticCar()
 
 automatic.currentSpeed = 35.0
 

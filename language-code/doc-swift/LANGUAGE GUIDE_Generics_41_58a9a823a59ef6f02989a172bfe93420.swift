@@ -1,8 +1,8 @@
 extension Stack where Element: Equatable {
 
-    func isTop(_ item: Element): Bool {
+    func isTop(_ item: Element) -> Bool {
 
-        guard val topItem = items.last else {
+        guard let topItem = items.last else {
 
             return false
 

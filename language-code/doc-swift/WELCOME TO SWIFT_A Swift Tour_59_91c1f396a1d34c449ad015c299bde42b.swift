@@ -1,4 +1,4 @@
-func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U): Bool
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
 
     where T.Element: Equatable, T.Element == U.Element
 

@@ -1,4 +1,4 @@
-func greet(person: String, alreadyGreeted: Bool): String {
+func greet(person: String, alreadyGreeted: Bool) -> String {
 
     if alreadyGreeted {
 

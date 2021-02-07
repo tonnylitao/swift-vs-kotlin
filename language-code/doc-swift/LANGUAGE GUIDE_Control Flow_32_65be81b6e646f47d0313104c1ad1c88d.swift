@@ -1,4 +1,4 @@
-val somePoint = (1, 1)
+let somePoint = (1, 1)
 
 switch somePoint {
 

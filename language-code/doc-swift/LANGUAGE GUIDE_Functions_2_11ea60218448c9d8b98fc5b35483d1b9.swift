@@ -1,6 +1,6 @@
-func greet(person: String): String {
+func greet(person: String) -> String {
 
-    val greeting = "Hello, " + person + "!"
+    let greeting = "Hello, " + person + "!"
 
     return greeting
 

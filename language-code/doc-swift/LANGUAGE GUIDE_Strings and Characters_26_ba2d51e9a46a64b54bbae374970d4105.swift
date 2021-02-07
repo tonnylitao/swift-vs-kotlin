@@ -1,4 +1,4 @@
-val badStart = """
+let badStart = """
 
 one
 
@@ -6,7 +6,7 @@ two
 
 """
 
-val end = """
+let end = """
 
 three
 
@@ -22,7 +22,7 @@ print(badStart + end)
 
 
 
-val goodStart = """
+let goodStart = """
 
 one
 

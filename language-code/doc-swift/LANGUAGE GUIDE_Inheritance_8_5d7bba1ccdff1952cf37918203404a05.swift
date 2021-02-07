@@ -1,3 +1,3 @@
-val bicycle = Bicycle()
+let bicycle = Bicycle()
 
 bicycle.hasBasket = true

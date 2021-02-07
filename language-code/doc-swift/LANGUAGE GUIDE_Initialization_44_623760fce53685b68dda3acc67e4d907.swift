@@ -1,5 +1,5 @@
-val oneMysteryItem = RecipeIngredient()
+let oneMysteryItem = RecipeIngredient()
 
-val oneBacon = RecipeIngredient(name: "Bacon")
+let oneBacon = RecipeIngredient(name: "Bacon")
 
-val sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)

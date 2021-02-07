@@ -1,5 +1,5 @@
-val protoFlippedTriangle = protoFlip(smallTriangle)
+let protoFlippedTriangle = protoFlip(smallTriangle)
 
-val sameThing = protoFlip(smallTriangle)
+let sameThing = protoFlip(smallTriangle)
 
 protoFlippedTriangle == sameThing  // Error

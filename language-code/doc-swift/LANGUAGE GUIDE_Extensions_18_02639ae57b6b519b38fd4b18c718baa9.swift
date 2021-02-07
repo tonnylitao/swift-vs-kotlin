@@ -1,6 +1,6 @@
 extension Int {
 
-    subscript(digitIndex: Int): Int {
+    subscript(digitIndex: Int) -> Int {
 
         var decimalBase = 1
 

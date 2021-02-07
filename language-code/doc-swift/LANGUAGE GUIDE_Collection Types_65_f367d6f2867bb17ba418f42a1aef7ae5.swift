@@ -1,9 +1,9 @@
-val airportCodes = [String](airports.keys)
+let airportCodes = [String](airports.keys)
 
 // airportCodes is ["LHR", "YYZ"]
 
 
 
-val airportNames = [String](airports.values)
+let airportNames = [String](airports.values)
 
 // airportNames is ["London Heathrow", "Toronto Pearson"]

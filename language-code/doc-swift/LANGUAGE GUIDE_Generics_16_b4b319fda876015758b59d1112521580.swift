@@ -1,4 +1,4 @@
-if val topItem = stackOfStrings.topItem {
+if let topItem = stackOfStrings.topItem {
 
     print("The top item on the stack is \(topItem).")
 

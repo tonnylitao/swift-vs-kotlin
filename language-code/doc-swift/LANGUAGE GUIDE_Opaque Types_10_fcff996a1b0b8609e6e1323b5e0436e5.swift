@@ -2,7 +2,7 @@ struct FlippedShape<T: Shape>: Shape {
 
     var shape: T
 
-    func draw(): String {
+    func draw() -> String {
 
         if shape is Square {
 
@@ -10,7 +10,7 @@ struct FlippedShape<T: Shape>: Shape {
 
         }
 
-        val lines = shape.draw().split(separator: "\n")
+        let lines = shape.draw().split(separator: "\n")
 
         return lines.reversed().joined(separator: "\n")
 

@@ -20,9 +20,9 @@ struct Rect {
 
         get {
 
-            val centerX = origin.x + (size.width / 2)
+            let centerX = origin.x + (size.width / 2)
 
-            val centerY = origin.y + (size.height / 2)
+            let centerY = origin.y + (size.height / 2)
 
             return Point(x: centerX, y: centerY)
 
@@ -44,7 +44,7 @@ var square = Rect(origin: Point(x: 0.0, y: 0.0),
 
                   size: Size(width: 10.0, height: 10.0))
 
-val initialSquareCenter = square.center
+let initialSquareCenter = square.center
 
 square.center = Point(x: 15.0, y: 15.0)
 

@@ -1,5 +1,5 @@
-val label = "The width is "
+let label = "The width is "
 
-val width = 94
+let width = 94
 
-val widthLabel = label + String(width)
+let widthLabel = label + String(width)

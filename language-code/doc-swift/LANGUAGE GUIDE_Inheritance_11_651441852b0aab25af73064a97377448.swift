@@ -1,4 +1,4 @@
-val tandem = Tandem()
+let tandem = Tandem()
 
 tandem.hasBasket = true
 

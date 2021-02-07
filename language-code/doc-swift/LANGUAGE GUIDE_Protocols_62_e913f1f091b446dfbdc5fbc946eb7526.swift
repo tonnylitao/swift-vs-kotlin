@@ -1,6 +1,6 @@
 for object in objects {
 
-    if val objectWithArea = object as? HasArea {
+    if let objectWithArea = object as? HasArea {
 
         print("Area is \(objectWithArea.area)")
 

@@ -16,7 +16,7 @@ var a = SimpleClass()
 
 a.adjust()
 
-val aDescription = a.simpleDescription
+let aDescription = a.simpleDescription
 
 
 
@@ -36,4 +36,4 @@ var b = SimpleStructure()
 
 b.adjust()
 
-val bDescription = b.simpleDescription
+let bDescription = b.simpleDescription

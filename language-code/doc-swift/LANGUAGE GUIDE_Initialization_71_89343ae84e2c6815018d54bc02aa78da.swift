@@ -1,6 +1,6 @@
 struct Chessboard {
 
-    val boardColors: [Bool] = {
+    let boardColors: [Bool] = {
 
         var temporaryBoard = [Bool]()
 
@@ -24,7 +24,7 @@ struct Chessboard {
 
     }()
 
-    func squareIsBlackAt(row: Int, column: Int): Bool {
+    func squareIsBlackAt(row: Int, column: Int) -> Bool {
 
         return boardColors[(row * 8) + column]
 

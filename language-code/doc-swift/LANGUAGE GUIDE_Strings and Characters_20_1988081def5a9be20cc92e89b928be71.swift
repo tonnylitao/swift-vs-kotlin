@@ -1,1 +1,1 @@
-val exclamationMark: Character = "!"
+let exclamationMark: Character = "!"
