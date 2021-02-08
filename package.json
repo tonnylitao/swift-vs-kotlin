@@ -1,17 +1,18 @@
 {
-  "name": "spider-in-puppeteer",
+  "name": "swift-vs-kotlin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/kotlin.js localhost 8080",
-    "ejs": "ejs src/template/index.ejs -f language-code/kotlin.json -0 ejs/output.html",
+    "start-swift": "nodemon src/swift.js & http-server public",
+    "start-kotlin": "nodemon src/kotlin.js & http-server public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
+    "http-server": "^0.12.3",
     "make-dir": "^3.1.0",
     "md5": "^2.3.0",
     "nodemon": "^2.0.7",
@@ -22,7 +23,8 @@
     "delay": "2500",
     "watch": [
       "src/*.js",
-      "language-code/doc-kotlin/*.swift"
+      "language-code/doc-kotlin/*.swift",
+      "language-code/doc-swift/*.kt"
     ]
   }
 }
