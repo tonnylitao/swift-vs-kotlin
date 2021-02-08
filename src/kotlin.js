@@ -8,6 +8,7 @@ const ejs = require("ejs");
 const documentUrl = "https://kotlinlang.org/docs/reference";
 const documentName = "kotlin";
 
+makeDir.sync(`${process.env.BUILD_DIR}/from${documentName}`);
 //
 writeToHtml(require("../language-code/kotlin.json"));
 return;
@@ -285,12 +286,14 @@ function writeToHtml(result) {
         (err, str) => {
           err && console.log(err);
 
-          const fileName = `${__dirname}/../public/fromkotlin/${menuChapter}.html`;
+          const fileName = `${__dirname}/../${process.env.BUILD_DIR}/fromkotlin/${menuChapter}.html`;
           fs.writeFileSync(fileName, str);
         }
       );
     });
   });
 
-  console.log("please open html under public/fromswift/ when finished.");
+  console.log(
+    `please open html under ${process.env.BUILD_DIR}/fromkotlin/ when finished.`
+  );
 }

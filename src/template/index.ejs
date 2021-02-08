@@ -1,3 +1,4 @@
+<% const HOME = process.env.BUILD_DIR !== 'public' ? process.env.BUILD_DIR : '' %>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -159,8 +160,8 @@
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
     <div class="from-aspect">
-      <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
-      <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
+      <a href="<%= HOME %>/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
+      <a href="<%= HOME %>/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
     </div>
     <div class="capters">
       <ul>
@@ -169,7 +170,7 @@
           <ul>
             <% item.chapters.forEach((chap, chapterIndex) => { %>
               <ol class="chapter-2">-&nbsp
-                <a href="/from<%= language %>/<%= chap.menuChapter %>.html">
+                <a href="<%= HOME %>/from<%= language %>/<%= chap.menuChapter %>.html">
                   <%= chap.title %>
                 </a>
               </ol>

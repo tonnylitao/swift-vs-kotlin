@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-swift": "nodemon src/swift.js & http-server public",
-    "start-kotlin": "nodemon src/kotlin.js & http-server public",
+    "start-swift": "BUILD_DIR=public nodemon src/swift.js & http-server public",
+    "start-kotlin": "BUILD_DIR=public nodemon src/kotlin.js & http-server public",
+    "deploy": "BUILD_DIR=swift-vs-kotlin node src/kotlin.js & BUILD_DIR=swift-vs-kotlin node src/swift.js & cp public/github.css swift-vs-kotlin/github.css & cp public/highlight.site.pack.js swift-vs-kotlin/highlight.site.pack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

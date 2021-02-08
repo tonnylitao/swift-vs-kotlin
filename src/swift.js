@@ -11,6 +11,8 @@ const documentUrl2 =
 
 const documentName = "swift";
 
+makeDir.sync(`${process.env.BUILD_DIR}/from${documentName}`);
+
 //
 writeToHtml(require("../language-code/swift.json"));
 return;
@@ -281,12 +283,14 @@ function writeToHtml(result) {
         (err, str) => {
           err && console.log(err);
 
-          const fileName = `${__dirname}/../public/fromswift/${menuChapter}.html`;
+          const fileName = `${__dirname}/../${process.env.BUILD_DIR}/fromswift/${menuChapter}.html`;
           fs.writeFileSync(fileName, str);
         }
       );
     });
   });
 
-  console.log("please open html under public/fromswift/ when finished.");
+  console.log(
+    `please open html under ${process.env.BUILD_DIR}/fromswift/ when finished.`
+  );
 }
