@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -217,13 +231,19 @@
                 <pre>
                   <code class="kotlin"><%- selfEscaped %></code>
                 </pre>
+                <% if (otherEscaped.includes('//-👏')) { %>
+                    <div class="left-bravo">👏</div>
+                <% } %>
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               <% if (isSimilar) { %>
                   <pre>
-                    <code class="swift"><%- otherEscaped %></code>
+                    <code class="swift"><%- otherEscaped.replace('//-👏\n', '').replace('//👏\n', ''); %></code>
                   </pre>
+                  <% if (otherEscaped.includes('//👏')) { %>
+                      <div class="right-bravo">👏</div>
+                  <% } %>
               <% }else { %>
                   <div><%- otherEscaped %></div>
               <% } %>

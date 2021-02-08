@@ -11,7 +11,7 @@ const documentUrl2 =
 
 const documentName = "swift";
 
-makeDir.sync(`${process.env.BUILD_DIR}/from${documentName}`);
+makeDir.sync(`${process.env.BUILD_DIR.replace("/", "")}/from${documentName}`);
 
 //
 writeToHtml(require("../language-code/swift.json"));

@@ -8,7 +8,7 @@ const ejs = require("ejs");
 const documentUrl = "https://kotlinlang.org/docs/reference";
 const documentName = "kotlin";
 
-makeDir.sync(`${process.env.BUILD_DIR}/from${documentName}`);
+makeDir.sync(`${process.env.BUILD_DIR.replace("/", "")}/from${documentName}`);
 //
 writeToHtml(require("../language-code/kotlin.json"));
 return;
@@ -234,7 +234,8 @@ function writeToHtml(result) {
                     "utf8"
                   );
 
-                  isSimilar = !swiftCode.startsWith("❌") && swiftCode != "";
+                  isSimilar =
+                    !swiftCode.includes("not-support") && swiftCode != "";
                   if (isSimilar) {
                     otherEscaped = swiftCode.replace(
                       /[\u00A0-\u9999<>\&]/g,
