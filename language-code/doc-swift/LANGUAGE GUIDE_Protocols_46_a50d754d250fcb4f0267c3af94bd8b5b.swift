@@ -1,1 +1,0 @@
-let things: [TextRepresentable] = [game, d12, simonTheHamster]

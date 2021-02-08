@@ -1,3 +1,0 @@
-// In the implementation of a subscript...
-
-precondition(index > 0, "Index must be greater than zero.")

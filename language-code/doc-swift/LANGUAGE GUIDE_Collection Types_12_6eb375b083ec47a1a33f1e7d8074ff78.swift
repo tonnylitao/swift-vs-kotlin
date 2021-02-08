@@ -1,1 +1,0 @@
-var shoppingList = ["Eggs", "Milk"]

@@ -1,1 +1,0 @@
-var red, green, blue: Double

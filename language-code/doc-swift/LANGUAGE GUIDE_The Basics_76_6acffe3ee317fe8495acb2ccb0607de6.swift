@@ -1,1 +1,0 @@
-assert(age >= 0)

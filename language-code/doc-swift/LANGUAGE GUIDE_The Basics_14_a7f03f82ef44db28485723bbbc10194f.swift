@@ -1,3 +1,0 @@
-print(friendlyWelcome)
-
-// Prints "Bonjour!"

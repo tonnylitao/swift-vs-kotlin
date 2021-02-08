@@ -1,1 +1,0 @@
-typealias AudioSample = UInt16

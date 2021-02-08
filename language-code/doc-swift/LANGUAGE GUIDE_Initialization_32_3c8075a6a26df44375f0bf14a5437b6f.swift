@@ -1,5 +1,0 @@
-convenience init(parameters) {
-
-    statements
-
-}

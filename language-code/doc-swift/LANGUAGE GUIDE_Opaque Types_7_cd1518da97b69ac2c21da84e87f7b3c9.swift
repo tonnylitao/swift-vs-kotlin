@@ -1,1 +1,0 @@
-func max<T>(_ x: T, _ y: T) -> T where T: Comparable { ... }

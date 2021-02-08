@@ -1,1 +1,0 @@
-var mathFunction: (Int, Int) -> Int = addTwoInts

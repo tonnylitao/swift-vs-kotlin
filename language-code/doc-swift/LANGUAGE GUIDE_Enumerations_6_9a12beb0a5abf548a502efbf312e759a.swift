@@ -1,1 +1,0 @@
-var directionToHead = CompassPoint.west

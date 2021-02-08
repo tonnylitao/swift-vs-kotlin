@@ -1,5 +1,0 @@
-deinit {
-
-    // perform the deinitialization
-
-}

@@ -1,1 +1,0 @@
-reversedNames = names.sorted(by: >)
