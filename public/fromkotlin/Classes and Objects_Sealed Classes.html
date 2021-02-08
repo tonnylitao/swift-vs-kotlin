@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -619,6 +633,7 @@ data class Const(val number: Double) : Expr()
 data class Sum(val e1: Expr, val e2: Expr) : Expr()
 object NotANumber : Expr()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -630,6 +645,7 @@ data class Const(let number: Double) : Expr()
 data class Sum(let e1: Expr, let e2: Expr) : Expr()
 object NotANumber : Expr()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -664,6 +680,7 @@ data class Const(val number: Double) : MathExpr()
 data class Sum(val e1: Expr, val e2: Expr) : MathExpr()
 object NotANumber : Expr</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -677,6 +694,7 @@ data class Const(let number: Double) : MathExpr()
 data class Sum(let e1: Expr, let e2: Expr) : MathExpr()
 object NotANumber : Expr</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -710,6 +728,7 @@ object NotANumber : Expr</code>
     // the `else` clause is not required because we've covered all the cases
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -722,6 +741,7 @@ object NotANumber : Expr</code>
     // the `else` clause is not required because we've covered all the cases
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -750,6 +770,7 @@ object NotANumber : Expr</code>
                 <pre>
                   <code class="kotlin">kotlinOptions.languageVersion = "1.5"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -757,6 +778,7 @@ object NotANumber : Expr</code>
                   <pre>
                     <code class="swift">kotlinOptions.languageVersion = "1.5"</code>
                   </pre>
+                  
               
               </td>
             </tr>

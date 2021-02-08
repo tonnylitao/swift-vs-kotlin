@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -613,6 +627,7 @@
 &#8203;
 typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@ typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62
 &#8203;
 typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -638,6 +654,7 @@ typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62
 &#8203;
 typealias Predicate&#60;T&#62; = (T) -&#62; Boolean</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -647,6 +664,7 @@ typealias Predicate&#60;T&#62; = (T) -&#62; Boolean</code>
 &#8203;
 typealias Predicate&#60;T&#62; = (T) -&#62; Boolean</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -669,6 +687,7 @@ class B {
 typealias AInner = A.Inner
 typealias BInner = B.Inner</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -684,6 +703,7 @@ class B {
 typealias AInner = A.Inner
 typealias BInner = B.Inner</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -708,6 +728,7 @@ fun main() {
     println(listOf(1, -2).filter(p)) // prints "[1]"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -725,6 +746,7 @@ func main() {
     print(listOf(1, -2).filter(p)) // prints "[1]"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

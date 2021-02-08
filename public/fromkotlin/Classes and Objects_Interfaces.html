@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -620,6 +634,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -632,6 +647,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -664,6 +680,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -675,6 +692,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -716,6 +734,7 @@ class Child : MyInterface {
     override val prop: Int = 29
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -736,6 +755,7 @@ class Child : MyInterface {
     override let prop: Int = 29
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -780,6 +800,7 @@ data class Employee(
     val position: Position
 ) : Person</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -803,6 +824,7 @@ data class Employee(
     let position: Position
 ) : Person</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -854,6 +876,7 @@ class D : A, B {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -884,6 +907,7 @@ class D : A, B {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

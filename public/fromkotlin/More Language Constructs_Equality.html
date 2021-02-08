@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -629,6 +643,7 @@
                 <pre>
                   <code class="kotlin">a?.equals(b) ?: (b === null)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@
                   <pre>
                     <code class="swift">a?.equals(b) ?? (b === null)</code>
                   </pre>
+                  
               
               </td>
             </tr>

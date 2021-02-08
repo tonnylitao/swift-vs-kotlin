@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -634,6 +648,7 @@ println(numbers[0])
 println(numbers.getOrNull(5))             // null
 println(numbers.getOrElse(5, {it}))        // 5</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -646,6 +661,7 @@ print(numbers[0])
 print(numbers.getOrNull(5))             // null
 print(numbers.getOrElse(5, {it}))        // 5</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -675,6 +691,7 @@ print(numbers.getOrElse(5, {it}))        // 5</code>
                   <code class="kotlin">val numbers = (0..13).toList()
 println(numbers.subList(3, 6))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -683,6 +700,7 @@ println(numbers.subList(3, 6))</code>
                     <code class="swift">let numbers = (0..13).toList()
 print(numbers.subList(3, 6))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -713,6 +731,7 @@ print(numbers.subList(3, 6))</code>
 println(numbers.indexOf(2))
 println(numbers.lastIndexOf(2))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -722,6 +741,7 @@ println(numbers.lastIndexOf(2))</code>
 print(numbers.indexOf(2))
 print(numbers.lastIndexOf(2))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -738,6 +758,7 @@ print(numbers.lastIndexOf(2))</code>
 println(numbers.indexOfFirst { it &#62; 2})
 println(numbers.indexOfLast { it % 2 == 1})</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -747,6 +768,7 @@ println(numbers.indexOfLast { it % 2 == 1})</code>
 print(numbers.indexOfFirst { $0 &#62; 2})
 print(numbers.indexOfLast { $0 % 2 == 1})</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -780,6 +802,7 @@ println(numbers.binarySearch("two"))  // 3
 println(numbers.binarySearch("z")) // -5
 println(numbers.binarySearch("two", 0, 2))  // -3</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -792,6 +815,7 @@ print(numbers.binarySearch("two"))  // 3
 print(numbers.binarySearch("z")) // -5
 print(numbers.binarySearch("two", 0, 2))  // -3</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -826,6 +850,7 @@ print(numbers.binarySearch("two", 0, 2))  // -3</code>
 &#8203;
 println(productList.binarySearch(Product("AppCode", 99.0), compareBy&#60;Product&#62; { it.price }.thenBy { it.name }))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -839,6 +864,7 @@ println(productList.binarySearch(Product("AppCode", 99.0), compareBy&#60;Product
 &#8203;
 print(productList.binarySearch(Product("AppCode", 99.0), compareBy&#60;Product&#62; { it.price }.thenBy { it.name }))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -854,6 +880,7 @@ print(productList.binarySearch(Product("AppCode", 99.0), compareBy&#60;Product&#
                   <code class="kotlin">val colors = listOf("Blue", "green", "ORANGE", "Red", "yellow")
 println(colors.binarySearch("RED", String.CASE_INSENSITIVE_ORDER)) // 3</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -862,6 +889,7 @@ println(colors.binarySearch("RED", String.CASE_INSENSITIVE_ORDER)) // 3</code>
                     <code class="swift">let colors = listOf("Blue", "green", "ORANGE", "Red", "yellow")
 print(colors.binarySearch("RED", String.CASE_INSENSITIVE_ORDER)) // 3</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -902,6 +930,7 @@ fun main() {
     println(productList.binarySearch { priceComparison(it, 99.0) })
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -921,6 +950,7 @@ func main() {
     print(productList.binarySearch { priceComparison(it, 99.0) })
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -952,6 +982,7 @@ numbers.add(1, "two")
 numbers.addAll(2, listOf("three", "four"))
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -962,6 +993,7 @@ numbers.add(1, "two")
 numbers.addAll(2, listOf("three", "four"))
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -992,6 +1024,7 @@ print(numbers)</code>
 numbers[1] =  "two"
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1001,6 +1034,7 @@ println(numbers)</code>
 numbers[1] =  "two"
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1017,6 +1051,7 @@ print(numbers)</code>
 numbers.fill(3)
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1026,6 +1061,7 @@ println(numbers)</code>
 numbers.fill(3)
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1056,6 +1092,7 @@ print(numbers)</code>
 numbers.removeAt(1)
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1065,6 +1102,7 @@ println(numbers)</code>
 numbers.removeAt(1)
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1086,6 +1124,7 @@ val empty = mutableListOf&#60;Int&#62;()
 // empty.removeFirst() // NoSuchElementException: List is empty.
 empty.removeFirstOrNull() //null</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1100,6 +1139,7 @@ let empty = mutableListOf&#60;Int&#62;()
 // empty.removeFirst() // NoSuchElementException: List is empty.
 empty.removeFirstOrNull() //null</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1147,6 +1187,7 @@ println("Shuffle: $numbers")
 numbers.reverse()
 println("Reverse: $numbers")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1173,6 +1214,7 @@ print("Shuffle: $numbers")
 numbers.reverse()
 print("Reverse: $numbers")</code>
                   </pre>
+                  
               
               </td>
             </tr>

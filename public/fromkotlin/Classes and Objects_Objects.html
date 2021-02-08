@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -633,6 +647,7 @@
     override fun mouseEntered(e: MouseEvent) { /*...*/ }
 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +659,7 @@
     override func mouseEntered(e: MouseEvent) { /*...*/ }
 })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -666,6 +682,7 @@ val ab: A = object : A(1), B {
     override val y = 15
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -681,6 +698,7 @@ let ab: A = object : A(1), B {
     override let y = 15
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -701,6 +719,7 @@ let ab: A = object : A(1), B {
     print(adHoc.x + adHoc.y)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -714,6 +733,7 @@ let ab: A = object : A(1), B {
     print(adHoc.x + adHoc.y)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -743,6 +763,7 @@ let ab: A = object : A(1), B {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -765,6 +786,7 @@ let ab: A = object : A(1), B {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -793,6 +815,7 @@ let ab: A = object : A(1), B {
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -814,6 +837,7 @@ let ab: A = object : A(1), B {
     // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -849,6 +873,7 @@ let ab: A = object : A(1), B {
         get() = // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -863,6 +888,7 @@ let ab: A = object : A(1), B {
         get() = // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -877,6 +903,7 @@ let ab: A = object : A(1), B {
                 <pre>
                   <code class="kotlin">DataProviderManager.registerDataProvider(...)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -884,6 +911,7 @@ let ab: A = object : A(1), B {
                   <pre>
                     <code class="swift">DataProviderManager.registerDataProvider(...)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -902,6 +930,7 @@ let ab: A = object : A(1), B {
     override fun mouseEntered(e: MouseEvent) { ... }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -913,6 +942,7 @@ let ab: A = object : A(1), B {
     override func mouseEntered(e: MouseEvent) { ... }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -945,6 +975,7 @@ let ab: A = object : A(1), B {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -956,6 +987,7 @@ let ab: A = object : A(1), B {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -970,6 +1002,7 @@ let ab: A = object : A(1), B {
                 <pre>
                   <code class="kotlin">val instance = MyClass.create()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -977,6 +1010,7 @@ let ab: A = object : A(1), B {
                   <pre>
                     <code class="swift">let instance = MyClass.create()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -995,6 +1029,7 @@ let ab: A = object : A(1), B {
 &#8203;
 val x = MyClass.Companion</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1006,6 +1041,7 @@ val x = MyClass.Companion</code>
 &#8203;
 let x = MyClass.Companion</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1030,6 +1066,7 @@ class MyClass2 {
 &#8203;
 val y = MyClass2</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1047,6 +1084,7 @@ class MyClass2 {
 &#8203;
 let y = MyClass2</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1071,6 +1109,7 @@ class MyClass {
 &#8203;
 val f: Factory&#60;MyClass&#62; = MyClass</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1088,6 +1127,7 @@ class MyClass {
 &#8203;
 let f: Factory&#60;MyClass&#62; = MyClass</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -631,6 +645,7 @@
 &#8203;
 object EmptyDeclarationProcessor : DeclarationProcessor() { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -641,6 +656,7 @@ object EmptyDeclarationProcessor : DeclarationProcessor() { /*...*/ }</code>
 let emptyDeclarationProcessor : DeclarationProcessor()
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -670,6 +686,7 @@ let emptyDeclarationProcessor : DeclarationProcessor()
                   <code class="kotlin">fun processDeclarations() { /*...*/ }
 var declarationCount = 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -679,6 +696,7 @@ var declarationCount = 1</code>
 var declarationCount = 1
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -697,6 +715,7 @@ class FooImpl : Foo { /*...*/ }
 &#8203;
 fun Foo(): Foo { return FooImpl() }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -709,6 +728,7 @@ class FooImpl : Foo { /*...*/ }
 func foo() -&#62; Foo { return FooImpl() }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -741,12 +761,16 @@ func foo() -&#62; Foo { return FooImpl() }
      @Test fun ensureEverythingWorks_onAndroid() { /*...*/ }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div>❌
-</div>
+                  <pre>
+                    <code class="swift">&#10060;
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -776,6 +800,7 @@ func foo() -&#62; Foo { return FooImpl() }
                   <code class="kotlin">const val MAX_COUNT = 8
 val USER_NAME_FIELD = "UserName"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -785,6 +810,7 @@ val USER_NAME_FIELD = "UserName"</code>
 let USER_NAME_FIELD = "UserName"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -799,6 +825,7 @@ let USER_NAME_FIELD = "UserName"
                 <pre>
                   <code class="kotlin">val mutableCollection: MutableSet&#60;String&#62; = HashSet()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -807,6 +834,7 @@ let USER_NAME_FIELD = "UserName"
                     <code class="swift">var mutableCollection: Set&#60;String&#62; = Set()
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -821,6 +849,7 @@ let USER_NAME_FIELD = "UserName"
                 <pre>
                   <code class="kotlin">val PersonComparator: Comparator&#60;Person&#62; = /*...*/</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -829,6 +858,7 @@ let USER_NAME_FIELD = "UserName"
                     <code class="swift">let PersonComparator: Comparator&#60;Person&#62; = /*...*/
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -862,6 +892,7 @@ let USER_NAME_FIELD = "UserName"
          get() = _elementList
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -876,6 +907,7 @@ let USER_NAME_FIELD = "UserName"
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -908,6 +940,7 @@ let USER_NAME_FIELD = "UserName"
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -920,6 +953,7 @@ let USER_NAME_FIELD = "UserName"
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -954,6 +988,7 @@ fun bar() {
     foo(1)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -971,6 +1006,7 @@ func bar() {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1007,6 +1043,7 @@ class FooImpl : Foo() {
     val x = object : IFoo { /*...*/ } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1022,6 +1059,7 @@ class FooImpl : Foo() {
     let x = object : IFoo { /*...*/ } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1050,6 +1088,7 @@ class FooImpl : Foo() {
                 <pre>
                   <code class="kotlin">class Person(id: Int, name: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1057,6 +1096,7 @@ class FooImpl : Foo() {
                   <pre>
                     <code class="swift">class Person(id: Int, name: String)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1075,6 +1115,7 @@ class FooImpl : Foo() {
     surname: String
 ) : Human(id, name) { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1086,6 +1127,7 @@ class FooImpl : Foo() {
     surname: String
 ) : Human(id, name) { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1105,6 +1147,7 @@ class FooImpl : Foo() {
 ) : Human(id, name),
     KotlinMaker { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1117,6 +1160,7 @@ class FooImpl : Foo() {
 ) : Human(id, name),
     KotlinMaker { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1137,6 +1181,7 @@ class FooImpl : Foo() {
     fun foo() { /*...*/ }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1150,6 +1195,7 @@ class FooImpl : Foo() {
     func foo() { /*...*/ }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1170,6 +1216,7 @@ class FooImpl : Foo() {
     fun foo() { /*...*/ }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1183,6 +1230,7 @@ class FooImpl : Foo() {
     func foo() { /*...*/ }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1226,6 +1274,7 @@ infix
 operator
 data</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1248,6 +1297,7 @@ infix
 operator
 data</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1263,6 +1313,7 @@ data</code>
                   <code class="kotlin">@Named("Foo")
 private val foo: Foo</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1271,6 +1322,7 @@ private val foo: Foo</code>
                     <code class="swift">@Named("Foo")
 private let foo: Foo</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1300,6 +1352,7 @@ private let foo: Foo</code>
                   <code class="kotlin">@Target(AnnotationTarget.PROPERTY)
 annotation class JsonExclude</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1308,6 +1361,7 @@ annotation class JsonExclude</code>
                     <code class="swift">@Target(AnnotationTarget.PROPERTY)
 annotation class JsonExclude</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1323,6 +1377,7 @@ annotation class JsonExclude</code>
                   <code class="kotlin">@JsonExclude @JvmField
 var x: String</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1331,6 +1386,7 @@ var x: String</code>
                     <code class="swift">@JsonExclude @JvmField
 var x: String</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1345,6 +1401,7 @@ var x: String</code>
                 <pre>
                   <code class="kotlin">@Test fun foo() { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1352,6 +1409,7 @@ var x: String</code>
                   <pre>
                     <code class="swift">@Test func foo() { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1383,6 +1441,7 @@ var x: String</code>
 &#8203;
 package foo.bar</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1393,6 +1452,7 @@ package foo.bar</code>
 &#8203;
 package foo.bar</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1426,6 +1486,7 @@ package foo.bar</code>
     // body
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1438,6 +1499,7 @@ package foo.bar</code>
     // body
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1456,6 +1518,7 @@ package foo.bar</code>
 &#8203;
 fun foo() = 1        // good</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1467,6 +1530,7 @@ fun foo() = 1        // good</code>
 &#8203;
 func foo() = 1        // good</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1496,6 +1560,7 @@ func foo() = 1        // good</code>
                   <code class="kotlin">fun f(x: String, y: String, z: String) =
     veryLongFunctionCallWithManyWords(andLongParametersToo(), x, y, z)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1504,6 +1569,7 @@ func foo() = 1        // good</code>
                     <code class="swift">func f(x: String, y: String, z: String) =
     veryLongFunctionCallWithManyWords(andLongParametersToo(), x, y, z)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1532,6 +1598,7 @@ func foo() = 1        // good</code>
                 <pre>
                   <code class="kotlin">val isEmpty: Boolean get() = size == 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1539,6 +1606,7 @@ func foo() = 1        // good</code>
                   <pre>
                     <code class="swift">let isEmpty: Boolean get() = size == 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1554,6 +1622,7 @@ func foo() = 1        // good</code>
                   <code class="kotlin">val foo: String
     get() { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1562,6 +1631,7 @@ func foo() = 1        // good</code>
                     <code class="swift">let foo: String
     get() { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1577,6 +1647,7 @@ func foo() = 1        // good</code>
                   <code class="kotlin">private val defaultCharset: Charset? =
     EncodingRegistry.getInstance().getDefaultCharsetForPropertiesFiles(file)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1585,6 +1656,7 @@ func foo() = 1        // good</code>
                     <code class="swift">private let defaultCharset: Charset? =
     EncodingRegistry.getInstance().getDefaultCharsetForPropertiesFiles(file)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1617,6 +1689,7 @@ func foo() = 1        // good</code>
     return createKotlinNotConfiguredPanel(module)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1628,6 +1701,7 @@ func foo() = 1        // good</code>
     return createKotlinNotConfiguredPanel(module)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1652,6 +1726,7 @@ try {
     // cleanup
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1669,6 +1744,7 @@ try {
     // cleanup
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1691,6 +1767,7 @@ try {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1706,6 +1783,7 @@ try {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1723,6 +1801,7 @@ try {
     false -&#62; { baz() } // bad
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1733,6 +1812,7 @@ try {
     false -&#62; { baz() } // bad
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1765,6 +1845,7 @@ try {
     fill = true
 )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1776,6 +1857,7 @@ try {
     fill = true
 )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1807,6 +1889,7 @@ try {
     .siblings(forward = true)
     .dropWhile { it is PsiComment || it is PsiWhiteSpace }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1818,6 +1901,7 @@ try {
     .dropWhile { $0 is PsiComment || $0 is PsiWhiteSpace }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1846,6 +1930,7 @@ try {
                 <pre>
                   <code class="kotlin">list.filter { it &#62; 10 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1853,6 +1938,7 @@ try {
                   <pre>
                     <code class="swift">list.filter { $0 &#62; 10 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1871,6 +1957,7 @@ try {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1882,6 +1969,7 @@ try {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1898,6 +1986,7 @@ try {
     val propertyValue = prop.get(obj)  // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1907,6 +1996,7 @@ try {
     let propertyValue = prop.get(obj)  // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1926,6 +2016,7 @@ try {
    context.configureEnv(environment)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1938,6 +2029,7 @@ try {
    context.configureEnv(environment)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1970,6 +2062,7 @@ try {
     val age: Int, // trailing comma
 )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1981,6 +2074,7 @@ try {
     let age: Int, // trailing comma
 )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2014,6 +2108,7 @@ try {
     EAST, // trailing comma
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2026,6 +2121,7 @@ try {
     EAST, // trailing comma
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2065,6 +2161,7 @@ val colors = listOf(
     "blue", // trailing comma
 )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2083,6 +2180,7 @@ let colors = listOf(
     "blue", // trailing comma
 )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2119,6 +2217,7 @@ class Customer(
     lastName: String, // trailing comma
 )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2134,6 +2233,7 @@ class Customer(
     lastName: String, // trailing comma
 )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2175,6 +2275,7 @@ fun print(
     description: String, // trailing comma
 ) {}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2195,6 +2296,7 @@ func print(
     description: String, // trailing comma
 ) {}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2230,6 +2332,7 @@ func print(
 }
 println(sum(8, 8, 8))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2244,6 +2347,7 @@ println(sum(8, 8, 8))</code>
 }
 print(sum(8, 8, 8))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2279,6 +2383,7 @@ fun getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
         yValue, // trailing comma
     ]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2293,6 +2398,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
         yValue, // trailing comma
     ]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2330,6 +2436,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
     println(x)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2346,6 +2453,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
     print(x)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2380,6 +2488,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
     else -&#62; false
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2393,6 +2502,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
     else -&#62; false
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2429,6 +2539,7 @@ func getZValue(mySurface: Surface, xValue: Int, yValue: Int) =
 ])
 fun run() {}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2444,6 +2555,7 @@ fun run() {}</code>
 ])
 func run() {}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2479,6 +2591,7 @@ fun main() {
             &#62;()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2493,6 +2606,7 @@ func main() {
             &#62;()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2524,6 +2638,7 @@ func main() {
         MyValue, // trailing comma
         &#62; {}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2534,6 +2649,7 @@ func main() {
         MyValue, // trailing comma
         &#62; {}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2583,6 +2699,7 @@ fun printMeanValue() {
 }
 printMeanValue()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2611,6 +2728,7 @@ func printMeanValue() {
 }
 printMeanValue()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2642,6 +2760,7 @@ printMeanValue()</code>
  * on multiple lines.
  */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2652,6 +2771,7 @@ printMeanValue()</code>
  * on multiple lines.
  */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2666,6 +2786,7 @@ printMeanValue()</code>
                 <pre>
                   <code class="kotlin">/** This is a short documentation comment. */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2673,6 +2794,7 @@ printMeanValue()</code>
                   <pre>
                     <code class="swift">/** This is a short documentation comment. */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2701,6 +2823,7 @@ fun abs(number: Int) { /*...*/ }
  */
 fun abs(number: Int) { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2722,6 +2845,7 @@ func abs(number: Int) { /*...*/ }
  */
 func abs(number: Int) { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2752,6 +2876,7 @@ func abs(number: Int) { /*...*/ }</code>
 &#8203;
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2761,6 +2886,7 @@ func abs(number: Int) { /*...*/ }</code>
 &#8203;
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2789,6 +2915,7 @@ func abs(number: Int) { /*...*/ }</code>
                 <pre>
                   <code class="kotlin">println("$name has ${children.size} children")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2796,6 +2923,7 @@ func abs(number: Int) { /*...*/ }</code>
                   <pre>
                     <code class="swift">print("$name has ${children.size} children")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2834,6 +2962,7 @@ val allowedValues = arrayListOf("a", "b", "c")
 // Good: listOf() returns List&#60;T&#62;
 val allowedValues = listOf("a", "b", "c")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2851,6 +2980,7 @@ let allowedValues = arrayListOf("a", "b", "c")
 // Good: listOf() returns List&#60;T&#62;
 let allowedValues = listOf("a", "b", "c")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2884,6 +3014,7 @@ fun foo(a: String) { /*...*/ }
 // Good
 fun foo(a: String = "a") { /*...*/ }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2896,6 +3027,7 @@ func foo(a: String) { /*...*/ }
 // Good
 func foo(a: String = "a") { /*...*/ }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2925,6 +3057,7 @@ func foo(a: String = "a") { /*...*/ }</code>
                   <code class="kotlin">typealias MouseClickHandler = (Any, MouseEvent) -&#62; Unit
 typealias PersonIndex = Map&#60;String, Person&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2933,6 +3066,7 @@ typealias PersonIndex = Map&#60;String, Person&#62;</code>
                     <code class="swift">typealias MouseClickHandler = (Any, MouseEvent) -&#62; Unit
 typealias PersonIndex = Map&#60;String, Person&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2961,6 +3095,7 @@ typealias PersonIndex = Map&#60;String, Person&#62;</code>
                 <pre>
                   <code class="kotlin">drawSquare(x = 10, y = 10, width = 100, height = 100, fill = true)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2968,6 +3103,7 @@ typealias PersonIndex = Map&#60;String, Person&#62;</code>
                   <pre>
                     <code class="swift">drawSquare(x = 10, y = 10, width = 100, height = 100, fill = true)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3001,6 +3137,7 @@ return when(x) {
     else -&#62; "nonzero"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3013,6 +3150,7 @@ return when(x) {
     else -&#62; "nonzero"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3035,6 +3173,7 @@ when(x) {
     else -&#62; return "nonzero"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3050,6 +3189,7 @@ when(x) {
     else -&#62; return "nonzero"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3081,6 +3221,7 @@ when(x) {
     else -&#62; // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3091,6 +3232,7 @@ when(x) {
     else -&#62; // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3120,6 +3262,7 @@ when(x) {
                   <code class="kotlin">for (i in 0..n - 1) { /*...*/ }  // bad
 for (i in 0 until n) { /*...*/ }  // good</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3128,6 +3271,7 @@ for (i in 0 until n) { /*...*/ }  // good</code>
                     <code class="swift">for (i in 0..n - 1) { /*...*/ }  // bad
 for (i in 0 until n) { /*...*/ }  // good</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3166,6 +3310,7 @@ val a = """if(a &#62; 1) {
           |    return a
           |}""".trimMargin()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3183,6 +3328,7 @@ let a = """if(a &#62; 1) {
           |    return a
           |}""".trimMargin()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3215,6 +3361,7 @@ let a = """if(a &#62; 1) {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3226,6 +3373,7 @@ let a = """if(a &#62; 1) {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3254,6 +3402,7 @@ let a = """if(a &#62; 1) {
                 <pre>
                   <code class="kotlin">fun apiCall(): String = MyJavaApi.getProperty("name")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3261,6 +3410,7 @@ let a = """if(a &#62; 1) {
                   <pre>
                     <code class="swift">func apiCall() -&#62; String = MyJavaApi.getProperty("name")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3277,6 +3427,7 @@ let a = """if(a &#62; 1) {
     val name: String = MyJavaApi.getProperty("name")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3286,6 +3437,7 @@ let a = """if(a &#62; 1) {
     let name: String = MyJavaApi.getProperty("name")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3303,6 +3455,7 @@ let a = """if(a &#62; 1) {
     println(name)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3313,6 +3466,7 @@ let a = """if(a &#62; 1) {
     print(name)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

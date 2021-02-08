@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@ fun main() {
     simple().forEach { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -626,6 +641,7 @@ func main() {
     simple().forEach { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -663,6 +679,7 @@ fun main() {
     simple().forEach { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -679,6 +696,7 @@ func main() {
     simple().forEach { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -714,6 +732,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     simple().forEach { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -728,6 +747,7 @@ func main() = runBlocking&#60;Unit&#62; {
     simple().forEach { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -773,6 +793,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -797,6 +818,7 @@ func main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -840,6 +862,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     flow.collect { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -862,6 +885,7 @@ func main() = runBlocking&#60;Unit&#62; {
     flow.collect { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -903,6 +927,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     println("Done")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -923,6 +948,7 @@ func main() = runBlocking&#60;Unit&#62; {
     print("Done")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -952,6 +978,7 @@ func main() = runBlocking&#60;Unit&#62; {
                   <code class="kotlin">// Convert an integer range to a flow
 (1..3).asFlow().collect { value -&#62; println(value) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -960,6 +987,7 @@ func main() = runBlocking&#60;Unit&#62; {
                     <code class="swift">// Convert an integer range to a flow
 (1..3).asFlow().collect { value -&#62; print(value) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -997,6 +1025,7 @@ fun main() = runBlocking&#60;Unit&#62; {
         .collect { response -&#62; println(response) }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1013,6 +1042,7 @@ func main() = runBlocking&#60;Unit&#62; {
         .collect { response -&#62; print(response) }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1046,6 +1076,7 @@ func main() = runBlocking&#60;Unit&#62; {
     }
     .collect { response -&#62; println(response) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1058,6 +1089,7 @@ func main() = runBlocking&#60;Unit&#62; {
     }
     .collect { response -&#62; print(response) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1101,6 +1133,7 @@ fun main() = runBlocking&#60;Unit&#62; {
         .collect { value -&#62; println(value) }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1123,6 +1156,7 @@ func main() = runBlocking&#60;Unit&#62; {
         .collect { value -&#62; print(value) }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1155,6 +1189,7 @@ val sum = (1..5).asFlow()
     .reduce { a, b -&#62; a + b } // sum them (terminal operator)
 println(sum)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1167,6 +1202,7 @@ let sum = (1..5).asFlow()
 print(sum)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1206,6 +1242,7 @@ print(sum)
         println("Collect $it")
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1225,6 +1262,7 @@ print(sum)
     }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1257,6 +1295,7 @@ print(sum)
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1268,6 +1307,7 @@ print(sum)
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1291,6 +1331,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; log("Collected $value") } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1307,6 +1348,7 @@ func main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; log("Collected $value") } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1347,6 +1389,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; println(value) } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1366,6 +1409,7 @@ func main() = runBlocking&#60;Unit&#62; {
     simple().collect { value -&#62; print(value) } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1406,6 +1450,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1425,6 +1470,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1468,6 +1514,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     println("Collected in $time ms")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1490,6 +1537,7 @@ func main() = runBlocking&#60;Unit&#62; {
     print("Collected in $time ms")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1512,6 +1560,7 @@ func main() = runBlocking&#60;Unit&#62; {
 }   
 println("Collected in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1527,6 +1576,7 @@ println("Collected in $time ms")</code>
 }   
 print("Collected in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1563,6 +1613,7 @@ print("Collected in $time ms")</code>
 }   
 println("Collected in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1578,6 +1629,7 @@ println("Collected in $time ms")</code>
 }   
 print("Collected in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1614,6 +1666,7 @@ print("Collected in $time ms")</code>
 }   
 println("Collected in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1629,6 +1682,7 @@ println("Collected in $time ms")</code>
 }   
 print("Collected in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1661,6 +1715,7 @@ val strs = flowOf("one", "two", "three") // strings
 nums.zip(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string
     .collect { println(it) } // collect and print</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1672,6 +1727,7 @@ let strs = flowOf("one", "two", "three") // strings
 nums.zip(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string
     .collect { print(it) } // collect and print</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1707,6 +1763,7 @@ nums.zip(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string with "z
         println("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1721,6 +1778,7 @@ nums.zip(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string with "z
         print("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1742,6 +1800,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         println("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1756,6 +1815,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         print("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1788,6 +1848,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
     emit("$i: Second")    
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1799,6 +1860,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
     emit("$i: Second")    
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1813,6 +1875,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
                 <pre>
                   <code class="kotlin">(1..3).asFlow().map { requestFlow(it) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1820,6 +1883,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
                   <pre>
                     <code class="swift">(1..3).asFlow().map { requestFlow(it) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1853,6 +1917,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         println("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1865,6 +1930,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         print("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1898,6 +1964,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         println("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1910,6 +1977,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         print("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1943,6 +2011,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         println("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1955,6 +2024,7 @@ nums.combine(strs) { a, b -&#62; "$a -&#62; $b" } // compose a single string wit
         print("$value at ${System.currentTimeMillis() - startTime} ms from start") 
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1999,6 +2069,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2022,6 +2093,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2068,6 +2140,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2093,6 +2166,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2123,6 +2197,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .catch { e -&#62; emit("Caught $e") } // emit on exception
     .collect { value -&#62; println(value) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2132,6 +2207,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .catch { e -&#62; emit("Caught $e") } // emit on exception
     .collect { value -&#62; print(value) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2174,6 +2250,7 @@ fun main() = runBlocking&#60;Unit&#62; {
         }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2195,6 +2272,7 @@ func main() = runBlocking&#60;Unit&#62; {
         }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2229,6 +2307,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .catch { e -&#62; println("Caught $e") }
     .collect()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2242,6 +2321,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .catch { e -&#62; print("Caught $e") }
     .collect()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2278,6 +2358,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2293,6 +2374,7 @@ func main() = runBlocking&#60;Unit&#62; {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2323,6 +2405,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .onCompletion { println("Done") }
     .collect { value -&#62; println(value) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2332,6 +2415,7 @@ func main() = runBlocking&#60;Unit&#62; {
     .onCompletion { print("Done") }
     .collect { value -&#62; print(value) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2356,6 +2440,7 @@ fun main() = runBlocking&#60;Unit&#62; {
         .collect { value -&#62; println(value) }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2373,6 +2458,7 @@ func main() = runBlocking&#60;Unit&#62; {
         .collect { value -&#62; print(value) }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2410,6 +2496,7 @@ fun main() = runBlocking&#60;Unit&#62; {
         }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2426,6 +2513,7 @@ func main() = runBlocking&#60;Unit&#62; {
         }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2462,6 +2550,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     println("Done")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2477,6 +2566,7 @@ func main() = runBlocking&#60;Unit&#62; {
     print("Done")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2496,6 +2586,7 @@ func main() = runBlocking&#60;Unit&#62; {
     println("Done")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2508,6 +2599,7 @@ func main() = runBlocking&#60;Unit&#62; {
     print("Done")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2548,6 +2640,7 @@ fun main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2567,6 +2660,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2586,6 +2680,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2598,6 +2693,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2631,6 +2727,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2643,6 +2740,7 @@ func main() = runBlocking&#60;Unit&#62; {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

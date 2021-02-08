@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@
                 <pre>
                   <code class="kotlin">inline class Password(val value: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@
                   <pre>
                     <code class="swift">inline class Password(let value: String)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -636,6 +652,7 @@
                 <pre>
                   <code class="kotlin">value class Password(private val s: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -643,6 +660,7 @@
                   <pre>
                     <code class="swift">value class Password(private let s: String)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -659,6 +677,7 @@
 @JvmInline
 value class Password(private val s: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -668,6 +687,7 @@ value class Password(private val s: String)</code>
 @JvmInline
 value class Password(private let s: String)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -684,6 +704,7 @@ value class Password(private let s: String)</code>
 // At runtime 'securePassword' contains just 'String'
 val securePassword = Password("Don't try this in production")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -693,6 +714,7 @@ val securePassword = Password("Don't try this in production")</code>
 // At runtime 'securePassword' contains just 'String'
 let securePassword = Password("Don't try this in production")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -739,6 +761,7 @@ fun main() {
     println(name.length) // property getter is called as a static method
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -764,6 +787,7 @@ func main() {
     print(name.length) // property getter is called as a static method
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -804,6 +828,7 @@ fun main() {
     println(name.prettyPrint()) // Still called as a static method
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -823,6 +848,7 @@ func main() {
     print(name.prettyPrint()) // Still called as a static method
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -874,6 +900,7 @@ fun main() {
     val c = id(f)  
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -904,6 +931,7 @@ func main() {
     let c = id(f)  
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -939,6 +967,7 @@ fun compute(x: Int) { }
 // Also represented as 'public final void compute(int x)' on the JVM!
 fun compute(x: UInt) { }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -953,6 +982,7 @@ func compute(x: Int) { }
 // Also represented as 'public final void compute(int x)' on the JVM!
 func compute(x: UInt) { }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -987,6 +1017,7 @@ fun compute(x: Int) { }
 @JvmName("computeUInt")
 fun compute(x: UInt) { }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1000,6 +1031,7 @@ func compute(x: Int) { }
 @JvmName("computeUInt")
 func compute(x: UInt) { }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1048,6 +1080,7 @@ fun main() {
     acceptNameInlineClass(string) // Not OK: can't pass underlying type instead of inline class
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1075,6 +1108,7 @@ func main() {
     acceptNameInlineClass(string) // Not OK: can't pass underlying type instead of inline class
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1107,6 +1141,7 @@ func main() {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1118,6 +1153,7 @@ func main() {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1136,6 +1172,7 @@ func main() {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1147,6 +1184,7 @@ func main() {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1179,6 +1217,7 @@ func main() {
     &#60;/args&#62;
 &#60;/configuration&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1190,6 +1229,7 @@ func main() {
     &#60;/args&#62;
 &#60;/configuration&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -632,6 +646,7 @@ val threeBillion = 3000000000 // Long
 val oneLong = 1L // Long
 val oneByte: Byte = 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -643,6 +658,7 @@ let oneDouble = 1.0 // Double
 let oneByte: Byte = 1
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -659,6 +675,7 @@ let oneByte: Byte = 1
 val e = 2.7182818284 // Double
 val eFloat = 2.7182818284f // Float, actual value is 2.7182817</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -669,6 +686,7 @@ let e = 2.7182818284 // Double
 let eFloat: Float = 2.7182818284 // Float, actual value is 2.71828175
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -693,6 +711,7 @@ let eFloat: Float = 2.7182818284 // Float, actual value is 2.71828175
 //    printDouble(f) // Error: Type mismatch
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -710,6 +729,7 @@ let eFloat: Float = 2.7182818284 // Float, actual value is 2.71828175
 //    printDouble(f) // Error: Type mismatch
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -742,6 +762,7 @@ val socialSecurityNumber = 999_99_9999L
 val hexBytes = 0xFF_EC_DE_5E
 val bytes = 0b11010010_01101001_10010100_10010010</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -753,6 +774,7 @@ let socialSecurityNumber = 999_99_9999L
 let hexBytes = 0xFF_EC_DE_5E
 let bytes = 0b11010010_01101001_10010100_10010010</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -790,6 +812,7 @@ val anotherBoxedB: Int? = b
 println(boxedA === anotherBoxedA) // true
 println(boxedB === anotherBoxedB) // false</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -806,6 +829,7 @@ let anotherBoxedB: Int? = b
 print(boxedA === anotherBoxedA) // true
 print(boxedB === anotherBoxedB) // false</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -824,6 +848,7 @@ val boxedA: Int? = a
 val anotherBoxedA: Int? = a
 println(boxedA == anotherBoxedA) // Prints 'true'</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -835,6 +860,7 @@ let boxedA: Int? = a
 let anotherBoxedA: Int? = a
 print(boxedA == anotherBoxedA) // Prints 'true'</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -866,6 +892,7 @@ val a: Int? = 1 // A boxed Int (java.lang.Integer)
 val b: Long? = a // implicit conversion yields a boxed Long (java.lang.Long)
 print(b == a) // Surprise! This prints "false" as Long's equals() checks whether the other is Long as well</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -876,6 +903,7 @@ let b: Double? = Double(a!)
 print(b == a) //Compiler Error: Binary operator '==' cannot be applied to operands of type 'Double?' and 'Int?'
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -891,6 +919,7 @@ print(b == a) //Compiler Error: Binary operator '==' cannot be applied to operan
                   <code class="kotlin">val b: Byte = 1 // OK, literals are checked statically
 val i: Int = b // ERROR</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -900,6 +929,7 @@ val i: Int = b // ERROR</code>
 let i: Int = b // ERROR
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -915,6 +945,7 @@ let i: Int = b // ERROR
                   <code class="kotlin">val i: Int = b.toInt() // OK: explicitly widened
 print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -925,6 +956,7 @@ print(i)</code>
 print(i)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -939,6 +971,7 @@ print(i)
                 <pre>
                   <code class="kotlin">val l = 1L + 3 // Long + Int =&#62; Long</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -947,6 +980,7 @@ print(i)
                     <code class="swift">let l = 1.0 + 3 // Double + Int =&#62; Double
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -977,6 +1011,7 @@ print(i)
 //println(x == 2.5) // ERROR: Operator '==' cannot be applied to 'Int' and 'Double'
 println(x == 2)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -987,6 +1022,7 @@ println(x == 2)</code>
 print(x == 2)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1002,6 +1038,7 @@ print(x == 2)
                   <code class="kotlin">val x = 5L / 2
 println(x == 2L)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1011,6 +1048,7 @@ println(x == 2L)</code>
 print(x == 2.0)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1026,6 +1064,7 @@ print(x == 2.0)
                   <code class="kotlin">val x = 5 / 2.toDouble()
 println(x == 2.5)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1035,6 +1074,7 @@ println(x == 2.5)</code>
 print(x == 2.5)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1063,6 +1103,7 @@ print(x == 2.5)
                 <pre>
                   <code class="kotlin">val x = (1 shl 2) and 0x000FF000</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1071,6 +1112,7 @@ print(x == 2.5)
                     <code class="swift">let x = (1 &#60;&#60; 2) &#38; 0x000FF000
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1103,6 +1145,7 @@ print(x == 2.5)
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1115,6 +1158,7 @@ print(x == 2.5)
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1133,6 +1177,7 @@ print(x == 2.5)
     return c.toInt() - '0'.toInt() // Explicit conversions to numbers
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1151,6 +1196,7 @@ func decimalDigitValue(c: Character) throws -&#62; Int? {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1186,6 +1232,7 @@ func decimalDigitValue(c: Character) throws -&#62; Int? {
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1203,6 +1250,7 @@ func decimalDigitValue(c: Character) throws -&#62; Int? {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1219,6 +1267,7 @@ func decimalDigitValue(c: Character) throws -&#62; Int? {
 val asc = Array(5) { i -&#62; (i * i).toString() }
 asc.forEach { println(it) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1229,6 +1278,7 @@ let asc = (0..&#60;5).map { String($0 * $0) }
 asc.forEach { print($0) }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1258,6 +1308,7 @@ asc.forEach { print($0) }
                   <code class="kotlin">val x: IntArray = intArrayOf(1, 2, 3)
 x[0] = x[1] + x[2]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1267,6 +1318,7 @@ x[0] = x[1] + x[2]</code>
 x[0] = x[1] + x[2]
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1290,6 +1342,7 @@ val arr = IntArray(5) { 42 }
 // Array of int of size 5 with values [0, 1, 2, 3, 4] (values initialised to their index value)
 var arr = IntArray(5) { it * 1 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1307,6 +1360,7 @@ let arr = Array(repeating: 42, count: 5)
 var arr = (0..&#60;5).map { $0 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1340,6 +1394,7 @@ val l: ULong = 1u  // ULong, expected type provided
 val a1 = 42u // UInt: no expected type provided, constant fits in UInt
 val a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1353,6 +1408,7 @@ let a1 = 42u // UInt: no expected type provided, constant fits in UInt
 let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1367,6 +1423,7 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
                 <pre>
                   <code class="kotlin">val a = 1UL // ULong, even though no expected type provided and constant fits into UInt</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1374,6 +1431,7 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
                   <pre>
                     <code class="swift">let a = 1UL // ULong, even though no expected type provided and constant fits into UInt</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1404,6 +1462,7 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
     println(c)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1414,6 +1473,7 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1429,6 +1489,7 @@ let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't
                   <code class="kotlin">val s = "abc" + 1
 println(s + "def")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1437,6 +1498,7 @@ println(s + "def")</code>
                     <code class="swift">let s = "abc" + 1
 print(s + "def")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1465,6 +1527,7 @@ print(s + "def")</code>
                 <pre>
                   <code class="kotlin">val s = "Hello, world!\n"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1473,6 +1536,7 @@ print(s + "def")</code>
                     <code class="swift">let s = "Hello, world!\n"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1490,6 +1554,7 @@ print(s + "def")</code>
         print(c)
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1501,6 +1566,7 @@ print(s + "def")</code>
 """
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1520,6 +1586,7 @@ print(s + "def")</code>
     |(Benjamin Franklin)
     """.trimMargin()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1532,6 +1599,7 @@ print(s + "def")</code>
     |(Benjamin Franklin)
     """.trimMargin()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1561,6 +1629,7 @@ print(s + "def")</code>
                   <code class="kotlin">val i = 10
 println("i = $i") // prints "i = 10"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1570,6 +1639,7 @@ println("i = $i") // prints "i = 10"</code>
 print("i = \(i)") // prints "i = 10"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1585,6 +1655,7 @@ print("i = \(i)") // prints "i = 10"
                   <code class="kotlin">val s = "abc"
 println("$s.length is ${s.length}") // prints "abc.length is 3"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1594,6 +1665,7 @@ println("$s.length is ${s.length}") // prints "abc.length is 3"</code>
 print("\(s).count is \(s.count)") // prints "abc.count is 3"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1610,6 +1682,7 @@ print("\(s).count is \(s.count)") // prints "abc.count is 3"
 ${'$'}9.99
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1620,6 +1693,7 @@ $9.99
 """
 </code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -620,6 +634,7 @@ class Message { /*...*/ }
 &#8203;
 // ...</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -632,6 +647,7 @@ class Message { /*...*/ }
 &#8203;
 // ...</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -660,6 +676,7 @@ class Message { /*...*/ }
                 <pre>
                   <code class="kotlin">import org.example.Message // Message is now accessible without qualification</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -667,6 +684,7 @@ class Message { /*...*/ }
                   <pre>
                     <code class="swift">import org.example.Message // Message is now accessible without qualification</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -681,6 +699,7 @@ class Message { /*...*/ }
                 <pre>
                   <code class="kotlin">import org.example.* // everything in 'org.example' becomes accessible</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -688,6 +707,7 @@ class Message { /*...*/ }
                   <pre>
                     <code class="swift">import org.example.* // everything in 'org.example' becomes accessible</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -703,6 +723,7 @@ class Message { /*...*/ }
                   <code class="kotlin">import org.example.Message // Message is accessible
 import org.test.Message as testMessage // testMessage stands for 'org.test.Message'</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -711,6 +732,7 @@ import org.test.Message as testMessage // testMessage stands for 'org.test.Messa
                     <code class="swift">import org.example.Message // Message is accessible
 import org.test.Message as testMessage // testMessage stands for 'org.test.Message'</code>
                   </pre>
+                  
               
               </td>
             </tr>

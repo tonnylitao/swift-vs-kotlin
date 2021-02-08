@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -633,6 +647,7 @@ println(numbers.elementAt(3))
 val numbersSortedSet = sortedSetOf("one", "two", "three", "four")
 println(numbersSortedSet.elementAt(0)) // elements are stored in the ascending order</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +659,7 @@ print(numbers.elementAt(3))
 let numbersSortedSet = sortedSetOf("one", "two", "three", "four")
 print(numbersSortedSet.elementAt(0)) // elements are stored in the ascending order</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -660,6 +676,7 @@ print(numbersSortedSet.elementAt(0)) // elements are stored in the ascending ord
 println(numbers.first())    
 println(numbers.last())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -669,6 +686,7 @@ println(numbers.last())</code>
 print(numbers.first())    
 print(numbers.last())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -685,6 +703,7 @@ print(numbers.last())</code>
 println(numbers.elementAtOrNull(5))
 println(numbers.elementAtOrElse(5) { index -&#62; "The value for index $index is undefined"})</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -694,6 +713,7 @@ println(numbers.elementAtOrElse(5) { index -&#62; "The value for index $index is
 print(numbers.elementAtOrNull(5))
 print(numbers.elementAtOrElse(5) { index -&#62; "The value for index $index is undefined"})</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -724,6 +744,7 @@ print(numbers.elementAtOrElse(5) { index -&#62; "The value for index $index is u
 println(numbers.first { it.length &#62; 3 })
 println(numbers.last { it.startsWith("f") })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -733,6 +754,7 @@ println(numbers.last { it.startsWith("f") })</code>
 print(numbers.first { it.length &#62; 3 })
 print(numbers.last { it.startsWith("f") })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -748,6 +770,7 @@ print(numbers.last { it.startsWith("f") })</code>
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four", "five", "six")
 println(numbers.firstOrNull { it.length &#62; 6 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -756,6 +779,7 @@ println(numbers.firstOrNull { it.length &#62; 6 })</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four", "five", "six")
 print(numbers.firstOrNull { it.length &#62; 6 })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -772,6 +796,7 @@ print(numbers.firstOrNull { it.length &#62; 6 })</code>
 println(numbers.find { it % 2 == 0 })
 println(numbers.findLast { it % 2 == 0 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -781,6 +806,7 @@ println(numbers.findLast { it % 2 == 0 })</code>
 print(numbers.find { $0 % 2 == 0 })
 print(numbers.findLast { $0 % 2 == 0 })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -810,6 +836,7 @@ print(numbers.findLast { $0 % 2 == 0 })</code>
                   <code class="kotlin">val numbers = listOf(1, 2, 3, 4)
 println(numbers.random())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -818,6 +845,7 @@ println(numbers.random())</code>
                     <code class="swift">let numbers = [1, 2, 3, 4]
 print(numbers.random())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -851,6 +879,7 @@ println("zero" in numbers)
 println(numbers.containsAll(listOf("four", "two")))
 println(numbers.containsAll(listOf("one", "zero")))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -863,6 +892,7 @@ print("zero" in numbers)
 print(numbers.containsAll(listOf("four", "two")))
 print(numbers.containsAll(listOf("one", "zero")))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -883,6 +913,7 @@ val empty = emptyList&#60;String&#62;()
 println(empty.isEmpty())
 println(empty.isNotEmpty())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -896,6 +927,7 @@ let empty = emptyList&#60;String&#62;()
 print(empty.isEmpty())
 print(empty.isNotEmpty())</code>
                   </pre>
+                  
               
               </td>
             </tr>

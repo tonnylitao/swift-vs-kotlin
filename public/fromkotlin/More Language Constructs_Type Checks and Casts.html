@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -638,6 +652,7 @@ else {
     print(obj.length)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -654,6 +669,7 @@ else {
     print(obj.length)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -686,6 +702,7 @@ else {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -697,6 +714,7 @@ else {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -713,6 +731,7 @@ else {
 &#8203;
 print(x.length) // x is automatically cast to String</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -722,6 +741,7 @@ print(x.length) // x is automatically cast to String</code>
 &#8203;
 print(x.length) // x is automatically cast to String</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -742,6 +762,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     print(x.length) // x is automatically cast to String
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -755,6 +776,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     print(x.length) // x is automatically cast to String
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -773,6 +795,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     is IntArray -&#62; print(x.sum())
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -784,6 +807,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     is IntArray -&#62; print(x.sum())
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -812,6 +836,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                 <pre>
                   <code class="kotlin">val x: String = y as String</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -819,6 +844,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                   <pre>
                     <code class="swift">let x: String = y as String</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -833,6 +859,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                 <pre>
                   <code class="kotlin">val x: String? = y as String?</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -840,6 +867,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                   <pre>
                     <code class="swift">let x: String? = y as String?</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -868,6 +896,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                 <pre>
                   <code class="kotlin">val x: String? = y as? String</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -875,6 +904,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
                   <pre>
                     <code class="swift">let x: String? = y as? String</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -905,6 +935,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     something.forEach { println(it) } // The items are typed as `Any?`
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -914,6 +945,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     something.forEach { print(it) } // The items are typed as `Any?`
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -932,6 +964,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -943,6 +976,7 @@ if (x is String &#38;&#38; x.length &#62; 0) {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -967,6 +1001,7 @@ val stringToInt = somePair.asPairOf&#60;String, Int&#62;()
 val stringToList = somePair.asPairOf&#60;String, List&#60;*&#62;&#62;()
 val stringToStringList = somePair.asPairOf&#60;String, List&#60;String&#62;&#62;() // Breaks type safety!</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -984,6 +1019,7 @@ let stringToInt = somePair.asPairOf&#60;String, Int&#62;()
 let stringToList = somePair.asPairOf&#60;String, List&#60;*&#62;&#62;()
 let stringToStringList = somePair.asPairOf&#60;String, List&#60;String&#62;&#62;() // Breaks type safety!</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1020,6 +1056,7 @@ val intsFile = File("ints.dictionary")
 // Warning: Unchecked cast: `Map&#60;String, *&#62;` to `Map&#60;String, Int&#62;`
 val intsDictionary: Map&#60;String, Int&#62; = readDictionary(intsFile) as Map&#60;String, Int&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1035,6 +1072,7 @@ let intsFile = File("ints.dictionary")
 // Warning: Unchecked cast: `Map&#60;String, *&#62;` to `Map&#60;String, Int&#62;`
 let intsDictionary: Map&#60;String, Int&#62; = readDictionary(intsFile) as Map&#60;String, Int&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1053,6 +1091,7 @@ let intsDictionary: Map&#60;String, Int&#62; = readDictionary(intsFile) as Map&#
         this as List&#60;T&#62; else
         null</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1064,6 +1103,7 @@ let intsDictionary: Map&#60;String, Int&#62; = readDictionary(intsFile) as Map&#
         this as List&#60;T&#62; else
         null</code>
                   </pre>
+                  
               
               </td>
             </tr>

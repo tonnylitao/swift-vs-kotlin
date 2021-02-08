@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -621,6 +635,7 @@ println("Min: ${numbers.minOrNull()}")
 println("Average: ${numbers.average()}")
 println("Sum: ${numbers.sum()}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -634,6 +649,7 @@ print("Min: ${numbers.minOrNull()}")
 print("Average: ${numbers.average()}")
 print("Sum: ${numbers.sum()}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -654,6 +670,7 @@ val strings = listOf("one", "two", "three", "four")
 val longestString = strings.maxWithOrNull(compareBy { it.length })
 println(longestString)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -667,6 +684,7 @@ let strings = listOf("one", "two", "three", "four")
 let longestString = strings.maxWithOrNull(compareBy { it.length })
 print(longestString)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -684,6 +702,7 @@ val numbers = listOf(5, 42, 10, 4)
 println(numbers.sumBy { it * 2 })
 println(numbers.sumByDouble { it.toDouble() / 2 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -694,6 +713,7 @@ let numbers = listOf(5, 42, 10, 4)
 print(numbers.sumBy { $0 * 2 })
 print(numbers.sumByDouble { it.toDouble() / 2 })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -730,6 +750,7 @@ println(sumDoubled)
 //val sumDoubledReduce = numbers.reduce { sum, element -&#62; sum + element * 2 } //incorrect: the first element isn't doubled in the result
 //println(sumDoubledReduce)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -745,6 +766,7 @@ print(sumDoubled)
 //let sumDoubledReduce = numbers.reduce { sum, element -&#62; sum + element * 2 } //incorrect: the first element isn't doubled in the result
 //print(sumDoubledReduce)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -761,6 +783,7 @@ print(sumDoubled)
 val sumDoubledRight = numbers.foldRight(0) { element, sum -&#62; sum + element * 2 }
 println(sumDoubledRight)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -770,6 +793,7 @@ println(sumDoubledRight)</code>
 let sumDoubledRight = numbers.foldRight(0) { element, sum -&#62; sum + element * 2 }
 print(sumDoubledRight)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -789,6 +813,7 @@ println(sumEven)
 val sumEvenRight = numbers.foldRightIndexed(0) { idx, element, sum -&#62; if (idx % 2 == 0) sum + element else sum }
 println(sumEvenRight)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -801,6 +826,7 @@ print(sumEven)
 let sumEvenRight = numbers.foldRightIndexed(0) { idx, element, sum -&#62; if (idx % 2 == 0) sum + element else sum }
 print(sumEvenRight)</code>
                   </pre>
+                  
               
               </td>
             </tr>

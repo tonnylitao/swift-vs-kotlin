@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -617,6 +631,7 @@
     NORTH, SOUTH, WEST, EAST
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -634,6 +649,7 @@ enum Direction {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -666,6 +682,7 @@ enum Direction {
         BLUE(0x0000FF)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -687,6 +704,7 @@ let color = Color.red
 let rgb = color.rawValue
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -725,6 +743,7 @@ let rgb = color.rawValue
     abstract fun signal(): ProtocolState
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -746,6 +765,7 @@ let rgb = color.rawValue
 let state = ProtocolState.waiting.signal()
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -783,6 +803,7 @@ let state = ProtocolState.waiting.signal()
     override fun applyAsInt(t: Int, u: Int) = apply(t, u)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -809,6 +830,7 @@ IntArithmetics.plus.apply(13, 31)
 IntArithmetics.times.apply(13, 31)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -838,6 +860,7 @@ IntArithmetics.times.apply(13, 31)
                   <code class="kotlin">EnumClass.valueOf(value: String): EnumClass
 EnumClass.values(): Array&#60;EnumClass&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -853,6 +876,7 @@ Direction.allCases
 Direction.north.rawValue
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -873,6 +897,7 @@ inline fun &#60;reified T : Enum&#60;T&#62;&#62; printAllValues() {
 &#8203;
 printAllValues&#60;RGB&#62;() // prints RED, GREEN, BLUE</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -881,6 +906,7 @@ printAllValues&#60;RGB&#62;() // prints RED, GREEN, BLUE</code>
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -896,6 +922,7 @@ printAllValues&#60;RGB&#62;() // prints RED, GREEN, BLUE</code>
                   <code class="kotlin">val name: String
 val ordinal: Int</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -904,6 +931,7 @@ val ordinal: Int</code>
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>

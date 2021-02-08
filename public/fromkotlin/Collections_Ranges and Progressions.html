@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -617,6 +631,7 @@
     print(i)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -626,6 +641,7 @@
     print(i)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -640,6 +656,7 @@
                 <pre>
                   <code class="kotlin">for (i in 1..4) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -647,6 +664,7 @@
                   <pre>
                     <code class="swift">for (i in 1..4) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -661,6 +679,7 @@
                 <pre>
                   <code class="kotlin">for (i in 4 downTo 1) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -668,6 +687,7 @@
                   <pre>
                     <code class="swift">for (i in 4 downTo 1) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -684,6 +704,7 @@
 println()
 for (i in 8 downTo 1 step 2) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -693,6 +714,7 @@ for (i in 8 downTo 1 step 2) print(i)</code>
 print()
 for (i in 8 downTo 1 step 2) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -709,6 +731,7 @@ for (i in 8 downTo 1 step 2) print(i)</code>
     print(i)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -718,6 +741,7 @@ for (i in 8 downTo 1 step 2) print(i)</code>
     print(i)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -748,6 +772,7 @@ for (i in 8 downTo 1 step 2) print(i)</code>
 println(Version(0, 9) in versionRange)
 println(Version(1, 20) in versionRange)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -757,6 +782,7 @@ println(Version(1, 20) in versionRange)</code>
 print(Version(0, 9) in versionRange)
 print(Version(1, 20) in versionRange)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -787,6 +813,7 @@ print(Version(1, 20) in versionRange)</code>
   // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -796,6 +823,7 @@ print(Version(1, 20) in versionRange)</code>
   // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -810,6 +838,7 @@ print(Version(1, 20) in versionRange)</code>
                 <pre>
                   <code class="kotlin">for (i in 1..10) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -817,6 +846,7 @@ print(Version(1, 20) in versionRange)</code>
                   <pre>
                     <code class="swift">for (i in 1..10) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -831,6 +861,7 @@ print(Version(1, 20) in versionRange)</code>
                 <pre>
                   <code class="kotlin">for (i in 1..8 step 2) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -838,6 +869,7 @@ print(Version(1, 20) in versionRange)</code>
                   <pre>
                     <code class="swift">for (i in 1..8 step 2) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -852,6 +884,7 @@ print(Version(1, 20) in versionRange)</code>
                 <pre>
                   <code class="kotlin">for (i in 1..9 step 3) print(i) // the last element is 7</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -859,6 +892,7 @@ print(Version(1, 20) in versionRange)</code>
                   <pre>
                     <code class="swift">for (i in 1..9 step 3) print(i) // the last element is 7</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -873,6 +907,7 @@ print(Version(1, 20) in versionRange)</code>
                 <pre>
                   <code class="kotlin">for (i in 4 downTo 1) print(i)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -880,6 +915,7 @@ print(Version(1, 20) in versionRange)</code>
                   <pre>
                     <code class="swift">for (i in 4 downTo 1) print(i)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -894,6 +930,7 @@ print(Version(1, 20) in versionRange)</code>
                 <pre>
                   <code class="kotlin">println((1..10).filter { it % 2 == 0 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -901,6 +938,7 @@ print(Version(1, 20) in versionRange)</code>
                   <pre>
                     <code class="swift">print((1..10).filter { $0 % 2 == 0 })</code>
                   </pre>
+                  
               
               </td>
             </tr>

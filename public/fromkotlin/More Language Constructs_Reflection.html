@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -631,6 +645,7 @@
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.30"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -640,6 +655,7 @@
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.30"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -656,6 +672,7 @@
   implementation("org.jetbrains.kotlin:kotlin-reflect:1.4.30")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -665,6 +682,7 @@
   implementation("org.jetbrains.kotlin:kotlin-reflect:1.4.30")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -684,6 +702,7 @@
     &#60;/dependency&#62;
 &#60;/dependencies&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -696,6 +715,7 @@
     &#60;/dependency&#62;
 &#60;/dependencies&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -724,6 +744,7 @@
                 <pre>
                   <code class="kotlin">val c = MyClass::class</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -731,6 +752,7 @@
                   <pre>
                     <code class="swift">let c = MyClass::class</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -760,6 +782,7 @@
                   <code class="kotlin">val widget: Widget = ...
 assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -768,6 +791,7 @@ assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</c
                     <code class="swift">let widget: Widget = ...
 assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -796,6 +820,7 @@ assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</c
                 <pre>
                   <code class="kotlin">fun isOdd(x: Int) = x % 2 != 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -803,6 +828,7 @@ assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</c
                   <pre>
                     <code class="swift">func isOdd(x: Int) = x % 2 != 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -818,6 +844,7 @@ assert(widget is GoodWidget) { "Bad widget: ${widget::class.qualifiedName}" }</c
                   <code class="kotlin">val numbers = listOf(1, 2, 3)
 println(numbers.filter(::isOdd))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -826,6 +853,7 @@ println(numbers.filter(::isOdd))</code>
                     <code class="swift">let numbers = [1, 2, 3]
 print(numbers.filter(::isOdd))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -844,6 +872,7 @@ fun isOdd(s: String) = s == "brillig" || s == "slithy" || s == "tove"
 val numbers = listOf(1, 2, 3)
 println(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -855,6 +884,7 @@ func isOdd(s: String) = s == "brillig" || s == "slithy" || s == "tove"
 let numbers = [1, 2, 3]
 print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -869,6 +899,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                 <pre>
                   <code class="kotlin">val predicate: (String) -&#62; Boolean = ::isOdd   // refers to isOdd(x: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -876,6 +907,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                   <pre>
                     <code class="swift">let predicate: (String) -&#62; Boolean = ::isOdd   // refers to isOdd(x: String)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -890,6 +922,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                 <pre>
                   <code class="kotlin">val isEmptyStringList: List&#60;String&#62;.() -&#62; Boolean = List&#60;String&#62;::isEmpty</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -897,6 +930,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
                   <pre>
                     <code class="swift">let isEmptyStringList: List&#60;String&#62;.() -&#62; Boolean = List&#60;String&#62;::isEmpty</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -927,6 +961,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
     return { x -&#62; f(g(x)) }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -936,6 +971,7 @@ print(numbers.filter(::isOdd)) // refers to isOdd(x: Int)</code>
     return { x -&#62; f(g(x)) }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -955,6 +991,7 @@ val strings = listOf("a", "ab", "abc")
 &#8203;
 println(strings.filter(oddLength))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -967,6 +1004,7 @@ let strings = listOf("a", "ab", "abc")
 &#8203;
 print(strings.filter(oddLength))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1000,6 +1038,7 @@ fun main() {
     println(::x.name) 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1012,6 +1051,7 @@ func main() {
     print(::x.name) 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1031,6 +1071,7 @@ fun main() {
     println(y)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1043,6 +1084,7 @@ func main() {
     print(y)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1058,6 +1100,7 @@ func main() {
                   <code class="kotlin">val strs = listOf("a", "bc", "def")
 println(strs.map(String::length))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1066,6 +1109,7 @@ println(strs.map(String::length))</code>
                     <code class="swift">let strs = listOf("a", "bc", "def")
 print(strs.map(String::length))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1082,6 +1126,7 @@ print(strs.map(String::length))</code>
 val prop = A::p
 println(prop.get(A(1)))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1091,6 +1136,7 @@ println(prop.get(A(1)))</code>
 let prop = A::p
 print(prop.get(A(1)))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1110,6 +1156,7 @@ fun main() {
     println(String::lastChar.get("abc"))
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1122,6 +1169,7 @@ func main() {
     print(String::lastChar.get("abc"))
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1157,6 +1205,7 @@ fun main() {
     println(A::p.javaField)  // prints "private final int A.p"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1171,6 +1220,7 @@ func main() {
     print(A::p.javaField)  // prints "private final int A.p"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1185,6 +1235,7 @@ func main() {
                 <pre>
                   <code class="kotlin">fun getKClass(o: Any): KClass&#60;Any&#62; = o.javaClass.kotlin</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1192,6 +1243,7 @@ func main() {
                   <pre>
                     <code class="swift">func getKClass(o: Any): KClass&#60;Any&#62; = o.javaClass.kotlin</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1224,6 +1276,7 @@ fun function(factory: () -&#62; Foo) {
     val x: Foo = factory()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1235,6 +1288,7 @@ func function(factory: () -&#62; Foo) {
     let x: Foo = factory()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1249,6 +1303,7 @@ func function(factory: () -&#62; Foo) {
                 <pre>
                   <code class="kotlin">function(::Foo)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1256,6 +1311,7 @@ func function(factory: () -&#62; Foo) {
                   <pre>
                     <code class="swift">function(::Foo)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1288,6 +1344,7 @@ println(numberRegex.matches("29"))
 val isNumber = numberRegex::matches
 println(isNumber("29"))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1299,6 +1356,7 @@ print(numberRegex.matches("29"))
 let isNumber = numberRegex::matches
 print(isNumber("29"))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1315,6 +1373,7 @@ print(isNumber("29"))</code>
 val strings = listOf("abc", "124", "a70")
 println(strings.filter(numberRegex::matches))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1324,6 +1383,7 @@ println(strings.filter(numberRegex::matches))</code>
 let strings = listOf("abc", "124", "a70")
 print(strings.filter(numberRegex::matches))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1340,6 +1400,7 @@ print(strings.filter(numberRegex::matches))</code>
 &#8203;
 val matches: (Regex, CharSequence) -&#62; Boolean = Regex::matches</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1349,6 +1410,7 @@ val matches: (Regex, CharSequence) -&#62; Boolean = Regex::matches</code>
 &#8203;
 let matches: (Regex, CharSequence) -&#62; Boolean = Regex::matches</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1364,6 +1426,7 @@ let matches: (Regex, CharSequence) -&#62; Boolean = Regex::matches</code>
                   <code class="kotlin">val prop = "abc"::length
 println(prop.get())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1372,6 +1435,7 @@ println(prop.get())</code>
                     <code class="swift">let prop = "abc"::length
 print(prop.get())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1405,6 +1469,7 @@ print(prop.get())</code>
 val o = Outer()
 val boundInnerCtor = o::Inner</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1417,6 +1482,7 @@ val boundInnerCtor = o::Inner</code>
 let o = Outer()
 let boundInnerCtor = o::Inner</code>
                   </pre>
+                  
               
               </td>
             </tr>

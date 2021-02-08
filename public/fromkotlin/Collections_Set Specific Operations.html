@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -622,6 +636,7 @@ println(numbers intersect setOf("two", "one"))
 println(numbers subtract setOf("three", "four"))
 println(numbers subtract setOf("four", "three")) // same output</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@ print(numbers intersect setOf("two", "one"))
 print(numbers subtract setOf("three", "four"))
 print(numbers subtract setOf("four", "three")) // same output</code>
                   </pre>
+                  
               
               </td>
             </tr>

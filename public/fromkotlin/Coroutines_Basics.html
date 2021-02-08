@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -620,6 +634,7 @@ fun main() {
     Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@ func main() {
     Thread.sleep(2000L) // block main thread for 2 seconds to keep JVM alive
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -675,6 +691,7 @@ fun main() {
     } 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -693,6 +710,7 @@ func main() {
     } 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -716,6 +734,7 @@ fun main() = runBlocking&#60;Unit&#62; { // start main coroutine
     delay(2000L)      // delaying for 2 seconds to keep JVM alive
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -732,6 +751,7 @@ func main() = runBlocking&#60;Unit&#62; { // start main coroutine
     delay(2000L)      // delaying for 2 seconds to keep JVM alive
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -751,6 +771,7 @@ func main() = runBlocking&#60;Unit&#62; { // start main coroutine
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -763,6 +784,7 @@ func main() = runBlocking&#60;Unit&#62; { // start main coroutine
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -796,6 +818,7 @@ func main() = runBlocking&#60;Unit&#62; { // start main coroutine
 println("Hello,")
 job.join() // wait until child coroutine completes</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -808,6 +831,7 @@ job.join() // wait until child coroutine completes</code>
 print("Hello,")
 job.join() // wait until child coroutine completes</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -844,6 +868,7 @@ fun main() = runBlocking { // this: CoroutineScope
     println("Hello,")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -859,6 +884,7 @@ func main() = runBlocking { // this: CoroutineScope
     print("Hello,")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -906,6 +932,7 @@ fun main() = runBlocking { // this: CoroutineScope
     println("Coroutine scope is over") // This line is not printed until the nested launch completes
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -932,6 +959,7 @@ func main() = runBlocking { // this: CoroutineScope
     print("Coroutine scope is over") // This line is not printed until the nested launch completes
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -971,6 +999,7 @@ suspend fun doWorld() {
     println("World!")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -989,6 +1018,7 @@ suspend func doWorld() {
     print("World!")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1026,6 +1056,7 @@ fun main() = runBlocking {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1042,6 +1073,7 @@ func main() = runBlocking {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1076,6 +1108,7 @@ func main() = runBlocking {
 }
 delay(1300L) // just quit after delay</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1089,6 +1122,7 @@ delay(1300L) // just quit after delay</code>
 }
 delay(1300L) // just quit after delay</code>
                   </pre>
+                  
               
               </td>
             </tr>

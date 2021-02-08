@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -632,6 +646,7 @@
      id 'org.jetbrains.kotlin.plugin.serialization' version '1.4.30'  
  }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -640,6 +655,7 @@
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -657,6 +673,7 @@
      kotlin("plugin.serialization") version "1.4.30"
  }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -665,6 +682,7 @@
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -681,6 +699,7 @@
      implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0-RC'
  }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -689,6 +708,7 @@
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -705,6 +725,7 @@
      implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.1.0-RC")
  }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -713,6 +734,7 @@
                     <code class="swift">
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -728,6 +750,7 @@
                   <code class="kotlin">@Serializable
 data class Data(val a: Int, val b: String)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -739,6 +762,7 @@ data class Data(val a: Int, val b: String)</code>
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -753,6 +777,7 @@ data class Data(val a: Int, val b: String)</code>
                 <pre>
                   <code class="kotlin">Json.encodeToString(Data(a = 42, b = "str"))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -762,6 +787,7 @@ data class Data(val a: Int, val b: String)</code>
 print(String(data: data, encoding: .utf8)!)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -777,6 +803,7 @@ print(String(data: data, encoding: .utf8)!)
                   <code class="kotlin">val dataList = listOf(Data(42, "abc"), Data(12, "test"))
 val jsonList = Json.encodeToString(dataList)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -788,6 +815,7 @@ let data = try! JSONEncoder().encode(dataList)
 let jsonList = String(data: data, encoding: .utf8)!
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -802,6 +830,7 @@ let jsonList = String(data: data, encoding: .utf8)!
                 <pre>
                   <code class="kotlin">val obj = Json.decodeFromString&#60;Data&#62;("""{"a":42, "b": "str"}""")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -811,6 +840,7 @@ let jsonList = String(data: data, encoding: .utf8)!
 let movie = try JSONDecoder().decode(DataStruct.self, from: data)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -624,6 +638,7 @@
     println("Completed ${n * k} actions in $time ms")    
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +659,7 @@
     print("Completed ${n * k} actions in $time ms")    
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -667,6 +683,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -683,6 +700,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -721,6 +739,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -738,6 +757,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -775,6 +795,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -791,6 +812,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +854,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -852,6 +875,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -891,6 +915,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -909,6 +934,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -950,6 +976,7 @@ fun main() = runBlocking {
     println("Counter = $counter")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -970,6 +997,7 @@ func main() = runBlocking {
     print("Counter = $counter")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1001,6 +1029,7 @@ sealed class CounterMsg
 object IncCounter : CounterMsg() // one-way message to increment counter
 class GetCounter(val response: CompletableDeferred&#60;Int&#62;) : CounterMsg() // a request with reply</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1011,6 +1040,7 @@ sealed class CounterMsg
 object IncCounter : CounterMsg() // one-way message to increment counter
 class GetCounter(let response: CompletableDeferred&#60;Int&#62;) : CounterMsg() // a request with reply</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1034,6 +1064,7 @@ fun CoroutineScope.counterActor() = actor&#60;CounterMsg&#62; {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1050,6 +1081,7 @@ func CoroutineScope.counterActor() = actor&#60;CounterMsg&#62; {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1076,6 +1108,7 @@ func CoroutineScope.counterActor() = actor&#60;CounterMsg&#62; {
     counter.close() // shutdown the actor
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1095,6 +1128,7 @@ func CoroutineScope.counterActor() = actor&#60;CounterMsg&#62; {
     counter.close() // shutdown the actor
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

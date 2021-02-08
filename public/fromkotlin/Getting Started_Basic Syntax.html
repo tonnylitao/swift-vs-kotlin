@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -633,6 +647,7 @@ import kotlin.text.*
 &#8203;
 // ...</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -641,6 +656,7 @@ import kotlin.text.*
                     <code class="swift">import Fondation
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -671,12 +687,14 @@ import kotlin.text.*
     println("Hello world!")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div>❌<br/>
+                  <div><div class="not-support">
 Code written at global scope is used as the entry point for the program, so you don’t need a main() function.
+</div>
 </div>
               
               </td>
@@ -708,6 +726,7 @@ Code written at global scope is used as the entry point for the program, so you 
     return a + b
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -718,6 +737,7 @@ Code written at global scope is used as the entry point for the program, so you 
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -732,6 +752,7 @@ Code written at global scope is used as the entry point for the program, so you 
                 <pre>
                   <code class="kotlin">fun sum(a: Int, b: Int) = a + b</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -742,6 +763,7 @@ Code written at global scope is used as the entry point for the program, so you 
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -758,6 +780,7 @@ Code written at global scope is used as the entry point for the program, so you 
     println("sum of $a and $b is ${a + b}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -768,6 +791,7 @@ Code written at global scope is used as the entry point for the program, so you 
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -784,6 +808,7 @@ Code written at global scope is used as the entry point for the program, so you 
     println("sum of $a and $b is ${a + b}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -794,6 +819,7 @@ Code written at global scope is used as the entry point for the program, so you 
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -825,17 +851,19 @@ val b = 2   // `Int` type is inferred
 val c: Int  // Type required when no initializer is provided
 c = 3       // deferred assignment</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">let a: Int = 1
-let b = 2
-let c: Int
-c = 3
+                    <code class="swift">let a: Int = 1  // immediate assignment
+let b = 2   // `Int` type is inferred
+let c: Int  // Type required when no initializer is provided
+c = 3       // deferred assignment
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -851,6 +879,7 @@ c = 3
                   <code class="kotlin">var x = 5 // `Int` type is inferred
 x += 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -859,6 +888,7 @@ x += 1</code>
                     <code class="swift">var x = 5 // `Int` type is inferred
 x += 1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -878,6 +908,7 @@ fun incrementX() {
     x += 1 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -891,6 +922,7 @@ func incrementX() {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -922,6 +954,7 @@ func incrementX() {
 /* This is a block comment
    on multiple lines. */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -932,6 +965,7 @@ func incrementX() {
 /* This is a block comment
    on multiple lines. */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -948,6 +982,7 @@ func incrementX() {
 /* contains a nested comment */     
 and ends here. */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -957,6 +992,7 @@ and ends here. */</code>
 /* contains a nested comment */     
 and ends here. */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -991,20 +1027,23 @@ a = 2
 // arbitrary expression in template:
 val s2 = "${s1.replace("is", "was")}, but now is $a"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">var a = 1
+                    <code class="swift">import Foundation
+var a = 1
 // simple name in template:
 let s1 = "a is \(a)"
-&#8203;
+
 a = 2
 // arbitrary expression in template:
-let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
+let s2 = "\(s1.replacingOccurrences(of: "is", with: "was")), but now is \(a)"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1039,6 +1078,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1053,6 +1093,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1067,16 +1108,20 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
                 <pre>
                   <code class="kotlin">fun maxOf(a: Int, b: Int) = if (a &#62; b) a else b</code>
                 </pre>
+                
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
                     <code class="swift">func maxOf(a: Int, b: Int) -&#62; Int {
-  a &#62; b ? a : b
+    a &#62; b ? a : b
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1107,6 +1152,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1117,6 +1163,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1143,6 +1190,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
     }    
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1163,6 +1211,7 @@ let s2 = "\(s1.replacingOccurrences("is", "was")), but now is \(a)"
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1188,6 +1237,9 @@ if (y == null) {
 // x and y are automatically cast to non-nullable after null check
 println(x * y)</code>
                 </pre>
+                
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1203,10 +1255,24 @@ if (y == nil) {
     return
 }
 &#8203;
-// x and y are automatically cast to non-nullable after null check
+// x and y force unwrap
+print(x! * y!)
+
+//or
+
+guard let x = x else {
+    print("Wrong number format in arg1: '\(arg1)'")
+    return
+}
+guard let y = y else {
+    print("Wrong number format in arg2: '\(arg2)'")
+    return
+}
+&#8203;
 print(x * y)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1243,22 +1309,23 @@ print(x * y)
     return null
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
                     <code class="swift">func getStringLength(obj: Any) -&#62; Int? {
+
     if let obj = obj as? String {
-        
         return obj.count
     }
-&#8203;
-    
+
     return nil
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1278,6 +1345,7 @@ print(x * y)
     return obj.length
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1286,11 +1354,17 @@ print(x * y)
                     <code class="swift">func getStringLength(obj: Any) -&#62; Int? {
     guard let obj = obj as? String else { return nil }
 &#8203;
-    
     return obj.count
+}
+
+//or
+
+func getStringLength(obj: Any) -&#62; Int? {
+    (obj as? String)?.count
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1312,21 +1386,23 @@ print(x * y)
     return null
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
                     <code class="swift">func getStringLength(obj: Any) -&#62; Int? {
-    
-    guard let obj = obj as? String, obj.count &#62; 0 else {
-        return nil
+
+    if let obj = obj as? String, obj.count &#62; 0 {
+        return obj.count
     }
 &#8203;
-    return obj.count
+    return nil
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1358,6 +1434,7 @@ for (item in items) {
     println(item)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1369,6 +1446,7 @@ for item in items {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1386,6 +1464,7 @@ for (index in items.indices) {
     println("item at $index is ${items[index]}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1397,6 +1476,7 @@ for index in items.indices {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1430,6 +1510,7 @@ while (index &#60; items.size) {
     index++
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1443,6 +1524,7 @@ while index &#60; items.count {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1478,12 +1560,32 @@ while index &#60; items.count {
         else       -&#62; "Unknown"
     }</code>
                 </pre>
+                
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div>❌
-</div>
+                  <pre>
+                    <code class="swift">func describe(obj: Any) -&#62; String {
+    switch obj {
+    case 1 as Int: //or case is Int where obj as? Int == 1
+        return "One"
+    case "Hello" as String: //or case is String where obj as? String == "Hello":
+        return "Greeting"
+    case is Double:
+        return "Double"
+    case _ where !(obj is String):
+        return "Not a string"
+    default:
+        return "Unknown"
+    }
+}
+
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1516,6 +1618,7 @@ if (x in 1..y+1) {
     println("fits in range")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1528,6 +1631,7 @@ if 1...y+1 ~= x {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1549,6 +1653,7 @@ if (list.size !in list.indices) {
     println("list size is out of valid list indices range, too")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1559,11 +1664,12 @@ if (list.size !in list.indices) {
 if !(0..&#60;list.count ~= -1) {
     print("-1 is out of range")
 }
-if list.indices ~= list.count {
+if !(list.indices ~= list.count) {
     print("list size is out of valid list indices range, too")
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1580,6 +1686,7 @@ if list.indices ~= list.count {
     print(x)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1590,6 +1697,7 @@ if list.indices ~= list.count {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1610,20 +1718,22 @@ for (x in 9 downTo 0 step 3) {
     print(x)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">for x in stride(from: 1, to: 10, by: 2) {
+                    <code class="swift">for x in stride(from: 1, through: 10, by: 2) {
     print(x)
 }
 print()
-for x in stride(from: 9, to: 0, by: -3) {
+for x in stride(from: 9, through: 0, by: -3) {
     print(x)
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1654,6 +1764,7 @@ for x in stride(from: 9, to: 0, by: -3) {
     println(item)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1664,6 +1775,7 @@ for x in stride(from: 9, to: 0, by: -3) {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1681,12 +1793,23 @@ for x in stride(from: 9, to: 0, by: -3) {
     "apple" in items -&#62; println("apple is fine too")
 }</code>
                 </pre>
+                
+                    <div class="left-bravo">👏</div>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
-                  <div>❌
-</div>
+                  <pre>
+                    <code class="swift">if items.contains("orange") {
+    print("juicy")
+}else if items.contains("apple") {
+    print("apple is fine too")
+}
+
+</code>
+                  </pre>
+                  
               
               </td>
             </tr>
@@ -1706,6 +1829,7 @@ fruits
   .map { it.toUpperCase() }
   .forEach { println(it) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1719,6 +1843,7 @@ fruits
     .forEach { print($0) }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1748,14 +1873,13 @@ fruits
                   <code class="kotlin">val rectangle = Rectangle(5.0, 2.0)
 val triangle = Triangle(3.0, 4.0, 5.0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">import UIKit
-
-let rectangle = CGSize(width: 5.0, height: 2.0)
+                    <code class="swift">let rectangle = CGSize(width: 5.0, height: 2.0)
 
 struct Triangle {
     let a, b, c: CGFloat
@@ -1763,6 +1887,7 @@ struct Triangle {
 let triangle = Triangle(a: 3.0, b: 4.0, c: 5.0)
 </code>
                   </pre>
+                  
               
               </td>
             </tr>

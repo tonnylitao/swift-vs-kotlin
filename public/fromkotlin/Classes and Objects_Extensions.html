@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -633,6 +647,7 @@
     this[index2] = tmp
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +659,7 @@
     this[index2] = tmp
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -659,6 +675,7 @@
                   <code class="kotlin">val list = mutableListOf(1, 2, 3)
 list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -667,6 +684,7 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
                     <code class="swift">let list = [1, 2, 3]
 list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -685,6 +703,7 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
     this[index2] = tmp
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -696,6 +715,7 @@ list.swap(0, 2) // 'this' inside 'swap()' will hold the value of 'list'</code>
     this[index2] = tmp
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -736,6 +756,7 @@ fun printClassName(s: Shape) {
 &#8203;
 printClassName(Rectangle())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -755,6 +776,7 @@ func printClassName(s: Shape) {
 &#8203;
 printClassName(Rectangle())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -775,6 +797,7 @@ fun Example.printFunctionType() { println("Extension function") }
 &#8203;
 Example().printFunctionType()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -788,6 +811,7 @@ func Example.printFunctionType() { print("Extension function") }
 &#8203;
 Example().printFunctionType()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -808,6 +832,7 @@ fun Example.printFunctionType(i: Int) { println("Extension function") }
 &#8203;
 Example().printFunctionType(1)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -821,6 +846,7 @@ func Example.printFunctionType(i: Int) { print("Extension function") }
 &#8203;
 Example().printFunctionType(1)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -854,6 +880,7 @@ Example().printFunctionType(1)</code>
     return toString()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -866,6 +893,7 @@ Example().printFunctionType(1)</code>
     return toString()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -895,6 +923,7 @@ Example().printFunctionType(1)</code>
                   <code class="kotlin">val &#60;T&#62; List&#60;T&#62;.lastIndex: Int
     get() = size - 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -903,6 +932,7 @@ Example().printFunctionType(1)</code>
                     <code class="swift">let &#60;T&#62; List&#60;T&#62;.lastIndex: Int
     get() = size - 1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -917,6 +947,7 @@ Example().printFunctionType(1)</code>
                 <pre>
                   <code class="kotlin">val House.number = 1 // error: initializers are not allowed for extension properties</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -924,6 +955,7 @@ Example().printFunctionType(1)</code>
                   <pre>
                     <code class="swift">let House.number = 1 // error: initializers are not allowed for extension properties</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -960,6 +992,7 @@ fun main() {
     MyClass.printCompanion()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -975,6 +1008,7 @@ func main() {
     MyClass.printCompanion()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1005,6 +1039,7 @@ func main() {
  
 fun List&#60;String&#62;.getLongestString() { /*...*/}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1014,6 +1049,7 @@ fun List&#60;String&#62;.getLongestString() { /*...*/}</code>
  
 func List&#60;String&#62;.getLongestString() { /*...*/}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1035,6 +1071,7 @@ fun main() {
     list.getLongestString()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1049,6 +1086,7 @@ func main() {
     list.getLongestString()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1099,6 +1137,7 @@ fun main() {
     //Host("kotl.in").printConnectionString(443)  // error, the extension function is unavailable outside Connection
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1128,6 +1167,7 @@ func main() {
     //Host("kotl.in").printConnectionString(443)  // error, the extension function is unavailable outside Connection
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1147,6 +1187,7 @@ func main() {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1159,6 +1200,7 @@ func main() {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1205,6 +1247,7 @@ fun main() {
     DerivedCaller().call(Derived())  // "Base extension function in DerivedCaller" - extension receiver is resolved statically
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1244,6 +1287,7 @@ func main() {
     DerivedCaller().call(Derived())  // "Base extension function in DerivedCaller" - extension receiver is resolved statically
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

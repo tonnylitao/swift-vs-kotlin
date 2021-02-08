@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -630,6 +644,7 @@
                   <code class="kotlin">var a: String = "abc" // Regular initialization means non-null by default
 a = null // compilation error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -638,6 +653,7 @@ a = null // compilation error</code>
                     <code class="swift">var a: String = "abc" // Regular initialization means non-null by default
 a = null // compilation error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -654,6 +670,7 @@ a = null // compilation error</code>
 b = null // ok
 print(b)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -663,6 +680,7 @@ print(b)</code>
 b = null // ok
 print(b)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -677,6 +695,7 @@ print(b)</code>
                 <pre>
                   <code class="kotlin">val l = a.length</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -684,6 +703,7 @@ print(b)</code>
                   <pre>
                     <code class="swift">let l = a.length</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -698,6 +718,7 @@ print(b)</code>
                 <pre>
                   <code class="kotlin">val l = b.length // error: variable 'b' can be null</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -705,6 +726,7 @@ print(b)</code>
                   <pre>
                     <code class="swift">let l = b.length // error: variable 'b' can be null</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -733,6 +755,7 @@ print(b)</code>
                 <pre>
                   <code class="kotlin">val l = if (b != null) b.length else -1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -740,6 +763,7 @@ print(b)</code>
                   <pre>
                     <code class="swift">let l = if (b != null) b.length else -1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -759,6 +783,7 @@ if (b != null &#38;&#38; b.length &#62; 0) {
     print("Empty string")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -771,6 +796,7 @@ if (b != null &#38;&#38; b.length &#62; 0) {
     print("Empty string")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -802,6 +828,7 @@ val b: String? = null
 println(b?.length)
 println(a?.length) // Unnecessary safe call</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -812,6 +839,7 @@ let b: String? = null
 print(b?.length)
 print(a?.length) // Unnecessary safe call</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -826,6 +854,7 @@ print(a?.length) // Unnecessary safe call</code>
                 <pre>
                   <code class="kotlin">bob?.department?.head?.name</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -833,6 +862,7 @@ print(a?.length) // Unnecessary safe call</code>
                   <pre>
                     <code class="swift">bob?.department?.head?.name</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -850,6 +880,7 @@ for (item in listWithNulls) {
     item?.let { println(it) } // prints Kotlin and ignores null
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -860,6 +891,7 @@ for (item in listWithNulls) {
     item?.let { print(it) } // prints Kotlin and ignores null
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -875,6 +907,7 @@ for (item in listWithNulls) {
                   <code class="kotlin">// If either `person` or `person.department` is null, the function is not called:
 person?.department?.head = managersPool.getManager()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -883,6 +916,7 @@ person?.department?.head = managersPool.getManager()</code>
                     <code class="swift">// If either `person` or `person.department` is null, the function is not called:
 person?.department?.head = managersPool.getManager()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -911,6 +945,7 @@ person?.department?.head = managersPool.getManager()</code>
                 <pre>
                   <code class="kotlin">val l: Int = if (b != null) b.length else -1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -918,6 +953,7 @@ person?.department?.head = managersPool.getManager()</code>
                   <pre>
                     <code class="swift">let l: Int = if (b != null) b.length else -1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -932,6 +968,7 @@ person?.department?.head = managersPool.getManager()</code>
                 <pre>
                   <code class="kotlin">val l = b?.length ?: -1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -939,6 +976,7 @@ person?.department?.head = managersPool.getManager()</code>
                   <pre>
                     <code class="swift">let l = b?.length ?? -1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -957,6 +995,7 @@ person?.department?.head = managersPool.getManager()</code>
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -968,6 +1007,7 @@ person?.department?.head = managersPool.getManager()</code>
     // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -996,6 +1036,7 @@ person?.department?.head = managersPool.getManager()</code>
                 <pre>
                   <code class="kotlin">val l = b!!.length</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1003,6 +1044,7 @@ person?.department?.head = managersPool.getManager()</code>
                   <pre>
                     <code class="swift">let l = b!!.length</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1031,6 +1073,7 @@ person?.department?.head = managersPool.getManager()</code>
                 <pre>
                   <code class="kotlin">val aInt: Int? = a as? Int</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1038,6 +1081,7 @@ person?.department?.head = managersPool.getManager()</code>
                   <pre>
                     <code class="swift">let aInt: Int? = a as? Int</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1067,6 +1111,7 @@ person?.department?.head = managersPool.getManager()</code>
                   <code class="kotlin">val nullableList: List&#60;Int?&#62; = listOf(1, 2, null, 4)
 val intList: List&#60;Int&#62; = nullableList.filterNotNull()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1075,6 +1120,7 @@ val intList: List&#60;Int&#62; = nullableList.filterNotNull()</code>
                     <code class="swift">let nullableList: List&#60;Int?&#62; = listOf(1, 2, null, 4)
 let intList: List&#60;Int&#62; = nullableList.filterNotNull()</code>
                   </pre>
+                  
               
               </td>
             </tr>

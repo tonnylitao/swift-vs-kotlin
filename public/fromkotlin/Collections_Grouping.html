@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -618,6 +632,7 @@
 println(numbers.groupBy { it.first().toUpperCase() })
 println(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.toUpperCase() }))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -628,6 +643,7 @@ println(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.toUp
 print(numbers.groupBy { it.first().toUpperCase() })
 print(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.toUpperCase() }))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -643,6 +659,7 @@ print(numbers.groupBy(keySelector = { it.first() }, valueTransform = { it.toUppe
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four", "five", "six")
 println(numbers.groupingBy { it.first() }.eachCount())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -651,6 +668,7 @@ println(numbers.groupingBy { it.first() }.eachCount())</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four", "five", "six")
 print(numbers.groupingBy { it.first() }.eachCount())</code>
                   </pre>
+                  
               
               </td>
             </tr>

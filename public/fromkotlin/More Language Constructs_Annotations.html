@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -629,6 +643,7 @@
                 <pre>
                   <code class="kotlin">annotation class Fancy</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@
                   <pre>
                     <code class="swift">annotation class Fancy</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -654,6 +670,7 @@
 @MustBeDocumented
 annotation class Fancy</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -665,6 +682,7 @@ annotation class Fancy</code>
 @MustBeDocumented
 annotation class Fancy</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -697,6 +715,7 @@ annotation class Fancy</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -708,6 +727,7 @@ annotation class Fancy</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -722,6 +742,7 @@ annotation class Fancy</code>
                 <pre>
                   <code class="kotlin">class Foo @Inject constructor(dependency: MyDependency) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -729,6 +750,7 @@ annotation class Fancy</code>
                   <pre>
                     <code class="swift">class Foo @Inject constructor(dependency: MyDependency) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -746,6 +768,7 @@ annotation class Fancy</code>
         @Inject set
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -756,6 +779,7 @@ annotation class Fancy</code>
         @Inject set
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -786,6 +810,7 @@ annotation class Fancy</code>
 &#8203;
 @Special("example") class Foo {}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -795,6 +820,7 @@ annotation class Fancy</code>
 &#8203;
 @Special("example") class Foo {}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -815,6 +841,7 @@ annotation class Deprecated(
 &#8203;
 @Deprecated("This function is deprecated, use === instead", ReplaceWith("this === other"))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -828,6 +855,7 @@ annotation class Deprecated(
 &#8203;
 @Deprecated("This function is deprecated, use === instead", ReplaceWith("this === other"))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -846,6 +874,7 @@ annotation class Ann(val arg1: KClass&#60;*&#62;, val arg2: KClass&#60;out Any&#
 &#8203;
 @Ann(String::class, Int::class) class MyClass</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -857,6 +886,7 @@ annotation class Ann(let arg1: KClass&#60;*&#62;, let arg2: KClass&#60;out Any&#
 &#8203;
 @Ann(String::class, Int::class) class MyClass</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -887,6 +917,7 @@ annotation class Ann(let arg1: KClass&#60;*&#62;, let arg2: KClass&#60;out Any&#
 &#8203;
 val f = @Suspendable { Fiber.sleep(10) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -896,6 +927,7 @@ val f = @Suspendable { Fiber.sleep(10) }</code>
 &#8203;
 let f = @Suspendable { Fiber.sleep(10) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -926,6 +958,7 @@ let f = @Suspendable { Fiber.sleep(10) }</code>
               @get:Ann val bar,      // annotate Java getter
               @param:Ann val quux)   // annotate Java constructor parameter</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -935,6 +968,7 @@ let f = @Suspendable { Fiber.sleep(10) }</code>
               @get:Ann let bar,      // annotate Java getter
               @param:Ann let quux)   // annotate Java constructor parameter</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -951,6 +985,7 @@ let f = @Suspendable { Fiber.sleep(10) }</code>
 &#8203;
 package org.jetbrains.demo</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -960,6 +995,7 @@ package org.jetbrains.demo</code>
 &#8203;
 package org.jetbrains.demo</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -977,6 +1013,7 @@ package org.jetbrains.demo</code>
      var collaborator: Collaborator
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -987,6 +1024,7 @@ package org.jetbrains.demo</code>
      var collaborator: Collaborator
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1001,6 +1039,7 @@ package org.jetbrains.demo</code>
                 <pre>
                   <code class="kotlin">fun @receiver:Fancy String.myExtension() { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1008,6 +1047,7 @@ package org.jetbrains.demo</code>
                   <pre>
                     <code class="swift">func @receiver:Fancy String.myExtension() { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1049,6 +1089,7 @@ class Tests {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1069,6 +1110,7 @@ class Tests {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1087,6 +1129,7 @@ public @interface Ann {
     String stringValue();
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1098,6 +1141,7 @@ public @interface Ann {
     String stringValue();
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1113,6 +1157,7 @@ public @interface Ann {
                   <code class="kotlin">// Kotlin
 @Ann(intValue = 1, stringValue = "abc") class C</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1121,6 +1166,7 @@ public @interface Ann {
                     <code class="swift">// Kotlin
 @Ann(intValue = 1, stringValue = "abc") class C</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1138,6 +1184,7 @@ public @interface AnnWithValue {
     String value();
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1148,6 +1195,7 @@ public @interface AnnWithValue {
     String value();
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1163,6 +1211,7 @@ public @interface AnnWithValue {
                   <code class="kotlin">// Kotlin
 @AnnWithValue("abc") class C</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1171,6 +1220,7 @@ public @interface AnnWithValue {
                     <code class="swift">// Kotlin
 @AnnWithValue("abc") class C</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1202,6 +1252,7 @@ public @interface AnnWithArrayValue {
     String[] value();
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1212,6 +1263,7 @@ public @interface AnnWithArrayValue {
     String[] value();
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1227,6 +1279,7 @@ public @interface AnnWithArrayValue {
                   <code class="kotlin">// Kotlin
 @AnnWithArrayValue("abc", "foo", "bar") class C</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1235,6 +1288,7 @@ public @interface AnnWithArrayValue {
                     <code class="swift">// Kotlin
 @AnnWithArrayValue("abc", "foo", "bar") class C</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1252,6 +1306,7 @@ public @interface AnnWithArrayMethod {
     String[] names();
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1262,6 +1317,7 @@ public @interface AnnWithArrayMethod {
     String[] names();
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1282,6 +1338,7 @@ class C
 @AnnWithArrayMethod(names = arrayOf("abc", "foo", "bar")) 
 class D</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1295,6 +1352,7 @@ class C
 @AnnWithArrayMethod(names = arrayOf("abc", "foo", "bar")) 
 class D</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1326,6 +1384,7 @@ public @interface Ann {
     int value();
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1336,6 +1395,7 @@ public @interface Ann {
     int value();
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1353,6 +1413,7 @@ fun foo(ann: Ann) {
     val i = ann.value
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1363,6 +1424,7 @@ func foo(ann: Ann) {
     let i = ann.value
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

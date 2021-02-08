@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -631,6 +645,7 @@
 numbers.add("five")   // this is OK    
 //numbers = mutableListOf("six", "seven")      // compilation error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -640,6 +655,7 @@ numbers.add("five")   // this is OK
 numbers.add("five")   // this is OK    
 //numbers = mutableListOf("six", "seven")      // compilation error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -679,6 +695,7 @@ fun main() {
     printAll(stringSet)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -697,6 +714,7 @@ func main() {
     printAll(stringSet)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -723,6 +741,7 @@ fun main() {
     println(shortWords)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -742,6 +761,7 @@ func main() {
     print(shortWords)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -774,6 +794,7 @@ println("Third element: ${numbers.get(2)}")
 println("Fourth element: ${numbers[3]}")
 println("Index of element \"two\" ${numbers.indexOf("two")}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -785,6 +806,7 @@ print("Third element: ${numbers.get(2)}")
 print("Fourth element: ${numbers[3]}")
 print("Index of element \"two\" ${numbers.indexOf("two")}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -804,6 +826,7 @@ println(people == people2)
 bob.age = 32
 println(people == people2)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -816,6 +839,7 @@ print(people == people2)
 bob.age = 32
 print(people == people2)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -835,6 +859,7 @@ numbers[0] = 0
 numbers.shuffle()
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -847,6 +872,7 @@ numbers[0] = 0
 numbers.shuffle()
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -880,6 +906,7 @@ if (numbers.contains(1)) println("1 is in the set")
 val numbersBackwards = setOf(4, 3, 2, 1)
 println("The sets are equal: ${numbers == numbersBackwards}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -892,6 +919,7 @@ if (numbers.contains(1)) print("1 is in the set")
 let numbersBackwards = setOf(4, 3, 2, 1)
 print("The sets are equal: ${numbers == numbersBackwards}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -910,6 +938,7 @@ val numbersBackwards = setOf(4, 3, 2, 1)
 println(numbers.first() == numbersBackwards.first())
 println(numbers.first() == numbersBackwards.last())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -921,6 +950,7 @@ let numbersBackwards = setOf(4, 3, 2, 1)
 print(numbers.first() == numbersBackwards.first())
 print(numbers.first() == numbersBackwards.last())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -955,6 +985,7 @@ if ("key2" in numbersMap) println("Value by key \"key2\": ${numbersMap["key2"]}"
 if (1 in numbersMap.values) println("The value 1 is in the map")
 if (numbersMap.containsValue(1)) println("The value 1 is in the map") // same as previous</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -968,6 +999,7 @@ if ("key2" in numbersMap) print("Value by key \"key2\": ${numbersMap["key2"]}")
 if (1 in numbersMap.values) print("The value 1 is in the map")
 if (numbersMap.containsValue(1)) print("The value 1 is in the map") // same as previous</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -985,6 +1017,7 @@ val anotherMap = mapOf("key2" to 2, "key1" to 1, "key4" to 1, "key3" to 3)
 &#8203;
 println("The maps are equal: ${numbersMap == anotherMap}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -995,6 +1028,7 @@ let anotherMap = mapOf("key2" to 2, "key1" to 1, "key4" to 1, "key3" to 3)
 &#8203;
 print("The maps are equal: ${numbersMap == anotherMap}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1013,6 +1047,7 @@ numbersMap["one"] = 11
 &#8203;
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1024,6 +1059,7 @@ numbersMap["one"] = 11
 &#8203;
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -635,6 +649,7 @@ val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key11" to 11)
 val filteredMap = numbersMap.filter { (key, value) -&#62; key.endsWith("1") &#38;&#38; value &#62; 10}
 println(filteredMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -648,6 +663,7 @@ let numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key11" to 11)
 let filteredMap = numbersMap.filter { (key, value) -&#62; key.endsWith("1") &#38;&#38; value &#62; 10}
 print(filteredMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -668,6 +684,7 @@ val filteredNot = numbers.filterNot { it.length &#60;= 3 }
 println(filteredIdx)
 println(filteredNot)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -681,6 +698,7 @@ let filteredNot = numbers.filterNot { it.length &#60;= 3 }
 print(filteredIdx)
 print(filteredNot)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -699,6 +717,7 @@ numbers.filterIsInstance&#60;String&#62;().forEach {
     println(it.toUpperCase())
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -710,6 +729,7 @@ numbers.filterIsInstance&#60;String&#62;().forEach {
     print(it.toUpperCase())
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -727,6 +747,7 @@ numbers.filterNotNull().forEach {
     println(it.length)   // length is unavailable for nullable Strings
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -737,6 +758,7 @@ numbers.filterNotNull().forEach {
     print(it.length)   // length is unavailable for nullable Strings
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -769,6 +791,7 @@ val (match, rest) = numbers.partition { it.length &#62; 3 }
 println(match)
 println(rest)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -780,6 +803,7 @@ let (match, rest) = numbers.partition { it.length &#62; 3 }
 print(match)
 print(rest)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -814,6 +838,7 @@ println(numbers.all { it.endsWith("e") })
 &#8203;
 println(emptyList&#60;Int&#62;().all { it &#62; 5 })   // vacuous truth</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -827,6 +852,7 @@ print(numbers.all { it.endsWith("e") })
 &#8203;
 print(emptyList&#60;Int&#62;().all { $0 &#62; 5 })   // vacuous truth</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -848,6 +874,7 @@ println(empty.any())
 println(numbers.none())
 println(empty.none())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -862,6 +889,7 @@ print(empty.any())
 print(numbers.none())
 print(empty.none())</code>
                   </pre>
+                  
               
               </td>
             </tr>

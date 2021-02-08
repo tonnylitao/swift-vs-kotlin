@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -622,6 +636,7 @@ launch(newSingleThreadContext("MyOwnThread")) { // will get its own new thread
     println("newSingleThreadContext: I'm working in thread ${Thread.currentThread().name}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -640,6 +655,7 @@ launch(newSingleThreadContext("MyOwnThread")) { // will get its own new thread
     print("newSingleThreadContext: I'm working in thread ${Thread.currentThread().name}")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -677,6 +693,7 @@ launch { // context of the parent, main runBlocking coroutine
     println("main runBlocking: After delay in thread ${Thread.currentThread().name}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -693,6 +710,7 @@ launch { // context of the parent, main runBlocking coroutine
     print("main runBlocking: After delay in thread ${Thread.currentThread().name}")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -729,6 +747,7 @@ val b = async {
 }
 log("The answer is ${a.await() * b.await()}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -744,6 +763,7 @@ let b = async {
 }
 log("The answer is ${a.await() * b.await()}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -782,6 +802,7 @@ log("The answer is ${a.await() * b.await()}")</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -799,6 +820,7 @@ log("The answer is ${a.await() * b.await()}")</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -827,6 +849,7 @@ log("The answer is ${a.await() * b.await()}")</code>
                 <pre>
                   <code class="kotlin">println("My job is ${coroutineContext[Job]}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -834,6 +857,7 @@ log("The answer is ${a.await() * b.await()}")</code>
                   <pre>
                     <code class="swift">print("My job is ${coroutineContext[Job]}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -881,6 +905,7 @@ request.cancel() // cancel processing of the request
 delay(1000) // delay a second to see what happens
 println("main: Who has survived request cancellation?")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -907,6 +932,7 @@ request.cancel() // cancel processing of the request
 delay(1000) // delay a second to see what happens
 print("main: Who has survived request cancellation?")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -946,6 +972,7 @@ val request = launch {
 request.join() // wait for completion of the request, including all its children
 println("Now processing of the request is complete")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -964,6 +991,7 @@ let request = launch {
 request.join() // wait for completion of the request, including all its children
 print("Now processing of the request is complete")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1004,6 +1032,7 @@ val v2 = async(CoroutineName("v2coroutine")) {
 }
 log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1023,6 +1052,7 @@ let v2 = async(CoroutineName("v2coroutine")) {
 }
 log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1053,6 +1083,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     println("I'm working in thread ${Thread.currentThread().name}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1062,6 +1093,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     print("I'm working in thread ${Thread.currentThread().name}")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1096,6 +1128,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     }
     // to be continued ...</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1109,6 +1142,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     }
     // to be continued ...</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1133,6 +1167,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     }
 } // class Activity ends</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1150,6 +1185,7 @@ log("The answer for v1 / v2 = ${v1.await() / v2.await()}")</code>
     }
 } // class Activity ends</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1170,6 +1206,7 @@ println("Destroying activity!")
 activity.destroy() // cancels all coroutines
 delay(1000) // visually confirm that they don't work</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1183,6 +1220,7 @@ print("Destroying activity!")
 activity.destroy() // cancels all coroutines
 delay(1000) // visually confirm that they don't work</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1219,6 +1257,7 @@ val job = launch(Dispatchers.Default + threadLocal.asContextElement(value = "lau
 job.join()
 println("Post-main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1234,6 +1273,7 @@ let job = launch(Dispatchers.Default + threadLocal.asContextElement(value = "lau
 job.join()
 print("Post-main, current thread: ${Thread.currentThread()}, thread local value: '${threadLocal.get()}'")</code>
                   </pre>
+                  
               
               </td>
             </tr>

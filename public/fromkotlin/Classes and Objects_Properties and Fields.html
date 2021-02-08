@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -635,6 +649,7 @@
     var zip: String = "123456"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -648,6 +663,7 @@
     var zip: String = "123456"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -668,6 +684,7 @@
     return result
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -681,6 +698,7 @@
     return result
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -711,6 +729,7 @@
     [&#60;getter&#62;]
     [&#60;setter&#62;]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -720,6 +739,7 @@
     [&#60;getter&#62;]
     [&#60;setter&#62;]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -735,6 +755,7 @@
                   <code class="kotlin">var allByDefault: Int? // error: explicit initializer required, default getter and setter implied
 var initialized = 1 // has type Int, default getter and setter</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -743,6 +764,7 @@ var initialized = 1 // has type Int, default getter and setter</code>
                     <code class="swift">var allByDefault: Int? // error: explicit initializer required, default getter and setter implied
 var initialized = 1 // has type Int, default getter and setter</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -758,6 +780,7 @@ var initialized = 1 // has type Int, default getter and setter</code>
                   <code class="kotlin">val simple: Int? // has type Int, default getter, must be initialized in constructor
 val inferredType = 1 // has type Int and a default getter</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -766,6 +789,7 @@ val inferredType = 1 // has type Int and a default getter</code>
                     <code class="swift">let simple: Int? // has type Int, default getter, must be initialized in constructor
 let inferredType = 1 // has type Int and a default getter</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -781,6 +805,7 @@ let inferredType = 1 // has type Int and a default getter</code>
                   <code class="kotlin">val isEmpty: Boolean
     get() = this.size == 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -789,6 +814,7 @@ let inferredType = 1 // has type Int and a default getter</code>
                     <code class="swift">let isEmpty: Boolean
     get() = this.size == 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -807,6 +833,7 @@ let inferredType = 1 // has type Int and a default getter</code>
         setDataFromString(value) // parses the string and assigns values to other properties
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -818,6 +845,7 @@ let inferredType = 1 // has type Int and a default getter</code>
         setDataFromString(value) // parses the string and assigns values to other properties
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +860,7 @@ let inferredType = 1 // has type Int and a default getter</code>
                 <pre>
                   <code class="kotlin">val isEmpty get() = this.size == 0  // has type Boolean</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -839,6 +868,7 @@ let inferredType = 1 // has type Int and a default getter</code>
                   <pre>
                     <code class="swift">let isEmpty get() = this.size == 0  // has type Boolean</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -857,6 +887,7 @@ let inferredType = 1 // has type Int and a default getter</code>
 var setterWithAnnotation: Any? = null
     @Inject set // annotate the setter with Inject</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -868,6 +899,7 @@ var setterWithAnnotation: Any? = null
 var setterWithAnnotation: Any? = null
     @Inject set // annotate the setter with Inject</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -899,6 +931,7 @@ var setterWithAnnotation: Any? = null
         if (value &#62;= 0) field = value
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -909,6 +942,7 @@ var setterWithAnnotation: Any? = null
         if (value &#62;= 0) field = value
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -924,6 +958,7 @@ var setterWithAnnotation: Any? = null
                   <code class="kotlin">val isEmpty: Boolean
     get() = this.size == 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -932,6 +967,7 @@ var setterWithAnnotation: Any? = null
                     <code class="swift">let isEmpty: Boolean
     get() = this.size == 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -967,6 +1003,7 @@ public val table: Map&#60;String, Int&#62;
         return _table ?: throw AssertionError("Set to null by another thread")
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -981,6 +1018,7 @@ public let table: Map&#60;String, Int&#62;
         return _table ?? throw AssertionError("Set to null by another thread")
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1011,6 +1049,7 @@ public let table: Map&#60;String, Int&#62;
 &#8203;
 @Deprecated(SUBSYSTEM_DEPRECATED) fun foo() { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1020,6 +1059,7 @@ public let table: Map&#60;String, Int&#62;
 &#8203;
 @Deprecated(SUBSYSTEM_DEPRECATED) func foo() { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1058,6 +1098,7 @@ public let table: Map&#60;String, Int&#62;
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1075,6 +1116,7 @@ public let table: Map&#60;String, Int&#62;
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1105,6 +1147,7 @@ public let table: Map&#60;String, Int&#62;
     println(foo.bar)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1114,6 +1157,7 @@ public let table: Map&#60;String, Int&#62;
     print(foo.bar)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

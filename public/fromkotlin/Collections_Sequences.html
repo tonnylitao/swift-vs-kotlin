@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -629,6 +643,7 @@
                 <pre>
                   <code class="kotlin">val numbersSequence = sequenceOf("four", "three", "two", "one")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@
                   <pre>
                     <code class="swift">let numbersSequence = sequenceOf("four", "three", "two", "one")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -665,6 +681,7 @@
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four")
 val numbersSequence = numbers.asSequence()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -673,6 +690,7 @@ val numbersSequence = numbers.asSequence()</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four")
 let numbersSequence = numbers.asSequence()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -703,6 +721,7 @@ let numbersSequence = numbers.asSequence()</code>
 println(oddNumbers.take(5).toList())
 //println(oddNumbers.count())     // error: the sequence is infinite</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -712,6 +731,7 @@ println(oddNumbers.take(5).toList())
 print(oddNumbers.take(5).toList())
 //print(oddNumbers.count())     // error: the sequence is infinite</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -727,6 +747,7 @@ print(oddNumbers.take(5).toList())
                   <code class="kotlin">val oddNumbersLessThan10 = generateSequence(1) { if (it + 2 &#60; 10) it + 2 else null }
 println(oddNumbersLessThan10.count())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -736,6 +757,7 @@ println(oddNumbersLessThan10.count())</code>
 print(oddNumbersLessThan10.count())
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -769,6 +791,7 @@ print(oddNumbersLessThan10.count())
 }
 println(oddNumbers.take(5).toList())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -781,6 +804,7 @@ println(oddNumbers.take(5).toList())</code>
 }
 print(oddNumbers.take(5).toList())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -815,6 +839,7 @@ val lengthsList = words.filter { println("filter: $it"); it.length &#62; 3 }
 println("Lengths of first 4 words longer than 3 chars:")
 println(lengthsList)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -828,6 +853,7 @@ let lengthsList = words.filter { print("filter: $it"); it.length &#62; 3 }
 print("Lengths of first 4 words longer than 3 chars:")
 print(lengthsList)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -866,6 +892,7 @@ println("Lengths of first 4 words longer than 3 chars")
 // terminal operation: obtaining the result as a List
 println(lengthsSequence.toList())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -883,6 +910,7 @@ print("Lengths of first 4 words longer than 3 chars")
 // terminal operation: obtaining the result as a List
 print(lengthsSequence.toList())</code>
                   </pre>
+                  
               
               </td>
             </tr>

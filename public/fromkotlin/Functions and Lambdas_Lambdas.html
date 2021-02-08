@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -638,6 +652,7 @@
     return accumulator
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -654,6 +669,7 @@
     return accumulator
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -686,6 +702,7 @@ val joinedToString = items.fold("Elements:", { acc, i -&#62; acc + " " + i })
 val product = items.fold(1, Int::times)
 &#8203;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -711,6 +728,7 @@ let joinedToString = items.fold("Elements:", { acc, i -&#62; acc + " " + i })
 let product = items.fold(1, Int::times)
 &#8203;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -739,6 +757,7 @@ let product = items.fold(1, Int::times)
                 <pre>
                   <code class="kotlin">typealias ClickHandler = (Button, ClickEvent) -&#62; Unit</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -746,6 +765,7 @@ let product = items.fold(1, Int::times)
                   <pre>
                     <code class="swift">typealias ClickHandler = (Button, ClickEvent) -&#62; Unit</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -778,6 +798,7 @@ let product = items.fold(1, Int::times)
 &#8203;
 val intFunction: (Int) -&#62; Int = IntTransformer()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -789,6 +810,7 @@ val intFunction: (Int) -&#62; Int = IntTransformer()</code>
 &#8203;
 let intFunction: (Int) -&#62; Int = IntTransformer()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -803,6 +825,7 @@ let intFunction: (Int) -&#62; Int = IntTransformer()</code>
                 <pre>
                   <code class="kotlin">val a = { i: Int -&#62; i + 1 } // The inferred type is (Int) -&#62; Int</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -810,6 +833,7 @@ let intFunction: (Int) -&#62; Int = IntTransformer()</code>
                   <pre>
                     <code class="swift">let a = { i: Int -&#62; i + 1 } // The inferred type is (Int) -&#62; Int</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -831,6 +855,7 @@ fun runTransformation(f: (String, Int) -&#62; String): String {
 val result = runTransformation(repeatFun) // OK
 &#8203;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -845,6 +870,7 @@ func runTransformation(f: (String, Int) -&#62; String) -&#62; String {
 let result = runTransformation(repeatFun) // OK
 &#8203;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -882,6 +908,7 @@ println(intPlus(1, 2))
 println(2.intPlus(3)) // extension-like call
 &#8203;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -898,6 +925,7 @@ print(intPlus(1, 2))
 print(2.intPlus(3)) // extension-like call
 &#8203;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -926,6 +954,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">max(strings, { a, b -&#62; a.length &#60; b.length })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -933,6 +962,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">max(strings, { a, b -&#62; a.length &#60; b.length })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -947,6 +977,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">fun compare(a: String, b: String): Boolean = a.length &#60; b.length</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -954,6 +985,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">func compare(a: String, b: String): Boolean = a.length &#60; b.length</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -982,6 +1014,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">val sum: (Int, Int) -&#62; Int = { x: Int, y: Int -&#62; x + y }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -989,6 +1022,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">let sum: (Int, Int) -&#62; Int = { x: Int, y: Int -&#62; x + y }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1003,6 +1037,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">val sum = { x: Int, y: Int -&#62; x + y }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1010,6 +1045,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">let sum = { x: Int, y: Int -&#62; x + y }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1038,6 +1074,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">val product = items.fold(1) { acc, e -&#62; acc * e }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1045,6 +1082,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">let product = items.fold(1) { acc, e -&#62; acc * e }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1059,6 +1097,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">run { println("...") }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1066,6 +1105,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">run { print("...") }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1094,6 +1134,7 @@ print(2.intPlus(3)) // extension-like call
                 <pre>
                   <code class="kotlin">ints.filter { it &#62; 0 } // this literal is of type '(it: Int) -&#62; Boolean'</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1101,6 +1142,7 @@ print(2.intPlus(3)) // extension-like call
                   <pre>
                     <code class="swift">ints.filter { $0 &#62; 0 } // this literal is of type '(it: Int) -&#62; Boolean'</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1137,6 +1179,7 @@ ints.filter {
     return@filter shouldFilter
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1153,6 +1196,7 @@ ints.filter {
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1167,6 +1211,7 @@ ints.filter {
                 <pre>
                   <code class="kotlin">strings.filter { it.length == 5 }.sortedBy { it }.map { it.toUpperCase() }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1174,6 +1219,7 @@ ints.filter {
                   <pre>
                     <code class="swift">strings.filter { it.length == 5 }.sortedBy { $0 }.map { it.toUpperCase() }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1202,6 +1248,7 @@ ints.filter {
                 <pre>
                   <code class="kotlin">map.forEach { _, value -&#62; println("$value!") }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1209,6 +1256,7 @@ ints.filter {
                   <pre>
                     <code class="swift">map.forEach { _, value -&#62; print("$value!") }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1237,6 +1285,7 @@ ints.filter {
                 <pre>
                   <code class="kotlin">fun(x: Int, y: Int): Int = x + y</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1244,6 +1293,7 @@ ints.filter {
                   <pre>
                     <code class="swift">fun(x: Int, y: Int) -&#62; Int = x + y</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1260,6 +1310,7 @@ ints.filter {
     return x + y
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1269,6 +1320,7 @@ ints.filter {
     return x + y
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1283,6 +1335,7 @@ ints.filter {
                 <pre>
                   <code class="kotlin">ints.filter(fun(item) = item &#62; 0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1290,6 +1343,7 @@ ints.filter {
                   <pre>
                     <code class="swift">ints.filter(fun(item) = item &#62; 0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1322,6 +1376,7 @@ ints.filter { it &#62; 0 }.forEach {
 }
 print(sum)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1333,6 +1388,7 @@ ints.filter { $0 &#62; 0 }.forEach {
 }
 print(sum)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1361,6 +1417,7 @@ print(sum)</code>
                 <pre>
                   <code class="kotlin">val sum: Int.(Int) -&#62; Int = { other -&#62; plus(other) }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1368,6 +1425,7 @@ print(sum)</code>
                   <pre>
                     <code class="swift">let sum: Int.(Int) -&#62; Int = { other -&#62; plus(other) }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1382,6 +1440,7 @@ print(sum)</code>
                 <pre>
                   <code class="kotlin">val sum = fun Int.(other: Int): Int = this + other</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1389,6 +1448,7 @@ print(sum)</code>
                   <pre>
                     <code class="swift">let sum = func Int.(other: Int) -&#62; Int = this + other</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1415,6 +1475,7 @@ html {       // lambda with receiver begins here
     body()   // calling a method on the receiver object
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1434,6 +1495,7 @@ html {       // lambda with receiver begins here
     body()   // calling a method on the receiver object
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

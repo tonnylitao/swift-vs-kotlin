@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -629,6 +643,7 @@
                 <pre>
                   <code class="kotlin">throw Exception("Hi There!")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +651,7 @@
                   <pre>
                     <code class="swift">throw Exception("Hi There!")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -658,6 +674,7 @@ finally {
     // optional finally block
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -673,6 +690,7 @@ finally {
     // optional finally block
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -701,6 +719,7 @@ finally {
                 <pre>
                   <code class="kotlin">val a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -708,6 +727,7 @@ finally {
                   <pre>
                     <code class="swift">let a: Int? = try { parseInt(input) } catch (e: NumberFormatException) { null }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -736,6 +756,7 @@ finally {
                 <pre>
                   <code class="kotlin">Appendable append(CharSequence csq) throws IOException;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -743,6 +764,7 @@ finally {
                   <pre>
                     <code class="swift">Appendable append(CharSequence csq) throws IOException;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -762,6 +784,7 @@ catch (IOException e) {
     // Must be safe
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -774,6 +797,7 @@ catch (IOException e) {
     // Must be safe
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -802,6 +826,7 @@ catch (IOException e) {
                 <pre>
                   <code class="kotlin">val s = person.name ?: throw IllegalArgumentException("Name required")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -809,6 +834,7 @@ catch (IOException e) {
                   <pre>
                     <code class="swift">let s = person.name ?? throw IllegalArgumentException("Name required")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -825,6 +851,7 @@ catch (IOException e) {
     throw IllegalArgumentException(message)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -834,6 +861,7 @@ catch (IOException e) {
     throw IllegalArgumentException(message)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -849,6 +877,7 @@ catch (IOException e) {
                   <code class="kotlin">val s = person.name ?: fail("Name required")
 println(s)     // 's' is known to be initialized at this point</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -857,6 +886,7 @@ println(s)     // 's' is known to be initialized at this point</code>
                     <code class="swift">let s = person.name ?? fail("Name required")
 print(s)     // 's' is known to be initialized at this point</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -872,6 +902,7 @@ print(s)     // 's' is known to be initialized at this point</code>
                   <code class="kotlin">val x = null           // 'x' has type `Nothing?`
 val l = listOf(null)   // 'l' has type `List&#60;Nothing?&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -880,6 +911,7 @@ val l = listOf(null)   // 'l' has type `List&#60;Nothing?&#62;</code>
                     <code class="swift">let x = null           // 'x' has type `Nothing?`
 let l = listOf(null)   // 'l' has type `List&#60;Nothing?&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>

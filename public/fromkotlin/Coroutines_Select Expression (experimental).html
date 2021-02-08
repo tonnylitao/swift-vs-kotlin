@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -616,6 +630,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -628,6 +643,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -647,6 +663,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -659,6 +676,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -682,6 +700,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -698,6 +717,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -717,6 +737,7 @@ repeat(7) {
 }
 coroutineContext.cancelChildren() // cancel fizz &#38; buzz coroutines</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -729,6 +750,7 @@ repeat(7) {
 }
 coroutineContext.cancelChildren() // cancel fizz &#38; buzz coroutines</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -771,6 +793,7 @@ coroutineContext.cancelChildren() // cancel fizz &#38; buzz coroutines</code>
         }
     }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -792,6 +815,7 @@ coroutineContext.cancelChildren() // cancel fizz &#38; buzz coroutines</code>
         }
     }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -815,6 +839,7 @@ repeat(8) { // print first eight results
 }
 coroutineContext.cancelChildren()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -831,6 +856,7 @@ repeat(8) { // print first eight results
 }
 coroutineContext.cancelChildren()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -867,6 +893,7 @@ coroutineContext.cancelChildren()</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -882,6 +909,7 @@ coroutineContext.cancelChildren()</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -905,6 +933,7 @@ produceNumbers(side).consumeEach {
 println("Done consuming")
 coroutineContext.cancelChildren()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -921,6 +950,7 @@ produceNumbers(side).consumeEach {
 print("Done consuming")
 coroutineContext.cancelChildren()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -952,6 +982,7 @@ coroutineContext.cancelChildren()</code>
     "Waited for $time ms"
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -962,6 +993,7 @@ coroutineContext.cancelChildren()</code>
     "Waited for $time ms"
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -979,6 +1011,7 @@ coroutineContext.cancelChildren()</code>
     return List(12) { asyncString(random.nextInt(1000)) }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -989,6 +1022,7 @@ coroutineContext.cancelChildren()</code>
     return List(12) { asyncString(random.nextInt(1000)) }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1013,6 +1047,7 @@ println(result)
 val countActive = list.count { it.isActive }
 println("$countActive coroutines are still active")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1030,6 +1065,7 @@ print(result)
 let countActive = list.count { it.isActive }
 print("$countActive coroutines are still active")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1077,6 +1113,7 @@ print("$countActive coroutines are still active")</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1103,6 +1140,7 @@ print("$countActive coroutines are still active")</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1120,6 +1158,7 @@ print("$countActive coroutines are still active")</code>
     str
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1130,6 +1169,7 @@ print("$countActive coroutines are still active")</code>
     str
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1158,6 +1198,7 @@ delay(1000) // give it time to process
 chan.close() // close the channel ... 
 delay(500) // and wait some time to let it finish</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1179,6 +1220,7 @@ delay(1000) // give it time to process
 chan.close() // close the channel ... 
 delay(500) // and wait some time to let it finish</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -630,6 +644,7 @@
                   <code class="kotlin">val numbersSet = setOf("one", "two", "three", "four")
 val emptySet = mutableSetOf&#60;String&#62;()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -638,6 +653,7 @@ val emptySet = mutableSetOf&#60;String&#62;()</code>
                     <code class="swift">let numbersSet = setOf("one", "two", "three", "four")
 let emptySet = mutableSetOf&#60;String&#62;()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -652,6 +668,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                 <pre>
                   <code class="kotlin">val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -659,6 +676,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                   <pre>
                     <code class="swift">let numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -673,6 +691,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                 <pre>
                   <code class="kotlin">val numbersMap = mutableMapOf&#60;String, String&#62;().apply { this["one"] = "1"; this["two"] = "2" }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -680,6 +699,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                   <pre>
                     <code class="swift">let numbersMap = mutableMapOf&#60;String, String&#62;().apply { this["one"] = "1"; this["two"] = "2" }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -708,6 +728,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                 <pre>
                   <code class="kotlin">val empty = emptyList&#60;String&#62;()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -715,6 +736,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                   <pre>
                     <code class="swift">let empty = emptyList&#60;String&#62;()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -744,6 +766,7 @@ let emptySet = mutableSetOf&#60;String&#62;()</code>
                   <code class="kotlin">val doubled = List(3, { it * 2 })  // or MutableList if you want to change its content later
 println(doubled)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -752,6 +775,7 @@ println(doubled)</code>
                     <code class="swift">let doubled = List(3, { $0 * 2 })  // or MutableList if you want to change its content later
 print(doubled)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -781,6 +805,7 @@ print(doubled)</code>
                   <code class="kotlin">val linkedList = LinkedList&#60;String&#62;(listOf("one", "two", "three"))
 val presizedSet = HashSet&#60;Int&#62;(32)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -789,6 +814,7 @@ val presizedSet = HashSet&#60;Int&#62;(32)</code>
                     <code class="swift">let linkedList = LinkedList&#60;String&#62;(listOf("one", "two", "three"))
 let presizedSet = HashSet&#60;Int&#62;(32)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -824,6 +850,7 @@ println("Copy size: ${copyList.size}")
 //readOnlyCopyList.add(4)             // compilation error
 println("Read-only copy size: ${readOnlyCopyList.size}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -838,6 +865,7 @@ print("Copy size: ${copyList.size}")
 //readOnlyCopyList.add(4)             // compilation error
 print("Read-only copy size: ${readOnlyCopyList.size}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -856,6 +884,7 @@ copySet.add(3)
 copySet.add(4)    
 println(copySet)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -867,6 +896,7 @@ copySet.add(3)
 copySet.add(4)    
 print(copySet)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -884,6 +914,7 @@ val referenceList = sourceList
 referenceList.add(4)
 println("Source size: ${sourceList.size}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -894,6 +925,7 @@ let referenceList = sourceList
 referenceList.add(4)
 print("Source size: ${sourceList.size}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -913,6 +945,7 @@ val referenceList: List&#60;Int&#62; = sourceList
 sourceList.add(4)
 println(referenceList) // shows the current state of sourceList</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -925,6 +958,7 @@ let referenceList: List&#60;Int&#62; = sourceList
 sourceList.add(4)
 print(referenceList) // shows the current state of sourceList</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -956,6 +990,7 @@ val numbers = listOf("one", "two", "three", "four")
 val longerThan3 = numbers.filter { it.length &#62; 3 }
 println(longerThan3)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -966,6 +1001,7 @@ let numbers = listOf("one", "two", "three", "four")
 let longerThan3 = numbers.filter { it.length &#62; 3 }
 print(longerThan3)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -983,6 +1019,7 @@ val numbers = setOf(1, 2, 3)
 println(numbers.map { it * 3 })
 println(numbers.mapIndexed { idx, value -&#62; value * idx })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -993,6 +1030,7 @@ let numbers = setOf(1, 2, 3)
 print(numbers.map { $0 * 3 })
 print(numbers.mapIndexed { idx, value -&#62; value * idx })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1008,6 +1046,7 @@ print(numbers.mapIndexed { idx, value -&#62; value * idx })</code>
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four")
 println(numbers.associateWith { it.length })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1016,6 +1055,7 @@ println(numbers.associateWith { it.length })</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four")
 print(numbers.associateWith { it.length })</code>
                   </pre>
+                  
               
               </td>
             </tr>

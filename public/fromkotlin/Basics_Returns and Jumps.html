@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@
                 <pre>
                   <code class="kotlin">val s = person.name ?: return</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@
                   <pre>
                     <code class="swift">let s = person.name ?? return</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -652,6 +668,7 @@
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -661,6 +678,7 @@
     // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -679,6 +697,7 @@
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -690,6 +709,7 @@
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -724,6 +744,7 @@
     println("this point is unreachable")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -738,6 +759,7 @@
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -758,6 +780,7 @@
     print(" done with explicit label")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -772,6 +795,7 @@
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -792,6 +816,7 @@
     print(" done with implicit label")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -806,6 +831,7 @@
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -826,6 +852,7 @@
     print(" done with anonymous function")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -839,6 +866,7 @@
     print(" done with anonymous function")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -861,6 +889,7 @@
     print(" done with nested loop")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -877,6 +906,7 @@
 }
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -891,6 +921,7 @@
                 <pre>
                   <code class="kotlin">return@a 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -898,6 +929,7 @@
                   <pre>
                     <code class="swift">return@a 1</code>
                   </pre>
+                  
               
               </td>
             </tr>

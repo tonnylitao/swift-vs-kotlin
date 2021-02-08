@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -630,6 +644,7 @@ fun main() = runBlocking {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -656,6 +671,7 @@ func main() = runBlocking {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -693,6 +709,7 @@ val deferred = GlobalScope.async(handler) { // also root, but async instead of l
 }
 joinAll(job, deferred)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -709,6 +726,7 @@ let deferred = GlobalScope.async(handler) { // also root, but async instead of l
 }
 joinAll(job, deferred)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -752,6 +770,7 @@ joinAll(job, deferred)</code>
 }
 job.join()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -774,6 +793,7 @@ job.join()</code>
 }
 job.join()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -809,6 +829,7 @@ val job = GlobalScope.launch(handler) {
 }
 job.join()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -837,6 +858,7 @@ let job = GlobalScope.launch(handler) {
 }
 job.join()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -887,6 +909,7 @@ fun main() = runBlocking {
     job.join()  
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -916,6 +939,7 @@ func main() = runBlocking {
     job.join()  
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -948,6 +972,7 @@ val job = GlobalScope.launch(handler) {
 }
 job.join()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -973,6 +998,7 @@ let job = GlobalScope.launch(handler) {
 }
 job.join()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1029,6 +1055,7 @@ fun main() = runBlocking {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1064,6 +1091,7 @@ func main() = runBlocking {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1114,6 +1142,7 @@ fun main() = runBlocking {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1143,6 +1172,7 @@ func main() = runBlocking {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1186,6 +1216,7 @@ fun main() = runBlocking {
     println("The scope is completed")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1208,6 +1239,7 @@ func main() = runBlocking {
     print("The scope is completed")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

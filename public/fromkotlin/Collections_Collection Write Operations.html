@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -631,6 +645,7 @@
 numbers.add(5)
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -640,6 +655,7 @@ println(numbers)</code>
 numbers.add(5)
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -658,6 +674,7 @@ println(numbers)
 numbers.addAll(2, setOf(3, 4))
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -669,6 +686,7 @@ print(numbers)
 numbers.addAll(2, setOf(3, 4))
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -687,6 +705,7 @@ println(numbers)
 numbers += listOf("four", "five")    
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -698,6 +717,7 @@ print(numbers)
 numbers += listOf("four", "five")    
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -730,6 +750,7 @@ println(numbers)
 numbers.remove(5)                    // removes nothing
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -741,6 +762,7 @@ print(numbers)
 numbers.remove(5)                    // removes nothing
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -764,6 +786,7 @@ val numbersSet = mutableSetOf("one", "two", "three", "four")
 numbersSet.removeAll(setOf("one", "two"))
 println(numbersSet)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -780,6 +803,7 @@ let numbersSet = mutableSetOf("one", "two", "three", "four")
 numbersSet.removeAll(setOf("one", "two"))
 print(numbersSet)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -799,6 +823,7 @@ numbers -= listOf("four", "five")
 //numbers -= listOf("four")    // does the same as above
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -811,6 +836,7 @@ numbers -= listOf("four", "five")
 //numbers -= listOf("four")    // does the same as above
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>

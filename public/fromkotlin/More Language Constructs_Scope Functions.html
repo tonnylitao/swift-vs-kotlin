@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -620,6 +634,7 @@
     println(it)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -632,6 +647,7 @@
     print(it)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -650,6 +666,7 @@ alice.moveTo("London")
 alice.incrementAge()
 println(alice)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -661,6 +678,7 @@ alice.moveTo("London")
 alice.incrementAge()
 print(alice)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -701,6 +719,7 @@ print(alice)</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -720,6 +739,7 @@ print(alice)</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -752,6 +772,7 @@ print(alice)</code>
 }
 println(adam)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -763,6 +784,7 @@ println(adam)</code>
 }
 print(adam)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -797,6 +819,7 @@ print(adam)</code>
 &#8203;
 val i = getRandomInt()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -810,6 +833,7 @@ val i = getRandomInt()</code>
 &#8203;
 let i = getRandomInt()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -830,6 +854,7 @@ let i = getRandomInt()</code>
 &#8203;
 val i = getRandomInt()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -843,6 +868,7 @@ val i = getRandomInt()</code>
 &#8203;
 let i = getRandomInt()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -879,6 +905,7 @@ numberList.also { println("Populating the list") }
     .also { println("Sorting the list") }
     .sort()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -894,6 +921,7 @@ numberList.also { print("Populating the list") }
     .also { print("Sorting the list") }
     .sort()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -914,6 +942,7 @@ numberList.also { print("Populating the list") }
 &#8203;
 val i = getRandomInt()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -927,6 +956,7 @@ val i = getRandomInt()</code>
 &#8203;
 let i = getRandomInt()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -961,6 +991,7 @@ val countEndsWithE = numbers.run {
 }
 println("There are $countEndsWithE elements that end with e.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -974,6 +1005,7 @@ let countEndsWithE = numbers.run {
 }
 print("There are $countEndsWithE elements that end with e.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -993,6 +1025,7 @@ with(numbers) {
     println("First item: $firstItem, last item: $lastItem")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1005,6 +1038,7 @@ with(numbers) {
     print("First item: $firstItem, last item: $lastItem")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1035,6 +1069,7 @@ with(numbers) {
 val resultList = numbers.map { it.length }.filter { it &#62; 3 }
 println(resultList)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1044,6 +1079,7 @@ println(resultList)</code>
 let resultList = numbers.map { it.length }.filter { $0 &#62; 3 }
 print(resultList)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1062,6 +1098,7 @@ numbers.map { it.length }.filter { it &#62; 3 }.let {
     // and more function calls if needed
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1073,6 +1110,7 @@ numbers.map { it.length }.filter { $0 &#62; 3 }.let {
     // and more function calls if needed
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1088,6 +1126,7 @@ numbers.map { it.length }.filter { $0 &#62; 3 }.let {
                   <code class="kotlin">val numbers = mutableListOf("one", "two", "three", "four", "five")
 numbers.map { it.length }.filter { it &#62; 3 }.let(::println)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1096,6 +1135,7 @@ numbers.map { it.length }.filter { it &#62; 3 }.let(::println)</code>
                     <code class="swift">let numbers = mutableListOf("one", "two", "three", "four", "five")
 numbers.map { it.length }.filter { $0 &#62; 3 }.let(::println)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1116,6 +1156,7 @@ val length = str?.let {
     it.length
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1129,6 +1170,7 @@ let length = str?.let {
     it.length
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1148,6 +1190,7 @@ val modifiedFirstItem = numbers.first().let { firstItem -&#62;
 }.toUpperCase()
 println("First item after modifications: '$modifiedFirstItem'")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1160,6 +1203,7 @@ let modifiedFirstItem = numbers.first().let { firstItem -&#62;
 }.toUpperCase()
 print("First item after modifications: '$modifiedFirstItem'")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1192,6 +1236,7 @@ with(numbers) {
     println("It contains $size elements")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1203,6 +1248,7 @@ with(numbers) {
     print("It contains $size elements")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1222,6 +1268,7 @@ val firstAndLast = with(numbers) {
 }
 println(firstAndLast)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1234,6 +1281,7 @@ let firstAndLast = with(numbers) {
 }
 print(firstAndLast)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1273,6 +1321,7 @@ val letResult = service.let {
     it.query(it.prepareRequest() + " to port ${it.port}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1291,6 +1340,7 @@ let letResult = service.let {
     it.query(it.prepareRequest() + " to port ${it.port}")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1315,6 +1365,7 @@ for (match in hexNumberRegex.findAll("+1234 -FFFF not-a-number")) {
     println(match.value)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1332,6 +1383,7 @@ for (match in hexNumberRegex.findAll("+1234 -FFFF not-a-number")) {
     print(match.value)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1364,6 +1416,7 @@ for (match in hexNumberRegex.findAll("+1234 -FFFF not-a-number")) {
 }
 println(adam)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1375,6 +1428,7 @@ println(adam)</code>
 }
 print(adam)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1406,6 +1460,7 @@ numbers
     .also { println("The list elements before adding new one: $it") }
     .add("four")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1416,6 +1471,7 @@ numbers
     .also { print("The list elements before adding new one: $it") }
     .add("four")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1448,6 +1504,7 @@ val evenOrNull = number.takeIf { it % 2 == 0 }
 val oddOrNull = number.takeUnless { it % 2 == 0 }
 println("even: $evenOrNull, odd: $oddOrNull")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1459,6 +1516,7 @@ let evenOrNull = number.takeIf { $0 % 2 == 0 }
 let oddOrNull = number.takeUnless { $0 % 2 == 0 }
 print("even: $evenOrNull, odd: $oddOrNull")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1476,6 +1534,7 @@ val caps = str.takeIf { it.isNotEmpty() }?.toUpperCase()
 //val caps = str.takeIf { it.isNotEmpty() }.toUpperCase() //compilation error
 println(caps)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1486,6 +1545,7 @@ let caps = str.takeIf { it.isNotEmpty() }?.toUpperCase()
 //let caps = str.takeIf { it.isNotEmpty() }.toUpperCase() //compilation error
 print(caps)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1508,6 +1568,7 @@ print(caps)</code>
 displaySubstringPosition("010000011", "11")
 displaySubstringPosition("010000011", "12")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1523,6 +1584,7 @@ displaySubstringPosition("010000011", "12")</code>
 displaySubstringPosition("010000011", "11")
 displaySubstringPosition("010000011", "12")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1546,6 +1608,7 @@ displaySubstringPosition("010000011", "12")</code>
 displaySubstringPosition("010000011", "11")
 displaySubstringPosition("010000011", "12")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1562,6 +1625,7 @@ displaySubstringPosition("010000011", "12")</code>
 displaySubstringPosition("010000011", "11")
 displaySubstringPosition("010000011", "12")</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -619,6 +633,7 @@ while (numbersIterator.hasNext()) {
     println(numbersIterator.next())
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -630,6 +645,7 @@ while (numbersIterator.hasNext()) {
     print(numbersIterator.next())
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -647,6 +663,7 @@ for (item in numbers) {
     println(item)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -657,6 +674,7 @@ for (item in numbers) {
     print(item)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -674,6 +692,7 @@ numbers.forEach {
     println(it)
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -684,6 +703,7 @@ numbers.forEach {
     print(it)
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -719,6 +739,7 @@ while (listIterator.hasPrevious()) {
     println(", value: ${listIterator.previous()}")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -733,6 +754,7 @@ while (listIterator.hasPrevious()) {
     print(", value: ${listIterator.previous()}")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -766,6 +788,7 @@ mutableIterator.next()
 mutableIterator.remove()    
 println("After removal: $numbers")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -778,6 +801,7 @@ mutableIterator.next()
 mutableIterator.remove()    
 print("After removal: $numbers")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -799,6 +823,7 @@ mutableListIterator.next()
 mutableListIterator.set("three")   
 println(numbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -813,6 +838,7 @@ mutableListIterator.next()
 mutableListIterator.set("three")   
 print(numbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>

@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -634,6 +648,7 @@ println(numbersMap.getOrDefault("four", 10))
 println(numbersMap["five"])               // null
 //numbersMap.getValue("six")      // exception!</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -646,6 +661,7 @@ print(numbersMap.getOrDefault("four", 10))
 print(numbersMap["five"])               // null
 //numbersMap.getValue("six")      // exception!</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -662,6 +678,7 @@ print(numbersMap["five"])               // null
 println(numbersMap.keys)
 println(numbersMap.values)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -671,6 +688,7 @@ println(numbersMap.values)</code>
 print(numbersMap.keys)
 print(numbersMap.values)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -701,6 +719,7 @@ print(numbersMap.values)</code>
 val filteredMap = numbersMap.filter { (key, value) -&#62; key.endsWith("1") &#38;&#38; value &#62; 10}
 println(filteredMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -710,6 +729,7 @@ println(filteredMap)</code>
 let filteredMap = numbersMap.filter { (key, value) -&#62; key.endsWith("1") &#38;&#38; value &#62; 10}
 print(filteredMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -729,6 +749,7 @@ val filteredValuesMap = numbersMap.filterValues { it &#60; 10 }
 println(filteredKeysMap)
 println(filteredValuesMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -741,6 +762,7 @@ let filteredValuesMap = numbersMap.filterValues { $0 &#60; 10 }
 print(filteredKeysMap)
 print(filteredValuesMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -772,6 +794,7 @@ println(numbersMap + Pair("four", 4))
 println(numbersMap + Pair("one", 10))
 println(numbersMap + mapOf("five" to 5, "one" to 11))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -782,6 +805,7 @@ print(numbersMap + Pair("four", 4))
 print(numbersMap + Pair("one", 10))
 print(numbersMap + mapOf("five" to 5, "one" to 11))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -798,6 +822,7 @@ print(numbersMap + mapOf("five" to 5, "one" to 11))</code>
 println(numbersMap - "one")
 println(numbersMap - listOf("two", "four"))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -807,6 +832,7 @@ println(numbersMap - listOf("two", "four"))</code>
 print(numbersMap - "one")
 print(numbersMap - listOf("two", "four"))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -837,6 +863,7 @@ print(numbersMap - listOf("two", "four"))</code>
 numbersMap.put("three", 3)
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -846,6 +873,7 @@ println(numbersMap)</code>
 numbersMap.put("three", 3)
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -862,6 +890,7 @@ print(numbersMap)</code>
 numbersMap.putAll(setOf("four" to 4, "five" to 5))
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -871,6 +900,7 @@ println(numbersMap)</code>
 numbersMap.putAll(setOf("four" to 4, "five" to 5))
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -888,6 +918,7 @@ val previousValue = numbersMap.put("one", 11)
 println("value associated with 'one', before: $previousValue, after: ${numbersMap["one"]}")
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -898,6 +929,7 @@ let previousValue = numbersMap.put("one", 11)
 print("value associated with 'one', before: $previousValue, after: ${numbersMap["one"]}")
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -915,6 +947,7 @@ numbersMap["three"] = 3     // calls numbersMap.set("three", 3)
 numbersMap += mapOf("four" to 4, "five" to 5)
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -925,6 +958,7 @@ numbersMap["three"] = 3     // calls numbersMap.set("three", 3)
 numbersMap += mapOf("four" to 4, "five" to 5)
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -957,6 +991,7 @@ println(numbersMap)
 numbersMap.remove("three", 4)            //doesn't remove anything
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -968,6 +1003,7 @@ print(numbersMap)
 numbersMap.remove("three", 4)            //doesn't remove anything
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -986,6 +1022,7 @@ println(numbersMap)
 numbersMap.values.remove(3)
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -997,6 +1034,7 @@ print(numbersMap)
 numbersMap.values.remove(3)
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1015,6 +1053,7 @@ println(numbersMap)
 numbersMap -= "five"             //doesn't remove anything
 println(numbersMap)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1026,6 +1065,7 @@ print(numbersMap)
 numbersMap -= "five"             //doesn't remove anything
 print(numbersMap)</code>
                   </pre>
+                  
               
               </td>
             </tr>

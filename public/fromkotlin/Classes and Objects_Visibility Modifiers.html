@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -633,6 +647,7 @@ package foo
 fun baz() { ... }
 class Bar { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +659,7 @@ package foo
 func baz() { ... }
 class Bar { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -666,6 +682,7 @@ public var bar: Int = 5 // property is visible everywhere
     
 internal val baz = 6    // visible inside the same module</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -681,6 +698,7 @@ public var bar: Int = 5 // property is visible everywhere
     
 internal let baz = 6    // visible inside the same module</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -732,6 +750,7 @@ class Unrelated(o: Outer) {
     // Outer.Nested is not visible, and Nested::e is not visible either 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -762,6 +781,7 @@ class Unrelated(o: Outer) {
     // Outer.Nested is not visible, and Nested::e is not visible either 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -790,6 +810,7 @@ class Unrelated(o: Outer) {
                 <pre>
                   <code class="kotlin">class C private constructor(a: Int) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -797,6 +818,7 @@ class Unrelated(o: Outer) {
                   <pre>
                     <code class="swift">class C private constructor(a: Int) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>

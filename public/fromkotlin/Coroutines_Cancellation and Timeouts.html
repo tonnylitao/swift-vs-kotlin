@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -621,6 +635,7 @@ job.cancel() // cancels the job
 job.join() // waits for job's completion 
 println("main: Now I can quit.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -638,6 +653,7 @@ job.cancel() // cancels the job
 job.join() // waits for job's completion 
 print("main: Now I can quit.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -681,6 +697,7 @@ println("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 println("main: Now I can quit.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -703,6 +720,7 @@ print("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 print("main: Now I can quit.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -746,6 +764,7 @@ println("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 println("main: Now I can quit.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -768,6 +787,7 @@ print("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 print("main: Now I can quit.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -809,6 +829,7 @@ println("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 println("main: Now I can quit.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -829,6 +850,7 @@ print("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 print("main: Now I can quit.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -874,6 +896,7 @@ println("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 println("main: Now I can quit.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -898,6 +921,7 @@ print("main: I'm tired of waiting!")
 job.cancelAndJoin() // cancels the job and waits for its completion
 print("main: Now I can quit.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -931,6 +955,7 @@ print("main: Now I can quit.")</code>
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -943,6 +968,7 @@ print("main: Now I can quit.")</code>
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -964,6 +990,7 @@ print("main: Now I can quit.")</code>
 }
 println("Result is $result")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -978,6 +1005,7 @@ println("Result is $result")</code>
 }
 print("Result is $result")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1027,6 +1055,7 @@ fun main() {
     println(acquired) // Print the number of resources still acquired
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1055,6 +1084,7 @@ func main() {
     print(acquired) // Print the number of resources still acquired
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1086,6 +1116,7 @@ func main() {
 // Outside of runBlocking all coroutines have completed
 println(acquired) // Print the number of resources still acquired</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1110,6 +1141,7 @@ println(acquired) // Print the number of resources still acquired</code>
 // Outside of runBlocking all coroutines have completed
 print(acquired) // Print the number of resources still acquired</code>
                   </pre>
+                  
               
               </td>
             </tr>

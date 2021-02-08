@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -628,6 +642,7 @@ fun main() {
     println(Version(2, 0) &#62; Version(1, 5))
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -648,6 +663,7 @@ func main() {
     print(Version(2, 0) &#62; Version(1, 5))
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -663,6 +679,7 @@ func main() {
                   <code class="kotlin">val lengthComparator = Comparator { str1: String, str2: String -&#62; str1.length - str2.length }
 println(listOf("aaa", "bb", "c").sortedWith(lengthComparator))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -671,6 +688,7 @@ println(listOf("aaa", "bb", "c").sortedWith(lengthComparator))</code>
                     <code class="swift">let lengthComparator = Comparator { str1: String, str2: String -&#62; str1.length - str2.length }
 print(listOf("aaa", "bb", "c").sortedWith(lengthComparator))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -686,6 +704,7 @@ print(listOf("aaa", "bb", "c").sortedWith(lengthComparator))</code>
                   <code class="kotlin">&#8203;
 println(listOf("aaa", "bb", "c").sortedWith(compareBy { it.length }))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -694,6 +713,7 @@ println(listOf("aaa", "bb", "c").sortedWith(compareBy { it.length }))</code>
                     <code class="swift">&#8203;
 print(listOf("aaa", "bb", "c").sortedWith(compareBy { it.length }))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -725,6 +745,7 @@ print(listOf("aaa", "bb", "c").sortedWith(compareBy { it.length }))</code>
 println("Sorted ascending: ${numbers.sorted()}")
 println("Sorted descending: ${numbers.sortedDescending()}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -735,6 +756,7 @@ println("Sorted descending: ${numbers.sortedDescending()}")</code>
 print("Sorted ascending: ${numbers.sorted()}")
 print("Sorted descending: ${numbers.sortedDescending()}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -768,6 +790,7 @@ println("Sorted by length ascending: $sortedNumbers")
 val sortedByLast = numbers.sortedByDescending { it.last() }
 println("Sorted by the last letter descending: $sortedByLast")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -780,6 +803,7 @@ print("Sorted by length ascending: $sortedNumbers")
 let sortedByLast = numbers.sortedByDescending { it.last() }
 print("Sorted by the last letter descending: $sortedByLast")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -795,6 +819,7 @@ print("Sorted by the last letter descending: $sortedByLast")</code>
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four")
 println("Sorted by length ascending: ${numbers.sortedWith(compareBy { it.length })}")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -803,6 +828,7 @@ println("Sorted by length ascending: ${numbers.sortedWith(compareBy { it.length 
                     <code class="swift">let numbers = listOf("one", "two", "three", "four")
 print("Sorted by length ascending: ${numbers.sortedWith(compareBy { it.length })}")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +858,7 @@ print("Sorted by length ascending: ${numbers.sortedWith(compareBy { it.length })
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four")
 println(numbers.reversed())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -840,6 +867,7 @@ println(numbers.reversed())</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four")
 print(numbers.reversed())</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -856,6 +884,7 @@ print(numbers.reversed())</code>
 val reversedNumbers = numbers.asReversed()
 println(reversedNumbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -865,6 +894,7 @@ println(reversedNumbers)</code>
 let reversedNumbers = numbers.asReversed()
 print(reversedNumbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -883,6 +913,7 @@ println(reversedNumbers)
 numbers.add("five")
 println(reversedNumbers)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -894,6 +925,7 @@ print(reversedNumbers)
 numbers.add("five")
 print(reversedNumbers)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -923,6 +955,7 @@ print(reversedNumbers)</code>
                   <code class="kotlin">val numbers = listOf("one", "two", "three", "four")
 println(numbers.shuffled())</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -931,6 +964,7 @@ println(numbers.shuffled())</code>
                     <code class="swift">let numbers = listOf("one", "two", "three", "four")
 print(numbers.shuffled())</code>
                   </pre>
+                  
               
               </td>
             </tr>

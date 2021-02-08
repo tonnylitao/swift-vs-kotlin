@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@
                 <pre>
                   <code class="kotlin">lock(l) { foo() }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@
                   <pre>
                     <code class="swift">lock(l) { foo() }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -642,6 +658,7 @@ finally {
     l.unlock()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -655,6 +672,7 @@ finally {
     l.unlock()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -669,6 +687,7 @@ finally {
                 <pre>
                   <code class="kotlin">inline fun &#60;T&#62; lock(lock: Lock, body: () -&#62; T): T { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -676,6 +695,7 @@ finally {
                   <pre>
                     <code class="swift">inline func &#60;T&#62; lock(lock: Lock, body: () -&#62; T): T { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -704,6 +724,7 @@ finally {
                 <pre>
                   <code class="kotlin">inline fun foo(inlined: () -&#62; Unit, noinline notInlined: () -&#62; Unit) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -711,6 +732,7 @@ finally {
                   <pre>
                     <code class="swift">inline func foo(inlined: () -&#62; Unit, noinline notInlined: () -&#62; Unit) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -743,6 +765,7 @@ finally {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -754,6 +777,7 @@ finally {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -772,6 +796,7 @@ finally {
     }
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -783,6 +808,7 @@ finally {
     }
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -802,6 +828,7 @@ finally {
     return false
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -814,6 +841,7 @@ finally {
     return false
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -833,6 +861,7 @@ finally {
     // ...
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -845,6 +874,7 @@ finally {
     // ...
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -880,6 +910,7 @@ finally {
     return p as T?
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -894,6 +925,7 @@ finally {
     return p as T?
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -908,6 +940,7 @@ finally {
                 <pre>
                   <code class="kotlin">treeNode.findParentOfType(MyTreeNode::class.java)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -915,6 +948,7 @@ finally {
                   <pre>
                     <code class="swift">treeNode.findParentOfType(MyTreeNode::class.java)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -929,6 +963,7 @@ finally {
                 <pre>
                   <code class="kotlin">treeNode.findParentOfType&#60;MyTreeNode&#62;()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -936,6 +971,7 @@ finally {
                   <pre>
                     <code class="swift">treeNode.findParentOfType&#60;MyTreeNode&#62;()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -956,6 +992,7 @@ finally {
     return p as T?
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -969,6 +1006,7 @@ finally {
     return p as T?
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -987,6 +1025,7 @@ fun main(s: Array&#60;String&#62;) {
     println(membersOf&#60;StringBuilder&#62;().joinToString("\n"))
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -998,6 +1037,7 @@ func main(s: Array&#60;String&#62;) {
     print(membersOf&#60;StringBuilder&#62;().joinToString("\n"))
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1031,6 +1071,7 @@ var bar: Bar
     get() = ...
     inline set(v) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1043,6 +1084,7 @@ var bar: Bar
     get() = ...
     inline set(v) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1059,6 +1101,7 @@ var bar: Bar
     get() = ...
     set(v) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1068,6 +1111,7 @@ var bar: Bar
     get() = ...
     set(v) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>

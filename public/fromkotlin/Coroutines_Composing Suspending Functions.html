@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -619,6 +633,7 @@ suspend fun doSomethingUsefulTwo(): Int {
     return 29
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -634,6 +649,7 @@ suspend func doSomethingUsefulTwo() -&#62; Int {
     return 29
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -653,6 +669,7 @@ suspend func doSomethingUsefulTwo() -&#62; Int {
 }
 println("Completed in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -665,6 +682,7 @@ println("Completed in $time ms")</code>
 }
 print("Completed in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -698,6 +716,7 @@ print("Completed in $time ms")</code>
 }
 println("Completed in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -710,6 +729,7 @@ println("Completed in $time ms")</code>
 }
 print("Completed in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -746,6 +766,7 @@ print("Completed in $time ms")</code>
 }
 println("Completed in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -761,6 +782,7 @@ println("Completed in $time ms")</code>
 }
 print("Completed in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -797,6 +819,7 @@ fun somethingUsefulTwoAsync() = GlobalScope.async {
     doSomethingUsefulTwo()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -812,6 +835,7 @@ func somethingUsefulTwoAsync() = GlobalScope.async {
     doSomethingUsefulTwo()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -839,6 +863,7 @@ fun main() {
     println("Completed in $time ms")
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -859,6 +884,7 @@ func main() {
     print("Completed in $time ms")
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -891,6 +917,7 @@ func main() {
     one.await() + two.await()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -902,6 +929,7 @@ func main() {
     one.await() + two.await()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -919,6 +947,7 @@ func main() {
 }
 println("Completed in $time ms")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -929,6 +958,7 @@ println("Completed in $time ms")</code>
 }
 print("Completed in $time ms")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -967,6 +997,7 @@ suspend fun failedConcurrentSum(): Int = coroutineScope {
     one.await() + two.await()
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -998,6 +1029,7 @@ suspend func failedConcurrentSum() -&#62; Int = coroutineScope {
     one.await() + two.await()
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

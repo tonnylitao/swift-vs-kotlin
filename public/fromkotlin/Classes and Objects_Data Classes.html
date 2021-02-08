@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@
                 <pre>
                   <code class="kotlin">data class User(val name: String, val age: Int)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@
                   <pre>
                     <code class="swift">data class User(let name: String, let age: Int)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -636,6 +652,7 @@
                 <pre>
                   <code class="kotlin">data class User(val name: String = "", val age: Int = 0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -643,6 +660,7 @@
                   <pre>
                     <code class="swift">data class User(let name: String = "", let age: Int = 0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -673,6 +691,7 @@
     var age: Int = 0
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -682,6 +701,7 @@
     var age: Int = 0
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -699,6 +719,7 @@ val person2 = Person("John")
 person1.age = 10
 person2.age = 20</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -709,6 +730,7 @@ let person2 = Person("John")
 person1.age = 10
 person2.age = 20</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -737,6 +759,7 @@ person2.age = 20</code>
                 <pre>
                   <code class="kotlin">fun copy(name: String = this.name, age: Int = this.age) = User(name, age)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -744,6 +767,7 @@ person2.age = 20</code>
                   <pre>
                     <code class="swift">func copy(name: String = this.name, age: Int = this.age) = User(name, age)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -759,6 +783,7 @@ person2.age = 20</code>
                   <code class="kotlin">val jack = User(name = "Jack", age = 1)
 val olderJack = jack.copy(age = 2)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -767,6 +792,7 @@ val olderJack = jack.copy(age = 2)</code>
                     <code class="swift">let jack = User(name = "Jack", age = 1)
 let olderJack = jack.copy(age = 2)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -788,6 +814,7 @@ addressCopy.city = "New York"
 addressCopy.user.name = "John"  // Propagates to `address.user` because they both point to userJack.
 &#8203;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -802,6 +829,7 @@ addressCopy.city = "New York"
 addressCopy.user.name = "John"  // Propagates to `address.user` because they both point to userJack.
 &#8203;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +860,7 @@ addressCopy.user.name = "John"  // Propagates to `address.user` because they bot
 val (name, age) = jane
 println("$name, $age years of age") // prints "Jane, 35 years of age"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -841,6 +870,7 @@ println("$name, $age years of age") // prints "Jane, 35 years of age"</code>
 let (name, age) = jane
 print("$name, $age years of age") // prints "Jane, 35 years of age"</code>
                   </pre>
+                  
               
               </td>
             </tr>

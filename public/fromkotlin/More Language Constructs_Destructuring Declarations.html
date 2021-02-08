@@ -147,10 +147,24 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #eaeaea;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -615,6 +629,7 @@
                 <pre>
                   <code class="kotlin">val (name, age) = person</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -622,6 +637,7 @@
                   <pre>
                     <code class="swift">let (name, age) = person</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -637,6 +653,7 @@
                   <code class="kotlin">println(name)
 println(age)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -645,6 +662,7 @@ println(age)</code>
                     <code class="swift">print(name)
 print(age)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -660,6 +678,7 @@ print(age)</code>
                   <code class="kotlin">val name = person.component1()
 val age = person.component2()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -668,6 +687,7 @@ val age = person.component2()</code>
                     <code class="swift">let name = person.component1()
 let age = person.component2()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -682,6 +702,7 @@ let age = person.component2()</code>
                 <pre>
                   <code class="kotlin">for ((a, b) in collection) { ... }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -689,6 +710,7 @@ let age = person.component2()</code>
                   <pre>
                     <code class="swift">for ((a, b) in collection) { ... }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -725,6 +747,7 @@ fun function(...): Result {
 // Now, to use this function:
 val (result, status) = function(...)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -740,6 +763,7 @@ func function(...): Result {
 // Now, to use this function:
 let (result, status) = function(...)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -770,6 +794,7 @@ let (result, status) = function(...)</code>
    // do something with the key and the value
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -779,6 +804,7 @@ let (result, status) = function(...)</code>
    // do something with the key and the value
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -795,6 +821,7 @@ let (result, status) = function(...)</code>
 operator fun &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component1() = getKey()
 operator fun &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -804,6 +831,7 @@ operator fun &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</c
 operator func &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component1() = getKey()
 operator func &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +860,7 @@ operator func &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</
                 <pre>
                   <code class="kotlin">val (_, status) = getResult()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -839,6 +868,7 @@ operator func &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</
                   <pre>
                     <code class="swift">let (_, status) = getResult()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -868,6 +898,7 @@ operator func &#60;K, V&#62; Map.Entry&#60;K, V&#62;.component2() = getValue()</
                   <code class="kotlin">map.mapValues { entry -&#62; "${entry.value}!" }
 map.mapValues { (key, value) -&#62; "$value!" }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -876,6 +907,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
                     <code class="swift">map.mapValues { entry -&#62; "${entry.value}!" }
 map.mapValues { (key, value) -&#62; "$value!" }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -893,6 +925,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
 { (a, b) -&#62; ... } // a destructured pair
 { (a, b), c -&#62; ... } // a destructured pair and another parameter</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -903,6 +936,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
 { (a, b) -&#62; ... } // a destructured pair
 { (a, b), c -&#62; ... } // a destructured pair and another parameter</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -917,6 +951,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
                 <pre>
                   <code class="kotlin">map.mapValues { (_, value) -&#62; "$value!" }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -924,6 +959,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
                   <pre>
                     <code class="swift">map.mapValues { (_, value) -&#62; "$value!" }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -940,6 +976,7 @@ map.mapValues { (key, value) -&#62; "$value!" }</code>
 &#8203;
 map.mapValues { (_, value: String) -&#62; "$value!" }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -949,6 +986,7 @@ map.mapValues { (_, value: String) -&#62; "$value!" }</code>
 &#8203;
 map.mapValues { (_, value: String) -&#62; "$value!" }</code>
                   </pre>
+                  
               
               </td>
             </tr>
