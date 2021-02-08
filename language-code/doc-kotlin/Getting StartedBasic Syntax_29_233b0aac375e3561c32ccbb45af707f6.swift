@@ -1,8 +1,8 @@
 func getStringLength(obj: Any) -> Int? {
-    
-    guard let obj = obj as? String, obj.count > 0 else {
-        return nil
+
+    if let obj = obj as? String, obj.count > 0 {
+        return obj.count
     }
 ​
-    return obj.count
+    return nil
 }

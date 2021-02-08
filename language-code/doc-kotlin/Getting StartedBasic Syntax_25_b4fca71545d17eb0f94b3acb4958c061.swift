@@ -8,5 +8,19 @@ if (y == nil) {
     return
 }
 ​
-// x and y are automatically cast to non-nullable after null check
+// x and y force unwrap
+print(x! * y!)
+
+//or
+
+guard let x = x else {
+    print("Wrong number format in arg1: '\(arg1)'")
+    return
+}
+guard let y = y else {
+    print("Wrong number format in arg2: '\(arg2)'")
+    return
+}
+​
 print(x * y)
+//-👏

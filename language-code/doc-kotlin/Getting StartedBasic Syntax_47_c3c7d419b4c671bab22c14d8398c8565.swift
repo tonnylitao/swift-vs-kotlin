@@ -1,5 +1,3 @@
-import UIKit
-
 let rectangle = CGSize(width: 5.0, height: 2.0)
 
 struct Triangle {
