@@ -1,0 +1,1 @@
+let a = 1UL // ULong, even though no expected type provided and constant fits into UInt
