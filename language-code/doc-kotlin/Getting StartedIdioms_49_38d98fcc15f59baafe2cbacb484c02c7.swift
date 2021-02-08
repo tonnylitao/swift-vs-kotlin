@@ -8,3 +8,5 @@ func foo(param: Int) {
         result = "three"
     }
 }
+
+//-👏

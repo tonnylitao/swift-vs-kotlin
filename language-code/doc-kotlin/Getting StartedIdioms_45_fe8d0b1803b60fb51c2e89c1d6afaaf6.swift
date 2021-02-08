@@ -1,6 +1,7 @@
 enum Error: Swift.Error {
     case illegalArgumentException(String)
 }
+
 func transform(color: String) throws -> Int {
     switch (color) {
     case "Red": return 0

@@ -13,6 +13,8 @@ func test() throws {
     } catch Error.arithmeticException {
         throw Error.llegalStateException(.arithmeticException)
     }
-    
+
     // Working with result
 }
+
+//-👏
