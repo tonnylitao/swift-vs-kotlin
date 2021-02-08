@@ -242,11 +242,9 @@ function writeToHtml(result) {
                       (i) => "&#" + i.charCodeAt(0) + ";"
                     );
                   } else {
-                    otherEscaped = swiftCode || "❌";
+                    otherEscaped = swiftCode;
                   }
-                } catch (e) {
-                  otherEscaped = "❌";
-                }
+                } catch (e) {}
 
                 return {
                   tag,
