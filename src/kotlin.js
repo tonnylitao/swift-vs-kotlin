@@ -283,7 +283,7 @@ function writeToHtml(result) {
         `${__dirname}/template/index.ejs`,
         { language: "kotlin", data, doms, url },
         (err, str) => {
-          console.log(err);
+          err && console.log(err);
 
           const fileName = `${__dirname}/../public/fromkotlin/${menuChapter}.html`;
           fs.writeFileSync(fileName, str);
@@ -291,4 +291,6 @@ function writeToHtml(result) {
       );
     });
   });
+
+  console.log("please open html under public/fromswift/ when finished.");
 }

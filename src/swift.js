@@ -279,7 +279,7 @@ function writeToHtml(result) {
         `${__dirname}/template/index.ejs`,
         { language: "swift", data, doms, url },
         (err, str) => {
-          console.log(err);
+          err && console.log(err);
 
           const fileName = `${__dirname}/../public/fromswift/${menuChapter}.html`;
           fs.writeFileSync(fileName, str);
@@ -287,4 +287,6 @@ function writeToHtml(result) {
       );
     });
   });
+
+  console.log("please open html under public/fromswift/ when finished.");
 }
