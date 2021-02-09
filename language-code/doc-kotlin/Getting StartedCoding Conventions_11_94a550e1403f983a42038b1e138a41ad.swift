@@ -1,0 +1,1 @@
+let personComparator: Comparator<Person> = /*...*/

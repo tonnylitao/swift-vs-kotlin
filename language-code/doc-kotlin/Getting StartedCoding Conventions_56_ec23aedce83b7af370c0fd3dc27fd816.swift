@@ -1,0 +1,3 @@
+appendCommaSeparated(properties) { prop in
+    let propertyValue = prop.get(obj)  // ...
+}

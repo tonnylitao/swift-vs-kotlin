@@ -1,0 +1,2 @@
+@propertyWrapper
+struct SomeWrapper { /*...*/ }
