@@ -1,6 +1,6 @@
-let b: UByte = 1u  // UByte, expected type provided
-let s: UShort = 1u // UShort, expected type provided
-let l: ULong = 1u  // ULong, expected type provided
+let b: UInt8 = 1  // UInt8, expected type provided
+let s: UInt32 = 1 // UInt32, expected type provided
+let l: UInt64 = 1  // UInt64, expected type provided
 ​
-let a1 = 42u // UInt: no expected type provided, constant fits in UInt
-let a2 = 0xFFFF_FFFF_FFFFu // ULong: no expected type provided, constant doesn't fit in UInt
+let a1: UInt = 42 // UInt, expected type provided
+let a2: UInt64 = 0xFFFF_FFFF_FFFF // UInt64, expected type provided

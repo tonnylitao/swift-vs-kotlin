@@ -3,9 +3,9 @@ enum Error: Swift.Error {
 }
 
 func decimalDigitValue(c: Character) throws -> Int? {
-    guard c >= "0" && c <= "9" else {
+    guard let int = Int(String(c)), 0...9 ~= int else {
         throw Error.illegalArgumentException
     }
     
-    return Int(String(c))
+    return int
 }

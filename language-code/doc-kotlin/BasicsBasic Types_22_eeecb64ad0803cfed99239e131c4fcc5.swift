@@ -1,5 +1,5 @@
-func check(c: Char) {
-    if (c == 1) { // ERROR: incompatible types
+func check(c: Character) {
+    if c == 1 { // ERROR: incompatible types
         // ...
     }
 }
