@@ -1,5 +1,5 @@
 func foo() -> Int {
-    return 1 
+    return 1
 }
 ​
 //-👏

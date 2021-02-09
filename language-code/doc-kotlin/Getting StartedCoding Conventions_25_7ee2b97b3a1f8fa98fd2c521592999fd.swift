@@ -3,7 +3,7 @@ class MyFavouriteVeryLongClassHolder:
     SomeOtherInterface,
     AndAnotherOne
 {
-    ​   ​   
+    ​   ​
     typealias Type = MyFavouriteVeryLongClass
     func foo() { /*...*/ }
 }

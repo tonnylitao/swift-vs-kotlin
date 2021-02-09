@@ -8,8 +8,8 @@ protocol Foo: IFoo {
 
 class FooImpl: Foo {
     init(x: String) { /*...*/ }
-    
+
     func foo(a: Int) -> String { /*...*/ }
-    
+
     let x: IFoo = AImpl()
 }

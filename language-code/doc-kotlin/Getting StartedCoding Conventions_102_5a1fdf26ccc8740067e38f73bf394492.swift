@@ -3,7 +3,7 @@ if x {
 }else {
     return bar()
 }
-    
+
 switch x {
 case 0:
     return "zero"
