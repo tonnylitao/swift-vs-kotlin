@@ -194,7 +194,7 @@ function writeToHtml(result) {
       menu,
       chapters: chapters
         .filter((item) => item.doms.length > 0)
-        .map(({ title, url, doms: originDoms }, chapterIndex) => {
+        .map(({ title, url, doms: originDoms, translated }, chapterIndex) => {
           const menuChapter = sanitize(menu + "_" + title);
 
           const doms = originDoms.map(
@@ -269,7 +269,7 @@ function writeToHtml(result) {
             }
           );
 
-          return { title, url, doms, menuChapter };
+          return { title, url, doms, menuChapter, translated };
         }),
     };
   });
