@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -406,6 +423,7 @@ class Residence {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -425,6 +443,7 @@ class Residence {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -439,6 +458,7 @@ class Residence {
                 <pre>
                   <code class="kotlin">let john = Person()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -446,6 +466,7 @@ class Residence {
                   <pre>
                     <code class="swift">val john = Person()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -462,6 +483,7 @@ class Residence {
 
 // this triggers a runtime error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -471,6 +493,7 @@ class Residence {
 
 // this triggers a runtime error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -495,6 +518,7 @@ class Residence {
 
 // Prints "Unable to retrieve the number of rooms."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -512,6 +536,7 @@ class Residence {
 
 // Prints "Unable to retrieve the number of rooms."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -526,6 +551,7 @@ class Residence {
                 <pre>
                   <code class="kotlin">john.residence = Residence()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -533,6 +559,7 @@ class Residence {
                   <pre>
                     <code class="swift">john.residence = Residence()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -557,6 +584,7 @@ class Residence {
 
 // Prints "John's residence has 1 room(s)."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -574,6 +602,7 @@ class Residence {
 
 // Prints "John's residence has 1 room(s)."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -606,6 +635,7 @@ class Residence {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -617,6 +647,7 @@ class Residence {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -665,6 +696,7 @@ class Residence {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -706,6 +738,7 @@ class Residence {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -726,6 +759,7 @@ class Residence {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -739,6 +773,7 @@ class Residence {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -779,6 +814,7 @@ class Residence {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -812,6 +848,7 @@ class Residence {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -852,6 +889,7 @@ if let roomCount = john.residence?.numberOfRooms {
 
 // Prints "Unable to retrieve the number of rooms."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -871,6 +909,7 @@ if val roomCount = john.residence?.numberOfRooms {
 
 // Prints "Unable to retrieve the number of rooms."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -891,6 +930,7 @@ someAddress.street = "Acacia Road"
 
 john.residence?.address = someAddress</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -904,6 +944,7 @@ someAddress.street = "Acacia Road"
 
 john.residence?.address = someAddress</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -936,6 +977,7 @@ john.residence?.address = someAddress</code>
 
 john.residence?.address = createAddress()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -961,6 +1003,7 @@ john.residence?.address = createAddress()</code>
 
 john.residence?.address = createAddress()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -993,6 +1036,7 @@ john.residence?.address = createAddress()</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1004,6 +1048,7 @@ john.residence?.address = createAddress()</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1028,6 +1073,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "It was not possible to print the number of rooms."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1045,6 +1091,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "It was not possible to print the number of rooms."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1069,6 +1116,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "It was not possible to set the address."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1086,6 +1134,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "It was not possible to set the address."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1124,6 +1173,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "Unable to retrieve the first room name."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1141,6 +1191,7 @@ john.residence?.address = createAddress()</code>
 
 // Prints "Unable to retrieve the first room name."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1155,6 +1206,7 @@ john.residence?.address = createAddress()</code>
                 <pre>
                   <code class="kotlin">john.residence?[0] = Room(name: "Bathroom")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1162,6 +1214,7 @@ john.residence?.address = createAddress()</code>
                   <pre>
                     <code class="swift">john.residence?[0] = Room(name: "Bathroom")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1196,6 +1249,7 @@ if let firstRoomName = john.residence?[0].name {
 
 // Prints "The first room name is Living Room."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1223,6 +1277,7 @@ if val firstRoomName = john.residence?[0].name {
 
 // Prints "The first room name is Living Room."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1259,6 +1314,7 @@ testScores["Brian"]?[0] = 72
 
 // the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1274,6 +1330,7 @@ testScores["Brian"]?[0] = 72
 
 // the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1312,6 +1369,7 @@ testScores["Brian"]?[0] = 72
 
 // Prints "Unable to retrieve the address."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1329,6 +1387,7 @@ testScores["Brian"]?[0] = 72
 
 // Prints "Unable to retrieve the address."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1363,6 +1422,7 @@ if let johnsStreet = john.residence?.address?.street {
 
 // Prints "John's street name is Laurel Street."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1390,6 +1450,7 @@ if val johnsStreet = john.residence?.address?.street {
 
 // Prints "John's street name is Laurel Street."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1424,6 +1485,7 @@ if val johnsStreet = john.residence?.address?.street {
 
 // Prints "John's building identifier is The Larches."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1437,6 +1499,7 @@ if val johnsStreet = john.residence?.address?.street {
 
 // Prints "John's building identifier is The Larches."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1467,6 +1530,7 @@ if val johnsStreet = john.residence?.address?.street {
 
 // Prints "John's building identifier begins with "The"."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1490,6 +1554,7 @@ if val johnsStreet = john.residence?.address?.street {
 
 // Prints "John's building identifier begins with "The"."</code>
                   </pre>
+                  
               
               </td>
             </tr>

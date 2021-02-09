@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -416,6 +433,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -445,6 +463,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -473,6 +492,7 @@ counter.reset()
 
 // the counter's value is now 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -494,6 +514,7 @@ counter.reset()
 
 // the counter's value is now 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -526,6 +547,7 @@ counter.reset()
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -537,6 +559,7 @@ counter.reset()
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -571,6 +594,7 @@ if somePoint.isToTheRightOf(x: 1.0) {
 
 // Prints "This point is to the right of the line where x == 1.0"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -598,6 +622,7 @@ if somePoint.isToTheRightOf(x: 1.0) {
 
 // Prints "This point is to the right of the line where x == 1.0"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -646,6 +671,7 @@ print("The point is now at (\(somePoint.x), \(somePoint.y))")
 
 // Prints "The point is now at (3.0, 4.0)"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -673,6 +699,7 @@ println("The point is now at (${somePoint.x), ${somePoint.y))")
 
 // Prints "The point is now at (3.0, 4.0)"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -691,6 +718,7 @@ fixedPoint.moveBy(x: 2.0, y: 3.0)
 
 // this will report an error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -702,6 +730,7 @@ fixedPoint.moveBy(x: 2.0, y: 3.0)
 
 // this will report an error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -740,6 +769,7 @@ fixedPoint.moveBy(x: 2.0, y: 3.0)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -757,6 +787,7 @@ fixedPoint.moveBy(x: 2.0, y: 3.0)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -805,6 +836,7 @@ ovenLight.next()
 
 // ovenLight is now equal to .off</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -846,6 +878,7 @@ ovenLight.next()
 
 // ovenLight is now equal to .off</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -884,6 +917,7 @@ ovenLight.next()
 
 SomeClass.someTypeMethod()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -901,6 +935,7 @@ SomeClass.someTypeMethod()</code>
 
 SomeClass.someTypeMethod()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -957,6 +992,7 @@ SomeClass.someTypeMethod()</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1006,6 +1042,7 @@ SomeClass.someTypeMethod()</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1040,6 +1077,7 @@ SomeClass.someTypeMethod()</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1067,6 +1105,7 @@ SomeClass.someTypeMethod()</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1087,6 +1126,7 @@ print("highest unlocked level is now \(LevelTracker.highestUnlockedLevel)")
 
 // Prints "highest unlocked level is now 2"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1100,6 +1140,7 @@ println("highest unlocked level is now ${LevelTracker.highestUnlockedLevel)")
 
 // Prints "highest unlocked level is now 2"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1126,6 +1167,7 @@ if player.tracker.advance(to: 6) {
 
 // Prints "level 6 has not yet been unlocked"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1145,6 +1187,7 @@ if player.tracker.advance(to: 6) {
 
 // Prints "level 6 has not yet been unlocked"</code>
                   </pre>
+                  
               
               </td>
             </tr>

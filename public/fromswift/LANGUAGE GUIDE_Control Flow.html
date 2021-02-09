@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -408,6 +425,7 @@ for name in names {
 
 // Hello, Jack!</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -429,6 +447,7 @@ for name in names {
 
 // Hello, Jack!</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -455,6 +474,7 @@ for (animalName, legCount) in numberOfLegs {
 
 // spiders have 8 legs</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -474,6 +494,7 @@ for (animalName, legCount) in numberOfLegs {
 
 // spiders have 8 legs</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -502,6 +523,7 @@ for (animalName, legCount) in numberOfLegs {
 
 // 5 times 5 is 25</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -523,6 +545,7 @@ for (animalName, legCount) in numberOfLegs {
 
 // 5 times 5 is 25</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -551,6 +574,7 @@ print("\(base) to the power of \(power) is \(answer)")
 
 // Prints "3 to the power of 10 is 59049"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -572,6 +596,7 @@ println("${base) to the power of ${power) is ${answer)")
 
 // Prints "3 to the power of 10 is 59049"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -592,6 +617,7 @@ for tickMark in 0..&#60;minutes {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -605,6 +631,7 @@ for tickMark in 0..&#60;minutes {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -625,6 +652,7 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -638,6 +666,7 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -660,6 +689,7 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -675,6 +705,7 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -707,6 +738,7 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -718,6 +750,7 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -734,6 +767,7 @@ for tickMark in stride(from: 3, through: hours, by: hourInterval) {
 
 var board = [Int](repeating: 0, count: finalSquare + 1)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -743,6 +777,7 @@ var board = [Int](repeating: 0, count: finalSquare + 1)</code>
 
 var board = [Int](repeating: 0, count: finalSquare + 1)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -759,6 +794,7 @@ var board = [Int](repeating: 0, count: finalSquare + 1)</code>
 
 board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -768,6 +804,7 @@ board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
 
 board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -808,6 +845,7 @@ while square &#60; finalSquare {
 
 print("Game over!")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -841,6 +879,7 @@ while square &#60; finalSquare {
 
 println("Game over!")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -873,6 +912,7 @@ println("Game over!")</code>
 
 } while condition</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -884,6 +924,7 @@ println("Game over!")</code>
 
 } while condition</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -908,6 +949,7 @@ var square = 0
 
 var diceRoll = 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -925,6 +967,7 @@ var square = 0
 
 var diceRoll = 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -957,6 +1000,7 @@ var diceRoll = 0</code>
 
 print("Game over!")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -982,6 +1026,7 @@ print("Game over!")</code>
 
 println("Game over!")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1018,6 +1063,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's very cold. Consider wearing a scarf."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1033,6 +1079,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's very cold. Consider wearing a scarf."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1059,6 +1106,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's not that cold. Wear a t-shirt."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1078,6 +1126,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's not that cold. Wear a t-shirt."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1108,6 +1157,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's really warm. Don't forget to wear sunscreen."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1131,6 +1181,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 // Prints "It's really warm. Don't forget to wear sunscreen."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1155,6 +1206,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1172,6 +1224,7 @@ if temperatureInFahrenheit &#60;= 32 {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1216,6 +1269,7 @@ default:
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1239,6 +1293,7 @@ default:
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1271,6 +1326,7 @@ default:
 
 // Prints "The last letter of the alphabet"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1296,6 +1352,7 @@ default:
 
 // Prints "The last letter of the alphabet"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1340,6 +1397,7 @@ default:
 
 // This will report a compile-time error.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1363,6 +1421,7 @@ default:
 
 // This will report a compile-time error.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1391,6 +1450,7 @@ default:
 
 // Prints "The letter A"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1412,6 +1472,7 @@ default:
 
 // Prints "The letter A"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1476,6 +1537,7 @@ print("There are \(naturalCount) \(countedThings).")
 
 // Prints "There are dozens of moons orbiting Saturn."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1519,6 +1581,7 @@ println("There are ${naturalCount) ${countedThings).")
 
 // Prints "There are dozens of moons orbiting Saturn."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1573,6 +1636,7 @@ default:
 
 // Prints "(1, 1) is inside the box"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1606,6 +1670,7 @@ default:
 
 // Prints "(1, 1) is inside the box"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1652,6 +1717,7 @@ case let (x, y):
 
 // Prints "on the x-axis with an x value of 2"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1677,6 +1743,7 @@ case val (x, y):
 
 // Prints "on the x-axis with an x value of 2"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1723,6 +1790,7 @@ case let (x, y):
 
 // Prints "(1, -1) is on the line x == -y"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1748,6 +1816,7 @@ case val (x, y):
 
 // Prints "(1, -1) is on the line x == -y"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1796,6 +1865,7 @@ default:
 
 // Prints "e is a vowel"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1823,6 +1893,7 @@ default:
 
 // Prints "e is a vowel"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1851,6 +1922,7 @@ default:
 
 // Prints "On an axis, 9 from the origin"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1872,6 +1944,7 @@ default:
 
 // Prints "On an axis, 9 from the origin"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1920,6 +1993,7 @@ print(puzzleOutput)
 
 // Prints "grtmndsthnklk"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1947,6 +2021,7 @@ println(puzzleOutput)
 
 // Prints "grtmndsthnklk"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2013,6 +2088,7 @@ if let integerValue = possibleIntegerValue {
 
 // Prints "The integer value of &#19977; is 3."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2058,6 +2134,7 @@ if val integerValue = possibleIntegerValue {
 
 // Prints "The integer value of &#19977; is 3."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2106,6 +2183,7 @@ print(description)
 
 // Prints "The number 5 is a prime number, and also an integer."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2133,6 +2211,7 @@ println(description)
 
 // Prints "The number 5 is a prime number, and also an integer."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2165,6 +2244,7 @@ println(description)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2176,6 +2256,7 @@ println(description)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2200,6 +2281,7 @@ var square = 0
 
 var diceRoll = 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2217,6 +2299,7 @@ var square = 0
 
 var diceRoll = 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2263,6 +2346,7 @@ var diceRoll = 0</code>
 
 print("Game over!")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2302,6 +2386,7 @@ print("Game over!")</code>
 
 println("Game over!")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2370,6 +2455,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 // Prints "I hope the weather is nice in Cupertino."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2417,6 +2503,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 // Prints "I hope the weather is nice in Cupertino."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2453,6 +2540,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2468,6 +2556,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2490,6 +2579,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2505,6 +2595,7 @@ greet(person: ["name": "Jane", "location": "Cupertino"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

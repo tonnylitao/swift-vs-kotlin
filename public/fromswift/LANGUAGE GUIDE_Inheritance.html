@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -410,6 +427,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -433,6 +451,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -447,6 +466,7 @@
                 <pre>
                   <code class="kotlin">let someVehicle = Vehicle()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -454,6 +474,7 @@
                   <pre>
                     <code class="swift">val someVehicle = Vehicle()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -470,6 +491,7 @@
 
 // Vehicle: traveling at 0.0 miles per hour</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -479,6 +501,7 @@
 
 // Vehicle: traveling at 0.0 miles per hour</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -511,6 +534,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -522,6 +546,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -540,6 +565,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -551,6 +577,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -567,6 +594,7 @@
 
 bicycle.hasBasket = true</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -576,6 +604,7 @@ bicycle.hasBasket = true</code>
 
 bicycle.hasBasket = true</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -594,6 +623,7 @@ print("Bicycle: \(bicycle.description)")
 
 // Bicycle: traveling at 15.0 miles per hour</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -605,6 +635,7 @@ println("Bicycle: ${bicycle.description)")
 
 // Bicycle: traveling at 15.0 miles per hour</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -623,6 +654,7 @@ println("Bicycle: ${bicycle.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -634,6 +666,7 @@ println("Bicycle: ${bicycle.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -658,6 +691,7 @@ print("Tandem: \(tandem.description)")
 
 // Tandem: traveling at 22.0 miles per hour</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -675,6 +709,7 @@ println("Tandem: ${tandem.description)")
 
 // Tandem: traveling at 22.0 miles per hour</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -711,6 +746,7 @@ println("Tandem: ${tandem.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -726,6 +762,7 @@ println("Tandem: ${tandem.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -744,6 +781,7 @@ train.makeNoise()
 
 // Prints "Choo Choo"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -755,6 +793,7 @@ train.makeNoise()
 
 // Prints "Choo Choo"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -793,6 +832,7 @@ train.makeNoise()
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -810,6 +850,7 @@ train.makeNoise()
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -832,6 +873,7 @@ print("Car: \(car.description)")
 
 // Car: traveling at 25.0 miles per hour in gear 3</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -847,6 +889,7 @@ println("Car: ${car.description)")
 
 // Car: traveling at 25.0 miles per hour in gear 3</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -887,6 +930,7 @@ println("Car: ${car.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -906,6 +950,7 @@ println("Car: ${car.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -926,6 +971,7 @@ print("AutomaticCar: \(automatic.description)")
 
 // AutomaticCar: traveling at 35.0 miles per hour in gear 4</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -939,6 +985,7 @@ println("AutomaticCar: ${automatic.description)")
 
 // AutomaticCar: traveling at 35.0 miles per hour in gear 4</code>
                   </pre>
+                  
               
               </td>
             </tr>

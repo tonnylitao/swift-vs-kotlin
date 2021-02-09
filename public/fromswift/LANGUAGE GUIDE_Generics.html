@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -402,6 +419,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -417,6 +435,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -439,6 +458,7 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 
 // Prints "someInt is now 107, and anotherInt is now 3"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -454,6 +474,7 @@ println("someInt is now ${someInt), and anotherInt is now ${anotherInt)")
 
 // Prints "someInt is now 107, and anotherInt is now 3"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -488,6 +509,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -515,6 +537,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -551,6 +574,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -566,6 +590,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -582,6 +607,7 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
 
 func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -591,6 +617,7 @@ func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T)</code>
 
 func swapTwoValues&#60;T&#62;(_ a: inout T, _ b: inout T)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -621,6 +648,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 // someString is now "world", and anotherString is now "hello"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -644,6 +672,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 // someString is now "world", and anotherString is now "hello"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -688,6 +717,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -711,6 +741,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -741,6 +772,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -764,6 +796,7 @@ swapTwoValues(&#38;someString, &#38;anotherString)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -788,6 +821,7 @@ stackOfStrings.push("cuatro")
 
 // the stack now contains 4 strings</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -805,6 +839,7 @@ stackOfStrings.push("cuatro")
 
 // the stack now contains 4 strings</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -821,6 +856,7 @@ stackOfStrings.push("cuatro")
 
 // fromTheTop is equal to "cuatro", and the stack now contains 3 strings</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -830,6 +866,7 @@ stackOfStrings.push("cuatro")
 
 // fromTheTop is equal to "cuatro", and the stack now contains 3 strings</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -866,6 +903,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -881,6 +919,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -901,6 +940,7 @@ stackOfStrings.push("cuatro")
 
 // Prints "The top item on the stack is tres."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -914,6 +954,7 @@ stackOfStrings.push("cuatro")
 
 // Prints "The top item on the stack is tres."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -946,6 +987,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -957,6 +999,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -999,6 +1042,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1020,6 +1064,7 @@ stackOfStrings.push("cuatro")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1042,6 +1087,7 @@ if let foundIndex = findIndex(ofString: "llama", in: strings) {
 
 // Prints "The index of llama is 2"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1057,6 +1103,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
 // Prints "The index of llama is 2"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1085,6 +1132,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1106,6 +1154,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1134,6 +1183,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1155,6 +1205,7 @@ if val foundIndex = findIndex(ofString: "llama", in: strings) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1175,6 +1226,7 @@ let stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 // stringIndex is an optional Int containing a value of 2</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1188,6 +1240,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 // stringIndex is an optional Int containing a value of 2</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1226,6 +1279,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1243,6 +1297,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1297,6 +1352,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1344,6 +1400,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1396,6 +1453,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1441,6 +1499,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1469,6 +1528,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
                 <pre>
                   <code class="kotlin">extension Array: Container {}</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1476,6 +1536,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
                   <pre>
                     <code class="swift">extension Array: Container {}</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1514,6 +1575,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1531,6 +1593,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1565,6 +1628,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1578,6 +1642,7 @@ val stringIndex = findIndex(of: "Andrea", in: ["Mike", "Malcolm", "Andrea"])
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1622,6 +1687,7 @@ let suffix = stackOfInts.suffix(2)
 
 // suffix contains 20 and 30</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1659,6 +1725,7 @@ val suffix = stackOfInts.suffix(2)
 
 // suffix contains 20 and 30</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1691,6 +1758,7 @@ val suffix = stackOfInts.suffix(2)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1716,6 +1784,7 @@ val suffix = stackOfInts.suffix(2)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1780,6 +1849,7 @@ val suffix = stackOfInts.suffix(2)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1823,6 +1893,7 @@ val suffix = stackOfInts.suffix(2)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1861,6 +1932,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 // Prints "All items match."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1892,6 +1964,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 // Prints "All items match."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1934,6 +2007,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1955,6 +2029,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1979,6 +2054,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 // Prints "Top element is tres."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1996,6 +2072,7 @@ if allItemsMatch(stackOfStrings, arrayOfStrings) {
 
 // Prints "Top element is tres."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2018,6 +2095,7 @@ notEquatableStack.push(notEquatableValue)
 
 notEquatableStack.isTop(notEquatableValue)  // Error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2033,6 +2111,7 @@ notEquatableStack.push(notEquatableValue)
 
 notEquatableStack.isTop(notEquatableValue)  // Error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2055,6 +2134,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2070,6 +2150,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2094,6 +2175,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
 // Prints "Starts with something else."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2111,6 +2193,7 @@ notEquatableStack.isTop(notEquatableValue)  // Error</code>
 
 // Prints "Starts with something else."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2145,6 +2228,7 @@ print([1260.0, 1200.0, 98.6, 37.0].average())
 
 // Prints "648.9"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2172,6 +2256,7 @@ println([1260.0, 1200.0, 98.6, 37.0].average())
 
 // Prints "648.9"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2232,6 +2317,7 @@ print(numbers.endsWith(37))
 
 // Prints "true"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2271,6 +2357,7 @@ println(numbers.endsWith(37))
 
 // Prints "true"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2311,6 +2398,7 @@ extension Container where Item: Equatable {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2344,6 +2432,7 @@ extension Container where Item: Equatable {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2388,6 +2477,7 @@ extension Container where Item: Equatable {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2411,6 +2501,7 @@ extension Container where Item: Equatable {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2425,6 +2516,7 @@ extension Container where Item: Equatable {
                 <pre>
                   <code class="kotlin">protocol ComparableContainer: Container where Item: Comparable { }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2432,6 +2524,7 @@ extension Container where Item: Equatable {
                   <pre>
                     <code class="swift">protocol ComparableContainer: Container where Item: Comparable { }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2478,6 +2571,7 @@ extension Container where Item: Equatable {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2503,6 +2597,7 @@ extension Container where Item: Equatable {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>

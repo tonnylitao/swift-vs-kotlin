@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -394,6 +411,7 @@
                 <pre>
                   <code class="kotlin">let someString = "Some string literal value"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -401,6 +419,7 @@
                   <pre>
                     <code class="swift">val someString = "Some string literal value"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -441,6 +460,7 @@ till you come to the end; then stop."
 
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -460,6 +480,7 @@ till you come to the end; then stop."
 
 """</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -480,6 +501,7 @@ These are the same.
 
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -493,6 +515,7 @@ These are the same.
 
 """</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -519,6 +542,7 @@ till you come to the end; then stop."
 
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -538,6 +562,7 @@ till you come to the end; then stop."
 
 """</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -562,6 +587,7 @@ It also ends with a line break.
 
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -579,6 +605,7 @@ It also ends with a line break.
 
 """</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -615,6 +642,7 @@ let blackHeart = "\u{2665}"      // &#9829;,  Unicode scalar U+2665
 
 let sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -630,6 +658,7 @@ val blackHeart = "\u{2665}"      // &#9829;,  Unicode scalar U+2665
 
 val sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -650,6 +679,7 @@ Escaping all three quotation marks \"\"\"
 
 """</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -663,6 +693,7 @@ Escaping all three quotation marks \"\"\"
 
 """</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -695,6 +726,7 @@ Here are three more double quotes: """
 
 """#</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -706,6 +738,7 @@ Here are three more double quotes: """
 
 """#</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -738,6 +771,7 @@ var anotherEmptyString = String()  // initializer syntax
 
 // these two strings are both empty, and are equivalent to each other</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -749,6 +783,7 @@ var anotherEmptyString = String()  // initializer syntax
 
 // these two strings are both empty, and are equivalent to each other</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -769,6 +804,7 @@ var anotherEmptyString = String()  // initializer syntax
 
 // Prints "Nothing to see here"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -782,6 +818,7 @@ var anotherEmptyString = String()  // initializer syntax
 
 // Prints "Nothing to see here"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -822,6 +859,7 @@ constantString += " and another Highlander"
 
 // this reports a compile-time error - a constant string cannot be modified</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -841,6 +879,7 @@ constantString += " and another Highlander"
 
 // this reports a compile-time error - a constant string cannot be modified</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -883,6 +922,7 @@ constantString += " and another Highlander"
 
 // 🐶</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -904,6 +944,7 @@ constantString += " and another Highlander"
 
 // 🐶</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -918,6 +959,7 @@ constantString += " and another Highlander"
                 <pre>
                   <code class="kotlin">let exclamationMark: Character = "!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -925,6 +967,7 @@ constantString += " and another Highlander"
                   <pre>
                     <code class="swift">val exclamationMark: Character = "!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -945,6 +988,7 @@ print(catString)
 
 // Prints "Cat!🐱"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -958,6 +1002,7 @@ println(catString)
 
 // Prints "Cat!🐱"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -992,6 +1037,7 @@ var welcome = string1 + string2
 
 // welcome now equals "hello there"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1005,6 +1051,7 @@ var welcome = string1 + string2
 
 // welcome now equals "hello there"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1023,6 +1070,7 @@ instruction += string2
 
 // instruction now equals "look over there"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1034,6 +1082,7 @@ instruction += string2
 
 // instruction now equals "look over there"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1052,6 +1101,7 @@ welcome.append(exclamationMark)
 
 // welcome now equals "hello there!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1063,6 +1113,7 @@ welcome.append(exclamationMark)
 
 // welcome now equals "hello there!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1119,6 +1170,7 @@ print(goodStart + end)
 
 // three</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1168,6 +1220,7 @@ println(goodStart + end)
 
 // three</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1200,6 +1253,7 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 
 // message is "3 times 2.5 is 7.5"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1211,6 +1265,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
 // message is "3 times 2.5 is 7.5"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1227,6 +1282,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
 // Prints "Write an interpolated string in Swift using \(multiplier)."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1236,6 +1292,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
 // Prints "Write an interpolated string in Swift using ${multiplier)."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1252,6 +1309,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
 // Prints "6 times 7 is 42."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1261,6 +1319,7 @@ val message = "${multiplier) times 2.5 is ${Double(multiplier) * 2.5)"
 
 // Prints "6 times 7 is 42."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1293,6 +1352,7 @@ let combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
 
 // eAcute is &#233;, combinedEAcute is e&#769;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1304,6 +1364,7 @@ val combinedEAcute: Character = "\u{65}\u{301}"          // e followed by &#769;
 
 // eAcute is &#233;, combinedEAcute is e&#769;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1322,6 +1383,7 @@ let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // precomposed is 한, decomposed is &#4370;&#4449;&#4523;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1333,6 +1395,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // precomposed is 한, decomposed is &#4370;&#4449;&#4523;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1349,6 +1412,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // enclosedEAcute is &#233;&#8413;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1358,6 +1422,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // enclosedEAcute is &#233;&#8413;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1374,6 +1439,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // regionalIndicatorForUS is 🇺🇸</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1383,6 +1449,7 @@ val decomposed: Character = "\u{1112}\u{1161}\u{11AB}"   // &#4370;, &#4449;, &#
 
 // regionalIndicatorForUS is 🇺🇸</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1415,6 +1482,7 @@ print("unusualMenagerie has \(unusualMenagerie.count) characters")
 
 // Prints "unusualMenagerie has 40 characters"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1426,6 +1494,7 @@ println("unusualMenagerie has ${unusualMenagerie.count) characters")
 
 // Prints "unusualMenagerie has 40 characters"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1454,6 +1523,7 @@ print("the number of characters in \(word) is \(word.count)")
 
 // Prints "the number of characters in cafe&#769; is 4"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1475,6 +1545,7 @@ println("the number of characters in ${word) is ${word.count)")
 
 // Prints "the number of characters in cafe&#769; is 4"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1521,6 +1592,7 @@ greeting[index]
 
 // a</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1546,6 +1618,7 @@ greeting[index]
 
 // a</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1562,6 +1635,7 @@ greeting[index]
 
 greeting.index(after: greeting.endIndex) // Error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1571,6 +1645,7 @@ greeting.index(after: greeting.endIndex) // Error</code>
 
 greeting.index(after: greeting.endIndex) // Error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1591,6 +1666,7 @@ greeting.index(after: greeting.endIndex) // Error</code>
 
 // Prints "G u t e n   T a g ! "</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1604,6 +1680,7 @@ greeting.index(after: greeting.endIndex) // Error</code>
 
 // Prints "G u t e n   T a g ! "</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1642,6 +1719,7 @@ welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex)
 
 // welcome now equals "hello there!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1659,6 +1737,7 @@ welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex)
 
 // welcome now equals "hello there!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1683,6 +1762,7 @@ welcome.removeSubrange(range)
 
 // welcome now equals "hello"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1700,6 +1780,7 @@ welcome.removeSubrange(range)
 
 // welcome now equals "hello"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1740,6 +1821,7 @@ let beginning = greeting[..&#60;index]
 
 let newString = String(beginning)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1759,6 +1841,7 @@ val beginning = greeting[..&#60;index]
 
 val newString = String(beginning)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1797,6 +1880,7 @@ if quotation == sameQuotation {
 
 // Prints "These two strings are considered equal"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1814,6 +1898,7 @@ if quotation == sameQuotation {
 
 // Prints "These two strings are considered equal"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1846,6 +1931,7 @@ if eAcuteQuestion == combinedEAcuteQuestion {
 
 // Prints "These two strings are considered equal"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1871,6 +1957,7 @@ if eAcuteQuestion == combinedEAcuteQuestion {
 
 // Prints "These two strings are considered equal"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1899,6 +1986,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
 // Prints "These two characters are not equivalent."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1920,6 +2008,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
 // Prints "These two characters are not equivalent."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1972,6 +2061,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
 ]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2003,6 +2093,7 @@ if latinCapitalLetterA != cyrillicCapitalLetterA {
 
 ]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2031,6 +2122,7 @@ print("There are \(act1SceneCount) scenes in Act 1")
 
 // Prints "There are 5 scenes in Act 1"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2052,6 +2144,7 @@ println("There are ${act1SceneCount) scenes in Act 1")
 
 // Prints "There are 5 scenes in Act 1"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2086,6 +2179,7 @@ print("\(mansionCount) mansion scenes; \(cellCount) cell scenes")
 
 // Prints "6 mansion scenes; 2 cell scenes"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2113,6 +2207,7 @@ println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
 
 // Prints "6 mansion scenes; 2 cell scenes"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2141,6 +2236,7 @@ println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
                 <pre>
                   <code class="kotlin">let dogString = "Dog&#8252;🐶"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2148,6 +2244,7 @@ println("${mansionCount) mansion scenes; ${cellCount) cell scenes")
                   <pre>
                     <code class="swift">let dogString = "Dog&#8252;🐶"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2184,6 +2281,7 @@ print("")
 
 // Prints "68 111 103 226 128 188 240 159 144 182 "</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2199,6 +2297,7 @@ println("")
 
 // Prints "68 111 103 226 128 188 240 159 144 182 "</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2235,6 +2334,7 @@ print("")
 
 // Prints "68 111 103 8252 55357 56374 "</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2250,6 +2350,7 @@ println("")
 
 // Prints "68 111 103 8252 55357 56374 "</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2286,6 +2387,7 @@ print("")
 
 // Prints "68 111 103 8252 128054 "</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2301,6 +2403,7 @@ println("")
 
 // Prints "68 111 103 8252 128054 "</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2329,6 +2432,7 @@ println("")
 
 // 🐶</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2350,6 +2454,7 @@ println("")
 
 // 🐶</code>
                   </pre>
+                  
               
               </td>
             </tr>

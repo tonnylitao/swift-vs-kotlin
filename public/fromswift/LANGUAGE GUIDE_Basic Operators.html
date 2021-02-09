@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -400,6 +417,7 @@ a = b
 
 // a is now equal to 10</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -413,6 +431,7 @@ a = b
 
 // a is now equal to 10</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -429,6 +448,7 @@ a = b
 
 // x is equal to 1, and y is equal to 2</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -438,6 +458,7 @@ a = b
 
 // x is equal to 1, and y is equal to 2</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -456,6 +477,7 @@ a = b
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -467,6 +489,7 @@ a = b
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -501,6 +524,7 @@ a = b
 
 10.0 / 2.5  // equals 4.0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -514,6 +538,7 @@ a = b
 
 10.0 / 2.5  // equals 4.0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -528,6 +553,7 @@ a = b
                 <pre>
                   <code class="kotlin">"hello, " + "world"  // equals "hello, world"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -535,6 +561,7 @@ a = b
                   <pre>
                     <code class="swift">"hello, " + "world"  // equals "hello, world"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -563,6 +590,7 @@ a = b
                 <pre>
                   <code class="kotlin">9 % 4    // equals 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -570,6 +598,7 @@ a = b
                   <pre>
                     <code class="swift">9 % 4    // equals 1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -584,6 +613,7 @@ a = b
                 <pre>
                   <code class="kotlin">-9 % 4   // equals -1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -591,6 +621,7 @@ a = b
                   <pre>
                     <code class="swift">-9 % 4   // equals -1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -623,6 +654,7 @@ let minusThree = -three       // minusThree equals -3
 
 let plusThree = -minusThree   // plusThree equals 3, or "minus minus three"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -634,6 +666,7 @@ val minusThree = -three       // minusThree equals -3
 
 val plusThree = -minusThree   // plusThree equals 3, or "minus minus three"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -664,6 +697,7 @@ val plusThree = -minusThree   // plusThree equals 3, or "minus minus three"</cod
 
 let alsoMinusSix = +minusSix  // alsoMinusSix equals -6</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -673,6 +707,7 @@ let alsoMinusSix = +minusSix  // alsoMinusSix equals -6</code>
 
 val alsoMinusSix = +minusSix  // alsoMinusSix equals -6</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -705,6 +740,7 @@ a += 2
 
 // a is now equal to 3</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -716,6 +752,7 @@ a += 2
 
 // a is now equal to 3</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -754,6 +791,7 @@ a += 2
 
 2 &#60;= 1   // false because 2 is not less than or equal to 1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -771,6 +809,7 @@ a += 2
 
 2 &#60;= 1   // false because 2 is not less than or equal to 1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -797,6 +836,7 @@ if name == "world" {
 
 // Prints "hello, world", because name is indeed equal to "world".</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -817,6 +857,7 @@ if name == "world" {
 // Prints "hello, world", because name is indeed equal to "world".
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -835,6 +876,7 @@ if name == "world" {
 
 (4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -846,6 +888,7 @@ if name == "world" {
 
 (4, "dog") == (4, "dog")      // true because 4 is equal to 4, and "dog" is equal to "dog"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -862,6 +905,7 @@ if name == "world" {
 
 ("blue", false) &#60; ("purple", true)  // Error because &#60; can't compare Boolean values</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -871,6 +915,7 @@ if name == "world" {
 
 ("blue", false) &#60; ("purple", true)  // Error because &#60; can't compare Boolean values</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -907,6 +952,7 @@ if name == "world" {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -922,6 +968,7 @@ if name == "world" {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -942,6 +989,7 @@ let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
 // rowHeight is equal to 90</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -955,6 +1003,7 @@ val rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
 // rowHeight is equal to 90</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -985,6 +1034,7 @@ if hasHeader {
 
 // rowHeight is equal to 90</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1008,6 +1058,7 @@ if hasHeader {
 
 // rowHeight is equal to 90</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1036,6 +1087,7 @@ if hasHeader {
                 <pre>
                   <code class="kotlin">a != nil ? a! : b</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1043,6 +1095,7 @@ if hasHeader {
                   <pre>
                     <code class="swift">a != nil ? a! : b</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1065,6 +1118,7 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 
 // userDefinedColorName is nil, so colorNameToUse is set to the default of "red"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1080,6 +1134,7 @@ var colorNameToUse = userDefinedColorName ?: defaultColorName
 
 // userDefinedColorName is nil, so colorNameToUse is set to the default of "red"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1098,6 +1153,7 @@ colorNameToUse = userDefinedColorName ?? defaultColorName
 
 // userDefinedColorName is not nil, so colorNameToUse is set to "green"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1109,6 +1165,7 @@ colorNameToUse = userDefinedColorName ?: defaultColorName
 
 // userDefinedColorName is not nil, so colorNameToUse is set to "green"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1151,6 +1208,7 @@ colorNameToUse = userDefinedColorName ?: defaultColorName
 
 // 5 times 5 is 25</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1173,6 +1231,7 @@ colorNameToUse = userDefinedColorName ?: defaultColorName
 // 5 times 5 is 25
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1217,6 +1276,7 @@ for i in 0..&#60;count {
 
 // Person 4 is called Jack</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1241,6 +1301,7 @@ for i in 0..&#60;count {
 // Person 4 is called Jack
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1291,6 +1352,7 @@ for name in names[...2] {
 
 // Brian</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1320,6 +1382,7 @@ for name in names[...2] {
 
 // Brian</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1342,6 +1405,7 @@ for name in names[...2] {
 
 // Alex</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1357,6 +1421,7 @@ for name in names[...2] {
 
 // Alex</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1377,6 +1442,7 @@ range.contains(4)   // true
 
 range.contains(-1)  // true</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1390,6 +1456,7 @@ range.contains(4)   // true
 
 range.contains(-1)  // true</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1426,6 +1493,7 @@ if !allowedEntry {
 
 // Prints "ACCESS DENIED"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1441,6 +1509,7 @@ if !allowedEntry {
 
 // Prints "ACCESS DENIED"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1483,6 +1552,7 @@ if enteredDoorCode &#38;&#38; passedRetinaScan {
 
 // Prints "ACCESS DENIED"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1504,6 +1574,7 @@ if enteredDoorCode &#38;&#38; passedRetinaScan {
 
 // Prints "ACCESS DENIED"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1546,6 +1617,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1567,6 +1639,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1605,6 +1678,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1622,6 +1696,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1660,6 +1735,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1677,6 +1753,7 @@ if hasDoorKey || knowsOverridePassword {
 
 // Prints "Welcome!"</code>
                   </pre>
+                  
               
               </td>
             </tr>

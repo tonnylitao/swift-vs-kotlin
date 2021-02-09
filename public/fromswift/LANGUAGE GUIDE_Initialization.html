@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -398,6 +415,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -409,6 +427,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -439,6 +458,7 @@ print("The default temperature is \(f.temperature)&#176; Fahrenheit")
 
 // Prints "The default temperature is 32.0&#176; Fahrenheit"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -462,6 +482,7 @@ println("The default temperature is ${f.temperature)&#176; Fahrenheit")
 
 // Prints "The default temperature is 32.0&#176; Fahrenheit"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -494,6 +515,7 @@ println("The default temperature is ${f.temperature)&#176; Fahrenheit")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -505,6 +527,7 @@ println("The default temperature is ${f.temperature)&#176; Fahrenheit")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -557,6 +580,7 @@ let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 // freezingPointOfWater.temperatureInCelsius is 0.0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -588,6 +612,7 @@ val freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 // freezingPointOfWater.temperatureInCelsius is 0.0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -640,6 +665,7 @@ val freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -671,6 +697,7 @@ val freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -687,6 +714,7 @@ val freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
 let halfGray = Color(white: 0.5)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -696,6 +724,7 @@ let halfGray = Color(white: 0.5)</code>
 
 val halfGray = Color(white: 0.5)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -712,6 +741,7 @@ val halfGray = Color(white: 0.5)</code>
 
 // this reports a compile-time error - argument labels are required</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -721,6 +751,7 @@ val halfGray = Color(white: 0.5)</code>
 
 // this reports a compile-time error - argument labels are required</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -775,6 +806,7 @@ let bodyTemperature = Celsius(37.0)
 
 // bodyTemperature.temperatureInCelsius is 37.0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -808,6 +840,7 @@ val bodyTemperature = Celsius(37.0)
 
 // bodyTemperature.temperatureInCelsius is 37.0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -862,6 +895,7 @@ cheeseQuestion.ask()
 
 cheeseQuestion.response = "Yes, I do like cheese."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -895,6 +929,7 @@ cheeseQuestion.ask()
 
 cheeseQuestion.response = "Yes, I do like cheese."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -949,6 +984,7 @@ beetsQuestion.ask()
 
 beetsQuestion.response = "I also like beets. (But not with cheese.)"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -982,6 +1018,7 @@ beetsQuestion.ask()
 
 beetsQuestion.response = "I also like beets. (But not with cheese.)"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1020,6 +1057,7 @@ beetsQuestion.response = "I also like beets. (But not with cheese.)"</code>
 
 var item = ShoppingListItem()</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1037,6 +1075,7 @@ var item = ShoppingListItem()</code>
 
 var item = ShoppingListItem()</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1071,6 +1110,7 @@ var item = ShoppingListItem()</code>
 
 let twoByTwo = Size(width: 2.0, height: 2.0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1084,6 +1124,7 @@ let twoByTwo = Size(width: 2.0, height: 2.0)</code>
 
 val twoByTwo = Size(width: 2.0, height: 2.0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1110,6 +1151,7 @@ print(zeroByZero.width, zeroByZero.height)
 
 // Prints "0.0 0.0"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1129,6 +1171,7 @@ println(zeroByZero.width, zeroByZero.height)
 
 // Prints "0.0 0.0"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1167,6 +1210,7 @@ struct Point {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1184,6 +1228,7 @@ struct Point {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1224,6 +1269,7 @@ struct Point {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1257,6 +1303,7 @@ struct Point {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1273,6 +1320,7 @@ struct Point {
 
 // basicRect's origin is (0.0, 0.0) and its size is (0.0, 0.0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1282,6 +1330,7 @@ struct Point {
 
 // basicRect's origin is (0.0, 0.0) and its size is (0.0, 0.0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1300,6 +1349,7 @@ struct Point {
 
 // originRect's origin is (2.0, 2.0) and its size is (5.0, 5.0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1311,6 +1361,7 @@ struct Point {
 
 // originRect's origin is (2.0, 2.0) and its size is (5.0, 5.0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1329,6 +1380,7 @@ struct Point {
 
 // centerRect's origin is (2.5, 2.5) and its size is (3.0, 3.0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1340,6 +1392,7 @@ struct Point {
 
 // centerRect's origin is (2.5, 2.5) and its size is (3.0, 3.0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1372,6 +1425,7 @@ struct Point {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1383,6 +1437,7 @@ struct Point {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1401,6 +1456,7 @@ struct Point {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1412,6 +1468,7 @@ struct Point {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1450,6 +1507,7 @@ struct Point {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1467,6 +1525,7 @@ struct Point {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1485,6 +1544,7 @@ print("Vehicle: \(vehicle.description)")
 
 // Vehicle: 0 wheel(s)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1496,6 +1556,7 @@ println("Vehicle: ${vehicle.description)")
 
 // Vehicle: 0 wheel(s)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1520,6 +1581,7 @@ println("Vehicle: ${vehicle.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1537,6 +1599,7 @@ println("Vehicle: ${vehicle.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1555,6 +1618,7 @@ print("Bicycle: \(bicycle.description)")
 
 // Bicycle: 2 wheel(s)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1566,6 +1630,7 @@ println("Bicycle: ${bicycle.description)")
 
 // Bicycle: 2 wheel(s)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1598,6 +1663,7 @@ println("Bicycle: ${bicycle.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1623,6 +1689,7 @@ println("Bicycle: ${bicycle.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1641,6 +1708,7 @@ print("Hoverboard: \(hoverboard.description)")
 
 // Hoverboard: 0 wheel(s) in a beautiful silver</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1652,6 +1720,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 // Hoverboard: 0 wheel(s) in a beautiful silver</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1696,6 +1765,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1719,6 +1789,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1735,6 +1806,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 // namedMeat's name is "Bacon"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1744,6 +1816,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 // namedMeat's name is "Bacon"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1760,6 +1833,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 // mysteryMeat's name is "[Unnamed]"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1769,6 +1843,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 // mysteryMeat's name is "[Unnamed]"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1801,6 +1876,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1826,6 +1902,7 @@ println("Hoverboard: ${hoverboard.description)")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1844,6 +1921,7 @@ let oneBacon = RecipeIngredient(name: "Bacon")
 
 let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1855,6 +1933,7 @@ val oneBacon = RecipeIngredient(name: "Bacon")
 
 val sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1883,6 +1962,7 @@ val sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1904,6 +1984,7 @@ val sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1942,6 +2023,7 @@ for item in breakfastList {
 
 // 6 x Eggs &#10008;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1973,6 +2055,7 @@ for item in breakfastList {
 
 // 6 x Eggs &#10008;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2029,6 +2112,7 @@ if valueChanged == nil {
 
 // Prints "3.14159 conversion to Int does not maintain value"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2064,6 +2148,7 @@ if valueChanged == nil {
 
 // Prints "3.14159 conversion to Int does not maintain value"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2090,6 +2175,7 @@ if valueChanged == nil {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2109,6 +2195,7 @@ if valueChanged == nil {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2135,6 +2222,7 @@ if let giraffe = someCreature {
 
 // Prints "An animal was initialized with a species of Giraffe"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2154,6 +2242,7 @@ if val giraffe = someCreature {
 
 // Prints "An animal was initialized with a species of Giraffe"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2180,6 +2269,7 @@ if anonymousCreature == nil {
 
 // Prints "The anonymous creature could not be initialized"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2199,6 +2289,7 @@ if anonymousCreature == nil {
 
 // Prints "The anonymous creature could not be initialized"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2255,6 +2346,7 @@ if anonymousCreature == nil {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2290,6 +2382,7 @@ if anonymousCreature == nil {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2324,6 +2417,7 @@ if unknownUnit == nil {
 
 // Prints "This is not a defined temperature unit, so initialization failed."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2351,6 +2445,7 @@ if unknownUnit == nil {
 
 // Prints "This is not a defined temperature unit, so initialization failed."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2407,6 +2502,7 @@ if unknownUnit == nil {
 
 // Prints "This is not a defined temperature unit, so initialization failed."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2442,6 +2538,7 @@ if unknownUnit == nil {
 
 // Prints "This is not a defined temperature unit, so initialization failed."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2500,6 +2597,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2537,6 +2635,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2557,6 +2656,7 @@ class CartItem: Product {
 
 // Prints "Item: sock, quantity: 2"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2570,6 +2670,7 @@ class CartItem: Product {
 
 // Prints "Item: sock, quantity: 2"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2594,6 +2695,7 @@ class CartItem: Product {
 
 // Prints "Unable to initialize zero shirts"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2611,6 +2713,7 @@ class CartItem: Product {
 
 // Prints "Unable to initialize zero shirts"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2635,6 +2738,7 @@ class CartItem: Product {
 
 // Prints "Unable to initialize one unnamed product"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2652,6 +2756,7 @@ class CartItem: Product {
 
 // Prints "Unable to initialize one unnamed product"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2698,6 +2803,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2723,6 +2829,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2763,6 +2870,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2796,6 +2904,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2818,6 +2927,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2833,6 +2943,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2869,6 +2980,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2884,6 +2996,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2906,6 +3019,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2921,6 +3035,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2961,6 +3076,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2980,6 +3096,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3026,6 +3143,7 @@ class CartItem: Product {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3065,6 +3183,7 @@ class CartItem: Product {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -3087,6 +3206,7 @@ print(board.squareIsBlackAt(row: 7, column: 7))
 
 // Prints "false"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -3102,6 +3222,7 @@ println(board.squareIsBlackAt(row: 7, column: 7))
 
 // Prints "false"</code>
                   </pre>
+                  
               
               </td>
             </tr>

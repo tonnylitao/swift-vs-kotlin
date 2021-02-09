@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -398,6 +415,7 @@ print("someInts is of type [Int] with \(someInts.count) items.")
 
 // Prints "someInts is of type [Int] with 0 items."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -410,6 +428,7 @@ println("someInts is of type [Int] with ${someInts.count} items.")
 // Prints "someInts is of type [Int] with 0 items."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -430,6 +449,7 @@ someInts = []
 
 // someInts is now an empty array, but is still of type [Int]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -443,6 +463,7 @@ someInts = []
 
 // someInts is now an empty array, but is still of type [Int]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -473,6 +494,7 @@ someInts = []
 
 // threeDoubles is of type [Double], and equals [0.0, 0.0, 0.0]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -482,6 +504,7 @@ someInts = []
 
 // threeDoubles is of type [Double], and equals [0.0, 0.0, 0.0]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -518,6 +541,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -533,6 +557,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -561,6 +586,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
                 <pre>
                   <code class="kotlin">[value 1, value 2, value 3]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -568,6 +594,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
                   <pre>
                     <code class="swift">[value 1, value 2, value 3]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -584,6 +611,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // shoppingList has been initialized with two initial items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -593,6 +621,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // shoppingList has been initialized with two initial items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -607,6 +636,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
                 <pre>
                   <code class="kotlin">var shoppingList = ["Eggs", "Milk"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -614,6 +644,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
                   <pre>
                     <code class="swift">var shoppingList = ["Eggs", "Milk"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -644,6 +675,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // Prints "The shopping list contains 2 items."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -654,6 +686,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 // Prints "The shopping list contains 2 items."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -678,6 +711,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // Prints "The shopping list is not empty."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -695,6 +729,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // Prints "The shopping list is not empty."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -711,6 +746,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // shoppingList now contains 3 items, and someone is making pancakes</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -720,6 +756,7 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 
 // shoppingList now contains 3 items, and someone is making pancakes</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -740,6 +777,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // shoppingList now contains 7 items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -753,6 +791,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // shoppingList now contains 7 items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -769,6 +808,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // firstItem is equal to "Eggs"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -778,6 +818,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // firstItem is equal to "Eggs"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -794,6 +835,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the first item in the list is now equal to "Six eggs" rather than "Eggs"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -803,6 +845,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the first item in the list is now equal to "Six eggs" rather than "Eggs"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -819,6 +862,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // shoppingList now contains 6 items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -828,6 +872,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // shoppingList now contains 6 items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -846,6 +891,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // "Maple Syrup" is now the first item in the list</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -857,6 +903,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // "Maple Syrup" is now the first item in the list</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -877,6 +924,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the mapleSyrup constant is now equal to the removed "Maple Syrup" string</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -890,6 +938,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the mapleSyrup constant is now equal to the removed "Maple Syrup" string</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -906,6 +955,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // firstItem is now equal to "Six eggs"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -915,6 +965,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // firstItem is now equal to "Six eggs"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -935,6 +986,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the apples constant is now equal to the removed "Apples" string</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -948,6 +1000,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // the apples constant is now equal to the removed "Apples" string</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -990,6 +1043,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // Bananas</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1011,6 +1065,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // Bananas</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1039,6 +1094,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 
 // Item 5: Bananas</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1061,6 +1117,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 // Item 5: Bananas
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1093,6 +1150,7 @@ print("letters is of type Set&#60;Character&#62; with \(letters.count) items.")
 
 // Prints "letters is of type Set&#60;Character&#62; with 0 items."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1105,6 +1163,7 @@ println("letters is of type Set&#60;Character&#62; with ${letters.count} items."
 // Prints "letters is of type Set&#60;Character&#62; with 0 items."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1125,6 +1184,7 @@ letters = []
 
 // letters is now an empty set, but is still of type Set&#60;Character&#62;</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1138,6 +1198,7 @@ letters = []
 
 // letters is now an empty set, but is still of type Set&#60;Character&#62;</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1168,6 +1229,7 @@ letters = []
 
 // favoriteGenres has been initialized with three initial items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1177,6 +1239,7 @@ letters = []
 
 // favoriteGenres has been initialized with three initial items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1191,6 +1254,7 @@ letters = []
                 <pre>
                   <code class="kotlin">var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1198,6 +1262,7 @@ letters = []
                   <pre>
                     <code class="swift">var favoriteGenres: Set = ["Rock", "Classical", "Hip hop"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1228,6 +1293,7 @@ letters = []
 
 // Prints "I have 3 favorite music genres."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1238,6 +1304,7 @@ letters = []
 // Prints "I have 3 favorite music genres."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1262,6 +1329,7 @@ letters = []
 
 // Prints "I have particular music preferences."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1279,6 +1347,7 @@ letters = []
 
 // Prints "I have particular music preferences."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1295,6 +1364,7 @@ letters = []
 
 // favoriteGenres now contains 4 items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1304,6 +1374,7 @@ letters = []
 
 // favoriteGenres now contains 4 items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1328,6 +1399,7 @@ letters = []
 
 // Prints "Rock? I'm over it."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1346,6 +1418,7 @@ letters = []
 // Prints "Rock? I'm over it."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1370,6 +1443,7 @@ letters = []
 
 // Prints "It's too funky in here."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1387,6 +1461,7 @@ letters = []
 
 // Prints "It's too funky in here."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1425,6 +1500,7 @@ letters = []
 
 // Hip hop</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1443,6 +1519,7 @@ letters = []
 // Hip hop
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1467,6 +1544,7 @@ letters = []
 
 // Jazz</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1485,6 +1563,7 @@ letters = []
 // Jazz
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1535,6 +1614,7 @@ oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 
 // [1, 2, 9]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1564,6 +1644,7 @@ oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 
 // [1, 2, 9]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1610,6 +1691,7 @@ farmAnimals.isDisjoint(with: cityAnimals)
 
 // true</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1635,6 +1717,7 @@ farmAnimals.isDisjoint(with: cityAnimals)
 
 // true</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1665,6 +1748,7 @@ farmAnimals.isDisjoint(with: cityAnimals)
 
 // namesOfIntegers is an empty [Int: String] dictionary</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1674,6 +1758,7 @@ farmAnimals.isDisjoint(with: cityAnimals)
 
 // namesOfIntegers is an empty [Int: String] dictionary</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1694,6 +1779,7 @@ namesOfIntegers = [:]
 
 // namesOfIntegers is once again an empty dictionary of type [Int: String]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1707,6 +1793,7 @@ namesOfIntegers = [:]
 
 // namesOfIntegers is once again an empty dictionary of type [Int: String]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1735,6 +1822,7 @@ namesOfIntegers = [:]
                 <pre>
                   <code class="kotlin">[key 1: value 1, key 2: value 2, key 3: value 3]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1742,6 +1830,7 @@ namesOfIntegers = [:]
                   <pre>
                     <code class="swift">[key 1: value 1, key 2: value 2, key 3: value 3]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1756,6 +1845,7 @@ namesOfIntegers = [:]
                 <pre>
                   <code class="kotlin">var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1763,6 +1853,7 @@ namesOfIntegers = [:]
                   <pre>
                     <code class="swift">var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1777,6 +1868,7 @@ namesOfIntegers = [:]
                 <pre>
                   <code class="kotlin">var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1784,6 +1876,7 @@ namesOfIntegers = [:]
                   <pre>
                     <code class="swift">var airports = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1814,6 +1907,7 @@ namesOfIntegers = [:]
 
 // Prints "The airports dictionary contains 2 items."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1824,6 +1918,7 @@ namesOfIntegers = [:]
 // Prints "The airports dictionary contains 2 items."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1848,6 +1943,7 @@ namesOfIntegers = [:]
 
 // Prints "The airports dictionary is not empty."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1865,6 +1961,7 @@ namesOfIntegers = [:]
 
 // Prints "The airports dictionary is not empty."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1881,6 +1978,7 @@ namesOfIntegers = [:]
 
 // the airports dictionary now contains 3 items</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1890,6 +1988,7 @@ namesOfIntegers = [:]
 
 // the airports dictionary now contains 3 items</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1906,6 +2005,7 @@ namesOfIntegers = [:]
 
 // the value for "LHR" has been changed to "London Heathrow"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1915,6 +2015,7 @@ namesOfIntegers = [:]
 
 // the value for "LHR" has been changed to "London Heathrow"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1935,6 +2036,7 @@ namesOfIntegers = [:]
 
 // Prints "The old value for DUB was Dublin."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1949,6 +2051,7 @@ namesOfIntegers = [:]
 // Prints "The old value for DUB was Dublin."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1973,6 +2076,7 @@ namesOfIntegers = [:]
 
 // Prints "The name of the airport is Dublin Airport."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1991,6 +2095,7 @@ namesOfIntegers = [:]
 // Prints "The name of the airport is Dublin Airport."
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2011,6 +2116,7 @@ airports["APL"] = nil
 
 // APL has now been removed from the dictionary</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2024,6 +2130,7 @@ airports["APL"] = nil
 
 // APL has now been removed from the dictionary</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2048,6 +2155,7 @@ airports["APL"] = nil
 
 // Prints "The removed airport's name is Dublin Airport."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2065,6 +2173,7 @@ airports["APL"] = nil
 
 // Prints "The removed airport's name is Dublin Airport."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2101,6 +2210,7 @@ airports["APL"] = nil
 
 // YYZ: Toronto Pearson</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2117,6 +2227,7 @@ airports["APL"] = nil
 // YYZ: Toronto Pearson
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2151,6 +2262,7 @@ for airportName in airports.values {
 
 // Airport name: Toronto Pearson</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2178,6 +2290,7 @@ for airportName in airports.values {
 
 // Airport name: Toronto Pearson</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2200,6 +2313,7 @@ let airportNames = [String](airports.values)
 
 // airportNames is ["London Heathrow", "Toronto Pearson"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2215,6 +2329,7 @@ val airportNames = [String](airports.values)
 
 // airportNames is ["London Heathrow", "Toronto Pearson"]</code>
                   </pre>
+                  
               
               </td>
             </tr>

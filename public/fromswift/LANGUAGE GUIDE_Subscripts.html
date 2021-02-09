@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -408,6 +425,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -429,6 +447,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -447,6 +466,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -458,6 +478,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -488,6 +509,7 @@ print("six times three is \(threeTimesTable[6])")
 
 // Prints "six times three is 18"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -511,6 +533,7 @@ println("six times three is ${threeTimesTable[6])")
 
 // Prints "six times three is 18"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -541,6 +564,7 @@ println("six times three is ${threeTimesTable[6])")
 
 numberOfLegs["bird"] = 2</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -550,6 +574,7 @@ numberOfLegs["bird"] = 2</code>
 
 numberOfLegs["bird"] = 2</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -620,6 +645,7 @@ numberOfLegs["bird"] = 2</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -669,6 +695,7 @@ numberOfLegs["bird"] = 2</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -683,6 +710,7 @@ numberOfLegs["bird"] = 2</code>
                 <pre>
                   <code class="kotlin">var matrix = Matrix(rows: 2, columns: 2)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -690,6 +718,7 @@ numberOfLegs["bird"] = 2</code>
                   <pre>
                     <code class="swift">var matrix = Matrix(rows: 2, columns: 2)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -706,6 +735,7 @@ numberOfLegs["bird"] = 2</code>
 
 matrix[1, 0] = 3.2</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -715,6 +745,7 @@ matrix[1, 0] = 3.2</code>
 
 matrix[1, 0] = 3.2</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -733,6 +764,7 @@ matrix[1, 0] = 3.2</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -744,6 +776,7 @@ matrix[1, 0] = 3.2</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -760,6 +793,7 @@ matrix[1, 0] = 3.2</code>
 
 // This triggers an assert, because [2, 2] is outside of the matrix bounds.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -769,6 +803,7 @@ matrix[1, 0] = 3.2</code>
 
 // This triggers an assert, because [2, 2] is outside of the matrix bounds.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -811,6 +846,7 @@ let mars = Planet[4]
 
 print(mars)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -832,6 +868,7 @@ val mars = Planet[4]
 
 println(mars)</code>
                   </pre>
+                  
               
               </td>
             </tr>

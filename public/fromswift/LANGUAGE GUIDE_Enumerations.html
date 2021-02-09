@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -398,6 +415,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -409,6 +427,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -433,6 +452,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -450,6 +470,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -468,6 +489,7 @@
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -479,6 +501,7 @@
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -493,6 +516,7 @@
                 <pre>
                   <code class="kotlin">var directionToHead = CompassPoint.west</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -500,6 +524,7 @@
                   <pre>
                     <code class="swift">var directionToHead = CompassPoint.west</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -514,6 +539,7 @@
                 <pre>
                   <code class="kotlin">directionToHead = .east</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -521,6 +547,7 @@
                   <pre>
                     <code class="swift">directionToHead = .east</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -571,6 +598,7 @@ case .west:
 
 // Prints "Watch out for penguins"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -600,6 +628,7 @@ case .west:
 
 // Prints "Watch out for penguins"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -628,6 +657,7 @@ default:
 
 // Prints "Mostly harmless"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -649,6 +679,7 @@ default:
 
 // Prints "Mostly harmless"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -687,6 +718,7 @@ print("\(numberOfChoices) beverages available")
 
 // Prints "3 beverages available"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -704,6 +736,7 @@ println("${numberOfChoices) beverages available")
 
 // Prints "3 beverages available"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -728,6 +761,7 @@ println("${numberOfChoices) beverages available")
 
 // juice</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -745,6 +779,7 @@ println("${numberOfChoices) beverages available")
 
 // juice</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -779,6 +814,7 @@ println("${numberOfChoices) beverages available")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -792,6 +828,7 @@ println("${numberOfChoices) beverages available")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -806,6 +843,7 @@ println("${numberOfChoices) beverages available")
                 <pre>
                   <code class="kotlin">var productBarcode = Barcode.upc(8, 85909, 51226, 3)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -813,6 +851,7 @@ println("${numberOfChoices) beverages available")
                   <pre>
                     <code class="swift">var productBarcode = Barcode.upc(8, 85909, 51226, 3)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -827,6 +866,7 @@ println("${numberOfChoices) beverages available")
                 <pre>
                   <code class="kotlin">productBarcode = .qrCode("ABCDEFGHIJKLMNOP")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -834,6 +874,7 @@ println("${numberOfChoices) beverages available")
                   <pre>
                     <code class="swift">productBarcode = .qrCode("ABCDEFGHIJKLMNOP")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -860,6 +901,7 @@ case .qrCode(let productCode):
 
 // Prints "QR code: ABCDEFGHIJKLMNOP."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -879,6 +921,7 @@ case .qrCode(val productCode):
 
 // Prints "QR code: ABCDEFGHIJKLMNOP."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -905,6 +948,7 @@ case let .qrCode(productCode):
 
 // Prints "QR code: ABCDEFGHIJKLMNOP."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -924,6 +968,7 @@ case val .qrCode(productCode):
 
 // Prints "QR code: ABCDEFGHIJKLMNOP."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -960,6 +1005,7 @@ case val .qrCode(productCode):
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -975,6 +1021,7 @@ case val .qrCode(productCode):
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1007,6 +1054,7 @@ case val .qrCode(productCode):
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1018,6 +1066,7 @@ case val .qrCode(productCode):
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1036,6 +1085,7 @@ case val .qrCode(productCode):
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1047,6 +1097,7 @@ case val .qrCode(productCode):
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1069,6 +1120,7 @@ let sunsetDirection = CompassPoint.west.rawValue
 
 // sunsetDirection is "west"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1084,6 +1136,7 @@ val sunsetDirection = CompassPoint.west.rawValue
 
 // sunsetDirection is "west"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1114,6 +1167,7 @@ val sunsetDirection = CompassPoint.west.rawValue
 
 // possiblePlanet is of type Planet? and equals Planet.uranus</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1123,6 +1177,7 @@ val sunsetDirection = CompassPoint.west.rawValue
 
 // possiblePlanet is of type Planet? and equals Planet.uranus</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1159,6 +1214,7 @@ if let somePlanet = Planet(rawValue: positionToFind) {
 
 // Prints "There isn't a planet at position 11"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1188,6 +1244,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
 // Prints "There isn't a planet at position 11"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1224,6 +1281,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1239,6 +1297,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1261,6 +1320,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1276,6 +1336,7 @@ if val somePlanet = Planet(rawValue: positionToFind) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1296,6 +1357,7 @@ let sum = ArithmeticExpression.addition(five, four)
 
 let product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1309,6 +1371,7 @@ val sum = ArithmeticExpression.addition(five, four)
 
 val product = ArithmeticExpression.multiplication(sum, ArithmeticExpression.number(2))</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1347,6 +1410,7 @@ print(evaluate(product))
 
 // Prints "18"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1378,6 +1442,7 @@ println(evaluate(product))
 
 // Prints "18"</code>
                   </pre>
+                  
               
               </td>
             </tr>

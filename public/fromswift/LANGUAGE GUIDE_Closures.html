@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -394,6 +411,7 @@
                 <pre>
                   <code class="kotlin">let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -401,6 +419,7 @@
                   <pre>
                     <code class="swift">val names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -423,6 +442,7 @@ var reversedNames = names.sorted(by: backward)
 
 // reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -438,6 +458,7 @@ var reversedNames = names.sorted(by: backward)
 
 // reversedNames is equal to ["Ewa", "Daniella", "Chris", "Barry", "Alex"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -470,6 +491,7 @@ var reversedNames = names.sorted(by: backward)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -481,6 +503,7 @@ var reversedNames = names.sorted(by: backward)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -499,6 +522,7 @@ var reversedNames = names.sorted(by: backward)
 
 })</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -510,6 +534,7 @@ var reversedNames = names.sorted(by: backward)
 
 })</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -524,6 +549,7 @@ var reversedNames = names.sorted(by: backward)
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted(by: { (s1: String, s2: String) -&#62; Bool in return s1 &#62; s2 } )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -531,6 +557,7 @@ var reversedNames = names.sorted(by: backward)
                   <pre>
                     <code class="swift">reversedNames = names.sorted(by: { (s1: String, s2: String): Bool in return s1 &#62; s2 } )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -559,6 +586,7 @@ var reversedNames = names.sorted(by: backward)
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted(by: { s1, s2 in return s1 &#62; s2 } )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -566,6 +594,7 @@ var reversedNames = names.sorted(by: backward)
                   <pre>
                     <code class="swift">reversedNames = names.sorted(by: { s1, s2 in return s1 &#62; s2 } )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -594,6 +623,7 @@ var reversedNames = names.sorted(by: backward)
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted(by: { s1, s2 in s1 &#62; s2 } )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -601,6 +631,7 @@ var reversedNames = names.sorted(by: backward)
                   <pre>
                     <code class="swift">reversedNames = names.sorted(by: { s1, s2 in s1 &#62; s2 } )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -629,6 +660,7 @@ var reversedNames = names.sorted(by: backward)
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted(by: { $0 &#62; $1 } )</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -636,6 +668,7 @@ var reversedNames = names.sorted(by: backward)
                   <pre>
                     <code class="swift">reversedNames = names.sorted(by: { $0 &#62; $1 } )</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -664,6 +697,7 @@ var reversedNames = names.sorted(by: backward)
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted(by: &#62;)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -671,6 +705,7 @@ var reversedNames = names.sorted(by: backward)
                   <pre>
                     <code class="swift">reversedNames = names.sorted(by: &#62;)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -727,6 +762,7 @@ someFunctionThatTakesAClosure() {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -762,6 +798,7 @@ someFunctionThatTakesAClosure() {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -776,6 +813,7 @@ someFunctionThatTakesAClosure() {
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted() { $0 &#62; $1 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -783,6 +821,7 @@ someFunctionThatTakesAClosure() {
                   <pre>
                     <code class="swift">reversedNames = names.sorted() { $0 &#62; $1 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -797,6 +836,7 @@ someFunctionThatTakesAClosure() {
                 <pre>
                   <code class="kotlin">reversedNames = names.sorted { $0 &#62; $1 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -804,6 +844,7 @@ someFunctionThatTakesAClosure() {
                   <pre>
                     <code class="swift">reversedNames = names.sorted { $0 &#62; $1 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -826,6 +867,7 @@ someFunctionThatTakesAClosure() {
 
 let numbers = [16, 58, 510]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -841,6 +883,7 @@ let numbers = [16, 58, 510]</code>
 
 val numbers = [16, 58, 510]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -875,6 +918,7 @@ val numbers = [16, 58, 510]</code>
 
 // its value is ["OneSix", "FiveEight", "FiveOneZero"]</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -902,6 +946,7 @@ val numbers = [16, 58, 510]</code>
 
 // its value is ["OneSix", "FiveEight", "FiveOneZero"]</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -928,6 +973,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -947,6 +993,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -969,6 +1016,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -984,6 +1032,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1026,6 +1075,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1047,6 +1097,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1067,6 +1118,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1080,6 +1132,7 @@ val numbers = [16, 58, 510]</code>
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1094,6 +1147,7 @@ val numbers = [16, 58, 510]</code>
                 <pre>
                   <code class="kotlin">let incrementByTen = makeIncrementer(forIncrement: 10)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1101,6 +1155,7 @@ val numbers = [16, 58, 510]</code>
                   <pre>
                     <code class="swift">val incrementByTen = makeIncrementer(forIncrement: 10)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1125,6 +1180,7 @@ incrementByTen()
 
 // returns a value of 30</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1142,6 +1198,7 @@ incrementByTen()
 
 // returns a value of 30</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1160,6 +1217,7 @@ incrementBySeven()
 
 // returns a value of 7</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1171,6 +1229,7 @@ incrementBySeven()
 
 // returns a value of 7</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1187,6 +1246,7 @@ incrementBySeven()
 
 // returns a value of 40</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1196,6 +1256,7 @@ incrementBySeven()
 
 // returns a value of 40</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1234,6 +1295,7 @@ incrementByTen()
 
 // returns a value of 60</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1251,6 +1313,7 @@ incrementByTen()
 
 // returns a value of 60</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1285,6 +1348,7 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -&#62; Void
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1298,6 +1362,7 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping (): Void) {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1350,6 +1415,7 @@ print(instance.x)
 
 // Prints "100"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1395,6 +1461,7 @@ println(instance.x)
 
 // Prints "100"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1421,6 +1488,7 @@ println(instance.x)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1440,6 +1508,7 @@ println(instance.x)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1466,6 +1535,7 @@ println(instance.x)
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1485,6 +1555,7 @@ println(instance.x)
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1535,6 +1606,7 @@ print(customersInLine.count)
 
 // Prints "4"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1565,6 +1637,7 @@ println(customersInLine.count)
 // Prints "4"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1589,6 +1662,7 @@ serve(customer: { customersInLine.remove(at: 0) } )
 
 // Prints "Now serving Alex!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1607,6 +1681,7 @@ serve(customer: { customersInLine.remove(at: 0) } )
 // Prints "Now serving Alex!"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1631,6 +1706,7 @@ serve(customer: customersInLine.remove(at: 0))
 
 // Prints "Now serving Ewa!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1649,6 +1725,7 @@ serve(customer: customersInLine.remove(at: 0))
 // Prints "Now serving Ewa!"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1691,6 +1768,7 @@ for customerProvider in customerProviders {
 
 // Prints "Now serving Daniella!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1727,6 +1805,7 @@ for customerProvider in customerProviders {
 // Prints "Now serving Daniella!"
 </code>
                   </pre>
+                  
               
               </td>
             </tr>

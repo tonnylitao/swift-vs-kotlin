@@ -147,10 +147,25 @@
 
     pre {
       margin: 0;
+      white-space: pre-wrap;
     }
 
     .from-aspect a {
       display: block;
+    }
+
+    .not-support {
+      border: 1px dashed #d4d1d1;
+      padding: 10px;
+      margin-top: 16px;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .left-bravo {
+      position: relative;
+      top: -30px;
+      font-size: 1.5em;
     }
   </style>
 </head>
@@ -159,6 +174,8 @@
   <nav>
     <h1><img width="60px" src="https://cdn4.iconfinder.com/data/icons/logos-3/504/Swift-2-512.png" alt="Swift" />Swift vs <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin-logo.svg" alt="Kotlin" />Kotlin</h1>
 
+    <p style="color: red">Translation job is on going</p>
+    
     <div class="from-aspect">
       <a href="/fromswift/WELCOME TO SWIFT_A Swift Tour.html">From Swift View (5.3)</a>
       <a href="/fromkotlin/Getting Started_Basic Syntax.html">From Kotlin View (1.4.30)</a><br />
@@ -396,6 +413,7 @@
 
 var currentLoginAttempt = 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -405,6 +423,7 @@ var currentLoginAttempt = 0</code>
 
 var currentLoginAttempt = 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -419,6 +438,7 @@ var currentLoginAttempt = 0</code>
                 <pre>
                   <code class="kotlin">var x = 0.0, y = 0.0, z = 0.0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -426,6 +446,7 @@ var currentLoginAttempt = 0</code>
                   <pre>
                     <code class="swift">var x = 0.0, y = 0.0, z = 0.0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -454,6 +475,7 @@ var currentLoginAttempt = 0</code>
                 <pre>
                   <code class="kotlin">var welcomeMessage: String</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -461,6 +483,7 @@ var currentLoginAttempt = 0</code>
                   <pre>
                     <code class="swift">var welcomeMessage: String</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -475,6 +498,7 @@ var currentLoginAttempt = 0</code>
                 <pre>
                   <code class="kotlin">welcomeMessage = "Hello"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -482,6 +506,7 @@ var currentLoginAttempt = 0</code>
                   <pre>
                     <code class="swift">welcomeMessage = "Hello"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -496,6 +521,7 @@ var currentLoginAttempt = 0</code>
                 <pre>
                   <code class="kotlin">var red, green, blue: Double</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -503,6 +529,7 @@ var currentLoginAttempt = 0</code>
                   <pre>
                     <code class="swift">var red, green, blue: Double</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -535,6 +562,7 @@ let &#20320;&#22909; = "&#20320;&#22909;&#19990;&#30028;"
 
 let 🐶🐮 = "dogcow"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -546,6 +574,7 @@ let &#20320;&#22909; = "&#20320;&#22909;&#19990;&#30028;"
 
 let 🐶🐮 = "dogcow"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -564,6 +593,7 @@ friendlyWelcome = "Bonjour!"
 
 // friendlyWelcome is now "Bonjour!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -575,6 +605,7 @@ friendlyWelcome = "Bonjour!"
 
 // friendlyWelcome is now "Bonjour!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -593,6 +624,7 @@ languageName = "Swift++"
 
 // This is a compile-time error: languageName cannot be changed.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -604,6 +636,7 @@ languageName = "Swift++"
 
 // This is a compile-time error: languageName cannot be changed.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -634,6 +667,7 @@ languageName = "Swift++"
 
 // Prints "Bonjour!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -643,6 +677,7 @@ languageName = "Swift++"
 
 // Prints "Bonjour!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -659,6 +694,7 @@ languageName = "Swift++"
 
 // Prints "The current value of friendlyWelcome is Bonjour!"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -668,6 +704,7 @@ languageName = "Swift++"
 
 // Prints "The current value of friendlyWelcome is Bonjour!"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -696,6 +733,7 @@ languageName = "Swift++"
                 <pre>
                   <code class="kotlin">// This is a comment.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -703,6 +741,7 @@ languageName = "Swift++"
                   <pre>
                     <code class="swift">// This is a comment.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -719,6 +758,7 @@ languageName = "Swift++"
 
 but is written over multiple lines. */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -728,6 +768,7 @@ but is written over multiple lines. */</code>
 
 but is written over multiple lines. */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -746,6 +787,7 @@ but is written over multiple lines. */</code>
 
 This is the end of the first multiline comment. */</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -757,6 +799,7 @@ This is the end of the first multiline comment. */</code>
 
 This is the end of the first multiline comment. */</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -787,6 +830,7 @@ This is the end of the first multiline comment. */</code>
 
 // Prints "🐱"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -796,6 +840,7 @@ This is the end of the first multiline comment. */</code>
 
 // Prints "🐱"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -826,6 +871,7 @@ This is the end of the first multiline comment. */</code>
 
 let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -835,6 +881,7 @@ let maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -865,6 +912,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // meaningOfLife is inferred to be of type Int</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -874,6 +922,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // meaningOfLife is inferred to be of type Int</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -890,6 +939,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // pi is inferred to be of type Double</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -899,6 +949,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // pi is inferred to be of type Double</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -915,6 +966,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // anotherPi is also inferred to be of type Double</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -924,6 +976,7 @@ val maxValue = UInt8.max  // maxValue is equal to 255, and is of type UInt8</cod
 
 // anotherPi is also inferred to be of type Double</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -958,6 +1011,7 @@ let octalInteger = 0o21           // 17 in octal notation
 
 let hexadecimalInteger = 0x11     // 17 in hexadecimal notation</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -971,6 +1025,7 @@ val octalInteger = 0o21           // 17 in octal notation
 
 val hexadecimalInteger = 0x11     // 17 in hexadecimal notation</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -989,6 +1044,7 @@ let exponentDouble = 1.21875e1
 
 let hexadecimalDouble = 0xC.3p0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1000,6 +1056,7 @@ val exponentDouble = 1.21875e1
 
 val hexadecimalDouble = 0xC.3p0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1018,6 +1075,7 @@ let oneMillion = 1_000_000
 
 let justOverOneMillion = 1_000_000.000_000_1</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1029,6 +1087,7 @@ val oneMillion = 1_000_000
 
 val justOverOneMillion = 1_000_000.000_000_1</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1065,6 +1124,7 @@ let tooBig: Int8 = Int8.max + 1
 
 // and so this will also report an error</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1080,6 +1140,7 @@ val tooBig: Int8 = Int8.max + 1
 
 // and so this will also report an error</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1098,6 +1159,7 @@ let one: UInt8 = 1
 
 let twoThousandAndOne = twoThousand + UInt16(one)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1109,6 +1171,7 @@ val one: UInt8 = 1
 
 val twoThousandAndOne = twoThousand + UInt16(one)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1143,6 +1206,7 @@ let pi = Double(three) + pointOneFourOneFiveNine
 
 // pi equals 3.14159, and is inferred to be of type Double</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1156,6 +1220,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 // pi equals 3.14159, and is inferred to be of type Double</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1172,6 +1237,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 // integerPi equals 3, and is inferred to be of type Int</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1181,6 +1247,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 // integerPi equals 3, and is inferred to be of type Int</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1209,6 +1276,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
                 <pre>
                   <code class="kotlin">typealias AudioSample = UInt16</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1216,6 +1284,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
                   <pre>
                     <code class="swift">typealias AudioSample = UInt16</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1232,6 +1301,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 // maxAmplitudeFound is now 0</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1241,6 +1311,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 // maxAmplitudeFound is now 0</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1271,6 +1342,7 @@ val pi = Double(three) + pointOneFourOneFiveNine
 
 let turnipsAreDelicious = false</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1280,6 +1352,7 @@ let turnipsAreDelicious = false</code>
 
 val turnipsAreDelicious = false</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1304,6 +1377,7 @@ val turnipsAreDelicious = false</code>
 
 // Prints "Eww, turnips are horrible."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1321,6 +1395,7 @@ val turnipsAreDelicious = false</code>
 
 // Prints "Eww, turnips are horrible."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1341,6 +1416,7 @@ if i {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1354,6 +1430,7 @@ if i {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1374,6 +1451,7 @@ if i == 1 {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1387,6 +1465,7 @@ if i == 1 {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1417,6 +1496,7 @@ if i == 1 {
 
 // http404Error is of type (Int, String), and equals (404, "Not Found")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1426,6 +1506,7 @@ if i == 1 {
 
 // http404Error is of type (Int, String), and equals (404, "Not Found")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1448,6 +1529,7 @@ print("The status message is \(statusMessage)")
 
 // Prints "The status message is Not Found"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1463,6 +1545,7 @@ println("The status message is ${statusMessage)")
 
 // Prints "The status message is Not Found"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1481,6 +1564,7 @@ print("The status code is \(justTheStatusCode)")
 
 // Prints "The status code is 404"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1492,6 +1576,7 @@ println("The status code is ${justTheStatusCode)")
 
 // Prints "The status code is 404"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1512,6 +1597,7 @@ print("The status message is \(http404Error.1)")
 
 // Prints "The status message is Not Found"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1525,6 +1611,7 @@ println("The status message is ${http404Error.1)")
 
 // Prints "The status message is Not Found"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1539,6 +1626,7 @@ println("The status message is ${http404Error.1)")
                 <pre>
                   <code class="kotlin">let http200Status = (statusCode: 200, description: "OK")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1546,6 +1634,7 @@ println("The status message is ${http404Error.1)")
                   <pre>
                     <code class="swift">val http200Status = (statusCode: 200, description: "OK")</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1566,6 +1655,7 @@ print("The status message is \(http200Status.description)")
 
 // Prints "The status message is OK"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1579,6 +1669,7 @@ println("The status message is ${http200Status.description)")
 
 // Prints "The status message is OK"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1611,6 +1702,7 @@ let convertedNumber = Int(possibleNumber)
 
 // convertedNumber is inferred to be of type "Int?", or "optional Int"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1622,6 +1714,7 @@ val convertedNumber = Int(possibleNumber)
 
 // convertedNumber is inferred to be of type "Int?", or "optional Int"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1656,6 +1749,7 @@ serverResponseCode = nil
 
 // serverResponseCode now contains no value</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1669,6 +1763,7 @@ serverResponseCode = nil
 
 // serverResponseCode now contains no value</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1685,6 +1780,7 @@ serverResponseCode = nil
 
 // surveyAnswer is automatically set to nil</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1694,6 +1790,7 @@ serverResponseCode = nil
 
 // surveyAnswer is automatically set to nil</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1728,6 +1825,7 @@ serverResponseCode = nil
 
 // Prints "convertedNumber contains some integer value."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1741,6 +1839,7 @@ serverResponseCode = nil
 
 // Prints "convertedNumber contains some integer value."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1761,6 +1860,7 @@ serverResponseCode = nil
 
 // Prints "convertedNumber has an integer value of 123."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1774,6 +1874,7 @@ serverResponseCode = nil
 
 // Prints "convertedNumber has an integer value of 123."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1806,6 +1907,7 @@ serverResponseCode = nil
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1817,6 +1919,7 @@ serverResponseCode = nil
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1841,6 +1944,7 @@ serverResponseCode = nil
 
 // Prints "The string "123" has an integer value of 123"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1858,6 +1962,7 @@ serverResponseCode = nil
 
 // Prints "The string "123" has an integer value of 123"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1896,6 +2001,7 @@ if let firstNumber = Int("4") {
 
 // Prints "4 &#60; 42 &#60; 100"</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1927,6 +2033,7 @@ if val firstNumber = Int("4") {
 
 // Prints "4 &#60; 42 &#60; 100"</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1963,6 +2070,7 @@ let assumedString: String! = "An implicitly unwrapped optional string."
 
 let implicitString: String = assumedString // no need for an exclamation point</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -1978,6 +2086,7 @@ val assumedString: String! = "An implicitly unwrapped optional string."
 
 val implicitString: String = assumedString // no need for an exclamation point</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -1994,6 +2103,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // The type of optionalString is "String?" and assumedString isn't force-unwrapped.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2003,6 +2113,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // The type of optionalString is "String?" and assumedString isn't force-unwrapped.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2023,6 +2134,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // Prints "An implicitly unwrapped optional string."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2036,6 +2148,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // Prints "An implicitly unwrapped optional string."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2056,6 +2169,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // Prints "An implicitly unwrapped optional string."</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2069,6 +2183,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 // Prints "An implicitly unwrapped optional string."</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2101,6 +2216,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2112,6 +2228,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2136,6 +2253,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2153,6 +2271,7 @@ val implicitString: String = assumedString // no need for an exclamation point</
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2189,6 +2308,7 @@ do {
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2218,6 +2338,7 @@ do {
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2250,6 +2371,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
 
 // This assertion fails because -3 is not &#62;= 0.</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2261,6 +2383,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
 
 // This assertion fails because -3 is not &#62;= 0.</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2275,6 +2398,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
                 <pre>
                   <code class="kotlin">assert(age &#62;= 0)</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2282,6 +2406,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
                   <pre>
                     <code class="swift">assert(age &#62;= 0)</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2308,6 +2433,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
 
 }</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2327,6 +2453,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
 
 }</code>
                   </pre>
+                  
               
               </td>
             </tr>
@@ -2357,6 +2484,7 @@ assert(age &#62;= 0, "A person's age can't be less than zero.")
 
 precondition(index &#62; 0, "Index must be greater than zero.")</code>
                 </pre>
+                
               </td>
 
               <td style="padding-left:10px;padding-bottom:10px">
@@ -2366,6 +2494,7 @@ precondition(index &#62; 0, "Index must be greater than zero.")</code>
 
 precondition(index &#62; 0, "Index must be greater than zero.")</code>
                   </pre>
+                  
               
               </td>
             </tr>
