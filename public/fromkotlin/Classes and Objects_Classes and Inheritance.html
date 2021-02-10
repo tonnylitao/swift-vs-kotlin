@@ -742,8 +742,7 @@
               
                   <pre>
                     <code class="swift">class Person {
-    init(firstName: String) {}
-    /*...*/
+    init(firstName: String) { /*...*/ }
 }
 </code>
                   </pre>
@@ -783,7 +782,7 @@
               
                   <pre>
                     <code class="swift">class InitOrderDemo {
-    let name: String
+    private let name: String
     
     init(name: String) {
         self.name = name
@@ -830,7 +829,7 @@
               
                   <pre>
                     <code class="swift">class Customer {
-    let name: String
+    private let name: String
     
     init(name: String) {
         self.name = name
@@ -971,8 +970,6 @@
                     <code class="swift">class Person {
     var children: [Person] = []
     
-    init() {}
-    
     init(parent: Person) {
         parent.children.append(self)
     }
@@ -1006,8 +1003,8 @@
               
                   <pre>
                     <code class="swift">class Person {
-    var children: [Person] = []
     let name: String
+    var children: [Person] = []
     
     init(name: String) {
         self.name = name
