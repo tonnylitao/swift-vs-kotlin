@@ -1283,6 +1283,7 @@
     "menu": "Classes and Objects",
     "chapters": [
       {
+        "translated": true,
         "title": "Classes and Inheritance",
         "url": "https://kotlinlang.org/docs/reference/classes.html",
         "doms": [
