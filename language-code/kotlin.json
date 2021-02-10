@@ -3,6 +3,7 @@
     "menu": "Getting Started",
     "chapters": [
       {
+        "translated": true,
         "title": "Basic Syntax",
         "url": "https://kotlinlang.org/docs/reference/basic-syntax.html",
         "doms": [
@@ -201,6 +202,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Idioms",
         "url": "https://kotlinlang.org/docs/reference/idioms.html",
         "doms": [
@@ -512,6 +514,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Coding Conventions",
         "url": "https://kotlinlang.org/docs/reference/coding-conventions.html",
         "doms": [
@@ -948,6 +951,7 @@
     "menu": "Basics",
     "chapters": [
       {
+        "translated": true,
         "title": "Basic Types",
         "url": "https://kotlinlang.org/docs/reference/basic-types.html",
         "doms": [
@@ -1112,6 +1116,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Packages and Imports",
         "url": "https://kotlinlang.org/docs/reference/packages.html",
         "doms": [
@@ -1902,6 +1907,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Enum Classes",
         "url": "https://kotlinlang.org/docs/reference/enum-classes.html",
         "doms": [
