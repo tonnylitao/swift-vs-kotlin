@@ -1,0 +1,4 @@
+class DontCreateMe {
+    private init() { }
+    /*...*/
+}

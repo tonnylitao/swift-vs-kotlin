@@ -1141,6 +1141,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Control Flow",
         "url": "https://kotlinlang.org/docs/reference/control-flow.html",
         "doms": [
@@ -1224,6 +1225,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Returns and Jumps",
         "url": "https://kotlinlang.org/docs/reference/returns.html",
         "doms": [
@@ -1286,6 +1288,7 @@
     "menu": "Classes and Objects",
     "chapters": [
       {
+        "translated": true,
         "title": "Classes and Inheritance",
         "url": "https://kotlinlang.org/docs/reference/classes.html",
         "doms": [
