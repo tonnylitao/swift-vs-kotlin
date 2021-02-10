@@ -1451,6 +1451,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Properties and Fields",
         "url": "https://kotlinlang.org/docs/reference/properties.html",
         "doms": [
@@ -3001,6 +3002,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Filtering",
         "url": "https://kotlinlang.org/docs/reference/collection-filtering.html",
         "doms": [
