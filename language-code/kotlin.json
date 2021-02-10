@@ -1220,6 +1220,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Returns and Jumps",
         "url": "https://kotlinlang.org/docs/reference/returns.html",
         "doms": [
