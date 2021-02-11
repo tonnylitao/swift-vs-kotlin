@@ -278,7 +278,7 @@
                 <a href="/fromkotlin/Classes and Objects_Visibility Modifiers.html">
                   Visibility Modifiers
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -723,11 +723,10 @@ class Bar { ... }</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">// file name: example.kt
-package foo
-&#8203;
+                    <code class="swift">// file name: example.swift
 func baz() { ... }
-class Bar { ... }</code>
+class Bar { ... }
+</code>
                   </pre>
                   
               
@@ -759,15 +758,14 @@ internal val baz = 6    // visible inside the same module</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">// file name: example.kt
-package foo
-&#8203;
-private func foo() { ... } // visible inside example.kt
-&#8203;
-public var bar: Int = 5 // property is visible everywhere
-    private set         // setter is visible only in example.kt
-    
-internal let baz = 6    // visible inside the same module</code>
+                    <code class="swift">fileprivate func foo() { ... } // visible inside example.swift
+
+public private (set) var bar: Int = 5 // property is visible everywhere
+// setter is visible only in A
+
+internal let baz = 6    // visible inside the same module
+
+</code>
                   </pre>
                   
               
@@ -833,31 +831,53 @@ class Unrelated(o: Outer) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">open class Outer {
-    private let a = 1
-    protected open let b = 2
-    internal let c = 3
-    let d = 4  // public by default
-    
-    protected class Nested {
-        public let e: Int = 5
+                    <code class="swift">/*
+ open and public
+ Open access and public access enable entities to be used within any source file from their defining module
+ */
+open class A { //open for class, allowing code outside the module to subclass and override
+    open var a: Int = 0
+}
+
+public struct B {
+    public var b: Int = 0
+}
+
+
+/*
+ internal, default
+ Internal access enables entities to be used within any source file from their defining module
+ */
+internal let a = ""
+let someInternalConstant = 0 // implicitly internal
+class C { } // implicitly internal
+
+
+/*
+ fileprivate
+ File-private access restricts the use of an entity to its own defining source file
+ */
+fileprivate let b = ""
+
+
+/*
+ private
+ Private access restricts the use of an entity to the enclosing declaration, and to extensions of that declaration that are in the same file.
+ */
+class D {
+    private let d = 0
+}
+extension D {
+    func foo() {
+        print(d)
     }
 }
-&#8203;
-class Subclass : Outer() {
-    // a is not visible
-    // b, c and d are visible
-    // Nested and e are visible
-&#8203;
-    override let b = 5   // 'b' is protected
-}
-&#8203;
-class Unrelated(o: Outer) {
-    // o.a, o.b are not visible
-    // o.c and o.d are visible (same module)
-    // Outer.Nested is not visible, and Nested::e is not visible either 
-}</code>
+
+
+</code>
                   </pre>
+                  
+                      <div class="right-bravo">👏</div>
                   
               
               </td>
@@ -895,7 +915,10 @@ class Unrelated(o: Outer) {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">class C private constructor(a: Int) { ... }</code>
+                    <code class="swift">class C {
+    private init(a: Int) { ... }
+}
+</code>
                   </pre>
                   
               

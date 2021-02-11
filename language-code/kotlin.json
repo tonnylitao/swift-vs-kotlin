@@ -1639,6 +1639,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Visibility Modifiers",
         "url": "https://kotlinlang.org/docs/reference/visibility-modifiers.html",
         "doms": [
@@ -2047,6 +2048,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Type Aliases",
         "url": "https://kotlinlang.org/docs/reference/type-aliases.html",
         "doms": [
