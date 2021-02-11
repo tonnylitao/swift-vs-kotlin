@@ -200,77 +200,88 @@ function writeToHtml(result) {
         .map(({ title, url, doms: originDoms, translated }, chapterIndex) => {
           const menuChapter = sanitize(menu + "_" + title);
 
-          const doms = originDoms.map(
-            ({ tag: originTag, content, filename, anchor }) => {
-              //only one H1 for SEO
-              const tagMap = {
-                h1: "h2",
-                h2: "h3",
-                h3: "h4",
-                h4: "h4",
-              };
-              const tag = tagMap[originTag] || originTag;
+          const doms = originDoms.map(({ tag, content, filename, anchor }) => {
+            // //only one H1 for SEO
+            // const tagMap = {
+            //   h1: "h2",
+            //   h2: "h3",
+            //   h3: "h4",
+            //   h4: "h4",
+            // };
+            // const tag = tagMap[originTag] || originTag;
+
+            //
+            if (tag === "pre") {
+              let selfEscaped = "";
+              try {
+                const kotlinCode = fs.readFileSync(filename, "utf8");
+
+                selfEscaped = kotlinCode.replace(
+                  /[\u00A0-\u9999<>\&]/g,
+                  (i) => "&#" + i.charCodeAt(0) + ";"
+                );
+              } catch (e) {
+                console.log("Error:", e.stack);
+              }
 
               //
-              if (tag === "pre") {
-                let selfEscaped = "";
-                try {
-                  const kotlinCode = fs.readFileSync(filename, "utf8");
+              let otherEscaped = "";
+              let isSimilar = true;
+              let brovLeft, brovRight;
+              try {
+                let swiftCode = fs.readFileSync(
+                  filename.replace(".kt", ".swift"),
+                  "utf8"
+                );
 
-                  selfEscaped = kotlinCode.replace(
+                brovLeft = swiftCode.includes("//-👏");
+                brovRight = swiftCode.includes("//👏");
+
+                swiftCode = swiftCode.replace("//-👏", "").replace("//👏", "");
+
+                if (swiftCode.includes("not-support") || !swiftCode.trim()) {
+                  isSimilar = false;
+                }
+
+                if (isSimilar) {
+                  otherEscaped = swiftCode.replace(
                     /[\u00A0-\u9999<>\&]/g,
                     (i) => "&#" + i.charCodeAt(0) + ";"
                   );
-                } catch (e) {
-                  console.log("Error:", e.stack);
-                }
-
-                //
-                let otherEscaped = "";
-                let isSimilar = false;
-                try {
-                  const swiftCode = fs.readFileSync(
-                    filename.replace(".kt", ".swift"),
-                    "utf8"
-                  );
-
-                  isSimilar =
-                    !swiftCode.includes("not-support") && swiftCode != "";
-                  if (isSimilar) {
-                    otherEscaped = swiftCode.replace(
-                      /[\u00A0-\u9999<>\&]/g,
-                      (i) => "&#" + i.charCodeAt(0) + ";"
-                    );
-                  } else {
-                    otherEscaped = swiftCode;
+                } else {
+                  if (swiftCode.trim() === "") {
+                    swiftCode = `<div class="not-support" />`;
                   }
-                } catch (e) {}
+                  otherEscaped = swiftCode;
+                }
+              } catch (e) {}
 
-                return {
-                  tag,
-                  content,
-                  anchor,
+              return {
+                tag,
+                content,
+                anchor,
 
-                  selfEscaped,
-                  isSimilar,
-                  otherEscaped,
-                };
-              }
-
-              if (tag === "h2") {
-                return {
-                  tag,
-                  content,
-                  url,
-                  anchor,
-                  menuIndex,
-                  chapterIndex,
-                };
-              }
-
-              return { tag, content, url, anchor, menuIndex, chapterIndex };
+                selfEscaped,
+                isSimilar,
+                brovLeft,
+                brovRight,
+                otherEscaped,
+              };
             }
-          );
+
+            if (tag === "h2") {
+              return {
+                tag,
+                content,
+                url,
+                anchor,
+                menuIndex,
+                chapterIndex,
+              };
+            }
+
+            return { tag, content, url, anchor, menuIndex, chapterIndex };
+          });
 
           return { title, url, doms, menuChapter, translated };
         }),
