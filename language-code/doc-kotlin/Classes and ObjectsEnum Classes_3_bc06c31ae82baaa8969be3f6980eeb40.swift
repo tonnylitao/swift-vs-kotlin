@@ -10,5 +10,5 @@ enum Color : String {
     case blue = "0x0000FF"
 }
  
-val color = Color.red
-val rgb = color.rawValue
+let color = Color.red
+let rgb = color.rawValue
