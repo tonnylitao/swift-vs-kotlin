@@ -1554,6 +1554,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Interfaces",
         "url": "https://kotlinlang.org/docs/reference/interfaces.html",
         "doms": [
@@ -1601,6 +1602,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Functional (SAM) Interfaces",
         "url": "https://kotlinlang.org/docs/reference/fun-interfaces.html",
         "doms": [

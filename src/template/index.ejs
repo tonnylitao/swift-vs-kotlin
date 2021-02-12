@@ -75,14 +75,15 @@
       display: block;
     }
 
-    h2 {
+    h1 {
       margin: 10px 0;
     }
 
+    h2,
     h3,
     h4,
     h5 {
-      margin: 5px 0 0;
+      margin: 10px 0;
       color: #555;
       font-weight: 400;
     }
@@ -206,6 +207,7 @@
         <% doms.forEach(item => { %>
           <% const tag = item.tag; const content = item.content; const anchor = item.anchor; %>
           <% const selfEscaped = item.selfEscaped; const otherEscaped = item.otherEscaped; const isSimilar = item.isSimilar; %>
+          <% const brovLeft = item.brovLeft; const brovRight = item.brovRight; %>
 
           <% if (tag === 'h2') { %>
             <tr>
@@ -235,7 +237,7 @@
                 <pre>
                   <code class="kotlin"><%- selfEscaped %></code>
                 </pre>
-                <% if (otherEscaped.includes('//-👏')) { %>
+                <% if (brovLeft) { %>
                     <div class="left-bravo">👏</div>
                 <% } %>
               </td>
@@ -243,9 +245,9 @@
               <td style="padding-left:10px;padding-bottom:10px">
               <% if (isSimilar) { %>
                   <pre>
-                    <code class="swift"><%- otherEscaped.replace('//-👏\n', '').replace('//👏\n', ''); %></code>
+                    <code class="swift"><%- otherEscaped %></code>
                   </pre>
-                  <% if (otherEscaped.includes('//👏')) { %>
+                  <% if (brovRight) { %>
                       <div class="right-bravo">👏</div>
                   <% } %>
               <% }else { %>
