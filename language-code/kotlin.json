@@ -1674,6 +1674,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Extensions",
         "url": "https://kotlinlang.org/docs/reference/extensions.html",
         "doms": [
