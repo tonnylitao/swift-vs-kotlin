@@ -1827,6 +1827,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Sealed Classes",
         "url": "https://kotlinlang.org/docs/reference/sealed-classes.html",
         "doms": [
