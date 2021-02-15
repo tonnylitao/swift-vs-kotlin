@@ -1972,6 +1972,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Objects",
         "url": "https://kotlinlang.org/docs/reference/object-declarations.html",
         "doms": [
@@ -2157,6 +2158,7 @@
         ]
       },
       {
+        "translated": true,
         "title": "Delegation",
         "url": "https://kotlinlang.org/docs/reference/delegation.html",
         "doms": [
