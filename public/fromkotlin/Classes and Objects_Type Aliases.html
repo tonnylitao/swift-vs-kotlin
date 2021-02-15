@@ -285,7 +285,7 @@
                 <a href="/fromkotlin/Classes and Objects_Extensions.html">
                   Extensions
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -299,7 +299,7 @@
                 <a href="/fromkotlin/Classes and Objects_Sealed Classes.html">
                   Sealed Classes
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -327,7 +327,7 @@
                 <a href="/fromkotlin/Classes and Objects_Type Aliases.html">
                   Type Aliases
                 </a>
-                
+                 ✅
               </ol>
             
               <ol class="chapter-2">-&nbsp
@@ -675,15 +675,11 @@
 
           
             <tr>
-              <td class="sticky-row" colspan="2">
-                <div>
-                  <div>Kotlin</div>
-                  <h2 style="text-align:center;">
-                    Type aliases
-                    <a class="anchor" target="_blank"></a>
-                  </h2>
-                  <div>Swift</div>
-                </div>
+              <td colspan="2" style="text-align: center;">
+              <h2>
+                Type aliases
+                <a class="anchor" href="#https://kotlinlang.org/docs/reference/type-aliases.html#type-aliases" target="_blank"></a>
+              </h2>
               </td>
             </tr>
           
@@ -708,7 +704,8 @@ typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62
                   <pre>
                     <code class="swift">typealias NodeSet = Set&#60;Network.Node&#62;
 &#8203;
-typealias FileTable&#60;K&#62; = MutableMap&#60;K, MutableList&#60;File&#62;&#62;</code>
+typealias FileTable&#60;K&#62; = Dictionary&#60;K, Array&#60;File&#62;&#62;
+</code>
                   </pre>
                   
               
@@ -734,9 +731,10 @@ typealias Predicate&#60;T&#62; = (T) -&#62; Boolean</code>
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">typealias MyHandler = (Int, String, Any) -&#62; Unit
+                    <code class="swift">typealias MyHandler = (Int, String, Any) -&#62; Void
 &#8203;
-typealias Predicate&#60;T&#62; = (T) -&#62; Boolean</code>
+typealias Predicate&#60;T&#62; = (T) -&#62; Bool
+</code>
                   </pre>
                   
               
@@ -769,14 +767,15 @@ typealias BInner = B.Inner</code>
               
                   <pre>
                     <code class="swift">class A {
-    inner class Inner
+    class Inner {}
 }
 class B {
-    inner class Inner
+    class Inner {}
 }
 &#8203;
 typealias AInner = A.Inner
-typealias BInner = B.Inner</code>
+typealias BInner = B.Inner
+</code>
                   </pre>
                   
               
@@ -810,17 +809,19 @@ fun main() {
               <td style="padding-left:10px;padding-bottom:10px">
               
                   <pre>
-                    <code class="swift">typealias Predicate&#60;T&#62; = (T) -&#62; Boolean
-&#8203;
-func foo(p: Predicate&#60;Int&#62;) = p(42)
-&#8203;
-func main() {
-    let f: (Int) -&#62; Boolean = { $0 &#62; 0 }
-    print(foo(f)) // prints "true"
-&#8203;
-    let p: Predicate&#60;Int&#62; = { $0 &#62; 0 }
-    print(listOf(1, -2).filter(p)) // prints "[1]"
-}</code>
+                    <code class="swift">typealias Predicate&#60;T&#62; = (T) -&#62; Bool
+
+func foo(p: Predicate&#60;Int&#62;) -&#62; Bool {
+    p(42)
+}
+
+
+let f: (Int) -&#62; Bool = { $0 &#62; 0 }
+print(foo(p: f)) // prints "true"
+
+let p: Predicate&#60;Int&#62; = { $0 &#62; 0 }
+print([1, -2].filter(p)) // prints "[1]"
+</code>
                   </pre>
                   
               
